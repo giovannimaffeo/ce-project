@@ -114,10 +114,32 @@ def crossover(p1, p2):
   # return offspring tuple: (robot, fitness)
   return [offspring, None]
 
+def generate_possible_locations(child):
+  robot = child
+  possible_locations = np.zeros_like(robot)
+  #directions to search the neighborhood
+  directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+  
+  rows, cols = robot.shape
+  
+  for i in range(rows):
+    for j in range(cols):
+      if robot[i, j] != 0:
+        possible_locations[i, j] = 1
+        continue
+            
+      for di, dj in directions:
+        ni, nj = i + di, j + dj
+        if 0 <= ni < rows and 0 <= nj < cols:
+          if robot[ni, nj] != 0:
+            possible_locations[i, j] = 1
+            break
 
-def mutate(child, mutation_rate):
-  child = child.copy()
-  for i, chromosome in enumerate(child[0]):
+  return possible_locations
+
+def mutate(previousChild, mutation_rate):
+  child = previousChild[0]
+  for i, chromosome in enumerate(child):
     for j, gene in enumerate(chromosome):
       if random.random() < mutation_rate:
         #to generate a random number that is different from the current gene
@@ -125,19 +147,29 @@ def mutate(child, mutation_rate):
         #dps tentar again mas cuidado pra n ficar ciclo infinito.
         #se n conseguir, retorna o parent
         #vamos gerar a matriz de possibilidades, temos que gerar sempre uma nova apos cada alteracao
-        possibilites = [x for x in range(0, 5) if x != gene]
-        child[0][i][j] = random.choice(possibilites)
-  
+        possible_positions = generate_possible_locations(child)
+        if possible_positions[i][j] == 1: 
+          possibilites = [x for x in range(0, 5) if x != gene]
+          child[i][j] = random.choice(possibilites)
+        else:
+          continue
+        
   # return offspring tuple: (robot, fitness)
-  return [child[0], None] 
+  return [child, None] 
    
 def survivor_selection(population, new_population, t=2):
   #tbm tirar aqui o evaluate, e sempre com base na fitness anterior (da population anterior!). so ha uma fase de fitness
   #tira t elementos melhores da antiga, e randoms da nova
-  new_population = sorted(new_population, key=evaluate_fitness, reverse=True)
-  best_individuals = population[:t]
-  new_population[-t:] = best_individuals
+  # new_population = sorted(new_population, key=evaluate_fitness, reverse=True)
+  # best_individuals = population[:t]
+  # new_population[-t:] = best_individuals
   
+
+  #n sera necessario dar evaluate again, pq pode dar valores diferentes
+  sorted_previous_population = sorted(population, key=lambda x: x[1], reverse=True)
+  best_individuals = sorted_previous_population[:t]
+  sorted_previous_population[-t:] = best_individuals
+
   return new_population
 
 def ea_search():
