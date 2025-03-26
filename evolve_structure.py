@@ -59,10 +59,26 @@ def create_random_robot():
   random_robot, _ = sample_robot(grid_size)
   return random_robot
 
+def is_valid_structure(robot):
+  for i in range(len(robot)):
+    for j in range(len(robot[i])):
+      if robot[i][j] != 0:
+        return (
+          # up
+          robot[i - 1][j] != 0 and 
+          # down
+          robot[i + 1][j] != 0 and
+          # right
+          robot[i][j + 1] != 0 and
+          # left
+          robot[i][j - 1] != 0
+        )
+
 def parent_selection(population, t=3):
   # select a subset of "t" random individuals
   selected_parents = random.sample(population, t)
-  selected_parents = sorted(selected_parents, key=evaluate_fitness, reverse=True)
+  #n sera necessario dar evaluate again, pq pode dar valores diferentes
+  selected_parents = sorted(selected_parents, key=lambda x: x[1], reverse=True)
 
   # return the two with the best fitness
   return selected_parents[0], selected_parents[1]
@@ -78,25 +94,46 @@ def crossover(p1, p2):
     [0,0,0,0,2]
     ])
   """  
-  offsprings = [
-    np.array([*p1[0:2], *p2[2:]]), 
-    np.array([*p2[0:2], *p1[2:]])
-  ]
+  #poderemos fzr isto mas seria melhor fazer uma coisa mais soft, dar flat ao array, fzr crossover e voltar a montar
+  # offsprings = [
+  #   np.array([*p1[0:2], *p2[2:]]), 
+  #   np.array([*p2[0:2], *p1[2:]])
+  # ]
+
+  #flat the parents
+  p1 = p1[0].flatten()
+  p2 = p2[0].flatten()
   
-  offsprings = sorted(offsprings, key=evaluate_fitness, reverse=True)
-  return offsprings[0]  
+  # get first half of p1 and second half of p2 to generate offspring
+  half_index = int(len(p1) / 2)
+  p1_genes = p1[:half_index]
+  p2_genes = p2[half_index:]
+  offspring_flat = np.concatenate([p1_genes, p2_genes])
+  offspring = offspring_flat.reshape((5, 5))  
+  
+  # return offspring tuple: (robot, fitness)
+  return [offspring, None]
 
 
 def mutate(child, mutation_rate):
-  for i, chromosome in enumerate(child):
+  child = child.copy()
+  for i, chromosome in enumerate(child[0]):
     for j, gene in enumerate(chromosome):
       if random.random() < mutation_rate:
         #to generate a random number that is different from the current gene
+        #podiamos ver aqui se gerar algo diferente de 1 ver na vizinhança se ta tudo a 0
+        #dps tentar again mas cuidado pra n ficar ciclo infinito.
+        #se n conseguir, retorna o parent
+        #vamos gerar a matriz de possibilidades, temos que gerar sempre uma nova apos cada alteracao
         possibilites = [x for x in range(0, 5) if x != gene]
-        child[i][j] = random.choice(possibilites)
-  return child  
+        child[0][i][j] = random.choice(possibilites)
+  
+  # return offspring tuple: (robot, fitness)
+  return [child[0], None] 
    
 def survivor_selection(population, new_population, t=2):
+  #tbm tirar aqui o evaluate, e sempre com base na fitness anterior (da population anterior!). so ha uma fase de fitness
+  #tira t elementos melhores da antiga, e randoms da nova
   new_population = sorted(new_population, key=evaluate_fitness, reverse=True)
   best_individuals = population[:t]
   new_population[-t:] = best_individuals
@@ -106,24 +143,31 @@ def survivor_selection(population, new_population, t=2):
 def ea_search():
   best_robot = None
   best_fitness = -float('inf')
+  #list with tuples <robot, fitness>
+  population = [[create_random_robot(), None] for _ in range(POP_SIZE)]
 
-  population = [create_random_robot() for _ in range(POP_SIZE)]
   for it in range(NUM_GENERATIONS):
-    population = sorted(population, key=evaluate_fitness, reverse=True)
-    
-    best_current_fitness = evaluate_fitness(population[0])
+    # get individuals fitness
+    for i, individual in enumerate(population):
+      fitness = evaluate_fitness(individual[0])
+      population[i][1] = fitness
+    # sort individuals by fitness
+    population = sorted(population, key=lambda x: x[1], reverse=True)
+
+    # update best_fitness and best_robot
+    best_current_fitness = population[0][1]
     if best_current_fitness > best_fitness:
       best_fitness = best_current_fitness
-      best_robot = population[0]
-    # if evaluate_fitness(population[0]) == STEPS:
-    #  break
+      best_robot = population[0][0]
 
     new_population = []
     while len(new_population) < POP_SIZE:
       p1, p2 = parent_selection(population)
       
+      #podemos ter uma mutation rate se vai haver ou noa e dps outra por cada gene, mas n e necessario
       #if random.random() < CROSSOVER_RATE: perguntar se é preciso ter uma prob de fzr ou uma coisa ou outra
-      child = crossover(p1, p2) # cuidado com as alterações, utilizar np.copy ou equivalente
+      # if random.random() < CROSSOVER_RATE:
+      child = crossover(p1, p2) 
       child = mutate(child, MUTATION_RATE)
       new_population.append(child)
     population = survivor_selection(population, new_population)
