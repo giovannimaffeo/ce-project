@@ -20,6 +20,7 @@ VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
 POP_SIZE = 5
 CROSSOVER_RATE = 0.1
 MUTATION_RATE = 0.05
+SURVIVORS_COUNT = 2
 
 CONTROLLER = alternating_gait
 
@@ -59,6 +60,49 @@ def create_random_robot():
   random_robot, _ = sample_robot(grid_size)
   return random_robot
 
+def is_connected(robot):
+  rows, cols = robot.shape
+  # create visited matrix
+  visited = np.zeros_like(robot, dtype=bool)
+
+  # get first node different from zero
+  s = None
+  for i in range(rows):
+    for j in range(cols):
+      if robot[i][j] > 0:
+        s = (i, j)
+        break
+    if s: break
+  
+  # if no index is different from zero, return false
+  if s is None:
+    return False
+
+  # initialize a queue
+  q = [s]
+  # mark node "s" as visited
+  visited[s] = True
+  while len(q) != 0:
+    # explore first node from the queue
+    v = q.pop(0)
+    
+    # get (i,j) from node v
+    x, y = v
+
+    # explore neighbors from node "v"
+    for movement in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
+      # get indexes from neighbor
+      w = [x + movement[0], y + movement[1]]
+      # verify if index is valid 
+      if 0 <= w[0] < rows and 0 <= w[1] < cols:
+        # if neighbor "w" is a node and not visited 
+        if robot[w[0]][w[1]] > 0 and not visited[w[0]][w[1]]:
+          # mark neighbor "w" as visited and add to queue
+          visited[w[0]][w[1]] = True
+          q.append(w)
+    
+  return np.all((robot == 0) | visited)
+       
 def is_valid_structure(robot):
   for i in range(len(robot)):
     for j in range(len(robot[i])):
@@ -101,19 +145,48 @@ def crossover(p1, p2):
   # ]
 
   #flat the parents
+  initial_p1 = p1
   p1 = p1[0].flatten()
   p2 = p2[0].flatten()
   
-  # get first half of p1 and second half of p2 to generate offspring
+  """
+  robot_structure = np.array([ 
+  [1,3,1,0,0],
+  [4,1,3,2,2],
+  [3,4,4,4,4],
+  [3,0,0,3,2],
+  [0,0,0,0,2]
+  ])
+
+  [1,1,1,1,1],
+  [1,1,1,1,1],
+  [1,1,1,1,1],
+  [1,1,1,1,1],
+  [1,0,0,0,1]
+  ])
+  """
+
+  # get first half of p1 and second half of p2 to generate offspring 1
   half_index = int(len(p1) / 2)
   p1_genes = p1[:half_index]
   p2_genes = p2[half_index:]
-  offspring_flat = np.concatenate([p1_genes, p2_genes])
-  offspring = offspring_flat.reshape((5, 5))  
-  
-  # return offspring tuple: (robot, fitness)
-  return [offspring, None]
+  offspring_flat1 = np.concatenate([p1_genes, p2_genes])
+  offspring1 = offspring_flat1.reshape((5, 5))  
 
+  # get first half of p2 and second half of p1 to generate offspring 2
+  p2_genes = p2[:half_index]
+  p1_genes = p1[half_index:]
+  offspring_flat2 = np.concatenate([p2_genes, p1_genes])
+  offspring2 = offspring_flat2.reshape((5, 5)) 
+
+  if (is_connected(offspring1)):
+    return [offspring1, None]
+  elif (is_connected(offspring2)):
+    return [offspring2, None]
+  # if none is a valid structered then we return the first original parent
+  else:
+    return initial_p1
+  
 def generate_possible_locations(child):
   robot = child
   possible_locations = np.zeros_like(robot)
@@ -138,8 +211,8 @@ def generate_possible_locations(child):
   return possible_locations
 
 def mutate(child, mutation_rate):
-  child = child.copy()
-  for i, chromosome in enumerate(child[0]):
+  child = child[0]
+  for i, chromosome in enumerate(child):
     for j, gene in enumerate(chromosome):
       if random.random() < mutation_rate:
         #to generate a random number that is different from the current gene
@@ -149,7 +222,7 @@ def mutate(child, mutation_rate):
         #vamos gerar a matriz de possibilidades, temos que gerar sempre uma nova apos cada alteracao
         possible_positions = generate_possible_locations(child)
         if possible_positions[i][j] == 1: 
-          possibilites = [x for x in range(0, 5) if x != gene]
+          possibilites = [x for x in range(1, 5) if x != gene]
           child[i][j] = random.choice(possibilites)
         else:
           continue
@@ -157,7 +230,7 @@ def mutate(child, mutation_rate):
   # return offspring tuple: (robot, fitness)
   return [child, None] 
    
-def survivor_selection(population, new_population, t):
+def survivor_selection(population, new_population, t=SURVIVORS_COUNT):
   #tbm tirar aqui o evaluate, e sempre com base na fitness anterior (da population anterior!). so ha uma fase de fitness
   #tira t elementos melhores da antiga, e randoms da nova
   survivors = population[:t]
@@ -188,20 +261,24 @@ def ea_search():
       best_robot = population[0][0]
 
     new_population = []
-    survivors_count = 2
-    while len(new_population) < (POP_SIZE - survivors_count):
+    while len(new_population) < (POP_SIZE - SURVIVORS_COUNT):
       p1, p2 = parent_selection(population)
       
       #podemos ter uma mutation rate se vai haver ou noa e dps outra por cada gene, mas n e necessario
       #if random.random() < CROSSOVER_RATE: perguntar se é preciso ter uma prob de fzr ou uma coisa ou outra
       # if random.random() < CROSSOVER_RATE:
       child = crossover(p1, p2) 
+      if (not is_connected(child[0])):
+        print(child)
+        print("não conectado CROSSOVER")
       child = mutate(child, MUTATION_RATE)
+      if (not is_connected(child[0])):
+        print(child)
+        print("não conectado MUTATION")
       new_population.append(child)
-    population = survivor_selection(population, new_population, survivors_count)
+    population = survivor_selection(population, new_population)
 
   return best_robot, best_fitness
-
 
 def random_search():
   """Perform a random search to find the best robot structure."""
@@ -232,4 +309,4 @@ while i < 10:
   utils.simulate_best_robot(best_robot, scenario=SCENARIO, steps=STEPS)
   i += 1
 
-utils.create_gif(best_robot, filename='random_search.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)
+utils.create_gif(best_robot, filename='evolve_structure.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)
