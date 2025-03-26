@@ -114,7 +114,6 @@ def crossover(p1, p2):
   # return offspring tuple: (robot, fitness)
   return [offspring, None]
 
-
 def mutate(child, mutation_rate):
   child = child.copy()
   for i, chromosome in enumerate(child[0]):
@@ -131,12 +130,11 @@ def mutate(child, mutation_rate):
   # return offspring tuple: (robot, fitness)
   return [child[0], None] 
    
-def survivor_selection(population, new_population, t=2):
+def survivor_selection(population, new_population, t):
   #tbm tirar aqui o evaluate, e sempre com base na fitness anterior (da population anterior!). so ha uma fase de fitness
   #tira t elementos melhores da antiga, e randoms da nova
-  new_population = sorted(new_population, key=evaluate_fitness, reverse=True)
-  best_individuals = population[:t]
-  new_population[-t:] = best_individuals
+  survivors = population[:t]
+  new_population = [*new_population, *survivors]
   
   return new_population
 
@@ -149,8 +147,10 @@ def ea_search():
   for it in range(NUM_GENERATIONS):
     # get individuals fitness
     for i, individual in enumerate(population):
-      fitness = evaluate_fitness(individual[0])
-      population[i][1] = fitness
+      #calculate the fitness only for the new individuals (not survivors)
+      if (individual[1] is None):
+        fitness = evaluate_fitness(individual[0])
+        population[i][1] = fitness
     # sort individuals by fitness
     population = sorted(population, key=lambda x: x[1], reverse=True)
 
@@ -161,7 +161,8 @@ def ea_search():
       best_robot = population[0][0]
 
     new_population = []
-    while len(new_population) < POP_SIZE:
+    survivors_count = 2
+    while len(new_population) < (POP_SIZE - survivors_count):
       p1, p2 = parent_selection(population)
       
       #podemos ter uma mutation rate se vai haver ou noa e dps outra por cada gene, mas n e necessario
@@ -170,7 +171,7 @@ def ea_search():
       child = crossover(p1, p2) 
       child = mutate(child, MUTATION_RATE)
       new_population.append(child)
-    population = survivor_selection(population, new_population)
+    population = survivor_selection(population, new_population, survivors_count)
 
   return best_robot, best_fitness
 
