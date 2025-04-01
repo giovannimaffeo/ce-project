@@ -10,14 +10,14 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 5  # Number of generations to evolve
+NUM_GENERATIONS = 50  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
 SCENARIO = 'Walker-v0' #'BridgeWalkerv0'
 # ---- VOXEL TYPES ----
 VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
-POP_SIZE = 5
+POP_SIZE = 20
 CROSSOVER_RATE = 0.1
 MUTATION_RATE = 0.05
 SURVIVORS_COUNT = 2
@@ -259,6 +259,14 @@ def ea_search():
     if best_current_fitness > best_fitness:
       best_fitness = best_current_fitness
       best_robot = population[0][0]
+      print("Generation: ", it)
+      print("Structure of the best robot: ")
+      print(best_robot)
+      print("Best fitness: " + str(best_fitness))
+      utils.simulate_best_robot(best_robot, scenario=SCENARIO, steps=STEPS)
+
+      utils.create_gif(best_robot, filename='evolve_structure_cena.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)
+
 
     new_population = []
     while len(new_population) < (POP_SIZE - SURVIVORS_COUNT):

@@ -19,7 +19,7 @@ def simulate_best_robot(robot_structure, scenario=None, steps=500, controller = 
     action_size = sim.get_dim_action_space('robot')  # Get correct action size
     t_reward = 0
     
-    for t in range(200):  # Simulate for 200 timesteps
+    for t in range(steps):  # Simulate for 200 timesteps
         # Update actuation before stepping
         actuation = controller(action_size,t)
 
@@ -51,7 +51,7 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
         t_reward = 0
 
         frames = []
-        for t in range(200):
+        for t in range(steps):
             actuation = controller(action_size,t)
             ob, reward, terminated, truncated, info = env.step(actuation)
             t_reward += reward
