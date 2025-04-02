@@ -1,4 +1,9 @@
 import numpy as np
+import json
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+from datetime import datetime
 import gymnasium as gym
 from evogym import EvoViewer, get_full_connectivity
 import imageio
@@ -65,6 +70,46 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
         imageio.mimsave(filename, frames, duration=duration, optimize=True)
     except ValueError as e:
         print('Invalid')
+
+def generate_results(fitness_history_df, best_robot, params):
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    output_dir = f"outputs/evolve_structure/{timestamp}"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # save best result (fitness + robot matrix) as csv
+    best_result_path = os.path.join(output_dir, "best_result.csv")
+    robot_str = json.dumps(best_robot.tolist()) 
+    best_result_df = pd.DataFrame([{
+        "best_fitness": fitness_history_df["best_fitness"].max(),
+        "best_robot": robot_str
+    }])
+    best_result_df.to_csv(best_result_path, index=False)
+
+    # save fitness history df as csv
+    fitness_csv_path = os.path.join(output_dir, "fitness_history.csv")
+    fitness_history_df.to_csv(fitness_csv_path, index=False)
+
+    # generate and save plot for fitness history
+    plt.figure()
+    plt.plot(fitness_history_df["generation"], fitness_history_df["best_fitness"], "b-", label="Best Fitness")
+    plt.plot(fitness_history_df["generation"], fitness_history_df["mean_fitness"], "r-", label="Mean Fitness")
+    plt.xlabel("Generation")
+    plt.ylabel("Fitness")
+    plt.title(f"Generation: {fitness_history_df['generation'].iloc[-1]} | Best Fitness: {fitness_history_df['best_fitness'].iloc[-1]:.2f}")
+    plt.legend()
+    plt.grid(True)
+    plot_path = os.path.join(output_dir, "fitness_plot.png")
+    plt.savefig(plot_path)
+    plt.close()
+
+    # save global parameters of execution as csv
+    params_df = pd.DataFrame([params])
+    params_csv_path = os.path.join(output_dir, "parameters_info.csv")
+    params_df.to_csv(params_csv_path, index=False)
+
+    # generate and save gif of best robot
+    gif_path = os.path.join(output_dir, "evolve_structure.gif")
+    create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
         
 
 

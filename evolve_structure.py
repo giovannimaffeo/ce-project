@@ -1,6 +1,9 @@
+from datetime import datetime
+import os
 import numpy as np
+import pandas as pd
 import random
-import copy
+import matplotlib.pyplot as plt
 import gymnasium as gym
 from evogym.envs import *
 
@@ -10,16 +13,16 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 250  # Number of generations to evolve
+NUM_GENERATIONS = 2  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
-SCENARIO = 'Walker-v0' #'BridgeWalkerv0'
-POP_SIZE = 5
-CROSSOVER_RATE = 0.8
-MUTATION_RATE = 0.05
-SURVIVORS_COUNT = 2
-PARENT_SELECTION_COUNT = 3
+SCENARIO = "Walker-v0" #"BridgeWalkerv0"
+POP_SIZE = 15
+CROSSOVER_RATE = 0.95
+MUTATION_RATE = 0.03
+SURVIVORS_COUNT = 1
+PARENT_SELECTION_COUNT = 4
 # ---- VOXEL TYPES ----
 VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
 
@@ -33,14 +36,14 @@ def evaluate_fitness(robot_structure, view=False):
     env.reset()
     sim = env.sim
     viewer = EvoViewer(sim)
-    viewer.track_objects('robot')
+    viewer.track_objects("robot")
     t_reward = 0
-    action_size = sim.get_dim_action_space('robot')  # Get correct action size
+    action_size = sim.get_dim_action_space("robot")  # Get correct action size
     for t in range(STEPS):  
       # Update actuation before stepping
       actuation = CONTROLLER(action_size, t)
       if view:
-        viewer.render('screen') 
+        viewer.render("screen") 
       ob, reward, terminated, truncated, info = env.step(actuation)
       t_reward += reward
 
@@ -174,10 +177,12 @@ def survivor_selection(population, new_population, t):
 
 def ea_search():
   best_robot = None
-  best_fitness = -float('inf')
+  best_fitness = -float("inf")
   # generate initial population randomly 
   # population is a list of individuals as [robot, fitness]
   population = [[create_random_robot(), None] for _ in range(POP_SIZE)]
+  # store fitness history
+  fitness_history = []
 
   for it in range(NUM_GENERATIONS):
     # get individuals fitness for sorting population
@@ -195,6 +200,13 @@ def ea_search():
       best_fitness = best_current_fitness
       best_robot = population[0][0]
     print(f"Iteration {it + 1}: Fitness = {best_fitness}")
+    # store best and mean fitness in the history
+    mean_fitness = sum(ind[1] for ind in population) / len(population)
+    fitness_history.append({
+      "generation": it,
+      "best_fitness": best_current_fitness,
+      "mean_fitness": mean_fitness
+    })
 
     new_population = []
     # generate new population with length of (POP_SIZE - SURVIVORS_COUNT)
@@ -208,35 +220,28 @@ def ea_search():
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
 
   # return best individual regarding all iterations
-  return best_robot, best_fitness
+  return best_robot, best_fitness, fitness_history
 
-def random_search():
-  """Perform a random search to find the best robot structure."""
-  best_robot = None
-  best_fitness = -float('inf')
-  
-  for it in range(NUM_GENERATIONS):
-    robot = create_random_robot() 
-    fitness_score = evaluate_fitness(robot)
-    
-    if fitness_score > best_fitness:
-      best_fitness = fitness_score
-      best_robot = robot
-    
-    print(f"Iteration {it + 1}: Fitness = {fitness_score}")
-  
-  return best_robot, best_fitness
-
-# Example usage
-best_robot, best_fitness = ea_search()
+best_robot, best_fitness, fitness_history = ea_search()
 print("Best robot structure found:")
 print(best_robot)
 print("Best fitness score:")
 print(best_fitness)
 
-i = 0
-while i < 10:
-  utils.simulate_best_robot(best_robot, scenario=SCENARIO, steps=STEPS)
-  i += 1
-
-utils.create_gif(best_robot, filename='evolve_structure.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)
+# generate results
+fitness_history_df = pd.DataFrame(fitness_history)
+params = {
+  "NUM_GENERATIONS": NUM_GENERATIONS,
+  "MIN_GRID_SIZE": MIN_GRID_SIZE,
+  "MAX_GRID_SIZE": MAX_GRID_SIZE,
+  "STEPS": STEPS,
+  "SCENARIO": SCENARIO,
+  "POP_SIZE": POP_SIZE,
+  "CROSSOVER_RATE": CROSSOVER_RATE,
+  "MUTATION_RATE": MUTATION_RATE,
+  "SURVIVORS_COUNT": SURVIVORS_COUNT,
+  "PARENT_SELECTION_COUNT": PARENT_SELECTION_COUNT,
+  "VOXEL_TYPES": str(VOXEL_TYPES),
+  "CONTROLLER": CONTROLLER
+}
+utils.generate_results(fitness_history_df, best_robot, params)
