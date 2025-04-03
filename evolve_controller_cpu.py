@@ -4,7 +4,7 @@ import gymnasium as gym
 from evogym.envs import *
 from evogym import EvoViewer, get_full_connectivity
 from neural_controller import *
-
+from multiprocessing import Pool
 
 NUM_GENERATIONS = 100  # Number of generations to evolve
 POPULATION_SIZE = 20
@@ -59,6 +59,11 @@ def evaluate_fitness(weights, view=False):
         return t_reward 
 
 
+def evaluate_fitness_parallel(population):
+    with Pool() as pool:  # Creates a pool of worker processes (defaults to number of CPU cores)
+        fitnesses = np.array(pool.map(evaluate_fitness, population))
+    return fitnesses
+
 def es_search(brain, population_size=200, generations=20, alpha=0.01, sigma=0.1):
     best_fitness = -np.inf
     param_vector = get_weights(brain)
@@ -76,7 +81,8 @@ def es_search(brain, population_size=200, generations=20, alpha=0.01, sigma=0.1)
                 noise = sigma * np.random.randn(num_params) * mutation_mask
                 ind = param_vector + noise
                 population.append(ind)
-        fitnesses = np.array([evaluate_fitness(individual) for individual in population])
+        fitnesses = evaluate_fitness_parallel(population)
+        #fitnesses = np.array([evaluate_fitness(individual) for individual in population])
         sorted_indices = np.argsort(fitnesses)[::-1]
         sorted_population = [population[i] for i in sorted_indices]
         sorted_rewards = fitnesses[sorted_indices]
