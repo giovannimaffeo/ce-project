@@ -177,12 +177,13 @@ def two_point_crossover(p1, p2, crossover_rate):
     offspring_part3 = p1[crossover_point_2:]
     # generate offspring by concatenating parts
     offspring_flat = np.concatenate([offspring_part1, offspring_part2, offspring_part3])
-    offspring = offspring_flat.reshape((5, 5))
-
-    # return the offspring if it is connected
-    if is_connected(offspring):
-      # return offspring with no fitness calculated
-      return [offspring, None]
+    if(len(offspring_flat) == 25):
+      offspring = offspring_flat.reshape((5, 5))
+      # return the offspring if it is connected
+      if is_connected(offspring):
+        # return offspring with no fitness calculated
+        return [offspring, None]
+    
     return p1
   
 def crossover(p1, p2, crossover_rate):
