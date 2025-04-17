@@ -115,6 +115,36 @@ def parent_selection(population, t):
   # return the two with the best fitness
   return selected_parents[0], selected_parents[1]
 
+def two_point_crossover(p1, p2, crossover_rate):
+  # skip crossover with probability (1 - crossover_rate) and return parent 1
+  if random.random() > crossover_rate:
+    return p1
+  
+  # flat the parents
+  p1 = p1[0].flatten()
+  p2 = p2[0].flatten()
+  individual_length = len(p1)
+
+  max_retries = 100
+  for _ in range(max_retries):
+    #to avoid having cuts in the end of the sequence
+    crossover_point_1 = random.randint(0, int(individual_length/2))
+    #we are doing this to start a little bit ahead from the first cut
+    crossover_point_2 = random.randint(crossover_point_1, individual_length-2)
+    
+    offspring_part1 = p1[:crossover_point_1]
+    offspring_part2 = p2[crossover_point_1:crossover_point_2]
+    offspring_part3 = p1[crossover_point_2:]
+    # generate offspring by concatenating parts
+    offspring_flat = np.concatenate([offspring_part1, offspring_part2, offspring_part3])
+    offspring = offspring_flat.reshape((5, 5))
+
+    # return the offspring if it is connected
+    if is_connected(offspring):
+      # return offspring with no fitness calculated
+      return [offspring, None]
+    return p1
+  
 def crossover(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1
   if random.random() > crossover_rate:
@@ -212,8 +242,8 @@ def ea_search():
     # generate new population with length of (POP_SIZE - SURVIVORS_COUNT)
     for i in range(POP_SIZE - SURVIVORS_COUNT):
       p1, p2 = parent_selection(population, PARENT_SELECTION_COUNT)
-      child = crossover(p1, p2, CROSSOVER_RATE) 
-      child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
+      child = two_point_crossover(p1,p2,CROSSOVER_RATE)#crossover(p1, p2, CROSSOVER_RATE) 
+      #child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
       new_population.append(child)
 
     # set population as new population plus best individuals of previous population
