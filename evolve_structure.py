@@ -13,7 +13,7 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 2  # Number of generations to evolve
+NUM_GENERATIONS = 100  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
@@ -39,14 +39,25 @@ def evaluate_fitness(robot_structure, view=False):
     viewer.track_objects("robot")
     t_reward = 0
     action_size = sim.get_dim_action_space("robot")  # Get correct action size
+    initial_position = sim.object_pos_at_time(sim.get_time(), 'robot')
+    
     for t in range(STEPS):  
       # Update actuation before stepping
       actuation = CONTROLLER(action_size, t)
       if view:
         viewer.render("screen") 
       ob, reward, terminated, truncated, info = env.step(actuation)
+      #t_reward += reward
+      current_position = sim.object_pos_at_time(sim.get_time(), 'robot')
+      current_velocity = np.max(sim.object_vel_at_time(sim.get_time(), 'robot'))
+      #print(current_velocity)
       t_reward += reward
-
+      t_reward += 0.1 * current_velocity
+      #check backward movement
+      if np.max(np.subtract(current_position, initial_position)) < 0:
+          t_reward = -5
+      
+      initial_position = current_position
       if terminated or truncated:
         env.reset()
         break
@@ -56,6 +67,35 @@ def evaluate_fitness(robot_structure, view=False):
     return t_reward
   except (ValueError, IndexError) as e:
     return 0.0
+
+# def evaluate_fitness(robot_structure, view=False):    
+#   try:
+#     connectivity = get_full_connectivity(robot_structure)
+
+#     env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
+#     env.reset()
+#     sim = env.sim
+#     viewer = EvoViewer(sim)
+#     viewer.track_objects("robot")
+#     t_reward = 0
+#     action_size = sim.get_dim_action_space("robot")  # Get correct action size
+#     for t in range(STEPS):  
+#       # Update actuation before stepping
+#       actuation = CONTROLLER(action_size, t)
+#       if view:
+#         viewer.render("screen") 
+#       ob, reward, terminated, truncated, info = env.step(actuation)
+#       t_reward += reward
+
+#       if terminated or truncated:
+#         env.reset()
+#         break
+
+#     viewer.close()
+#     env.close()
+#     return t_reward
+#   except (ValueError, IndexError) as e:
+#     return 0.0
 
 def create_random_robot():
   """Generate a valid random robot structure."""
@@ -130,7 +170,7 @@ def two_point_crossover(p1, p2, crossover_rate):
     #to avoid having cuts in the end of the sequence
     crossover_point_1 = random.randint(0, int(individual_length/2))
     #we are doing this to start a little bit ahead from the first cut
-    crossover_point_2 = random.randint(crossover_point_1, individual_length-2)
+    crossover_point_2 = random.randint(crossover_point_1, individual_length)
     
     offspring_part1 = p1[:crossover_point_1]
     offspring_part2 = p2[crossover_point_1:crossover_point_2]
@@ -274,4 +314,4 @@ params = {
   "VOXEL_TYPES": str(VOXEL_TYPES),
   "CONTROLLER": CONTROLLER
 }
-utils.generate_results(fitness_history_df, best_robot, params)
+#utils.generate_results(fitness_history_df, best_robot, params)
