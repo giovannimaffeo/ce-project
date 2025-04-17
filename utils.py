@@ -56,7 +56,7 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
         t_reward = 0
 
         frames = []
-        for t in range(200):
+        for t in range(500):
             actuation = controller(action_size,t)
             ob, reward, terminated, truncated, info = env.step(actuation)
             t_reward += reward

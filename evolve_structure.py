@@ -13,22 +13,22 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 100  # Number of generations to evolve
+NUM_GENERATIONS = 1#100  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
 SCENARIO = "Walker-v0" #"BridgeWalkerv0"
-POP_SIZE = 15
+POP_SIZE = 30#15
 CROSSOVER_RATE = 0.95
 MUTATION_RATE = 0.03
-SURVIVORS_COUNT = 1
+SURVIVORS_COUNT = 5#1
 PARENT_SELECTION_COUNT = 4
 # ---- VOXEL TYPES ----
 VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
 
 CONTROLLER = alternating_gait
 
-def evaluate_fitness(robot_structure, view=False):    
+def evaluate_fitness_2(robot_structure, view=False):    
   try:
     connectivity = get_full_connectivity(robot_structure)
 
@@ -49,12 +49,11 @@ def evaluate_fitness(robot_structure, view=False):
       ob, reward, terminated, truncated, info = env.step(actuation)
       #t_reward += reward
       current_position = sim.object_pos_at_time(sim.get_time(), 'robot')
-      current_velocity = np.max(sim.object_vel_at_time(sim.get_time(), 'robot'))
+      current_velocity = np.mean(sim.object_vel_at_time(sim.get_time(), 'robot'))
       #print(current_velocity)
-      t_reward += reward
-      t_reward += 0.1 * current_velocity
+      t_reward += reward + 0.1 * current_velocity
       #check backward movement
-      if np.max(np.subtract(current_position, initial_position)) < 0:
+      if np.mean(np.subtract(current_position, initial_position)) < 0:
           t_reward = -5
       
       initial_position = current_position
@@ -68,34 +67,34 @@ def evaluate_fitness(robot_structure, view=False):
   except (ValueError, IndexError) as e:
     return 0.0
 
-# def evaluate_fitness(robot_structure, view=False):    
-#   try:
-#     connectivity = get_full_connectivity(robot_structure)
+def evaluate_fitness(robot_structure, view=False):    
+  try:
+    connectivity = get_full_connectivity(robot_structure)
 
-#     env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
-#     env.reset()
-#     sim = env.sim
-#     viewer = EvoViewer(sim)
-#     viewer.track_objects("robot")
-#     t_reward = 0
-#     action_size = sim.get_dim_action_space("robot")  # Get correct action size
-#     for t in range(STEPS):  
-#       # Update actuation before stepping
-#       actuation = CONTROLLER(action_size, t)
-#       if view:
-#         viewer.render("screen") 
-#       ob, reward, terminated, truncated, info = env.step(actuation)
-#       t_reward += reward
+    env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
+    env.reset()
+    sim = env.sim
+    viewer = EvoViewer(sim)
+    viewer.track_objects("robot")
+    t_reward = 0
+    action_size = sim.get_dim_action_space("robot")  # Get correct action size
+    for t in range(STEPS):  
+      # Update actuation before stepping
+      actuation = CONTROLLER(action_size, t)
+      if view:
+        viewer.render("screen") 
+      ob, reward, terminated, truncated, info = env.step(actuation)
+      t_reward += reward
 
-#       if terminated or truncated:
-#         env.reset()
-#         break
+      if terminated or truncated:
+        env.reset()
+        break
 
-#     viewer.close()
-#     env.close()
-#     return t_reward
-#   except (ValueError, IndexError) as e:
-#     return 0.0
+    viewer.close()
+    env.close()
+    return t_reward
+  except (ValueError, IndexError) as e:
+    return 0.0
 
 def create_random_robot():
   """Generate a valid random robot structure."""
@@ -157,8 +156,8 @@ def parent_selection(population, t):
 
 def two_point_crossover(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1
-  if random.random() > crossover_rate:
-    return p1
+  #if random.random() > crossover_rate:
+  #  return p1
   
   # flat the parents
   p1 = p1[0].flatten()
@@ -170,21 +169,20 @@ def two_point_crossover(p1, p2, crossover_rate):
     #to avoid having cuts in the end of the sequence
     crossover_point_1 = random.randint(0, int(individual_length/2))
     #we are doing this to start a little bit ahead from the first cut
-    crossover_point_2 = random.randint(crossover_point_1, individual_length)
+    crossover_point_2 = random.randint(crossover_point_1+4, individual_length-2)
     
     offspring_part1 = p1[:crossover_point_1]
     offspring_part2 = p2[crossover_point_1:crossover_point_2]
     offspring_part3 = p1[crossover_point_2:]
     # generate offspring by concatenating parts
     offspring_flat = np.concatenate([offspring_part1, offspring_part2, offspring_part3])
-    if(len(offspring_flat) == 25):
-      offspring = offspring_flat.reshape((5, 5))
-      # return the offspring if it is connected
-      if is_connected(offspring):
-        # return offspring with no fitness calculated
-        return [offspring, None]
+    offspring = offspring_flat.reshape((5, 5))
+    # return the offspring if it is connected
+    if is_connected(offspring):
+      # return offspring with no fitness calculated
+      return [offspring, None]
     
-    return p1
+  return p1
   
 def crossover(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1
@@ -284,7 +282,7 @@ def ea_search():
     for i in range(POP_SIZE - SURVIVORS_COUNT):
       p1, p2 = parent_selection(population, PARENT_SELECTION_COUNT)
       child = two_point_crossover(p1,p2,CROSSOVER_RATE)#crossover(p1, p2, CROSSOVER_RATE) 
-      #child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
+      child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
       new_population.append(child)
 
     # set population as new population plus best individuals of previous population
@@ -293,26 +291,35 @@ def ea_search():
   # return best individual regarding all iterations
   return best_robot, best_fitness, fitness_history
 
-best_robot, best_fitness, fitness_history = ea_search()
-print("Best robot structure found:")
-print(best_robot)
-print("Best fitness score:")
-print(best_fitness)
+# best_robot, best_fitness, fitness_history = ea_search()
+# print("Best robot structure found:")
+# print(best_robot)
+# print("Best fitness score:")
+# print(best_fitness)
 
+
+mutant_robot = np.array([
+[3, 3, 3, 2, 4.],
+[3, 3, 2, 1, 4.],
+[1, 4, 3, 1, 3.],
+[3, 4, 0, 3, 3.],
+[4, 0, 0, 1, 0.]
+])
+utils.create_gif(robot_structure=mutant_robot, filename='best.gif', scenario=SCENARIO, controller=alternating_gait)
 # generate results
-fitness_history_df = pd.DataFrame(fitness_history)
-params = {
-  "NUM_GENERATIONS": NUM_GENERATIONS,
-  "MIN_GRID_SIZE": MIN_GRID_SIZE,
-  "MAX_GRID_SIZE": MAX_GRID_SIZE,
-  "STEPS": STEPS,
-  "SCENARIO": SCENARIO,
-  "POP_SIZE": POP_SIZE,
-  "CROSSOVER_RATE": CROSSOVER_RATE,
-  "MUTATION_RATE": MUTATION_RATE,
-  "SURVIVORS_COUNT": SURVIVORS_COUNT,
-  "PARENT_SELECTION_COUNT": PARENT_SELECTION_COUNT,
-  "VOXEL_TYPES": str(VOXEL_TYPES),
-  "CONTROLLER": CONTROLLER
-}
+# fitness_history_df = pd.DataFrame(fitness_history)
+# params = {
+#   "NUM_GENERATIONS": NUM_GENERATIONS,
+#   "MIN_GRID_SIZE": MIN_GRID_SIZE,
+#   "MAX_GRID_SIZE": MAX_GRID_SIZE,
+#   "STEPS": STEPS,
+#   "SCENARIO": SCENARIO,
+#   "POP_SIZE": POP_SIZE,
+#   "CROSSOVER_RATE": CROSSOVER_RATE,
+#   "MUTATION_RATE": MUTATION_RATE,
+#   "SURVIVORS_COUNT": SURVIVORS_COUNT,
+#   "PARENT_SELECTION_COUNT": PARENT_SELECTION_COUNT,
+#   "VOXEL_TYPES": str(VOXEL_TYPES),
+#   "CONTROLLER": CONTROLLER
+# }
 #utils.generate_results(fitness_history_df, best_robot, params)
