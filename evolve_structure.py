@@ -13,7 +13,7 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 1#100  # Number of generations to evolve
+NUM_GENERATIONS = 100  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
@@ -156,8 +156,8 @@ def parent_selection(population, t):
 
 def two_point_crossover(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1
-  #if random.random() > crossover_rate:
-  #  return p1
+  if random.random() > crossover_rate:
+   return p1
   
   # flat the parents
   p1 = p1[0].flatten()
@@ -291,21 +291,21 @@ def ea_search():
   # return best individual regarding all iterations
   return best_robot, best_fitness, fitness_history
 
-# best_robot, best_fitness, fitness_history = ea_search()
-# print("Best robot structure found:")
-# print(best_robot)
-# print("Best fitness score:")
-# print(best_fitness)
+best_robot, best_fitness, fitness_history = ea_search()
+print("Best robot structure found:")
+print(best_robot)
+print("Best fitness score:")
+print(best_fitness)
 
 
-mutant_robot = np.array([
-[3, 3, 3, 2, 4.],
-[3, 3, 2, 1, 4.],
-[1, 4, 3, 1, 3.],
-[3, 4, 0, 3, 3.],
-[4, 0, 0, 1, 0.]
-])
-utils.create_gif(robot_structure=mutant_robot, filename='best.gif', scenario=SCENARIO, controller=alternating_gait)
+# mutant_robot = np.array([
+# [3, 3, 3, 2, 4.],
+# [3, 3, 2, 1, 4.],
+# [1, 4, 3, 1, 3.],
+# [3, 4, 0, 3, 3.],
+# [4, 0, 0, 1, 0.]
+# ])
+#utils.create_gif(robot_structure=mutant_robot, filename='best.gif', scenario=SCENARIO, controller=alternating_gait)
 # generate results
 # fitness_history_df = pd.DataFrame(fitness_history)
 # params = {
