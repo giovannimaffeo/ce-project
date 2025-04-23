@@ -10,7 +10,7 @@ from fixed_controllers import *
 
 
 # ---- PARAMETERS ----
-NUM_GENERATIONS = 250  # Number of generations to evolve
+NUM_GENERATIONS = 2 # 250  # Number of generations to evolve
 MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
@@ -49,7 +49,6 @@ def evaluate_fitness(robot_structure, view=False):
     except (ValueError, IndexError) as e:
         return 0.0
 
-
 def create_random_robot():
     """Generate a valid random robot structure."""
     
@@ -57,8 +56,12 @@ def create_random_robot():
     random_robot, _ = sample_robot(grid_size)
     return random_robot
 
-def random_search():
+def random_search(seed=None):
     """Perform a random search to find the best robot structure."""
+    if seed is not None:
+        random.seed(seed)
+        np.random.seed(seed)
+
     best_robot = None
     best_fitness = -float('inf')
     
@@ -75,7 +78,7 @@ def random_search():
     return best_robot, best_fitness
 
 # Example usage
-best_robot, best_fitness = random_search()
+"""best_robot, best_fitness = random_search()
 print("Best robot structure found:")
 print(best_robot)
 print("Best fitness score:")
@@ -84,4 +87,4 @@ i = 0
 while i < 10:
     utils.simulate_best_robot(best_robot, scenario=SCENARIO, steps=STEPS)
     i += 1
-utils.create_gif(best_robot, filename='random_search.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)
+utils.create_gif(best_robot, filename='random_search.gif', scenario=SCENARIO, steps=STEPS, controller=CONTROLLER)"""

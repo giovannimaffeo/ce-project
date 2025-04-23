@@ -18,11 +18,11 @@ MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
 MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
 STEPS = 500
 SCENARIO = "Walker-v0" #"BridgeWalkerv0"
-POP_SIZE = 15
+POP_SIZE = 5 # 15
 CROSSOVER_RATE = 0.95
 MUTATION_RATE = 0.03
 SURVIVORS_COUNT = 1
-PARENT_SELECTION_COUNT = 4
+PARENT_SELECTION_COUNT = 3 # 4
 # ---- VOXEL TYPES ----
 VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
 
@@ -175,7 +175,11 @@ def survivor_selection(population, new_population, t):
 
   return new_population
 
-def ea_search():
+def ea_search(seed=None):
+  if seed is not None:
+    random.seed(seed)
+    np.random.seed(seed)
+
   best_robot = None
   best_fitness = -float("inf")
   # generate initial population randomly 
@@ -222,7 +226,7 @@ def ea_search():
   # return best individual regarding all iterations
   return best_robot, best_fitness, fitness_history
 
-best_robot, best_fitness, fitness_history = ea_search()
+"""best_robot, best_fitness, fitness_history = ea_search()
 print("Best robot structure found:")
 print(best_robot)
 print("Best fitness score:")
@@ -244,4 +248,4 @@ params = {
   "VOXEL_TYPES": str(VOXEL_TYPES),
   "CONTROLLER": CONTROLLER
 }
-utils.generate_results(fitness_history_df, best_robot, params)
+utils.generate_results(fitness_history_df, best_robot, params)"""

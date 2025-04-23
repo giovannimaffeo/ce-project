@@ -110,7 +110,4 @@ def generate_results(fitness_history_df, best_robot, params):
     # generate and save gif of best robot
     gif_path = os.path.join(output_dir, "evolve_structure.gif")
     create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
-        
-
-
     
