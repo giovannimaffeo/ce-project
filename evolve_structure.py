@@ -11,24 +11,7 @@ from evogym import EvoWorld, EvoSim, EvoViewer, sample_robot, get_full_connectiv
 import utils
 from fixed_controllers import *
 
-
-# ---- PARAMETERS ----
-NUM_GENERATIONS = 2  # Number of generations to evolve
-MIN_GRID_SIZE = (5, 5)  # Minimum size of the robot grid
-MAX_GRID_SIZE = (5, 5)  # Maximum size of the robot grid
-STEPS = 500
-SCENARIO = "Walker-v0" #"BridgeWalkerv0"
-POP_SIZE = 5 # 15
-CROSSOVER_RATE = 0.95
-MUTATION_RATE = 0.03
-SURVIVORS_COUNT = 1
-PARENT_SELECTION_COUNT = 3 # 4
-# ---- VOXEL TYPES ----
-VOXEL_TYPES = [0, 1, 2, 3, 4]  # Empty, Rigid, Soft, Active (+/-)
-
-CONTROLLER = alternating_gait
-
-def evaluate_fitness(robot_structure, view=False):    
+def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):    
   try:
     connectivity = get_full_connectivity(robot_structure)
 
@@ -57,7 +40,7 @@ def evaluate_fitness(robot_structure, view=False):
   except (ValueError, IndexError) as e:
     return 0.0
 
-def create_random_robot():
+def create_random_robot(MIN_GRID_SIZE, MAX_GRID_SIZE):
   """Generate a valid random robot structure."""
   grid_size = (random.randint(MIN_GRID_SIZE[0], MAX_GRID_SIZE[0]), random.randint(MIN_GRID_SIZE[1], MAX_GRID_SIZE[1]))
   random_robot, _ = sample_robot(grid_size)
@@ -175,16 +158,30 @@ def survivor_selection(population, new_population, t):
 
   return new_population
 
-def ea_search(seed=None):
-  if seed is not None:
-    random.seed(seed)
-    np.random.seed(seed)
+def ea_search(
+  NUM_GENERATIONS,
+  MIN_GRID_SIZE,
+  MAX_GRID_SIZE,
+  STEPS,
+  SCENARIO,
+  POP_SIZE,
+  CROSSOVER_RATE,
+  MUTATION_RATE,
+  SURVIVORS_COUNT,
+  PARENT_SELECTION_COUNT,
+  VOXEL_TYPES,
+  CONTROLLER,
+  SEED
+):
+  if SEED is not None:
+    random.seed(SEED)
+    np.random.seed(SEED)
 
   best_robot = None
   best_fitness = -float("inf")
   # generate initial population randomly 
   # population is a list of individuals as [robot, fitness]
-  population = [[create_random_robot(), None] for _ in range(POP_SIZE)]
+  population = [[create_random_robot(MIN_GRID_SIZE, MAX_GRID_SIZE), None] for _ in range(POP_SIZE)]
   # store fitness history
   fitness_history = []
 
@@ -193,7 +190,7 @@ def ea_search(seed=None):
     for i, individual in enumerate(population):
       # calculate the fitness only for the new individuals (fitness is None)
       if (individual[1] is None):
-        fitness = evaluate_fitness(individual[0])
+        fitness = evaluate_fitness(individual[0], SCENARIO, STEPS, CONTROLLER)
         population[i][1] = fitness
     # sort population by individual fitness
     population = sorted(population, key=lambda x: x[1], reverse=True)
@@ -225,27 +222,3 @@ def ea_search(seed=None):
 
   # return best individual regarding all iterations
   return best_robot, best_fitness, fitness_history
-
-"""best_robot, best_fitness, fitness_history = ea_search()
-print("Best robot structure found:")
-print(best_robot)
-print("Best fitness score:")
-print(best_fitness)
-
-# generate results
-fitness_history_df = pd.DataFrame(fitness_history)
-params = {
-  "NUM_GENERATIONS": NUM_GENERATIONS,
-  "MIN_GRID_SIZE": MIN_GRID_SIZE,
-  "MAX_GRID_SIZE": MAX_GRID_SIZE,
-  "STEPS": STEPS,
-  "SCENARIO": SCENARIO,
-  "POP_SIZE": POP_SIZE,
-  "CROSSOVER_RATE": CROSSOVER_RATE,
-  "MUTATION_RATE": MUTATION_RATE,
-  "SURVIVORS_COUNT": SURVIVORS_COUNT,
-  "PARENT_SELECTION_COUNT": PARENT_SELECTION_COUNT,
-  "VOXEL_TYPES": str(VOXEL_TYPES),
-  "CONTROLLER": CONTROLLER
-}
-utils.generate_results(fitness_history_df, best_robot, params)"""
