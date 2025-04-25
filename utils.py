@@ -2,8 +2,9 @@ import numpy as np
 import json
 import os
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from datetime import datetime
 import gymnasium as gym
 from evogym import EvoViewer, get_full_connectivity
 import imageio
@@ -71,9 +72,7 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
     except ValueError as e:
         print('Invalid')
 
-def generate_results(fitness_history_df, best_robot, params):
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_dir = f"outputs/evolve_structure/{timestamp}"
+def generate_results(fitness_history_df, best_robot, params, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     # save best result (fitness + robot matrix) as csv
@@ -110,4 +109,110 @@ def generate_results(fitness_history_df, best_robot, params):
     # generate and save gif of best robot
     gif_path = os.path.join(output_dir, "evolve_structure.gif")
     create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
+
+def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historics, combination, combination_output_dir):
+    combination_variable_parameters_info_df = pd.DataFrame([list(combination_variable_params.values())], columns=list(combination_variable_params.keys()))
+    combination_variable_parameters_info_path = os.path.join(combination_output_dir, "combination_variable_parameters_info.csv")
+    combination_variable_parameters_info_df.to_csv(combination_variable_parameters_info_path, index=False)
+
+    combination_best_result = np.mean(best_fitnesses)
+    combination_best_result_df = pd.DataFrame([{
+        "best_fitness": combination_best_result,
+    }])
+    combination_best_result_file_path = os.path.join(combination_output_dir, "combination_best_result.csv")
+    combination_best_result_df.to_csv(combination_best_result_file_path, index=False)
+
+    n_generations = len(fitness_historics[0])
+    combination_fitness_history_df = pd.DataFrame({
+        "generation": list(range(1, n_generations + 1)),
+        "best_fitness": [
+            np.mean([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            for i in range(n_generations)
+        ],
+        "mean_fitness": [
+            np.mean([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
+            for i in range(n_generations)
+        ]
+    }) 
+    combination_fitness_history_file_path = os.path.join(combination_output_dir, "combination_fitness_history.csv")
+    combination_fitness_history_df.to_csv(combination_fitness_history_file_path, index=False)   
+
+    plt.figure()
+    for i, fitness_history in enumerate(fitness_historics):
+        plt.plot(
+            [generation["generation"] for generation in fitness_history], 
+            [generation["best_fitness"] for generation in fitness_history], 
+            label=f"Run {i+1}"
+        )
+    plt.plot(
+        combination_fitness_history_df["generation"],
+        combination_fitness_history_df["best_fitness"],
+        "k--",
+        label="Avg"
+    )
+    plt.xlabel("Generation")
+    plt.ylabel("Best Fitness")
+    plt.title(f"Generation: {combination_fitness_history_df['generation'].iloc[-1]} | Combination Best Fitness: {combination_fitness_history_df['best_fitness'].iloc[-1]:.2f}")
+    plt.legend()
+    plt.grid(True)
+    combination_fitness_plot_path = os.path.join(combination_output_dir, "combination_fitness_plot.png")
+    plt.savefig(combination_fitness_plot_path)
+    plt.close()
+
+    return combination_variable_parameters_info_df, combination_best_result_df, combination_fitness_history_df
+
+def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_grid, combinations_results, hiperparams_fatorial_test_output_dir):
+    hiperparams_fatorial_test_fixed_parameters_df = pd.DataFrame([fixed_params])
+    hiperparams_fatorial_test_fixed_parameters_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_fixed_parameters.csv")
+    hiperparams_fatorial_test_fixed_parameters_df.to_csv(hiperparams_fatorial_test_fixed_parameters_file_path, index=False)
+
+    hiperparams_fatorial_test_variable_parameters_df = pd.DataFrame([list(variable_params_grid.keys())])
+    hiperparams_fatorial_test_variable_parameters_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_variable_parameters.csv")
+    hiperparams_fatorial_test_variable_parameters_df.to_csv(hiperparams_fatorial_test_variable_parameters_file_path, index=False, header=False)    
+
+    variable_params_df = pd.DataFrame([list(variable_params_grid.keys())])
+    variable_params_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_variable_parameters.csv")
+    variable_params_df.to_csv(variable_params_file_path, index=False, header=False)   
     
+    hiperparams_fatorial_test_fitnesses_rows = []
+    for i, (_, combination_best_result_df, _) in enumerate(combinations_results):
+        row_dict = {
+            "combination": i + 1,
+            "combination_fitness": combination_best_result_df["best_fitness"].iloc[0]
+        }
+        hiperparams_fatorial_test_fitnesses_rows.append(row_dict)
+    hiperparams_fatorial_test_fitnesses_df = pd.DataFrame(hiperparams_fatorial_test_fitnesses_rows)
+    hiperparams_fatorial_test_fitnesses_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_fitnesses.csv")
+    hiperparams_fatorial_test_fitnesses_df.to_csv(hiperparams_fatorial_test_fitnesses_file_path, index=False)
+
+    best_fitnesses = [combination_best_result_df["best_fitness"].iloc[0] for (_, combination_best_result_df, _) in combinations_results]
+    best_combination_fitness_index = int(np.argmax(best_fitnesses))
+    best_combination_fitness = best_fitnesses[best_combination_fitness_index]
+    hiperparams_fatorial_test_best_result_df = pd.DataFrame([{
+        "combination": best_combination_fitness_index + 1,
+        "best_combination_fitness": best_combination_fitness
+    }])
+    hiperparams_fatorial_test_best_result_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_best_result.csv")
+    hiperparams_fatorial_test_best_result_df.to_csv(hiperparams_fatorial_test_best_result_file_path, index=False)
+
+    plt.figure()
+    for i, (_, _, combination_fitness_history_df) in enumerate(combinations_results):
+        plt.plot(
+            combination_fitness_history_df["generation"],
+            combination_fitness_history_df["best_fitness"],
+            label=f"Combination {i+1}"
+        )
+    plt.xlabel("Generation")
+    plt.ylabel("Best Fitness")
+    plt.title("Best Fitness Evolution for All Combinations")
+    plt.grid(True)
+    plt.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.2),
+        ncol=3,
+        fontsize="small"
+    )
+    plt.tight_layout(rect=[0, 0.2, 1, 1])
+    hiperparams_fatorial_test_plot_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_plot.png")
+    plt.savefig(hiperparams_fatorial_test_plot_path)
+    plt.close()
