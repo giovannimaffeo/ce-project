@@ -7,7 +7,7 @@ from neural_controller import *
 from multiprocessing import Pool
 
 NUM_GENERATIONS = 100  # Number of generations to evolve
-POPULATION_SIZE = 20
+POPULATION_SIZE = 30#50#20
 STEPS = 500
 SCENARIO = 'DownStepper-v0'
 SEED = 42
@@ -34,7 +34,7 @@ output_size = env.action_space.shape[0]  # Action size
 brain = NeuralController(input_size, output_size)
 
 # ---- FITNESS FUNCTION ----
-def evaluate_fitness(weights, view=False):
+def evaluate_fitness_2(weights, view=False):
         set_weights(brain, weights)  # Load weights into the network
         env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
         sim = env
@@ -68,30 +68,30 @@ def evaluate_fitness(weights, view=False):
         viewer.close()
         env.close()
         return t_reward 
-# # ---- FITNESS FUNCTION ----
-# def evaluate_fitness(weights, view=False):
-#         set_weights(brain, weights)  # Load weights into the network
-#         env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
-#         sim = env
-#         viewer = EvoViewer(sim)
-#         viewer.track_objects('robot')
-#         state = env.reset()[0]  # Get initial state
-#         t_reward = 0
-#         for t in range(STEPS):  
-#             # Update actuation before stepping
-#             state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
-#             action = brain(state_tensor).detach().numpy().flatten() # Get action
-#             if view:
-#                 viewer.render('screen') 
-#             state, reward, terminated, truncated, info = env.step(action)
-#             t_reward += reward
-#             if terminated or truncated:
-#                 env.reset()
-#                 break
+# ---- FITNESS FUNCTION ----
+def evaluate_fitness(weights, view=False):
+        set_weights(brain, weights)  # Load weights into the network
+        env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
+        sim = env
+        viewer = EvoViewer(sim)
+        viewer.track_objects('robot')
+        state = env.reset()[0]  # Get initial state
+        t_reward = 0
+        for t in range(STEPS):  
+            # Update actuation before stepping
+            state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
+            action = brain(state_tensor).detach().numpy().flatten() # Get action
+            if view:
+                viewer.render('screen') 
+            state, reward, terminated, truncated, info = env.step(action)
+            t_reward += reward
+            if terminated or truncated:
+                env.reset()
+                break
 
-#         viewer.close()
-#         env.close()
-#         return t_reward 
+        viewer.close()
+        env.close()
+        return t_reward 
 
 
 def evaluate_fitness_parallel(population):
@@ -99,39 +99,44 @@ def evaluate_fitness_parallel(population):
         fitnesses = np.array(pool.map(evaluate_fitness, population))
     return fitnesses
 
-def es_search(brain, population_size=200, generations=20, alpha=0.01, sigma=0.1):
+
+def es_search(brain, population_size=200, generations=20, alpha=0.01, sigma=0.1):#sigma=0.1):
     best_fitness = -np.inf
     param_vector = get_weights(brain)
     best_weights = param_vector
     num_params = len(best_weights)
-    population = []
-    num_parents = 5
+    #num_parents = 5
+    num_offsprings = 3
     mutation_rate = 0.07
 
+    population = [([np.random.randn(*param.shape) for param in brain.parameters()]) for i in range(population_size)]
+    
     for generation in range(NUM_GENERATIONS):
+        #selects u parents (the previous population)
         for i in range(population_size):
-            for j in range(num_parents):
-                param_vector = population[0] if generation != 0 else param_vector
+            #each parent generates lambda offsprings
+            for j in range(num_offsprings):
                 mutation_mask = np.random.rand(num_params) < mutation_rate
                 noise = sigma * np.random.randn(num_params) * mutation_mask
-                ind = param_vector + noise
+                ind = population[i] + noise
                 population.append(ind)
         fitnesses = evaluate_fitness_parallel(population)
         #fitnesses = np.array([evaluate_fitness(individual) for individual in population])
         sorted_indices = np.argsort(fitnesses)[::-1]
         sorted_population = [population[i] for i in sorted_indices]
         sorted_rewards = fitnesses[sorted_indices]
-        population = sorted_population[:num_parents]
+        #to keep the original population size
+        population = sorted_population[:-population_size]
 
         if sorted_rewards[0] > best_fitness :
             best_fitness = sorted_rewards[0]
             best_weights = sorted_population[0] 
-        print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {sorted_rewards[0]}, Best global fitness: {best_fitness}")
-
+        print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {sorted_rewards[0]}, Best global fitness: {best_fitness}, Avg fitness: {np.mean(np.array(sorted_rewards))}")
     # Set the best weights found
     set_weights(brain, best_weights)
     print(f"Best Fitness: {best_fitness}")
     return best_weights
+
     
 def random_search(brain):
     # ---- RANDOM SEARCH ALGORITHM ----
