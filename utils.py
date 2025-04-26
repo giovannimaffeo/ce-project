@@ -101,8 +101,11 @@ def generate_results(fitness_history_df, best_robot, params, output_dir):
     plt.savefig(plot_path)
     plt.close()
 
-    # save global parameters of execution as csv
-    params_df = pd.DataFrame([params])
+    # convert function to string and save global parameters of execution as csv
+    params_df = pd.DataFrame([{
+        k: (v.__name__ if callable(v) else v)
+        for k, v in params.items()
+    }])
     params_csv_path = os.path.join(output_dir, "parameters_info.csv")
     params_df.to_csv(params_csv_path, index=False)
 

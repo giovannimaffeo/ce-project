@@ -98,7 +98,7 @@ def parent_selection(population, t):
   # return the two with the best fitness
   return selected_parents[0], selected_parents[1]
 
-def crossover(p1, p2, crossover_rate):
+def one_point_crossover(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1
   if random.random() > crossover_rate:
     return p1
@@ -124,6 +124,93 @@ def crossover(p1, p2, crossover_rate):
     if is_connected(offspring):
       # return offspring with no fitness calculated
       return [offspring, None]
+
+def two_point_crossover(p1, p2, crossover_rate):
+  # skip crossover with probability (1 - crossover_rate) and return parent 1
+  if random.random() > crossover_rate:
+   return p1
+  
+  # flat the parents
+  p1 = p1[0].flatten()
+  p2 = p2[0].flatten()
+  individual_length = len(p1)
+
+  # keep trying until a connected offspring is generated
+  while True:
+    # choose first crossover point randomly
+    crossover_point_1 = random.randint(0, individual_length)
+    # choose second point randomly ahead of the first
+    crossover_point_2 = random.randint(min(individual_length, crossover_point_1 + 1), individual_length)
+
+    # get parts from parents
+    offspring_part1 = p1[:crossover_point_1]
+    offspring_part2 = p2[crossover_point_1:crossover_point_2]
+    offspring_part3 = p1[crossover_point_2:]
+
+    # generate offspring by concatenating parts
+    offspring_flat = np.concatenate([offspring_part1, offspring_part2, offspring_part3])
+    offspring = offspring_flat.reshape((5, 5))
+
+    # return the offspring if it is connected
+    if is_connected(offspring):
+      # return offspring with no fitness calculated
+      return [offspring, None] 
+
+def uniform_crossover(p1, p2, crossover_rate):
+  # skip crossover with probability (1 - crossover_rate) and return parent 1
+  if random.random() > crossover_rate:
+    return p1
+  
+  # flatten the parents
+  p1 = p1[0].flatten()
+  p2 = p2[0].flatten()
+  individual_length = len(p1)
+
+  # keep trying until a connected offspring is generated
+  while True:
+    # for each gene, randomly choose from parent1 or parent2
+    offspring_flat = np.array([
+      p1[i] if random.random() < 0.5 else p2[i]
+      for i in range(individual_length)
+    ])
+
+    # reshape the offspring to 5x5 matrix
+    offspring = offspring_flat.reshape((5, 5))
+
+    # return the offspring if it is connected
+    if is_connected(offspring):
+      # return offspring with no fitness calculated
+      return [offspring, None]
+
+def two_point_crossover2(p1, p2, crossover_rate):
+  # skip crossover with probability (1 - crossover_rate) and return parent 1
+  if random.random() > crossover_rate:
+   return p1
+  
+  # flat the parents
+  p1 = p1[0].flatten()
+  p2 = p2[0].flatten()
+  individual_length = len(p1)
+
+  max_retries = 100
+  for _ in range(max_retries):
+    #to avoid having cuts in the end of the sequence
+    crossover_point_1 = random.randint(0, int(individual_length/2))
+    #we are doing this to start a little bit ahead from the first cut
+    crossover_point_2 = random.randint(crossover_point_1+4, individual_length-2)
+    
+    offspring_part1 = p1[:crossover_point_1]
+    offspring_part2 = p2[crossover_point_1:crossover_point_2]
+    offspring_part3 = p1[crossover_point_2:]
+    # generate offspring by concatenating parts
+    offspring_flat = np.concatenate([offspring_part1, offspring_part2, offspring_part3])
+    offspring = offspring_flat.reshape((5, 5))
+    # return the offspring if it is connected
+    if is_connected(offspring):
+      # return offspring with no fitness calculated
+      return [offspring, None]
+    
+  return p1
 
 def mutate(child, mutation_rate, mutation_possibilities):
   # set variable child as the robot
@@ -166,6 +253,7 @@ def ea_search(
   SCENARIO,
   POP_SIZE,
   CROSSOVER_RATE,
+  CROSSOVER_TYPE,
   MUTATION_RATE,
   SURVIVORS_COUNT,
   PARENT_SELECTION_COUNT,
@@ -213,7 +301,7 @@ def ea_search(
     # generate new population with length of (POP_SIZE - SURVIVORS_COUNT)
     for i in range(POP_SIZE - SURVIVORS_COUNT):
       p1, p2 = parent_selection(population, PARENT_SELECTION_COUNT)
-      child = crossover(p1, p2, CROSSOVER_RATE) 
+      child = CROSSOVER_TYPE(p1, p2, CROSSOVER_RATE) 
       child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
       new_population.append(child)
 
