@@ -1,4 +1,6 @@
 import itertools
+from multiprocessing import Pool, cpu_count
+import os
 import pandas as pd
 from datetime import datetime
 
@@ -22,24 +24,35 @@ def basic_test(params, output_dir=None):
   utils.generate_results(fitness_history_df, best_robot, params, output_dir)
   return best_robot, best_fitness, fitness_history
 
+def run_combination(args):
+  i, combination, variable_param_keys, fixed_params, SEEDS, timestamp = args
+  combination_output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}/combination{i+1}"
+  os.makedirs(combination_output_dir, exist_ok=True)
+
+  combination_variable_params = dict(zip(variable_param_keys, combination))
+  best_fitnesses = []
+  fitness_historics = []
+
+  for j, seed in enumerate(SEEDS):
+    params = {
+      **fixed_params,
+      **combination_variable_params,
+      "SEED": seed        
+    }
+    _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}")
+    best_fitnesses.append(best_fitness)
+    fitness_historics.append(fitness_history)
+
+  result = utils.generate_combination_results(
+    combination_variable_params, 
+    best_fitnesses, 
+    fitness_historics, 
+    combination, 
+    combination_output_dir
+  )
+  return list(result)
+
 def hiperparams_fatorial_test():
-  # rodar os basic_tests como assumptions e offline testing para encontrar os melhores 3/4 valores para as listas
-  """"fixed_params = {
-    "MIN_GRID_SIZE": (5, 5),
-    "MAX_GRID_SIZE": (5, 5),
-    "STEPS": 500,
-    "SCENARIO": "Walker-v0",
-    "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER": alternating_gait,
-  }
-  variable_params_grid = {
-    "NUM_GENERATIONS": [2, 5, 10],
-    "POP_SIZE": [5, 10, 15],
-    "CROSSOVER_RATE": [0.6, 0.75, 0.9],
-    "MUTATION_RATE": [0.01, 0.05, 0.1],
-    "SURVIVORS_COUNT": [1, 2],
-    "PARENT_SELECTION_COUNT": [2, 3, 4],
-  }"""
   fixed_params = {
     "NUM_GENERATIONS": 100,
     "MIN_GRID_SIZE": (5, 5),
@@ -51,46 +64,36 @@ def hiperparams_fatorial_test():
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
     "CONTROLLER": alternating_gait,
   }
+
   variable_params_grid = {
     "MUTATION_RATE": [0.03, 0.05],
     "CROSSOVER_RATE": [0.9, 0.95],
     "SURVIVORS_COUNT": [3, 5],
     "PARENT_SELECTION_COUNT": [3, 4]
   }
-  SEEDS = [3223, 19676, 85960, 12577, 62400]
 
+  SEEDS = [3223, 19676, 85960, 12577, 62400]
   timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-  hiperparams_fatorial_test_output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}"
-  combinations_results = []
+  output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}"
+
   variable_param_keys = list(variable_params_grid.keys())
   all_combinations = list(itertools.product(*variable_params_grid.values()))
 
-  for i, combination in enumerate(all_combinations):
-    combination_output_dir = f"{hiperparams_fatorial_test_output_dir}/combination{i+1}"
-    combination_variable_params = dict(zip(variable_param_keys, combination))
-    best_fitnesses = []
-    fitness_historics = []
-    
-    for j, seed in enumerate(SEEDS):
-      params = {
-        **fixed_params,
-        **combination_variable_params,
-        "SEED": seed        
-      }
-      _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}")
-      best_fitnesses.append(best_fitness)
-      fitness_historics.append(fitness_history)
+  # Cria args para cada combinação
+  args_list = [
+    (i, combination, variable_param_keys, fixed_params, SEEDS, timestamp)
+    for i, combination in enumerate(all_combinations)
+  ]
 
-    combination_results = utils.generate_combination_results(
-      combination_variable_params, 
-      best_fitnesses, 
-      fitness_historics, 
-      combination, 
-      combination_output_dir
-    )
-    combinations_results.append(list(combination_results))
-  
-  utils.generate_hiperparams_fatorial_test_results(fixed_params, variable_params_grid, combinations_results, hiperparams_fatorial_test_output_dir)
+  with Pool(processes=min(cpu_count(), len(args_list))) as pool:
+    combinations_results = pool.map(run_combination, args_list)
+
+  utils.generate_hiperparams_fatorial_test_results(
+    fixed_params, 
+    variable_params_grid, 
+    combinations_results, 
+    output_dir
+  )
 
 seeds = [3223, 19676, 85960, 12577, 62400]
 params = {
