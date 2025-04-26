@@ -63,13 +63,13 @@ def hiperparams_fatorial_test():
     "CROSSOVER_TYPE": uniform_crossover,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
     "CONTROLLER": alternating_gait,
+    "PARENT_SELECTION_COUNT": 4,
+    "SURVIVORS_COUNT": 3,
   }
 
   variable_params_grid = {
-    "MUTATION_RATE": [0.03, 0.05],
+    "MUTATION_RATE": [0.03, 0.1],
     "CROSSOVER_RATE": [0.9, 0.95],
-    "SURVIVORS_COUNT": [3, 5],
-    "PARENT_SELECTION_COUNT": [3, 4]
   }
 
   SEEDS = [3223, 19676, 85960, 12577, 62400]
