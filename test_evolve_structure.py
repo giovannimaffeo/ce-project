@@ -54,7 +54,7 @@ def run_combination(args):
 
 def hiperparams_fatorial_test():
   fixed_params = {
-    "NUM_GENERATIONS": 2,
+    "NUM_GENERATIONS": 100,
     "MIN_GRID_SIZE": (5, 5),
     "MAX_GRID_SIZE": (5, 5),
     "STEPS": 500,
