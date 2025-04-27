@@ -118,12 +118,17 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     combination_variable_parameters_info_path = os.path.join(combination_output_dir, "combination_variable_parameters_info.csv")
     combination_variable_parameters_info_df.to_csv(combination_variable_parameters_info_path, index=False)
 
-    combination_best_result = np.mean(best_fitnesses)
-    combination_best_result_df = pd.DataFrame([{
-        "best_fitness": combination_best_result,
+    combination_best_fitness = max(best_fitnesses)
+    combination_avg_best_fitness = np.mean(best_fitnesses)
+    combination_std_best_fitness = np.std(best_fitnesses)    
+
+    combination_results_df = pd.DataFrame([{
+        "combination_avg_best_fitness": combination_avg_best_fitness,
+        "combination_std_best_fitness": combination_std_best_fitness,
+        "combination_best_fitness": combination_best_fitness
     }])
-    combination_best_result_file_path = os.path.join(combination_output_dir, "combination_best_result.csv")
-    combination_best_result_df.to_csv(combination_best_result_file_path, index=False)
+    combination_results_file_path = os.path.join(combination_output_dir, "combination_results.csv")
+    combination_results_df.to_csv(combination_results_file_path, index=False)
 
     n_generations = len(fitness_historics[0])
     combination_fitness_history_df = pd.DataFrame({
@@ -135,8 +140,12 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
         "mean_fitness": [
             np.mean([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
+        ],
+        "std_best_fitness": [
+            np.std([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            for i in range(n_generations)
         ]
-    }) 
+    })
     combination_fitness_history_file_path = os.path.join(combination_output_dir, "combination_fitness_history.csv")
     combination_fitness_history_df.to_csv(combination_fitness_history_file_path, index=False)   
 
@@ -153,16 +162,26 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
         "k--",
         label="Avg"
     )
+    avg = combination_fitness_history_df["best_fitness"]
+    std = combination_fitness_history_df["std_best_fitness"]
+    plt.fill_between(
+        combination_fitness_history_df["generation"],
+        avg - std,
+        avg + std,
+        color="gray",
+        alpha=0.3,
+        label="±1 Std Dev"
+    )
     plt.xlabel("Generation")
     plt.ylabel("Best Fitness")
-    plt.title(f"Generation: {combination_fitness_history_df['generation'].iloc[-1]} | Combination Best Fitness: {combination_fitness_history_df['best_fitness'].iloc[-1]:.2f}")
+    plt.title(f"Generation {combination_fitness_history_df['generation'].iloc[-1]} | Combination Avg Best Fitness: {combination_avg_best_fitness:.2f}")
     plt.legend()
     plt.grid(True)
     combination_fitness_plot_path = os.path.join(combination_output_dir, "combination_fitness_plot.png")
     plt.savefig(combination_fitness_plot_path)
     plt.close()
 
-    return combination_variable_parameters_info_df, combination_best_result_df, combination_fitness_history_df
+    return combination_variable_parameters_info_df, combination_results_df, combination_fitness_history_df
 
 def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_grid, combinations_results, hiperparams_fatorial_test_output_dir):
     hiperparams_fatorial_test_fixed_parameters_df = pd.DataFrame([fixed_params])
@@ -178,27 +197,30 @@ def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_gri
     variable_params_df.to_csv(variable_params_file_path, index=False, header=False)   
     
     hiperparams_fatorial_test_fitnesses_rows = []
-    for i, (_, combination_best_result_df, _) in enumerate(combinations_results):
+    for i, (_, combination_results_df, _) in enumerate(combinations_results):
         row_dict = {
             "combination": i + 1,
-            "combination_fitness": combination_best_result_df["best_fitness"].iloc[0]
+            "combination_avg_best_fitness": combination_results_df["combination_avg_best_fitness"].iloc[0],
+            "combination_std_best_fitness": combination_results_df["combination_std_best_fitness"].iloc[0],
+            "combination_best_fitness": combination_results_df["combination_best_fitness"].iloc[0]
         }
         hiperparams_fatorial_test_fitnesses_rows.append(row_dict)
     hiperparams_fatorial_test_fitnesses_df = pd.DataFrame(hiperparams_fatorial_test_fitnesses_rows)
     hiperparams_fatorial_test_fitnesses_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_fitnesses.csv")
     hiperparams_fatorial_test_fitnesses_df.to_csv(hiperparams_fatorial_test_fitnesses_file_path, index=False)
 
-    best_fitnesses = [combination_best_result_df["best_fitness"].iloc[0] for (_, combination_best_result_df, _) in combinations_results]
-    best_combination_fitness_index = int(np.argmax(best_fitnesses))
-    best_combination_fitness = best_fitnesses[best_combination_fitness_index]
+    best_combination_index = int(hiperparams_fatorial_test_fitnesses_df["combination_avg_best_fitness"].idxmax())
+    best_combination_row = hiperparams_fatorial_test_fitnesses_df.loc[best_combination_index]
     hiperparams_fatorial_test_best_result_df = pd.DataFrame([{
-        "combination": best_combination_fitness_index + 1,
-        "best_combination_fitness": best_combination_fitness
+        "combination": best_combination_row["combination"],
+        "best_combination_avg_best_fitness": best_combination_row["combination_avg_best_fitness"],
+        "best_combination_std_best_fitness": best_combination_row["combination_std_best_fitness"],
+        "best_combination_best_fitness": best_combination_row["combination_best_fitness"],
     }])
     hiperparams_fatorial_test_best_result_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_best_result.csv")
     hiperparams_fatorial_test_best_result_df.to_csv(hiperparams_fatorial_test_best_result_file_path, index=False)
 
-    plt.figure()
+    plt.figure(figsize=(10, 6))
     for i, (_, _, combination_fitness_history_df) in enumerate(combinations_results):
         plt.plot(
             combination_fitness_history_df["generation"],
@@ -211,7 +233,7 @@ def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_gri
     plt.grid(True)
     plt.legend(
         loc="upper center",
-        bbox_to_anchor=(0.5, -0.2),
+        bbox_to_anchor=(0.5, -0.35),
         ncol=3,
         fontsize="small"
     )
