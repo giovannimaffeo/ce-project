@@ -167,7 +167,8 @@ def uniform_crossover(p1, p2, crossover_rate):
   individual_length = len(p1)
 
   # keep trying until a connected offspring is generated
-  while True:
+  max_attempts = 1000
+  for _ in range(max_attempts):
     # for each gene, randomly choose from parent1 or parent2
     offspring_flat = np.array([
       p1[i] if random.random() < 0.5 else p2[i]
@@ -181,6 +182,9 @@ def uniform_crossover(p1, p2, crossover_rate):
     if is_connected(offspring):
       # return offspring with no fitness calculated
       return [offspring, None]
+  
+  print(f"[Warning] Failed to produce connected offspring after {max_attempts} attempts. Returning p1.")
+  return p1
 
 def two_point_crossover2(p1, p2, crossover_rate):
   # skip crossover with probability (1 - crossover_rate) and return parent 1

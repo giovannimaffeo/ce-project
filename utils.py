@@ -25,7 +25,7 @@ def simulate_best_robot(robot_structure, scenario=None, steps=500, controller = 
     action_size = sim.get_dim_action_space('robot')  # Get correct action size
     t_reward = 0
     
-    for t in range(200):  # Simulate for 200 timesteps
+    for t in range(steps):  # Simulate for 200 timesteps
         # Update actuation before stepping
         actuation = controller(action_size,t)
 
@@ -57,7 +57,7 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
         t_reward = 0
 
         frames = []
-        for t in range(200):
+        for t in range(steps):
             actuation = controller(action_size,t)
             ob, reward, terminated, truncated, info = env.step(actuation)
             t_reward += reward
@@ -133,16 +133,24 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     n_generations = len(fitness_historics[0])
     combination_fitness_history_df = pd.DataFrame({
         "generation": list(range(1, n_generations + 1)),
-        "best_fitness": [
+        "combination_avg_best_fitness": [
             np.mean([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
-        "mean_fitness": [
+        "combination_avg_mean_fitness": [
             np.mean([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
-        "std_best_fitness": [
+        "combination_std_best_fitness": [
             np.std([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            for i in range(n_generations)
+        ],
+        "combination_std_mean_fitness": [
+            np.std([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
+            for i in range(n_generations)
+        ],
+        "combination_best_fitness": [
+            max([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ]
     })
@@ -152,29 +160,29 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     plt.figure()
     for i, fitness_history in enumerate(fitness_historics):
         plt.plot(
-            [generation["generation"] for generation in fitness_history], 
-            [generation["best_fitness"] for generation in fitness_history], 
+            [generation["generation"] for generation in fitness_history],
+            [generation["best_fitness"] for generation in fitness_history],
             label=f"Run {i+1}"
         )
     plt.plot(
         combination_fitness_history_df["generation"],
-        combination_fitness_history_df["best_fitness"],
+        combination_fitness_history_df["combination_avg_best_fitness"],
         "k--",
         label="Avg"
     )
-    avg = combination_fitness_history_df["best_fitness"]
-    std = combination_fitness_history_df["std_best_fitness"]
+    avg = combination_fitness_history_df["combination_avg_best_fitness"]
+    std = combination_fitness_history_df["combination_std_best_fitness"]
     plt.fill_between(
         combination_fitness_history_df["generation"],
         avg - std,
         avg + std,
         color="gray",
         alpha=0.3,
-        label="±1 Std Dev"
+        label="± Std Dev"
     )
     plt.xlabel("Generation")
     plt.ylabel("Best Fitness")
-    plt.title(f"Generation {combination_fitness_history_df['generation'].iloc[-1]} | Combination Avg Best Fitness: {combination_avg_best_fitness:.2f}")
+    plt.title(f"Generation {combination_fitness_history_df['generation'].iloc[-1]} | Combination Avg Best Fitness: {np.max(combination_fitness_history_df['combination_avg_best_fitness']):.2f}")
     plt.legend()
     plt.grid(True)
     combination_fitness_plot_path = os.path.join(combination_output_dir, "combination_fitness_plot.png")
@@ -190,11 +198,7 @@ def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_gri
 
     hiperparams_fatorial_test_variable_parameters_df = pd.DataFrame([list(variable_params_grid.keys())])
     hiperparams_fatorial_test_variable_parameters_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_variable_parameters.csv")
-    hiperparams_fatorial_test_variable_parameters_df.to_csv(hiperparams_fatorial_test_variable_parameters_file_path, index=False, header=False)    
-
-    variable_params_df = pd.DataFrame([list(variable_params_grid.keys())])
-    variable_params_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_variable_parameters.csv")
-    variable_params_df.to_csv(variable_params_file_path, index=False, header=False)   
+    hiperparams_fatorial_test_variable_parameters_df.to_csv(hiperparams_fatorial_test_variable_parameters_file_path, index=False, header=False)     
     
     hiperparams_fatorial_test_fitnesses_rows = []
     for i, (_, combination_results_df, _) in enumerate(combinations_results):
@@ -224,7 +228,7 @@ def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_gri
     for i, (_, _, combination_fitness_history_df) in enumerate(combinations_results):
         plt.plot(
             combination_fitness_history_df["generation"],
-            combination_fitness_history_df["best_fitness"],
+            combination_fitness_history_df["combination_avg_best_fitness"],
             label=f"Combination {i+1}"
         )
     plt.xlabel("Generation")
