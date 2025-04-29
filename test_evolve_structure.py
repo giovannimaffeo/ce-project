@@ -1,6 +1,7 @@
 import itertools
 from multiprocessing import Pool, cpu_count
 import os
+import sys
 import pandas as pd
 from datetime import datetime
 
@@ -25,9 +26,14 @@ def basic_test(params, output_dir=None):
   return best_robot, best_fitness, fitness_history
 
 def run_combination(args):
-  i, combination, variable_param_keys, fixed_params, SEEDS, timestamp = args
-  combination_output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}/combination{i+1}"
+  i, combination, variable_param_keys, fixed_params, SEEDS, output_dir = args
+  combination_output_dir = f"{output_dir}/combination{i+1}"
   os.makedirs(combination_output_dir, exist_ok=True)
+
+  log_path = os.path.join(output_dir, "log.txt")
+  f = open(log_path, "a", buffering=1)
+  sys.stdout = f
+  sys.stderr = f
 
   combination_variable_params = dict(zip(variable_param_keys, combination))
   best_fitnesses = []
@@ -75,13 +81,19 @@ def hiperparams_fatorial_test():
   SEEDS = [3223, 19676, 85960, 12577, 62400]
   timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
   output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}"
+  os.makedirs(output_dir, exist_ok=True)
+
+  log_path = os.path.join(output_dir, "log.txt")
+  f = open(log_path, "a", buffering=1)
+  sys.stdout = f
+  sys.stderr = f
 
   variable_param_keys = list(variable_params_grid.keys())
   all_combinations = list(itertools.product(*variable_params_grid.values()))
 
   # Cria args para cada combinação
   args_list = [
-    (i, combination, variable_param_keys, fixed_params, SEEDS, timestamp)
+    (i, combination, variable_param_keys, fixed_params, SEEDS, output_dir)
     for i, combination in enumerate(all_combinations)
   ]
 
