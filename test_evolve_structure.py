@@ -9,7 +9,7 @@ from evolve_structure import ea_search, one_point_crossover, two_point_crossover
 from fixed_controllers import alternating_gait
 import utils
 
-def basic_test(params, output_dir=None):
+def basic_test(params, output_dir=None, should_create_gif=True):
   if output_dir is None:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     output_dir = f"outputs/evolve_structure/ea_search/basic_tests/{timestamp}"
@@ -22,7 +22,7 @@ def basic_test(params, output_dir=None):
 
   # generate results
   fitness_history_df = pd.DataFrame(fitness_history)
-  utils.generate_results(fitness_history_df, best_robot, params, output_dir)
+  utils.generate_results(fitness_history_df, best_robot, params, output_dir, should_create_gif)
   return best_robot, best_fitness, fitness_history
 
 def run_combination(args):
@@ -45,7 +45,7 @@ def run_combination(args):
       **combination_variable_params,
       "SEED": seed        
     }
-    _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}")
+    _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}", False)
     best_fitnesses.append(best_fitness)
     fitness_historics.append(fitness_history)
 

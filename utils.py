@@ -72,7 +72,7 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
     except ValueError as e:
         print('Invalid')
 
-def generate_results(fitness_history_df, best_robot, params, output_dir):
+def generate_results(fitness_history_df, best_robot, params, output_dir, should_create_gif=True):
     os.makedirs(output_dir, exist_ok=True)
 
     # save best result (fitness + robot matrix) as csv
@@ -109,9 +109,10 @@ def generate_results(fitness_history_df, best_robot, params, output_dir):
     params_csv_path = os.path.join(output_dir, "parameters_info.csv")
     params_df.to_csv(params_csv_path, index=False)
 
-    # generate and save gif of best robot
-    gif_path = os.path.join(output_dir, "evolve_structure.gif")
-    create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
+    if should_create_gif:
+        # generate and save gif of best robot
+        gif_path = os.path.join(output_dir, "evolve_structure.gif")
+        create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
 
 def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historics, combination, combination_output_dir):
     combination_variable_parameters_info_df = pd.DataFrame([list(combination_variable_params.values())], columns=list(combination_variable_params.keys()))
