@@ -38,6 +38,9 @@ def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):
     env.close()
     return t_reward
   except (ValueError, IndexError) as e:
+    print(f"[Warning] Simulation failed: {str(e)}")
+    print("Robot structure:")
+    print(robot_structure)
     return 0.0
 
 def create_random_robot(MIN_GRID_SIZE, MAX_GRID_SIZE):
