@@ -43,7 +43,6 @@ def run_combination(args):
     }
     _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}", False)
     best_fitnesses.append(best_fitness)
-    del fitness_history_df
     fitness_historics.append(fitness_history)
 
   result = utils.generate_combination_results(
