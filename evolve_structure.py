@@ -262,8 +262,14 @@ def ea_search(
   PARENT_SELECTION_COUNT,
   VOXEL_TYPES,
   CONTROLLER,
-  SEED
+  SEED,
+  LOG_FILE=None
 ):
+  def log(msg):
+    if LOG_FILE:
+      with open(LOG_FILE, "a") as f:
+        f.write(f"[{datetime.now()}] [PID {os.getpid()}] {msg}\n")
+
   if SEED is not None:
     random.seed(SEED)
     np.random.seed(SEED)
@@ -277,6 +283,7 @@ def ea_search(
   fitness_history = []
 
   for it in range(NUM_GENERATIONS):
+    log("starting evaluation individuals")
     # get individuals fitness for sorting population
     for i, individual in enumerate(population):
       # calculate the fitness only for the new individuals (fitness is None)
@@ -291,7 +298,7 @@ def ea_search(
     if best_current_fitness > best_fitness:
       best_fitness = best_current_fitness
       best_robot = population[0][0]
-    print(f"Iteration {it + 1}: Fitness = {best_fitness}")
+    log(f"Iteration {it + 1}: Fitness = {best_fitness}")
     # store best and mean fitness in the history
     mean_fitness = sum(ind[1] for ind in population) / len(population)
     fitness_history.append({
@@ -300,6 +307,7 @@ def ea_search(
       "mean_fitness": mean_fitness
     })
 
+    log("starting gen of new population")
     new_population = []
     # generate new population with length of (POP_SIZE - SURVIVORS_COUNT)
     for i in range(POP_SIZE - SURVIVORS_COUNT):
@@ -308,6 +316,7 @@ def ea_search(
       child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
       new_population.append(child)
 
+    log("starting survivor_selection")
     # set population as new population plus best individuals of previous population
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
 

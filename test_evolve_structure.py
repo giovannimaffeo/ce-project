@@ -38,7 +38,8 @@ def run_combination(args):
     params = {
       **fixed_params,
       **combination_variable_params,
-      "SEED": seed        
+      "SEED": seed,
+      "LOG_FILE": os.path.join(combination_output_dir, f"log_combination{i + 1}_pid{os.getpid()}.txt")        
     }
     run_output_dir = os.path.join(combination_output_dir, f"run{j+1}")
     _, best_fitness, fitness_history = basic_test(params, run_output_dir, False)
