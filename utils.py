@@ -11,6 +11,8 @@ from evogym import EvoViewer, get_full_connectivity
 import imageio
 from fixed_controllers import *
 
+import tracemalloc
+
 # ---- SIMULATE BEST ROBOT ----
 def simulate_best_robot(robot_structure, scenario=None, steps=500, controller = alternating_gait):
     
@@ -192,8 +194,12 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     plt.savefig(combination_fitness_plot_path)
     plt.close()
 
+    current, peak = tracemalloc.get_traced_memory()
+    print(f"[PID {os.getpid()}] Current memory usage: {current / 1024**2:.2f} MB; Peak: {peak / 1024**2:.2f} MB")
     del fitness_historics
     gc.collect()
+    current, peak = tracemalloc.get_traced_memory()
+    print(f"[PID {os.getpid()}] Current memory usage: {current / 1024**2:.2f} MB; Peak: {peak / 1024**2:.2f} MB")
 
     return combination_variable_parameters_info_df, combination_results_df, combination_fitness_history_df
 

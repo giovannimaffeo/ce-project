@@ -1,4 +1,5 @@
 from datetime import datetime
+import gc
 import os
 import numpy as np
 import pandas as pd
@@ -6,6 +7,7 @@ import random
 import matplotlib.pyplot as plt
 import gymnasium as gym
 from evogym.envs import *
+import tracemalloc
 
 from evogym import EvoWorld, EvoSim, EvoViewer, sample_robot, get_full_connectivity, is_connected
 from fixed_controllers import *
@@ -17,14 +19,18 @@ def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):
     env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
     env.reset()
     sim = env.sim
-    viewer = EvoViewer(sim)
-    viewer.track_objects("robot")
+
+    viewer = None
+    if view:
+      viewer = EvoViewer(sim)
+      viewer.track_objects("robot")
+
     t_reward = 0
     action_size = sim.get_dim_action_space("robot")  # Get correct action size
     for t in range(STEPS):  
       # Update actuation before stepping
       actuation = CONTROLLER(action_size, t)
-      if view:
+      if view and viewer:
         viewer.render("screen") 
       ob, reward, terminated, truncated, info = env.step(actuation)
       t_reward += reward
@@ -33,7 +39,8 @@ def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):
         env.reset()
         break
 
-    viewer.close()
+    if viewer:
+      viewer.close()
     env.close()
     return t_reward
   except (ValueError, IndexError) as e:
@@ -292,6 +299,8 @@ def ea_search(
         population[i][1] = fitness
     # sort population by individual fitness
     population = sorted(population, key=lambda x: x[1], reverse=True)
+    current, peak = tracemalloc.get_traced_memory()
+    log(f"[PID {os.getpid()}] Memory after evaluate_fitness: Current = {current / 1024**2:.2f} MB; Peak = {peak / 1024**2:.2f} MB")
 
     # update best_fitness and best_robot
     best_current_fitness = population[0][1]
@@ -320,5 +329,6 @@ def ea_search(
     # set population as new population plus best individuals of previous population
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
 
+  gc.collect()
   # return best individual regarding all iterations
   return best_robot, best_fitness, fitness_history

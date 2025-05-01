@@ -9,6 +9,9 @@ from evolve_structure import ea_search, one_point_crossover, two_point_crossover
 from fixed_controllers import alternating_gait
 import utils
 
+import tracemalloc
+tracemalloc.start()
+
 def basic_test(params, output_dir=None, should_create_gif=True):
   if output_dir is None:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -45,8 +48,12 @@ def run_combination(args):
     _, best_fitness, fitness_history = basic_test(params, run_output_dir, False)
     best_fitnesses.append(best_fitness)
 
+    current, peak = tracemalloc.get_traced_memory()
+    print(f"[PID {os.getpid()}] Current memory usage: {current / 1024**2:.2f} MB; Peak: {peak / 1024**2:.2f} MB")
     del fitness_history
     gc.collect()
+    current, peak = tracemalloc.get_traced_memory()
+    print(f"[PID {os.getpid()}] Current memory usage: {current / 1024**2:.2f} MB; Peak: {peak / 1024**2:.2f} MB")
     fitness_historic_paths.append(os.path.join(run_output_dir, "fitness_history.csv"))
 
   result = utils.generate_combination_results(
