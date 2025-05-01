@@ -42,6 +42,12 @@ def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):
     if viewer:
       viewer.close()
     env.close()
+    
+    del viewer
+    del sim
+    del env
+    gc.collect()
+    
     return t_reward
   except (ValueError, IndexError) as e:
     return 0.0
