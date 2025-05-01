@@ -3,6 +3,7 @@ from multiprocessing import Pool, cpu_count
 import os
 import pandas as pd
 from datetime import datetime
+import gc
 
 from evolve_structure import ea_search, one_point_crossover, two_point_crossover, two_point_crossover2, uniform_crossover
 from fixed_controllers import alternating_gait
@@ -22,6 +23,7 @@ def basic_test(params, output_dir=None, should_create_gif=True):
   # generate results
   fitness_history_df = pd.DataFrame(fitness_history)
   utils.generate_results(fitness_history_df, best_robot, params, output_dir, should_create_gif)
+  gc.collect()
   return best_robot, best_fitness, fitness_history
 
 def run_combination(args):
@@ -41,6 +43,7 @@ def run_combination(args):
     }
     _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}", False)
     best_fitnesses.append(best_fitness)
+    del fitness_history_df
     fitness_historics.append(fitness_history)
 
   result = utils.generate_combination_results(
