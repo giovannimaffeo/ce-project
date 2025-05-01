@@ -23,7 +23,6 @@ def basic_test(params, output_dir=None, should_create_gif=True):
   # generate results
   fitness_history_df = pd.DataFrame(fitness_history)
   utils.generate_results(fitness_history_df, best_robot, params, output_dir, should_create_gif)
-  gc.collect()
   return best_robot, best_fitness, fitness_history
 
 def run_combination(args):
@@ -33,7 +32,7 @@ def run_combination(args):
 
   combination_variable_params = dict(zip(variable_param_keys, combination))
   best_fitnesses = []
-  fitness_historics = []
+  fitness_historic_paths = []
 
   for j, seed in enumerate(SEEDS):
     params = {
@@ -41,15 +40,18 @@ def run_combination(args):
       **combination_variable_params,
       "SEED": seed        
     }
-    _, best_fitness, fitness_history = basic_test(params, f"{combination_output_dir}/run{j+1}", False)
+    run_output_dir = os.path.join(combination_output_dir, f"run{j+1}")
+    _, best_fitness, fitness_history = basic_test(params, run_output_dir, False)
     best_fitnesses.append(best_fitness)
-    fitness_historics.append(fitness_history)
+
+    del fitness_history
+    gc.collect()
+    fitness_historic_paths.append(os.path.join(run_output_dir, "fitness_history.csv"))
 
   result = utils.generate_combination_results(
     combination_variable_params, 
     best_fitnesses, 
-    fitness_historics, 
-    combination, 
+    fitness_historic_paths, 
     combination_output_dir
   )
   return list(result)
@@ -64,7 +66,7 @@ def hiperparams_fatorial_test():
     "POP_SIZE": 50,
     "CROSSOVER_TYPE": uniform_crossover,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER": alternating_gait,
+    "CONTROLLER": alternating_gait
   }
 
   variable_params_grid = {

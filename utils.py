@@ -1,3 +1,4 @@
+import gc
 import numpy as np
 import json
 import os
@@ -114,7 +115,7 @@ def generate_results(fitness_history_df, best_robot, params, output_dir, should_
         gif_path = os.path.join(output_dir, "evolve_structure.gif")
         create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
 
-def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historics, combination, combination_output_dir):
+def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historic_paths, combination_output_dir):
     combination_variable_parameters_info_df = pd.DataFrame([list(combination_variable_params.values())], columns=list(combination_variable_params.keys()))
     combination_variable_parameters_info_path = os.path.join(combination_output_dir, "combination_variable_parameters_info.csv")
     combination_variable_parameters_info_df.to_csv(combination_variable_parameters_info_path, index=False)
@@ -131,27 +132,28 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     combination_results_file_path = os.path.join(combination_output_dir, "combination_results.csv")
     combination_results_df.to_csv(combination_results_file_path, index=False)
 
+    fitness_historics = [pd.read_csv(path) for path in fitness_historic_paths]
     n_generations = len(fitness_historics[0])
     combination_fitness_history_df = pd.DataFrame({
         "generation": list(range(1, n_generations + 1)),
         "combination_avg_best_fitness": [
-            np.mean([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            np.mean([fitness_history.iloc[i]["best_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
         "combination_avg_mean_fitness": [
-            np.mean([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
+            np.mean([fitness_history.iloc[i]["mean_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
         "combination_std_best_fitness": [
-            np.std([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            np.std([fitness_history.iloc[i]["best_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
         "combination_std_mean_fitness": [
-            np.std([fitness_history[i]["mean_fitness"] for fitness_history in fitness_historics])
+            np.std([fitness_history.iloc[i]["mean_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ],
         "combination_best_fitness": [
-            max([fitness_history[i]["best_fitness"] for fitness_history in fitness_historics])
+            max([fitness_history.iloc[i]["best_fitness"] for fitness_history in fitness_historics])
             for i in range(n_generations)
         ]
     })
@@ -161,8 +163,8 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     plt.figure()
     for i, fitness_history in enumerate(fitness_historics):
         plt.plot(
-            [generation["generation"] for generation in fitness_history],
-            [generation["best_fitness"] for generation in fitness_history],
+            fitness_history["generation"],
+            fitness_history["best_fitness"],
             label=f"Run {i+1}"
         )
     plt.plot(
@@ -189,6 +191,9 @@ def generate_combination_results(combination_variable_params, best_fitnesses, fi
     combination_fitness_plot_path = os.path.join(combination_output_dir, "combination_fitness_plot.png")
     plt.savefig(combination_fitness_plot_path)
     plt.close()
+
+    del fitness_historics
+    gc.collect()
 
     return combination_variable_parameters_info_df, combination_results_df, combination_fitness_history_df
 

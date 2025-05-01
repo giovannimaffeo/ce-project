@@ -8,7 +8,6 @@ import gymnasium as gym
 from evogym.envs import *
 
 from evogym import EvoWorld, EvoSim, EvoViewer, sample_robot, get_full_connectivity, is_connected
-import utils
 from fixed_controllers import *
 
 def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):    
@@ -18,31 +17,25 @@ def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):
     env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
     env.reset()
     sim = env.sim
-
-    viewer = None
-    if view:
-      viewer = EvoViewer(sim)
-      viewer.track_objects("robot")
-
+    viewer = EvoViewer(sim)
+    viewer.track_objects("robot")
     t_reward = 0
-    action_size = sim.get_dim_action_space("robot")
-    
+    action_size = sim.get_dim_action_space("robot")  # Get correct action size
     for t in range(STEPS):  
+      # Update actuation before stepping
       actuation = CONTROLLER(action_size, t)
-      if view and viewer:
+      if view:
         viewer.render("screen") 
       ob, reward, terminated, truncated, info = env.step(actuation)
       t_reward += reward
 
       if terminated or truncated:
+        env.reset()
         break
 
-    if viewer:
-      viewer.close()
+    viewer.close()
     env.close()
-
     return t_reward
-
   except (ValueError, IndexError) as e:
     return 0.0
 
