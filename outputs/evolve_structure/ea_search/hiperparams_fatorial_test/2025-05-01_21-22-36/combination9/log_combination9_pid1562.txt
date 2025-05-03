@@ -1,0 +1,1601 @@
+[2025-05-02 05:01:21.769754] [PID 1562] starting evaluation individuals
+[2025-05-02 05:02:23.245722] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.64 MB; Peak = 2.85 MB
+[2025-05-02 05:02:23.245828] [PID 1562] Iteration 1: Fitness = 2.200727235966663
+[2025-05-02 05:02:23.245915] [PID 1562] starting gen of new population
+[2025-05-02 05:02:23.280526] [PID 1562] starting survivor_selection
+[2025-05-02 05:02:23.280704] [PID 1562] starting evaluation individuals
+[2025-05-02 05:03:20.645484] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:03:20.645606] [PID 1562] Iteration 2: Fitness = 2.200727235966663
+[2025-05-02 05:03:20.645693] [PID 1562] starting gen of new population
+[2025-05-02 05:03:20.678813] [PID 1562] starting survivor_selection
+[2025-05-02 05:03:20.679003] [PID 1562] starting evaluation individuals
+[2025-05-02 05:04:19.213079] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:04:19.213182] [PID 1562] Iteration 3: Fitness = 2.200727235966663
+[2025-05-02 05:04:19.213309] [PID 1562] starting gen of new population
+[2025-05-02 05:04:19.251294] [PID 1562] starting survivor_selection
+[2025-05-02 05:04:19.251495] [PID 1562] starting evaluation individuals
+[2025-05-02 05:05:16.886824] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:05:16.886948] [PID 1562] Iteration 4: Fitness = 2.200727235966663
+[2025-05-02 05:05:16.887037] [PID 1562] starting gen of new population
+[2025-05-02 05:05:16.920983] [PID 1562] starting survivor_selection
+[2025-05-02 05:05:16.921200] [PID 1562] starting evaluation individuals
+[2025-05-02 05:06:15.088247] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:06:15.088359] [PID 1562] Iteration 5: Fitness = 2.200727235966663
+[2025-05-02 05:06:15.088501] [PID 1562] starting gen of new population
+[2025-05-02 05:06:15.117419] [PID 1562] starting survivor_selection
+[2025-05-02 05:06:15.117620] [PID 1562] starting evaluation individuals
+[2025-05-02 05:07:12.988940] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:07:12.989038] [PID 1562] Iteration 6: Fitness = 2.200727235966663
+[2025-05-02 05:07:12.989147] [PID 1562] starting gen of new population
+[2025-05-02 05:07:13.018502] [PID 1562] starting survivor_selection
+[2025-05-02 05:07:13.018698] [PID 1562] starting evaluation individuals
+[2025-05-02 05:08:10.106195] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:08:10.106361] [PID 1562] Iteration 7: Fitness = 2.200727235966663
+[2025-05-02 05:08:10.106455] [PID 1562] starting gen of new population
+[2025-05-02 05:08:10.141472] [PID 1562] starting survivor_selection
+[2025-05-02 05:08:10.141702] [PID 1562] starting evaluation individuals
+[2025-05-02 05:09:07.745426] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 05:09:07.745550] [PID 1562] Iteration 8: Fitness = 2.2782588782857087
+[2025-05-02 05:09:07.745634] [PID 1562] starting gen of new population
+[2025-05-02 05:09:07.779739] [PID 1562] starting survivor_selection
+[2025-05-02 05:09:07.779931] [PID 1562] starting evaluation individuals
+[2025-05-02 05:10:05.335456] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:10:05.335587] [PID 1562] Iteration 9: Fitness = 2.2782588782857087
+[2025-05-02 05:10:05.335674] [PID 1562] starting gen of new population
+[2025-05-02 05:10:05.371558] [PID 1562] starting survivor_selection
+[2025-05-02 05:10:05.371793] [PID 1562] starting evaluation individuals
+[2025-05-02 05:11:02.809432] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:11:02.809542] [PID 1562] Iteration 10: Fitness = 3.5023055216319117
+[2025-05-02 05:11:02.809644] [PID 1562] starting gen of new population
+[2025-05-02 05:11:02.843392] [PID 1562] starting survivor_selection
+[2025-05-02 05:11:02.843588] [PID 1562] starting evaluation individuals
+[2025-05-02 05:12:00.838890] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:12:00.839005] [PID 1562] Iteration 11: Fitness = 3.5023055216319117
+[2025-05-02 05:12:00.839483] [PID 1562] starting gen of new population
+[2025-05-02 05:12:00.876162] [PID 1562] starting survivor_selection
+[2025-05-02 05:12:00.876432] [PID 1562] starting evaluation individuals
+[2025-05-02 05:12:58.681116] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:12:58.681257] [PID 1562] Iteration 12: Fitness = 3.5023055216319117
+[2025-05-02 05:12:58.681346] [PID 1562] starting gen of new population
+[2025-05-02 05:12:58.710459] [PID 1562] starting survivor_selection
+[2025-05-02 05:12:58.710676] [PID 1562] starting evaluation individuals
+[2025-05-02 05:13:56.658416] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:13:56.658523] [PID 1562] Iteration 13: Fitness = 3.5023055216319117
+[2025-05-02 05:13:56.658641] [PID 1562] starting gen of new population
+[2025-05-02 05:13:56.689091] [PID 1562] starting survivor_selection
+[2025-05-02 05:13:56.689273] [PID 1562] starting evaluation individuals
+[2025-05-02 05:14:54.269618] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:14:54.269747] [PID 1562] Iteration 14: Fitness = 3.5023055216319117
+[2025-05-02 05:14:54.269833] [PID 1562] starting gen of new population
+[2025-05-02 05:14:54.308164] [PID 1562] starting survivor_selection
+[2025-05-02 05:14:54.308350] [PID 1562] starting evaluation individuals
+[2025-05-02 05:15:53.109080] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:15:53.109180] [PID 1562] Iteration 15: Fitness = 4.747843182010203
+[2025-05-02 05:15:53.109265] [PID 1562] starting gen of new population
+[2025-05-02 05:15:53.141828] [PID 1562] starting survivor_selection
+[2025-05-02 05:15:53.142014] [PID 1562] starting evaluation individuals
+[2025-05-02 05:16:51.415333] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:16:51.415431] [PID 1562] Iteration 16: Fitness = 4.747843182010203
+[2025-05-02 05:16:51.415561] [PID 1562] starting gen of new population
+[2025-05-02 05:16:51.453340] [PID 1562] starting survivor_selection
+[2025-05-02 05:16:51.453560] [PID 1562] starting evaluation individuals
+[2025-05-02 05:17:49.703730] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:17:49.703831] [PID 1562] Iteration 17: Fitness = 4.747843182010203
+[2025-05-02 05:17:49.703946] [PID 1562] starting gen of new population
+[2025-05-02 05:17:49.741592] [PID 1562] starting survivor_selection
+[2025-05-02 05:17:49.741835] [PID 1562] starting evaluation individuals
+[2025-05-02 05:18:48.016975] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:18:48.017108] [PID 1562] Iteration 18: Fitness = 4.747843182010203
+[2025-05-02 05:18:48.017225] [PID 1562] starting gen of new population
+[2025-05-02 05:18:48.053943] [PID 1562] starting survivor_selection
+[2025-05-02 05:18:48.054137] [PID 1562] starting evaluation individuals
+[2025-05-02 05:19:46.425249] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:19:46.425379] [PID 1562] Iteration 19: Fitness = 6.038677583483228
+[2025-05-02 05:19:46.425485] [PID 1562] starting gen of new population
+[2025-05-02 05:19:46.457847] [PID 1562] starting survivor_selection
+[2025-05-02 05:19:46.458026] [PID 1562] starting evaluation individuals
+[2025-05-02 05:20:45.467948] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:20:45.468084] [PID 1562] Iteration 20: Fitness = 6.038677583483228
+[2025-05-02 05:20:45.468171] [PID 1562] starting gen of new population
+[2025-05-02 05:20:45.500540] [PID 1562] starting survivor_selection
+[2025-05-02 05:20:45.500763] [PID 1562] starting evaluation individuals
+[2025-05-02 05:21:43.956681] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:21:43.956821] [PID 1562] Iteration 21: Fitness = 6.038677583483228
+[2025-05-02 05:21:43.956909] [PID 1562] starting gen of new population
+[2025-05-02 05:21:43.991619] [PID 1562] starting survivor_selection
+[2025-05-02 05:21:43.991816] [PID 1562] starting evaluation individuals
+[2025-05-02 05:22:42.205759] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:22:42.205882] [PID 1562] Iteration 22: Fitness = 6.038677583483228
+[2025-05-02 05:22:42.206140] [PID 1562] starting gen of new population
+[2025-05-02 05:22:42.243878] [PID 1562] starting survivor_selection
+[2025-05-02 05:22:42.244111] [PID 1562] starting evaluation individuals
+[2025-05-02 05:23:41.254318] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:23:41.254476] [PID 1562] Iteration 23: Fitness = 6.038677583483228
+[2025-05-02 05:23:41.254567] [PID 1562] starting gen of new population
+[2025-05-02 05:23:41.285006] [PID 1562] starting survivor_selection
+[2025-05-02 05:23:41.285206] [PID 1562] starting evaluation individuals
+[2025-05-02 05:24:40.546139] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:24:40.546274] [PID 1562] Iteration 24: Fitness = 6.038677583483228
+[2025-05-02 05:24:40.546460] [PID 1562] starting gen of new population
+[2025-05-02 05:24:40.581234] [PID 1562] starting survivor_selection
+[2025-05-02 05:24:40.581493] [PID 1562] starting evaluation individuals
+[2025-05-02 05:25:39.143179] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:25:39.143308] [PID 1562] Iteration 25: Fitness = 6.038677583483228
+[2025-05-02 05:25:39.143407] [PID 1562] starting gen of new population
+[2025-05-02 05:25:39.179408] [PID 1562] starting survivor_selection
+[2025-05-02 05:25:39.179605] [PID 1562] starting evaluation individuals
+[2025-05-02 05:26:38.963590] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:26:38.963695] [PID 1562] Iteration 26: Fitness = 6.038677583483228
+[2025-05-02 05:26:38.963809] [PID 1562] starting gen of new population
+[2025-05-02 05:26:39.000002] [PID 1562] starting survivor_selection
+[2025-05-02 05:26:39.000212] [PID 1562] starting evaluation individuals
+[2025-05-02 05:27:38.275642] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:27:38.275770] [PID 1562] Iteration 27: Fitness = 6.038677583483228
+[2025-05-02 05:27:38.275857] [PID 1562] starting gen of new population
+[2025-05-02 05:27:38.309172] [PID 1562] starting survivor_selection
+[2025-05-02 05:27:38.309380] [PID 1562] starting evaluation individuals
+[2025-05-02 05:28:36.690244] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:28:36.690365] [PID 1562] Iteration 28: Fitness = 6.038677583483228
+[2025-05-02 05:28:36.690525] [PID 1562] starting gen of new population
+[2025-05-02 05:28:36.719953] [PID 1562] starting survivor_selection
+[2025-05-02 05:28:36.720148] [PID 1562] starting evaluation individuals
+[2025-05-02 05:29:36.297008] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:29:36.297125] [PID 1562] Iteration 29: Fitness = 6.038677583483228
+[2025-05-02 05:29:36.297611] [PID 1562] starting gen of new population
+[2025-05-02 05:29:36.330893] [PID 1562] starting survivor_selection
+[2025-05-02 05:29:36.331116] [PID 1562] starting evaluation individuals
+[2025-05-02 05:30:36.167691] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:30:36.167792] [PID 1562] Iteration 30: Fitness = 6.269656221344675
+[2025-05-02 05:30:36.167906] [PID 1562] starting gen of new population
+[2025-05-02 05:30:36.200613] [PID 1562] starting survivor_selection
+[2025-05-02 05:30:36.200813] [PID 1562] starting evaluation individuals
+[2025-05-02 05:31:34.669984] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 05:31:34.670086] [PID 1562] Iteration 31: Fitness = 6.269656221344675
+[2025-05-02 05:31:34.670199] [PID 1562] starting gen of new population
+[2025-05-02 05:31:34.703472] [PID 1562] starting survivor_selection
+[2025-05-02 05:31:34.703661] [PID 1562] starting evaluation individuals
+[2025-05-02 05:32:33.398377] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:32:33.398482] [PID 1562] Iteration 32: Fitness = 6.269656221344675
+[2025-05-02 05:32:33.398567] [PID 1562] starting gen of new population
+[2025-05-02 05:32:33.433736] [PID 1562] starting survivor_selection
+[2025-05-02 05:32:33.434001] [PID 1562] starting evaluation individuals
+[2025-05-02 05:33:32.195894] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:33:32.196070] [PID 1562] Iteration 33: Fitness = 6.269656221344675
+[2025-05-02 05:33:32.196167] [PID 1562] starting gen of new population
+[2025-05-02 05:33:32.227806] [PID 1562] starting survivor_selection
+[2025-05-02 05:33:32.228034] [PID 1562] starting evaluation individuals
+[2025-05-02 05:34:31.978038] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:34:31.978144] [PID 1562] Iteration 34: Fitness = 6.269656221344675
+[2025-05-02 05:34:31.978358] [PID 1562] starting gen of new population
+[2025-05-02 05:34:32.010947] [PID 1562] starting survivor_selection
+[2025-05-02 05:34:32.011180] [PID 1562] starting evaluation individuals
+[2025-05-02 05:35:30.771176] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:35:30.771282] [PID 1562] Iteration 35: Fitness = 6.269656221344675
+[2025-05-02 05:35:30.771412] [PID 1562] starting gen of new population
+[2025-05-02 05:35:30.805571] [PID 1562] starting survivor_selection
+[2025-05-02 05:35:30.805769] [PID 1562] starting evaluation individuals
+[2025-05-02 05:36:29.602040] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:36:29.602142] [PID 1562] Iteration 36: Fitness = 6.510214107613407
+[2025-05-02 05:36:29.602258] [PID 1562] starting gen of new population
+[2025-05-02 05:36:29.632593] [PID 1562] starting survivor_selection
+[2025-05-02 05:36:29.632852] [PID 1562] starting evaluation individuals
+[2025-05-02 05:37:27.899331] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:37:27.899453] [PID 1562] Iteration 37: Fitness = 6.510214107613407
+[2025-05-02 05:37:27.899618] [PID 1562] starting gen of new population
+[2025-05-02 05:37:27.934554] [PID 1562] starting survivor_selection
+[2025-05-02 05:37:27.934794] [PID 1562] starting evaluation individuals
+[2025-05-02 05:38:27.013398] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:38:27.013515] [PID 1562] Iteration 38: Fitness = 6.510214107613407
+[2025-05-02 05:38:27.013703] [PID 1562] starting gen of new population
+[2025-05-02 05:38:27.045806] [PID 1562] starting survivor_selection
+[2025-05-02 05:38:27.046040] [PID 1562] starting evaluation individuals
+[2025-05-02 05:39:26.482376] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:39:26.482484] [PID 1562] Iteration 39: Fitness = 6.510214107613407
+[2025-05-02 05:39:26.482606] [PID 1562] starting gen of new population
+[2025-05-02 05:39:26.525189] [PID 1562] starting survivor_selection
+[2025-05-02 05:39:26.525408] [PID 1562] starting evaluation individuals
+[2025-05-02 05:40:25.824024] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:40:25.824124] [PID 1562] Iteration 40: Fitness = 6.510214107613407
+[2025-05-02 05:40:25.824239] [PID 1562] starting gen of new population
+[2025-05-02 05:40:25.854996] [PID 1562] starting survivor_selection
+[2025-05-02 05:40:25.855204] [PID 1562] starting evaluation individuals
+[2025-05-02 05:41:25.736601] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:41:25.736724] [PID 1562] Iteration 41: Fitness = 6.510214107613407
+[2025-05-02 05:41:25.736893] [PID 1562] starting gen of new population
+[2025-05-02 05:41:25.772158] [PID 1562] starting survivor_selection
+[2025-05-02 05:41:25.772450] [PID 1562] starting evaluation individuals
+[2025-05-02 05:42:25.281303] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:42:25.281453] [PID 1562] Iteration 42: Fitness = 6.510214107613407
+[2025-05-02 05:42:25.281541] [PID 1562] starting gen of new population
+[2025-05-02 05:42:25.318384] [PID 1562] starting survivor_selection
+[2025-05-02 05:42:25.318763] [PID 1562] starting evaluation individuals
+[2025-05-02 05:43:25.376493] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:43:25.376629] [PID 1562] Iteration 43: Fitness = 6.510214107613407
+[2025-05-02 05:43:25.376744] [PID 1562] starting gen of new population
+[2025-05-02 05:43:25.412580] [PID 1562] starting survivor_selection
+[2025-05-02 05:43:25.412792] [PID 1562] starting evaluation individuals
+[2025-05-02 05:44:23.849246] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:44:23.849394] [PID 1562] Iteration 44: Fitness = 6.510214107613407
+[2025-05-02 05:44:23.849482] [PID 1562] starting gen of new population
+[2025-05-02 05:44:23.883147] [PID 1562] starting survivor_selection
+[2025-05-02 05:44:23.883358] [PID 1562] starting evaluation individuals
+[2025-05-02 05:45:22.588023] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:45:22.588182] [PID 1562] Iteration 45: Fitness = 6.510214107613407
+[2025-05-02 05:45:22.588279] [PID 1562] starting gen of new population
+[2025-05-02 05:45:22.624431] [PID 1562] starting survivor_selection
+[2025-05-02 05:45:22.624705] [PID 1562] starting evaluation individuals
+[2025-05-02 05:46:21.112001] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:46:21.112104] [PID 1562] Iteration 46: Fitness = 6.510214107613407
+[2025-05-02 05:46:21.112223] [PID 1562] starting gen of new population
+[2025-05-02 05:46:21.146372] [PID 1562] starting survivor_selection
+[2025-05-02 05:46:21.146572] [PID 1562] starting evaluation individuals
+[2025-05-02 05:47:19.480867] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:47:19.480976] [PID 1562] Iteration 47: Fitness = 6.510214107613407
+[2025-05-02 05:47:19.481109] [PID 1562] starting gen of new population
+[2025-05-02 05:47:19.517769] [PID 1562] starting survivor_selection
+[2025-05-02 05:47:19.518018] [PID 1562] starting evaluation individuals
+[2025-05-02 05:48:18.566745] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:48:18.566888] [PID 1562] Iteration 48: Fitness = 6.510214107613407
+[2025-05-02 05:48:18.567058] [PID 1562] starting gen of new population
+[2025-05-02 05:48:18.605471] [PID 1562] starting survivor_selection
+[2025-05-02 05:48:18.605662] [PID 1562] starting evaluation individuals
+[2025-05-02 05:49:17.792557] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:49:17.792692] [PID 1562] Iteration 49: Fitness = 6.510214107613407
+[2025-05-02 05:49:17.792860] [PID 1562] starting gen of new population
+[2025-05-02 05:49:17.825404] [PID 1562] starting survivor_selection
+[2025-05-02 05:49:17.825601] [PID 1562] starting evaluation individuals
+[2025-05-02 05:50:17.107451] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:50:17.107554] [PID 1562] Iteration 50: Fitness = 6.510214107613407
+[2025-05-02 05:50:17.107639] [PID 1562] starting gen of new population
+[2025-05-02 05:50:17.141674] [PID 1562] starting survivor_selection
+[2025-05-02 05:50:17.141874] [PID 1562] starting evaluation individuals
+[2025-05-02 05:51:16.694185] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:51:16.694361] [PID 1562] Iteration 51: Fitness = 6.510214107613407
+[2025-05-02 05:51:16.694458] [PID 1562] starting gen of new population
+[2025-05-02 05:51:16.728135] [PID 1562] starting survivor_selection
+[2025-05-02 05:51:16.728378] [PID 1562] starting evaluation individuals
+[2025-05-02 05:52:15.381762] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:52:15.381904] [PID 1562] Iteration 52: Fitness = 6.510214107613407
+[2025-05-02 05:52:15.382128] [PID 1562] starting gen of new population
+[2025-05-02 05:52:15.418212] [PID 1562] starting survivor_selection
+[2025-05-02 05:52:15.418520] [PID 1562] starting evaluation individuals
+[2025-05-02 05:53:14.066771] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:53:14.066873] [PID 1562] Iteration 53: Fitness = 6.510214107613407
+[2025-05-02 05:53:14.066958] [PID 1562] starting gen of new population
+[2025-05-02 05:53:14.098656] [PID 1562] starting survivor_selection
+[2025-05-02 05:53:14.098834] [PID 1562] starting evaluation individuals
+[2025-05-02 05:54:13.250072] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:54:13.250207] [PID 1562] Iteration 54: Fitness = 6.510214107613407
+[2025-05-02 05:54:13.250294] [PID 1562] starting gen of new population
+[2025-05-02 05:54:13.283945] [PID 1562] starting survivor_selection
+[2025-05-02 05:54:13.284155] [PID 1562] starting evaluation individuals
+[2025-05-02 05:55:12.197302] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:55:12.197441] [PID 1562] Iteration 55: Fitness = 6.510214107613407
+[2025-05-02 05:55:12.197602] [PID 1562] starting gen of new population
+[2025-05-02 05:55:12.239694] [PID 1562] starting survivor_selection
+[2025-05-02 05:55:12.239932] [PID 1562] starting evaluation individuals
+[2025-05-02 05:56:11.013488] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:56:11.013604] [PID 1562] Iteration 56: Fitness = 6.510214107613407
+[2025-05-02 05:56:11.013760] [PID 1562] starting gen of new population
+[2025-05-02 05:56:11.048343] [PID 1562] starting survivor_selection
+[2025-05-02 05:56:11.048557] [PID 1562] starting evaluation individuals
+[2025-05-02 05:57:09.372497] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:57:09.372610] [PID 1562] Iteration 57: Fitness = 6.510214107613407
+[2025-05-02 05:57:09.372766] [PID 1562] starting gen of new population
+[2025-05-02 05:57:09.409075] [PID 1562] starting survivor_selection
+[2025-05-02 05:57:09.409269] [PID 1562] starting evaluation individuals
+[2025-05-02 05:58:08.332959] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:58:08.333062] [PID 1562] Iteration 58: Fitness = 6.510214107613407
+[2025-05-02 05:58:08.333177] [PID 1562] starting gen of new population
+[2025-05-02 05:58:08.367058] [PID 1562] starting survivor_selection
+[2025-05-02 05:58:08.367265] [PID 1562] starting evaluation individuals
+[2025-05-02 05:59:07.079272] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 05:59:07.079401] [PID 1562] Iteration 59: Fitness = 6.510214107613407
+[2025-05-02 05:59:07.079486] [PID 1562] starting gen of new population
+[2025-05-02 05:59:07.111377] [PID 1562] starting survivor_selection
+[2025-05-02 05:59:07.111569] [PID 1562] starting evaluation individuals
+[2025-05-02 06:00:05.866439] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:00:05.866586] [PID 1562] Iteration 60: Fitness = 6.510214107613407
+[2025-05-02 06:00:05.866674] [PID 1562] starting gen of new population
+[2025-05-02 06:00:05.899721] [PID 1562] starting survivor_selection
+[2025-05-02 06:00:05.899915] [PID 1562] starting evaluation individuals
+[2025-05-02 06:01:05.367966] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:01:05.368075] [PID 1562] Iteration 61: Fitness = 6.510214107613407
+[2025-05-02 06:01:05.368193] [PID 1562] starting gen of new population
+[2025-05-02 06:01:05.409339] [PID 1562] starting survivor_selection
+[2025-05-02 06:01:05.409556] [PID 1562] starting evaluation individuals
+[2025-05-02 06:02:05.341380] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:02:05.341479] [PID 1562] Iteration 62: Fitness = 6.510214107613407
+[2025-05-02 06:02:05.341610] [PID 1562] starting gen of new population
+[2025-05-02 06:02:05.376525] [PID 1562] starting survivor_selection
+[2025-05-02 06:02:05.376782] [PID 1562] starting evaluation individuals
+[2025-05-02 06:03:03.941100] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:03:03.941237] [PID 1562] Iteration 63: Fitness = 6.510214107613407
+[2025-05-02 06:03:03.941329] [PID 1562] starting gen of new population
+[2025-05-02 06:03:03.978554] [PID 1562] starting survivor_selection
+[2025-05-02 06:03:03.978772] [PID 1562] starting evaluation individuals
+[2025-05-02 06:04:03.090230] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:04:03.090333] [PID 1562] Iteration 64: Fitness = 6.510214107613407
+[2025-05-02 06:04:03.090452] [PID 1562] starting gen of new population
+[2025-05-02 06:04:03.128234] [PID 1562] starting survivor_selection
+[2025-05-02 06:04:03.128409] [PID 1562] starting evaluation individuals
+[2025-05-02 06:05:02.441255] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:05:02.441369] [PID 1562] Iteration 65: Fitness = 6.510214107613407
+[2025-05-02 06:05:02.441819] [PID 1562] starting gen of new population
+[2025-05-02 06:05:02.478981] [PID 1562] starting survivor_selection
+[2025-05-02 06:05:02.479245] [PID 1562] starting evaluation individuals
+[2025-05-02 06:06:02.514759] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:06:02.514943] [PID 1562] Iteration 66: Fitness = 6.510214107613407
+[2025-05-02 06:06:02.515045] [PID 1562] starting gen of new population
+[2025-05-02 06:06:02.550639] [PID 1562] starting survivor_selection
+[2025-05-02 06:06:02.550897] [PID 1562] starting evaluation individuals
+[2025-05-02 06:07:02.300692] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:07:02.300797] [PID 1562] Iteration 67: Fitness = 6.510214107613407
+[2025-05-02 06:07:02.300942] [PID 1562] starting gen of new population
+[2025-05-02 06:07:02.337083] [PID 1562] starting survivor_selection
+[2025-05-02 06:07:02.337325] [PID 1562] starting evaluation individuals
+[2025-05-02 06:08:01.625259] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:08:01.625378] [PID 1562] Iteration 68: Fitness = 6.510214107613407
+[2025-05-02 06:08:01.625481] [PID 1562] starting gen of new population
+[2025-05-02 06:08:01.664676] [PID 1562] starting survivor_selection
+[2025-05-02 06:08:01.664924] [PID 1562] starting evaluation individuals
+[2025-05-02 06:09:00.727743] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:09:00.727843] [PID 1562] Iteration 69: Fitness = 6.510214107613407
+[2025-05-02 06:09:00.727959] [PID 1562] starting gen of new population
+[2025-05-02 06:09:00.765269] [PID 1562] starting survivor_selection
+[2025-05-02 06:09:00.765462] [PID 1562] starting evaluation individuals
+[2025-05-02 06:09:59.519798] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:09:59.519903] [PID 1562] Iteration 70: Fitness = 6.510214107613407
+[2025-05-02 06:09:59.520024] [PID 1562] starting gen of new population
+[2025-05-02 06:09:59.559988] [PID 1562] starting survivor_selection
+[2025-05-02 06:09:59.560339] [PID 1562] starting evaluation individuals
+[2025-05-02 06:10:57.943396] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:10:57.943529] [PID 1562] Iteration 71: Fitness = 6.510214107613407
+[2025-05-02 06:10:57.943629] [PID 1562] starting gen of new population
+[2025-05-02 06:10:57.975301] [PID 1562] starting survivor_selection
+[2025-05-02 06:10:57.975482] [PID 1562] starting evaluation individuals
+[2025-05-02 06:11:57.337476] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:11:57.337629] [PID 1562] Iteration 72: Fitness = 6.510214107613407
+[2025-05-02 06:11:57.337719] [PID 1562] starting gen of new population
+[2025-05-02 06:11:57.371041] [PID 1562] starting survivor_selection
+[2025-05-02 06:11:57.371273] [PID 1562] starting evaluation individuals
+[2025-05-02 06:12:57.291485] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:12:57.291604] [PID 1562] Iteration 73: Fitness = 6.510214107613407
+[2025-05-02 06:12:57.291760] [PID 1562] starting gen of new population
+[2025-05-02 06:12:57.324352] [PID 1562] starting survivor_selection
+[2025-05-02 06:12:57.324559] [PID 1562] starting evaluation individuals
+[2025-05-02 06:13:55.793203] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:13:55.793361] [PID 1562] Iteration 74: Fitness = 6.510214107613407
+[2025-05-02 06:13:55.793658] [PID 1562] starting gen of new population
+[2025-05-02 06:13:55.827547] [PID 1562] starting survivor_selection
+[2025-05-02 06:13:55.827797] [PID 1562] starting evaluation individuals
+[2025-05-02 06:14:54.932390] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:14:54.932487] [PID 1562] Iteration 75: Fitness = 6.510214107613407
+[2025-05-02 06:14:54.932628] [PID 1562] starting gen of new population
+[2025-05-02 06:14:54.966411] [PID 1562] starting survivor_selection
+[2025-05-02 06:14:54.966639] [PID 1562] starting evaluation individuals
+[2025-05-02 06:15:53.433691] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:15:53.433801] [PID 1562] Iteration 76: Fitness = 6.510214107613407
+[2025-05-02 06:15:53.434334] [PID 1562] starting gen of new population
+[2025-05-02 06:15:53.466228] [PID 1562] starting survivor_selection
+[2025-05-02 06:15:53.466421] [PID 1562] starting evaluation individuals
+[2025-05-02 06:16:52.016119] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:16:52.016232] [PID 1562] Iteration 77: Fitness = 6.510214107613407
+[2025-05-02 06:16:52.016729] [PID 1562] starting gen of new population
+[2025-05-02 06:16:52.054282] [PID 1562] starting survivor_selection
+[2025-05-02 06:16:52.054476] [PID 1562] starting evaluation individuals
+[2025-05-02 06:17:50.889430] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:17:50.889531] [PID 1562] Iteration 78: Fitness = 6.510214107613407
+[2025-05-02 06:17:50.889666] [PID 1562] starting gen of new population
+[2025-05-02 06:17:50.926874] [PID 1562] starting survivor_selection
+[2025-05-02 06:17:50.927070] [PID 1562] starting evaluation individuals
+[2025-05-02 06:18:49.397265] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:18:49.397448] [PID 1562] Iteration 79: Fitness = 6.510214107613407
+[2025-05-02 06:18:49.397547] [PID 1562] starting gen of new population
+[2025-05-02 06:18:49.432354] [PID 1562] starting survivor_selection
+[2025-05-02 06:18:49.432545] [PID 1562] starting evaluation individuals
+[2025-05-02 06:19:47.868981] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:19:47.869079] [PID 1562] Iteration 80: Fitness = 6.510214107613407
+[2025-05-02 06:19:47.869165] [PID 1562] starting gen of new population
+[2025-05-02 06:19:47.904305] [PID 1562] starting survivor_selection
+[2025-05-02 06:19:47.904507] [PID 1562] starting evaluation individuals
+[2025-05-02 06:20:46.140794] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:20:46.140892] [PID 1562] Iteration 81: Fitness = 6.510214107613407
+[2025-05-02 06:20:46.141006] [PID 1562] starting gen of new population
+[2025-05-02 06:20:46.175384] [PID 1562] starting survivor_selection
+[2025-05-02 06:20:46.175601] [PID 1562] starting evaluation individuals
+[2025-05-02 06:21:44.832332] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:21:44.832443] [PID 1562] Iteration 82: Fitness = 6.510214107613407
+[2025-05-02 06:21:44.832622] [PID 1562] starting gen of new population
+[2025-05-02 06:21:44.869830] [PID 1562] starting survivor_selection
+[2025-05-02 06:21:44.870063] [PID 1562] starting evaluation individuals
+[2025-05-02 06:22:42.917346] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:22:42.917473] [PID 1562] Iteration 83: Fitness = 6.510214107613407
+[2025-05-02 06:22:42.917559] [PID 1562] starting gen of new population
+[2025-05-02 06:22:42.950225] [PID 1562] starting survivor_selection
+[2025-05-02 06:22:42.950432] [PID 1562] starting evaluation individuals
+[2025-05-02 06:23:41.144041] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:23:41.144140] [PID 1562] Iteration 84: Fitness = 6.510214107613407
+[2025-05-02 06:23:41.144256] [PID 1562] starting gen of new population
+[2025-05-02 06:23:41.182403] [PID 1562] starting survivor_selection
+[2025-05-02 06:23:41.182590] [PID 1562] starting evaluation individuals
+[2025-05-02 06:24:40.270844] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:24:40.270988] [PID 1562] Iteration 85: Fitness = 6.510214107613407
+[2025-05-02 06:24:40.271083] [PID 1562] starting gen of new population
+[2025-05-02 06:24:40.310063] [PID 1562] starting survivor_selection
+[2025-05-02 06:24:40.310288] [PID 1562] starting evaluation individuals
+[2025-05-02 06:25:39.024436] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:25:39.024542] [PID 1562] Iteration 86: Fitness = 6.510214107613407
+[2025-05-02 06:25:39.024703] [PID 1562] starting gen of new population
+[2025-05-02 06:25:39.064886] [PID 1562] starting survivor_selection
+[2025-05-02 06:25:39.065141] [PID 1562] starting evaluation individuals
+[2025-05-02 06:26:37.014609] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:26:37.014757] [PID 1562] Iteration 87: Fitness = 6.510214107613407
+[2025-05-02 06:26:37.014847] [PID 1562] starting gen of new population
+[2025-05-02 06:26:37.045999] [PID 1562] starting survivor_selection
+[2025-05-02 06:26:37.046185] [PID 1562] starting evaluation individuals
+[2025-05-02 06:27:34.859404] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:27:34.859550] [PID 1562] Iteration 88: Fitness = 6.510214107613407
+[2025-05-02 06:27:34.859636] [PID 1562] starting gen of new population
+[2025-05-02 06:27:34.894498] [PID 1562] starting survivor_selection
+[2025-05-02 06:27:34.894680] [PID 1562] starting evaluation individuals
+[2025-05-02 06:28:33.168894] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:28:33.169003] [PID 1562] Iteration 89: Fitness = 6.510214107613407
+[2025-05-02 06:28:33.169168] [PID 1562] starting gen of new population
+[2025-05-02 06:28:33.203394] [PID 1562] starting survivor_selection
+[2025-05-02 06:28:33.203623] [PID 1562] starting evaluation individuals
+[2025-05-02 06:29:31.524220] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:29:31.524332] [PID 1562] Iteration 90: Fitness = 6.510214107613407
+[2025-05-02 06:29:31.524456] [PID 1562] starting gen of new population
+[2025-05-02 06:29:31.560115] [PID 1562] starting survivor_selection
+[2025-05-02 06:29:31.560363] [PID 1562] starting evaluation individuals
+[2025-05-02 06:30:30.253152] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:30:30.253250] [PID 1562] Iteration 91: Fitness = 6.510214107613407
+[2025-05-02 06:30:30.253382] [PID 1562] starting gen of new population
+[2025-05-02 06:30:30.289784] [PID 1562] starting survivor_selection
+[2025-05-02 06:30:30.289992] [PID 1562] starting evaluation individuals
+[2025-05-02 06:31:29.008603] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:31:29.008763] [PID 1562] Iteration 92: Fitness = 6.510214107613407
+[2025-05-02 06:31:29.008914] [PID 1562] starting gen of new population
+[2025-05-02 06:31:29.047272] [PID 1562] starting survivor_selection
+[2025-05-02 06:31:29.047541] [PID 1562] starting evaluation individuals
+[2025-05-02 06:32:28.405109] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:32:28.405257] [PID 1562] Iteration 93: Fitness = 6.510214107613407
+[2025-05-02 06:32:28.405350] [PID 1562] starting gen of new population
+[2025-05-02 06:32:28.439126] [PID 1562] starting survivor_selection
+[2025-05-02 06:32:28.439332] [PID 1562] starting evaluation individuals
+[2025-05-02 06:33:28.419510] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:33:28.419613] [PID 1562] Iteration 94: Fitness = 6.510214107613407
+[2025-05-02 06:33:28.419734] [PID 1562] starting gen of new population
+[2025-05-02 06:33:28.456470] [PID 1562] starting survivor_selection
+[2025-05-02 06:33:28.456733] [PID 1562] starting evaluation individuals
+[2025-05-02 06:34:27.671163] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 06:34:27.671272] [PID 1562] Iteration 95: Fitness = 6.510214107613407
+[2025-05-02 06:34:27.671429] [PID 1562] starting gen of new population
+[2025-05-02 06:34:27.712707] [PID 1562] starting survivor_selection
+[2025-05-02 06:34:27.712947] [PID 1562] starting evaluation individuals
+[2025-05-02 06:35:26.690865] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 06:35:26.691005] [PID 1562] Iteration 96: Fitness = 6.510214107613407
+[2025-05-02 06:35:26.691104] [PID 1562] starting gen of new population
+[2025-05-02 06:35:26.721386] [PID 1562] starting survivor_selection
+[2025-05-02 06:35:26.721590] [PID 1562] starting evaluation individuals
+[2025-05-02 06:36:25.067698] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 06:36:25.067862] [PID 1562] Iteration 97: Fitness = 6.510214107613407
+[2025-05-02 06:36:25.067958] [PID 1562] starting gen of new population
+[2025-05-02 06:36:25.100707] [PID 1562] starting survivor_selection
+[2025-05-02 06:36:25.100913] [PID 1562] starting evaluation individuals
+[2025-05-02 06:37:24.049269] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 06:37:24.049416] [PID 1562] Iteration 98: Fitness = 6.510214107613407
+[2025-05-02 06:37:24.049507] [PID 1562] starting gen of new population
+[2025-05-02 06:37:24.086952] [PID 1562] starting survivor_selection
+[2025-05-02 06:37:24.087243] [PID 1562] starting evaluation individuals
+[2025-05-02 06:38:22.544071] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 06:38:22.544332] [PID 1562] Iteration 99: Fitness = 6.510214107613407
+[2025-05-02 06:38:22.544448] [PID 1562] starting gen of new population
+[2025-05-02 06:38:22.579570] [PID 1562] starting survivor_selection
+[2025-05-02 06:38:22.579852] [PID 1562] starting evaluation individuals
+[2025-05-02 06:39:21.057458] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 06:39:21.057559] [PID 1562] Iteration 100: Fitness = 6.510214107613407
+[2025-05-02 06:39:21.057677] [PID 1562] starting gen of new population
+[2025-05-02 06:39:21.089768] [PID 1562] starting survivor_selection
+[2025-05-02 06:39:21.854786] [PID 1562] starting evaluation individuals
+[2025-05-02 06:40:23.561284] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 06:40:23.561399] [PID 1562] Iteration 1: Fitness = 0.8527502238772822
+[2025-05-02 06:40:23.561520] [PID 1562] starting gen of new population
+[2025-05-02 06:40:23.597819] [PID 1562] starting survivor_selection
+[2025-05-02 06:40:23.598015] [PID 1562] starting evaluation individuals
+[2025-05-02 06:41:21.645887] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.65 MB; Peak = 2.85 MB
+[2025-05-02 06:41:21.646007] [PID 1562] Iteration 2: Fitness = 1.3300517948802215
+[2025-05-02 06:41:21.646118] [PID 1562] starting gen of new population
+[2025-05-02 06:41:21.679918] [PID 1562] starting survivor_selection
+[2025-05-02 06:41:21.680178] [PID 1562] starting evaluation individuals
+[2025-05-02 06:42:20.022502] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:42:20.022629] [PID 1562] Iteration 3: Fitness = 1.3300517948802215
+[2025-05-02 06:42:20.022723] [PID 1562] starting gen of new population
+[2025-05-02 06:42:20.058054] [PID 1562] starting survivor_selection
+[2025-05-02 06:42:20.058271] [PID 1562] starting evaluation individuals
+[2025-05-02 06:43:18.304227] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:43:18.304386] [PID 1562] Iteration 4: Fitness = 1.7841070425196273
+[2025-05-02 06:43:18.304866] [PID 1562] starting gen of new population
+[2025-05-02 06:43:18.343502] [PID 1562] starting survivor_selection
+[2025-05-02 06:43:18.343737] [PID 1562] starting evaluation individuals
+[2025-05-02 06:44:16.581301] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:44:16.581399] [PID 1562] Iteration 5: Fitness = 1.7841070425196273
+[2025-05-02 06:44:16.581506] [PID 1562] starting gen of new population
+[2025-05-02 06:44:16.617581] [PID 1562] starting survivor_selection
+[2025-05-02 06:44:16.617781] [PID 1562] starting evaluation individuals
+[2025-05-02 06:45:14.426921] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:45:14.427017] [PID 1562] Iteration 6: Fitness = 1.8630815041067639
+[2025-05-02 06:45:14.427128] [PID 1562] starting gen of new population
+[2025-05-02 06:45:14.464802] [PID 1562] starting survivor_selection
+[2025-05-02 06:45:14.465033] [PID 1562] starting evaluation individuals
+[2025-05-02 06:46:12.542706] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:46:12.542822] [PID 1562] Iteration 7: Fitness = 1.8630815041067639
+[2025-05-02 06:46:12.543058] [PID 1562] starting gen of new population
+[2025-05-02 06:46:12.574534] [PID 1562] starting survivor_selection
+[2025-05-02 06:46:12.574790] [PID 1562] starting evaluation individuals
+[2025-05-02 06:47:10.992585] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:47:10.992726] [PID 1562] Iteration 8: Fitness = 3.0149966397620385
+[2025-05-02 06:47:10.992918] [PID 1562] starting gen of new population
+[2025-05-02 06:47:11.030149] [PID 1562] starting survivor_selection
+[2025-05-02 06:47:11.030395] [PID 1562] starting evaluation individuals
+[2025-05-02 06:48:09.088838] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:48:09.088937] [PID 1562] Iteration 9: Fitness = 3.0149966397620385
+[2025-05-02 06:48:09.089054] [PID 1562] starting gen of new population
+[2025-05-02 06:48:09.125550] [PID 1562] starting survivor_selection
+[2025-05-02 06:48:09.125739] [PID 1562] starting evaluation individuals
+[2025-05-02 06:49:07.826742] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:49:07.826875] [PID 1562] Iteration 10: Fitness = 3.0149966397620385
+[2025-05-02 06:49:07.826998] [PID 1562] starting gen of new population
+[2025-05-02 06:49:07.865780] [PID 1562] starting survivor_selection
+[2025-05-02 06:49:07.866040] [PID 1562] starting evaluation individuals
+[2025-05-02 06:50:07.668280] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 06:50:07.668447] [PID 1562] Iteration 11: Fitness = 3.0149966397620385
+[2025-05-02 06:50:07.668549] [PID 1562] starting gen of new population
+[2025-05-02 06:50:07.710910] [PID 1562] starting survivor_selection
+[2025-05-02 06:50:07.711143] [PID 1562] starting evaluation individuals
+[2025-05-02 06:51:07.462298] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:51:07.462448] [PID 1562] Iteration 12: Fitness = 3.0149966397620385
+[2025-05-02 06:51:07.462546] [PID 1562] starting gen of new population
+[2025-05-02 06:51:07.495911] [PID 1562] starting survivor_selection
+[2025-05-02 06:51:07.496125] [PID 1562] starting evaluation individuals
+[2025-05-02 06:52:06.362808] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:52:06.362942] [PID 1562] Iteration 13: Fitness = 3.0149966397620385
+[2025-05-02 06:52:06.363041] [PID 1562] starting gen of new population
+[2025-05-02 06:52:06.391952] [PID 1562] starting survivor_selection
+[2025-05-02 06:52:06.392203] [PID 1562] starting evaluation individuals
+[2025-05-02 06:53:05.345427] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:53:05.345577] [PID 1562] Iteration 14: Fitness = 3.0149966397620385
+[2025-05-02 06:53:05.345671] [PID 1562] starting gen of new population
+[2025-05-02 06:53:05.381443] [PID 1562] starting survivor_selection
+[2025-05-02 06:53:05.381656] [PID 1562] starting evaluation individuals
+[2025-05-02 06:54:04.246658] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:54:04.246819] [PID 1562] Iteration 15: Fitness = 3.0149966397620385
+[2025-05-02 06:54:04.246915] [PID 1562] starting gen of new population
+[2025-05-02 06:54:04.282923] [PID 1562] starting survivor_selection
+[2025-05-02 06:54:04.283123] [PID 1562] starting evaluation individuals
+[2025-05-02 06:55:02.860305] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:55:02.860466] [PID 1562] Iteration 16: Fitness = 3.0149966397620385
+[2025-05-02 06:55:02.860600] [PID 1562] starting gen of new population
+[2025-05-02 06:55:02.892476] [PID 1562] starting survivor_selection
+[2025-05-02 06:55:02.892793] [PID 1562] starting evaluation individuals
+[2025-05-02 06:56:00.995863] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:56:00.995987] [PID 1562] Iteration 17: Fitness = 3.0149966397620385
+[2025-05-02 06:56:00.996091] [PID 1562] starting gen of new population
+[2025-05-02 06:56:01.028203] [PID 1562] starting survivor_selection
+[2025-05-02 06:56:01.028444] [PID 1562] starting evaluation individuals
+[2025-05-02 06:56:59.775086] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:56:59.775231] [PID 1562] Iteration 18: Fitness = 3.0149966397620385
+[2025-05-02 06:56:59.775322] [PID 1562] starting gen of new population
+[2025-05-02 06:56:59.812653] [PID 1562] starting survivor_selection
+[2025-05-02 06:56:59.812894] [PID 1562] starting evaluation individuals
+[2025-05-02 06:57:58.290305] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:57:58.290458] [PID 1562] Iteration 19: Fitness = 3.0149966397620385
+[2025-05-02 06:57:58.290558] [PID 1562] starting gen of new population
+[2025-05-02 06:57:58.322838] [PID 1562] starting survivor_selection
+[2025-05-02 06:57:58.323104] [PID 1562] starting evaluation individuals
+[2025-05-02 06:58:56.491374] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:58:56.491502] [PID 1562] Iteration 20: Fitness = 3.0149966397620385
+[2025-05-02 06:58:56.491684] [PID 1562] starting gen of new population
+[2025-05-02 06:58:56.531368] [PID 1562] starting survivor_selection
+[2025-05-02 06:58:56.531647] [PID 1562] starting evaluation individuals
+[2025-05-02 06:59:55.134732] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 06:59:55.134848] [PID 1562] Iteration 21: Fitness = 3.399462641098169
+[2025-05-02 06:59:55.134968] [PID 1562] starting gen of new population
+[2025-05-02 06:59:55.169199] [PID 1562] starting survivor_selection
+[2025-05-02 06:59:55.169450] [PID 1562] starting evaluation individuals
+[2025-05-02 07:00:53.694238] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:00:53.694354] [PID 1562] Iteration 22: Fitness = 3.399462641098169
+[2025-05-02 07:00:53.694445] [PID 1562] starting gen of new population
+[2025-05-02 07:00:53.728056] [PID 1562] starting survivor_selection
+[2025-05-02 07:00:53.728302] [PID 1562] starting evaluation individuals
+[2025-05-02 07:01:53.185940] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:01:53.186092] [PID 1562] Iteration 23: Fitness = 3.399462641098169
+[2025-05-02 07:01:53.186191] [PID 1562] starting gen of new population
+[2025-05-02 07:01:53.216488] [PID 1562] starting survivor_selection
+[2025-05-02 07:01:53.216770] [PID 1562] starting evaluation individuals
+[2025-05-02 07:02:52.392442] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:02:52.392565] [PID 1562] Iteration 24: Fitness = 3.399462641098169
+[2025-05-02 07:02:52.392688] [PID 1562] starting gen of new population
+[2025-05-02 07:02:52.434756] [PID 1562] starting survivor_selection
+[2025-05-02 07:02:52.434995] [PID 1562] starting evaluation individuals
+[2025-05-02 07:03:51.566781] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:03:51.566923] [PID 1562] Iteration 25: Fitness = 3.399462641098169
+[2025-05-02 07:03:51.567015] [PID 1562] starting gen of new population
+[2025-05-02 07:03:51.603324] [PID 1562] starting survivor_selection
+[2025-05-02 07:03:51.603527] [PID 1562] starting evaluation individuals
+[2025-05-02 07:04:50.184528] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:04:50.184719] [PID 1562] Iteration 26: Fitness = 3.851146850605387
+[2025-05-02 07:04:50.184821] [PID 1562] starting gen of new population
+[2025-05-02 07:04:50.217078] [PID 1562] starting survivor_selection
+[2025-05-02 07:04:50.217305] [PID 1562] starting evaluation individuals
+[2025-05-02 07:05:48.712731] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:05:48.712895] [PID 1562] Iteration 27: Fitness = 3.851146850605387
+[2025-05-02 07:05:48.712996] [PID 1562] starting gen of new population
+[2025-05-02 07:05:48.749566] [PID 1562] starting survivor_selection
+[2025-05-02 07:05:48.749820] [PID 1562] starting evaluation individuals
+[2025-05-02 07:06:47.121574] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:06:47.121689] [PID 1562] Iteration 28: Fitness = 3.851146850605387
+[2025-05-02 07:06:47.121808] [PID 1562] starting gen of new population
+[2025-05-02 07:06:47.153815] [PID 1562] starting survivor_selection
+[2025-05-02 07:06:47.154022] [PID 1562] starting evaluation individuals
+[2025-05-02 07:07:44.662058] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:07:44.662171] [PID 1562] Iteration 29: Fitness = 3.851146850605387
+[2025-05-02 07:07:44.662289] [PID 1562] starting gen of new population
+[2025-05-02 07:07:44.699005] [PID 1562] starting survivor_selection
+[2025-05-02 07:07:44.699196] [PID 1562] starting evaluation individuals
+[2025-05-02 07:08:43.125578] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:08:43.125699] [PID 1562] Iteration 30: Fitness = 3.851146850605387
+[2025-05-02 07:08:43.125790] [PID 1562] starting gen of new population
+[2025-05-02 07:08:43.155519] [PID 1562] starting survivor_selection
+[2025-05-02 07:08:43.155719] [PID 1562] starting evaluation individuals
+[2025-05-02 07:09:42.170486] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:09:42.170609] [PID 1562] Iteration 31: Fitness = 3.851146850605387
+[2025-05-02 07:09:42.170734] [PID 1562] starting gen of new population
+[2025-05-02 07:09:42.205576] [PID 1562] starting survivor_selection
+[2025-05-02 07:09:42.205833] [PID 1562] starting evaluation individuals
+[2025-05-02 07:10:40.810024] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:10:40.810178] [PID 1562] Iteration 32: Fitness = 3.851146850605387
+[2025-05-02 07:10:40.810285] [PID 1562] starting gen of new population
+[2025-05-02 07:10:40.844031] [PID 1562] starting survivor_selection
+[2025-05-02 07:10:40.844265] [PID 1562] starting evaluation individuals
+[2025-05-02 07:11:38.960966] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:11:38.961117] [PID 1562] Iteration 33: Fitness = 3.851146850605387
+[2025-05-02 07:11:38.961315] [PID 1562] starting gen of new population
+[2025-05-02 07:11:38.998230] [PID 1562] starting survivor_selection
+[2025-05-02 07:11:38.998464] [PID 1562] starting evaluation individuals
+[2025-05-02 07:12:37.366127] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:12:37.366271] [PID 1562] Iteration 34: Fitness = 3.851146850605387
+[2025-05-02 07:12:37.366369] [PID 1562] starting gen of new population
+[2025-05-02 07:12:37.397914] [PID 1562] starting survivor_selection
+[2025-05-02 07:12:37.398125] [PID 1562] starting evaluation individuals
+[2025-05-02 07:13:36.212299] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:13:36.212479] [PID 1562] Iteration 35: Fitness = 3.851146850605387
+[2025-05-02 07:13:36.212745] [PID 1562] starting gen of new population
+[2025-05-02 07:13:36.262672] [PID 1562] starting survivor_selection
+[2025-05-02 07:13:36.263027] [PID 1562] starting evaluation individuals
+[2025-05-02 07:14:34.475929] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:14:34.476074] [PID 1562] Iteration 36: Fitness = 3.851146850605387
+[2025-05-02 07:14:34.476166] [PID 1562] starting gen of new population
+[2025-05-02 07:14:34.512871] [PID 1562] starting survivor_selection
+[2025-05-02 07:14:34.513127] [PID 1562] starting evaluation individuals
+[2025-05-02 07:15:32.879842] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:15:32.879968] [PID 1562] Iteration 37: Fitness = 3.851146850605387
+[2025-05-02 07:15:32.880092] [PID 1562] starting gen of new population
+[2025-05-02 07:15:32.910289] [PID 1562] starting survivor_selection
+[2025-05-02 07:15:32.910522] [PID 1562] starting evaluation individuals
+[2025-05-02 07:16:31.301622] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 07:16:31.301734] [PID 1562] Iteration 38: Fitness = 3.9011710255615957
+[2025-05-02 07:16:31.301857] [PID 1562] starting gen of new population
+[2025-05-02 07:16:31.337514] [PID 1562] starting survivor_selection
+[2025-05-02 07:16:31.337715] [PID 1562] starting evaluation individuals
+[2025-05-02 07:17:29.989783] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:17:29.989926] [PID 1562] Iteration 39: Fitness = 4.063379190901397
+[2025-05-02 07:17:29.990021] [PID 1562] starting gen of new population
+[2025-05-02 07:17:30.031363] [PID 1562] starting survivor_selection
+[2025-05-02 07:17:30.031612] [PID 1562] starting evaluation individuals
+[2025-05-02 07:18:28.800242] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:18:28.800388] [PID 1562] Iteration 40: Fitness = 4.063379190901397
+[2025-05-02 07:18:28.800561] [PID 1562] starting gen of new population
+[2025-05-02 07:18:28.834588] [PID 1562] starting survivor_selection
+[2025-05-02 07:18:28.834858] [PID 1562] starting evaluation individuals
+[2025-05-02 07:19:27.548536] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:19:27.548715] [PID 1562] Iteration 41: Fitness = 4.091498561116214
+[2025-05-02 07:19:27.548814] [PID 1562] starting gen of new population
+[2025-05-02 07:19:27.584385] [PID 1562] starting survivor_selection
+[2025-05-02 07:19:27.584619] [PID 1562] starting evaluation individuals
+[2025-05-02 07:20:26.873132] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:20:26.873275] [PID 1562] Iteration 42: Fitness = 4.091498561116214
+[2025-05-02 07:20:26.873378] [PID 1562] starting gen of new population
+[2025-05-02 07:20:26.904543] [PID 1562] starting survivor_selection
+[2025-05-02 07:20:26.904764] [PID 1562] starting evaluation individuals
+[2025-05-02 07:21:25.515467] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:21:25.515586] [PID 1562] Iteration 43: Fitness = 4.091498561116214
+[2025-05-02 07:21:25.515706] [PID 1562] starting gen of new population
+[2025-05-02 07:21:25.555482] [PID 1562] starting survivor_selection
+[2025-05-02 07:21:25.555742] [PID 1562] starting evaluation individuals
+[2025-05-02 07:22:25.033911] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:22:25.034055] [PID 1562] Iteration 44: Fitness = 4.091498561116214
+[2025-05-02 07:22:25.034151] [PID 1562] starting gen of new population
+[2025-05-02 07:22:25.066762] [PID 1562] starting survivor_selection
+[2025-05-02 07:22:25.066966] [PID 1562] starting evaluation individuals
+[2025-05-02 07:23:23.319748] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:23:23.319866] [PID 1562] Iteration 45: Fitness = 4.091498561116214
+[2025-05-02 07:23:23.320028] [PID 1562] starting gen of new population
+[2025-05-02 07:23:23.349408] [PID 1562] starting survivor_selection
+[2025-05-02 07:23:23.349605] [PID 1562] starting evaluation individuals
+[2025-05-02 07:24:22.043809] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:24:22.043949] [PID 1562] Iteration 46: Fitness = 4.091498561116214
+[2025-05-02 07:24:22.044509] [PID 1562] starting gen of new population
+[2025-05-02 07:24:22.074814] [PID 1562] starting survivor_selection
+[2025-05-02 07:24:22.075076] [PID 1562] starting evaluation individuals
+[2025-05-02 07:25:21.174434] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:25:21.174560] [PID 1562] Iteration 47: Fitness = 4.182082780979598
+[2025-05-02 07:25:21.174718] [PID 1562] starting gen of new population
+[2025-05-02 07:25:21.210759] [PID 1562] starting survivor_selection
+[2025-05-02 07:25:21.210978] [PID 1562] starting evaluation individuals
+[2025-05-02 07:26:20.375426] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:26:20.375605] [PID 1562] Iteration 48: Fitness = 4.182082780979598
+[2025-05-02 07:26:20.375704] [PID 1562] starting gen of new population
+[2025-05-02 07:26:20.410752] [PID 1562] starting survivor_selection
+[2025-05-02 07:26:20.410985] [PID 1562] starting evaluation individuals
+[2025-05-02 07:27:19.182830] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:27:19.182953] [PID 1562] Iteration 49: Fitness = 4.182082780979598
+[2025-05-02 07:27:19.183078] [PID 1562] starting gen of new population
+[2025-05-02 07:27:19.211630] [PID 1562] starting survivor_selection
+[2025-05-02 07:27:19.211873] [PID 1562] starting evaluation individuals
+[2025-05-02 07:28:17.968340] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:28:17.968468] [PID 1562] Iteration 50: Fitness = 4.276247001789208
+[2025-05-02 07:28:17.968589] [PID 1562] starting gen of new population
+[2025-05-02 07:28:18.006110] [PID 1562] starting survivor_selection
+[2025-05-02 07:28:18.006500] [PID 1562] starting evaluation individuals
+[2025-05-02 07:29:16.748976] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:29:16.749155] [PID 1562] Iteration 51: Fitness = 4.336621073504741
+[2025-05-02 07:29:16.749441] [PID 1562] starting gen of new population
+[2025-05-02 07:29:16.784553] [PID 1562] starting survivor_selection
+[2025-05-02 07:29:16.784916] [PID 1562] starting evaluation individuals
+[2025-05-02 07:30:15.616819] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:30:15.617007] [PID 1562] Iteration 52: Fitness = 4.336621073504741
+[2025-05-02 07:30:15.617495] [PID 1562] starting gen of new population
+[2025-05-02 07:30:15.652263] [PID 1562] starting survivor_selection
+[2025-05-02 07:30:15.652564] [PID 1562] starting evaluation individuals
+[2025-05-02 07:31:13.220743] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:31:13.220863] [PID 1562] Iteration 53: Fitness = 4.336621073504741
+[2025-05-02 07:31:13.220956] [PID 1562] starting gen of new population
+[2025-05-02 07:31:13.251718] [PID 1562] starting survivor_selection
+[2025-05-02 07:31:13.251934] [PID 1562] starting evaluation individuals
+[2025-05-02 07:32:11.478077] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:32:11.478245] [PID 1562] Iteration 54: Fitness = 4.336621073504741
+[2025-05-02 07:32:11.478480] [PID 1562] starting gen of new population
+[2025-05-02 07:32:11.511791] [PID 1562] starting survivor_selection
+[2025-05-02 07:32:11.512031] [PID 1562] starting evaluation individuals
+[2025-05-02 07:33:09.954202] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:33:09.954385] [PID 1562] Iteration 55: Fitness = 4.336621073504741
+[2025-05-02 07:33:09.954492] [PID 1562] starting gen of new population
+[2025-05-02 07:33:09.984405] [PID 1562] starting survivor_selection
+[2025-05-02 07:33:09.984604] [PID 1562] starting evaluation individuals
+[2025-05-02 07:34:08.188165] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:34:08.188327] [PID 1562] Iteration 56: Fitness = 4.336621073504741
+[2025-05-02 07:34:08.188426] [PID 1562] starting gen of new population
+[2025-05-02 07:34:08.218747] [PID 1562] starting survivor_selection
+[2025-05-02 07:34:08.218962] [PID 1562] starting evaluation individuals
+[2025-05-02 07:35:07.134526] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:35:07.134641] [PID 1562] Iteration 57: Fitness = 4.336621073504741
+[2025-05-02 07:35:07.134773] [PID 1562] starting gen of new population
+[2025-05-02 07:35:07.167123] [PID 1562] starting survivor_selection
+[2025-05-02 07:35:07.167340] [PID 1562] starting evaluation individuals
+[2025-05-02 07:36:05.897114] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:36:05.897266] [PID 1562] Iteration 58: Fitness = 4.341369050984652
+[2025-05-02 07:36:05.897485] [PID 1562] starting gen of new population
+[2025-05-02 07:36:05.933379] [PID 1562] starting survivor_selection
+[2025-05-02 07:36:05.933580] [PID 1562] starting evaluation individuals
+[2025-05-02 07:37:04.180431] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:37:04.180579] [PID 1562] Iteration 59: Fitness = 4.78463000839435
+[2025-05-02 07:37:04.180693] [PID 1562] starting gen of new population
+[2025-05-02 07:37:04.213047] [PID 1562] starting survivor_selection
+[2025-05-02 07:37:04.213317] [PID 1562] starting evaluation individuals
+[2025-05-02 07:38:02.977517] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:38:02.977644] [PID 1562] Iteration 60: Fitness = 4.78463000839435
+[2025-05-02 07:38:02.977799] [PID 1562] starting gen of new population
+[2025-05-02 07:38:03.011662] [PID 1562] starting survivor_selection
+[2025-05-02 07:38:03.011911] [PID 1562] starting evaluation individuals
+[2025-05-02 07:39:02.864241] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:39:02.864384] [PID 1562] Iteration 61: Fitness = 4.78463000839435
+[2025-05-02 07:39:02.864799] [PID 1562] starting gen of new population
+[2025-05-02 07:39:02.897776] [PID 1562] starting survivor_selection
+[2025-05-02 07:39:02.897985] [PID 1562] starting evaluation individuals
+[2025-05-02 07:40:01.137057] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:40:01.137209] [PID 1562] Iteration 62: Fitness = 4.78463000839435
+[2025-05-02 07:40:01.137658] [PID 1562] starting gen of new population
+[2025-05-02 07:40:01.171854] [PID 1562] starting survivor_selection
+[2025-05-02 07:40:01.172079] [PID 1562] starting evaluation individuals
+[2025-05-02 07:40:59.519002] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:40:59.519119] [PID 1562] Iteration 63: Fitness = 4.78463000839435
+[2025-05-02 07:40:59.519235] [PID 1562] starting gen of new population
+[2025-05-02 07:40:59.555091] [PID 1562] starting survivor_selection
+[2025-05-02 07:40:59.555304] [PID 1562] starting evaluation individuals
+[2025-05-02 07:41:59.017259] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:41:59.017466] [PID 1562] Iteration 64: Fitness = 4.78463000839435
+[2025-05-02 07:41:59.017579] [PID 1562] starting gen of new population
+[2025-05-02 07:41:59.053849] [PID 1562] starting survivor_selection
+[2025-05-02 07:41:59.054138] [PID 1562] starting evaluation individuals
+[2025-05-02 07:42:58.969329] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:42:58.969472] [PID 1562] Iteration 65: Fitness = 4.78463000839435
+[2025-05-02 07:42:58.969565] [PID 1562] starting gen of new population
+[2025-05-02 07:42:58.999638] [PID 1562] starting survivor_selection
+[2025-05-02 07:42:58.999834] [PID 1562] starting evaluation individuals
+[2025-05-02 07:43:58.028694] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:43:58.028849] [PID 1562] Iteration 66: Fitness = 4.78463000839435
+[2025-05-02 07:43:58.028941] [PID 1562] starting gen of new population
+[2025-05-02 07:43:58.064982] [PID 1562] starting survivor_selection
+[2025-05-02 07:43:58.065258] [PID 1562] starting evaluation individuals
+[2025-05-02 07:44:56.618978] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:44:56.619226] [PID 1562] Iteration 67: Fitness = 4.78463000839435
+[2025-05-02 07:44:56.619386] [PID 1562] starting gen of new population
+[2025-05-02 07:44:56.651891] [PID 1562] starting survivor_selection
+[2025-05-02 07:44:56.652142] [PID 1562] starting evaluation individuals
+[2025-05-02 07:45:54.963841] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:45:54.963984] [PID 1562] Iteration 68: Fitness = 4.78463000839435
+[2025-05-02 07:45:54.964181] [PID 1562] starting gen of new population
+[2025-05-02 07:45:54.997648] [PID 1562] starting survivor_selection
+[2025-05-02 07:45:54.997922] [PID 1562] starting evaluation individuals
+[2025-05-02 07:46:54.678819] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:46:54.678974] [PID 1562] Iteration 69: Fitness = 4.78463000839435
+[2025-05-02 07:46:54.679067] [PID 1562] starting gen of new population
+[2025-05-02 07:46:54.711959] [PID 1562] starting survivor_selection
+[2025-05-02 07:46:54.712176] [PID 1562] starting evaluation individuals
+[2025-05-02 07:47:52.980267] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:47:52.980466] [PID 1562] Iteration 70: Fitness = 4.78463000839435
+[2025-05-02 07:47:52.980580] [PID 1562] starting gen of new population
+[2025-05-02 07:47:53.013532] [PID 1562] starting survivor_selection
+[2025-05-02 07:47:53.013779] [PID 1562] starting evaluation individuals
+[2025-05-02 07:48:51.419961] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:48:51.420146] [PID 1562] Iteration 71: Fitness = 4.78463000839435
+[2025-05-02 07:48:51.420270] [PID 1562] starting gen of new population
+[2025-05-02 07:48:51.451989] [PID 1562] starting survivor_selection
+[2025-05-02 07:48:51.452211] [PID 1562] starting evaluation individuals
+[2025-05-02 07:49:50.541787] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:49:50.541926] [PID 1562] Iteration 72: Fitness = 4.78463000839435
+[2025-05-02 07:49:50.542179] [PID 1562] starting gen of new population
+[2025-05-02 07:49:50.575859] [PID 1562] starting survivor_selection
+[2025-05-02 07:49:50.576121] [PID 1562] starting evaluation individuals
+[2025-05-02 07:50:49.272359] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 07:50:49.272516] [PID 1562] Iteration 73: Fitness = 4.978383608024445
+[2025-05-02 07:50:49.272700] [PID 1562] starting gen of new population
+[2025-05-02 07:50:49.305706] [PID 1562] starting survivor_selection
+[2025-05-02 07:50:49.305909] [PID 1562] starting evaluation individuals
+[2025-05-02 07:51:47.384407] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:51:47.384557] [PID 1562] Iteration 74: Fitness = 4.978383608024445
+[2025-05-02 07:51:47.384686] [PID 1562] starting gen of new population
+[2025-05-02 07:51:47.416417] [PID 1562] starting survivor_selection
+[2025-05-02 07:51:47.416645] [PID 1562] starting evaluation individuals
+[2025-05-02 07:52:46.645468] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:52:46.645688] [PID 1562] Iteration 75: Fitness = 4.978383608024445
+[2025-05-02 07:52:46.645883] [PID 1562] starting gen of new population
+[2025-05-02 07:52:46.693019] [PID 1562] starting survivor_selection
+[2025-05-02 07:52:46.693299] [PID 1562] starting evaluation individuals
+[2025-05-02 07:53:46.281210] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:53:46.281333] [PID 1562] Iteration 76: Fitness = 4.978383608024445
+[2025-05-02 07:53:46.281425] [PID 1562] starting gen of new population
+[2025-05-02 07:53:46.315065] [PID 1562] starting survivor_selection
+[2025-05-02 07:53:46.315324] [PID 1562] starting evaluation individuals
+[2025-05-02 07:54:45.629199] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:54:45.629343] [PID 1562] Iteration 77: Fitness = 4.978383608024445
+[2025-05-02 07:54:45.629436] [PID 1562] starting gen of new population
+[2025-05-02 07:54:45.663404] [PID 1562] starting survivor_selection
+[2025-05-02 07:54:45.663638] [PID 1562] starting evaluation individuals
+[2025-05-02 07:55:45.395165] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:55:45.395288] [PID 1562] Iteration 78: Fitness = 4.978383608024445
+[2025-05-02 07:55:45.395414] [PID 1562] starting gen of new population
+[2025-05-02 07:55:45.433234] [PID 1562] starting survivor_selection
+[2025-05-02 07:55:45.433464] [PID 1562] starting evaluation individuals
+[2025-05-02 07:56:44.699754] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:56:44.699912] [PID 1562] Iteration 79: Fitness = 4.978383608024445
+[2025-05-02 07:56:44.700006] [PID 1562] starting gen of new population
+[2025-05-02 07:56:44.737444] [PID 1562] starting survivor_selection
+[2025-05-02 07:56:44.737726] [PID 1562] starting evaluation individuals
+[2025-05-02 07:57:44.282653] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:57:44.282854] [PID 1562] Iteration 80: Fitness = 4.978383608024445
+[2025-05-02 07:57:44.282959] [PID 1562] starting gen of new population
+[2025-05-02 07:57:44.323927] [PID 1562] starting survivor_selection
+[2025-05-02 07:57:44.324190] [PID 1562] starting evaluation individuals
+[2025-05-02 07:58:42.938587] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:58:42.938742] [PID 1562] Iteration 81: Fitness = 5.137921911679274
+[2025-05-02 07:58:42.939364] [PID 1562] starting gen of new population
+[2025-05-02 07:58:42.968689] [PID 1562] starting survivor_selection
+[2025-05-02 07:58:42.968908] [PID 1562] starting evaluation individuals
+[2025-05-02 07:59:41.264938] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 07:59:41.265091] [PID 1562] Iteration 82: Fitness = 5.137921911679274
+[2025-05-02 07:59:41.265263] [PID 1562] starting gen of new population
+[2025-05-02 07:59:41.302451] [PID 1562] starting survivor_selection
+[2025-05-02 07:59:41.302679] [PID 1562] starting evaluation individuals
+[2025-05-02 08:00:40.591363] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:00:40.591525] [PID 1562] Iteration 83: Fitness = 5.137921911679274
+[2025-05-02 08:00:40.591640] [PID 1562] starting gen of new population
+[2025-05-02 08:00:40.625391] [PID 1562] starting survivor_selection
+[2025-05-02 08:00:40.625690] [PID 1562] starting evaluation individuals
+[2025-05-02 08:01:40.135145] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:01:40.135324] [PID 1562] Iteration 84: Fitness = 5.137921911679274
+[2025-05-02 08:01:40.135442] [PID 1562] starting gen of new population
+[2025-05-02 08:01:40.167497] [PID 1562] starting survivor_selection
+[2025-05-02 08:01:40.167776] [PID 1562] starting evaluation individuals
+[2025-05-02 08:02:39.302869] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:02:39.303075] [PID 1562] Iteration 85: Fitness = 5.137921911679274
+[2025-05-02 08:02:39.303185] [PID 1562] starting gen of new population
+[2025-05-02 08:02:39.334215] [PID 1562] starting survivor_selection
+[2025-05-02 08:02:39.334430] [PID 1562] starting evaluation individuals
+[2025-05-02 08:03:38.246357] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:03:38.246481] [PID 1562] Iteration 86: Fitness = 5.137921911679274
+[2025-05-02 08:03:38.246603] [PID 1562] starting gen of new population
+[2025-05-02 08:03:38.278560] [PID 1562] starting survivor_selection
+[2025-05-02 08:03:38.278823] [PID 1562] starting evaluation individuals
+[2025-05-02 08:04:36.371124] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:04:36.371245] [PID 1562] Iteration 87: Fitness = 5.405485681402923
+[2025-05-02 08:04:36.371371] [PID 1562] starting gen of new population
+[2025-05-02 08:04:36.403188] [PID 1562] starting survivor_selection
+[2025-05-02 08:04:36.403425] [PID 1562] starting evaluation individuals
+[2025-05-02 08:05:35.500212] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:05:35.500377] [PID 1562] Iteration 88: Fitness = 5.405485681402923
+[2025-05-02 08:05:35.500479] [PID 1562] starting gen of new population
+[2025-05-02 08:05:35.535221] [PID 1562] starting survivor_selection
+[2025-05-02 08:05:35.535448] [PID 1562] starting evaluation individuals
+[2025-05-02 08:06:33.499316] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:06:33.499424] [PID 1562] Iteration 89: Fitness = 5.405485681402923
+[2025-05-02 08:06:33.499578] [PID 1562] starting gen of new population
+[2025-05-02 08:06:33.536111] [PID 1562] starting survivor_selection
+[2025-05-02 08:06:33.536307] [PID 1562] starting evaluation individuals
+[2025-05-02 08:07:32.199854] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:07:32.199994] [PID 1562] Iteration 90: Fitness = 5.405485681402923
+[2025-05-02 08:07:32.200196] [PID 1562] starting gen of new population
+[2025-05-02 08:07:32.237078] [PID 1562] starting survivor_selection
+[2025-05-02 08:07:32.237312] [PID 1562] starting evaluation individuals
+[2025-05-02 08:08:30.506413] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:08:30.506637] [PID 1562] Iteration 91: Fitness = 5.405485681402923
+[2025-05-02 08:08:30.506752] [PID 1562] starting gen of new population
+[2025-05-02 08:08:30.537818] [PID 1562] starting survivor_selection
+[2025-05-02 08:08:30.538044] [PID 1562] starting evaluation individuals
+[2025-05-02 08:09:29.131172] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:09:29.131455] [PID 1562] Iteration 92: Fitness = 5.405485681402923
+[2025-05-02 08:09:29.131589] [PID 1562] starting gen of new population
+[2025-05-02 08:09:29.164961] [PID 1562] starting survivor_selection
+[2025-05-02 08:09:29.165280] [PID 1562] starting evaluation individuals
+[2025-05-02 08:10:26.235364] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:10:26.235487] [PID 1562] Iteration 93: Fitness = 5.405485681402923
+[2025-05-02 08:10:26.235653] [PID 1562] starting gen of new population
+[2025-05-02 08:10:26.273108] [PID 1562] starting survivor_selection
+[2025-05-02 08:10:26.273380] [PID 1562] starting evaluation individuals
+[2025-05-02 08:11:24.493940] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:11:24.494085] [PID 1562] Iteration 94: Fitness = 5.405485681402923
+[2025-05-02 08:11:24.494187] [PID 1562] starting gen of new population
+[2025-05-02 08:11:24.530309] [PID 1562] starting survivor_selection
+[2025-05-02 08:11:24.530528] [PID 1562] starting evaluation individuals
+[2025-05-02 08:12:22.623113] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:12:22.623267] [PID 1562] Iteration 95: Fitness = 5.405485681402923
+[2025-05-02 08:12:22.623363] [PID 1562] starting gen of new population
+[2025-05-02 08:12:22.656920] [PID 1562] starting survivor_selection
+[2025-05-02 08:12:22.657153] [PID 1562] starting evaluation individuals
+[2025-05-02 08:13:21.786449] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:13:21.786613] [PID 1562] Iteration 96: Fitness = 5.405485681402923
+[2025-05-02 08:13:21.786709] [PID 1562] starting gen of new population
+[2025-05-02 08:13:21.819853] [PID 1562] starting survivor_selection
+[2025-05-02 08:13:21.820075] [PID 1562] starting evaluation individuals
+[2025-05-02 08:14:20.317475] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:14:20.317640] [PID 1562] Iteration 97: Fitness = 5.405485681402923
+[2025-05-02 08:14:20.317741] [PID 1562] starting gen of new population
+[2025-05-02 08:14:20.351961] [PID 1562] starting survivor_selection
+[2025-05-02 08:14:20.352193] [PID 1562] starting evaluation individuals
+[2025-05-02 08:15:18.578922] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:15:18.579116] [PID 1562] Iteration 98: Fitness = 5.405485681402923
+[2025-05-02 08:15:18.579224] [PID 1562] starting gen of new population
+[2025-05-02 08:15:18.612269] [PID 1562] starting survivor_selection
+[2025-05-02 08:15:18.612516] [PID 1562] starting evaluation individuals
+[2025-05-02 08:16:16.829651] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:16:16.829789] [PID 1562] Iteration 99: Fitness = 5.405485681402923
+[2025-05-02 08:16:16.829910] [PID 1562] starting gen of new population
+[2025-05-02 08:16:16.868729] [PID 1562] starting survivor_selection
+[2025-05-02 08:16:16.868926] [PID 1562] starting evaluation individuals
+[2025-05-02 08:17:14.885318] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:17:14.885519] [PID 1562] Iteration 100: Fitness = 5.405485681402923
+[2025-05-02 08:17:14.885625] [PID 1562] starting gen of new population
+[2025-05-02 08:17:14.921021] [PID 1562] starting survivor_selection
+[2025-05-02 08:17:15.647918] [PID 1562] starting evaluation individuals
+[2025-05-02 08:18:17.392401] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.66 MB; Peak = 2.85 MB
+[2025-05-02 08:18:17.392542] [PID 1562] Iteration 1: Fitness = 1.1471048459185706
+[2025-05-02 08:18:17.392721] [PID 1562] starting gen of new population
+[2025-05-02 08:18:17.433483] [PID 1562] starting survivor_selection
+[2025-05-02 08:18:17.433695] [PID 1562] starting evaluation individuals
+[2025-05-02 08:19:15.626020] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 08:19:15.626162] [PID 1562] Iteration 2: Fitness = 1.1471048459185706
+[2025-05-02 08:19:15.626257] [PID 1562] starting gen of new population
+[2025-05-02 08:19:15.666793] [PID 1562] starting survivor_selection
+[2025-05-02 08:19:15.667024] [PID 1562] starting evaluation individuals
+[2025-05-02 08:20:14.037781] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 08:20:14.037919] [PID 1562] Iteration 3: Fitness = 1.415590517428231
+[2025-05-02 08:20:14.038038] [PID 1562] starting gen of new population
+[2025-05-02 08:20:14.074227] [PID 1562] starting survivor_selection
+[2025-05-02 08:20:14.074427] [PID 1562] starting evaluation individuals
+[2025-05-02 08:21:11.866783] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 08:21:11.867005] [PID 1562] Iteration 4: Fitness = 1.415590517428231
+[2025-05-02 08:21:11.867126] [PID 1562] starting gen of new population
+[2025-05-02 08:21:11.900856] [PID 1562] starting survivor_selection
+[2025-05-02 08:21:11.901085] [PID 1562] starting evaluation individuals
+[2025-05-02 08:22:10.699011] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.67 MB; Peak = 2.85 MB
+[2025-05-02 08:22:10.699159] [PID 1562] Iteration 5: Fitness = 1.4382516850848697
+[2025-05-02 08:22:10.699254] [PID 1562] starting gen of new population
+[2025-05-02 08:22:10.738868] [PID 1562] starting survivor_selection
+[2025-05-02 08:22:10.739120] [PID 1562] starting evaluation individuals
+[2025-05-02 08:23:09.404869] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:23:09.405005] [PID 1562] Iteration 6: Fitness = 3.2582356168040434
+[2025-05-02 08:23:09.405121] [PID 1562] starting gen of new population
+[2025-05-02 08:23:09.438509] [PID 1562] starting survivor_selection
+[2025-05-02 08:23:09.438754] [PID 1562] starting evaluation individuals
+[2025-05-02 08:24:07.672988] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:24:07.673194] [PID 1562] Iteration 7: Fitness = 3.2582356168040434
+[2025-05-02 08:24:07.673361] [PID 1562] starting gen of new population
+[2025-05-02 08:24:07.704704] [PID 1562] starting survivor_selection
+[2025-05-02 08:24:07.704953] [PID 1562] starting evaluation individuals
+[2025-05-02 08:25:06.760761] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:25:06.760930] [PID 1562] Iteration 8: Fitness = 3.2582356168040434
+[2025-05-02 08:25:06.761068] [PID 1562] starting gen of new population
+[2025-05-02 08:25:06.801433] [PID 1562] starting survivor_selection
+[2025-05-02 08:25:06.801659] [PID 1562] starting evaluation individuals
+[2025-05-02 08:26:05.113200] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:26:05.113353] [PID 1562] Iteration 9: Fitness = 3.2582356168040434
+[2025-05-02 08:26:05.113450] [PID 1562] starting gen of new population
+[2025-05-02 08:26:05.147398] [PID 1562] starting survivor_selection
+[2025-05-02 08:26:05.147606] [PID 1562] starting evaluation individuals
+[2025-05-02 08:27:02.871734] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:27:02.871849] [PID 1562] Iteration 10: Fitness = 3.2582356168040434
+[2025-05-02 08:27:02.871968] [PID 1562] starting gen of new population
+[2025-05-02 08:27:02.909720] [PID 1562] starting survivor_selection
+[2025-05-02 08:27:02.909912] [PID 1562] starting evaluation individuals
+[2025-05-02 08:28:00.930662] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:28:00.930821] [PID 1562] Iteration 11: Fitness = 3.2582356168040434
+[2025-05-02 08:28:00.930921] [PID 1562] starting gen of new population
+[2025-05-02 08:28:00.972741] [PID 1562] starting survivor_selection
+[2025-05-02 08:28:00.972987] [PID 1562] starting evaluation individuals
+[2025-05-02 08:28:59.588060] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:28:59.588192] [PID 1562] Iteration 12: Fitness = 3.2582356168040434
+[2025-05-02 08:28:59.588327] [PID 1562] starting gen of new population
+[2025-05-02 08:28:59.625255] [PID 1562] starting survivor_selection
+[2025-05-02 08:28:59.625496] [PID 1562] starting evaluation individuals
+[2025-05-02 08:29:58.856942] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:29:58.857101] [PID 1562] Iteration 13: Fitness = 3.2582356168040434
+[2025-05-02 08:29:58.857200] [PID 1562] starting gen of new population
+[2025-05-02 08:29:58.891917] [PID 1562] starting survivor_selection
+[2025-05-02 08:29:58.892139] [PID 1562] starting evaluation individuals
+[2025-05-02 08:30:58.073735] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:30:58.073875] [PID 1562] Iteration 14: Fitness = 3.2582356168040434
+[2025-05-02 08:30:58.073968] [PID 1562] starting gen of new population
+[2025-05-02 08:30:58.112532] [PID 1562] starting survivor_selection
+[2025-05-02 08:30:58.112895] [PID 1562] starting evaluation individuals
+[2025-05-02 08:31:57.423953] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:31:57.424066] [PID 1562] Iteration 15: Fitness = 3.2582356168040434
+[2025-05-02 08:31:57.424274] [PID 1562] starting gen of new population
+[2025-05-02 08:31:57.458264] [PID 1562] starting survivor_selection
+[2025-05-02 08:31:57.458542] [PID 1562] starting evaluation individuals
+[2025-05-02 08:32:56.284610] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:32:56.284733] [PID 1562] Iteration 16: Fitness = 3.2582356168040434
+[2025-05-02 08:32:56.284851] [PID 1562] starting gen of new population
+[2025-05-02 08:32:56.317536] [PID 1562] starting survivor_selection
+[2025-05-02 08:32:56.317757] [PID 1562] starting evaluation individuals
+[2025-05-02 08:33:53.736199] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:33:53.736352] [PID 1562] Iteration 17: Fitness = 3.2582356168040434
+[2025-05-02 08:33:53.736445] [PID 1562] starting gen of new population
+[2025-05-02 08:33:53.770662] [PID 1562] starting survivor_selection
+[2025-05-02 08:33:53.770875] [PID 1562] starting evaluation individuals
+[2025-05-02 08:34:52.742140] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:34:52.742261] [PID 1562] Iteration 18: Fitness = 3.2582356168040434
+[2025-05-02 08:34:52.742385] [PID 1562] starting gen of new population
+[2025-05-02 08:34:52.779238] [PID 1562] starting survivor_selection
+[2025-05-02 08:34:52.779437] [PID 1562] starting evaluation individuals
+[2025-05-02 08:35:51.853388] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:35:51.853528] [PID 1562] Iteration 19: Fitness = 3.2582356168040434
+[2025-05-02 08:35:51.853621] [PID 1562] starting gen of new population
+[2025-05-02 08:35:51.894947] [PID 1562] starting survivor_selection
+[2025-05-02 08:35:51.895220] [PID 1562] starting evaluation individuals
+[2025-05-02 08:36:50.499106] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:36:50.499409] [PID 1562] Iteration 20: Fitness = 3.2582356168040434
+[2025-05-02 08:36:50.499582] [PID 1562] starting gen of new population
+[2025-05-02 08:36:50.532683] [PID 1562] starting survivor_selection
+[2025-05-02 08:36:50.532923] [PID 1562] starting evaluation individuals
+[2025-05-02 08:37:49.676419] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:37:49.676592] [PID 1562] Iteration 21: Fitness = 3.2582356168040434
+[2025-05-02 08:37:49.676715] [PID 1562] starting gen of new population
+[2025-05-02 08:37:49.706107] [PID 1562] starting survivor_selection
+[2025-05-02 08:37:49.706319] [PID 1562] starting evaluation individuals
+[2025-05-02 08:38:49.003520] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:38:49.003636] [PID 1562] Iteration 22: Fitness = 3.2582356168040434
+[2025-05-02 08:38:49.003758] [PID 1562] starting gen of new population
+[2025-05-02 08:38:49.035849] [PID 1562] starting survivor_selection
+[2025-05-02 08:38:49.036057] [PID 1562] starting evaluation individuals
+[2025-05-02 08:39:48.373489] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:39:48.373671] [PID 1562] Iteration 23: Fitness = 3.2582356168040434
+[2025-05-02 08:39:48.373773] [PID 1562] starting gen of new population
+[2025-05-02 08:39:48.410934] [PID 1562] starting survivor_selection
+[2025-05-02 08:39:48.411171] [PID 1562] starting evaluation individuals
+[2025-05-02 08:40:47.766448] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:40:47.766552] [PID 1562] Iteration 24: Fitness = 3.2582356168040434
+[2025-05-02 08:40:47.766673] [PID 1562] starting gen of new population
+[2025-05-02 08:40:47.792818] [PID 1562] starting survivor_selection
+[2025-05-02 08:40:47.792996] [PID 1562] starting evaluation individuals
+[2025-05-02 08:41:46.673774] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 08:41:46.673875] [PID 1562] Iteration 25: Fitness = 3.268232532760394
+[2025-05-02 08:41:46.673960] [PID 1562] starting gen of new population
+[2025-05-02 08:41:46.712505] [PID 1562] starting survivor_selection
+[2025-05-02 08:41:46.712734] [PID 1562] starting evaluation individuals
+[2025-05-02 08:42:44.726453] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:42:44.726555] [PID 1562] Iteration 26: Fitness = 3.268232532760394
+[2025-05-02 08:42:44.726671] [PID 1562] starting gen of new population
+[2025-05-02 08:42:44.759115] [PID 1562] starting survivor_selection
+[2025-05-02 08:42:44.759314] [PID 1562] starting evaluation individuals
+[2025-05-02 08:43:43.129095] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:43:43.129241] [PID 1562] Iteration 27: Fitness = 3.313951388599507
+[2025-05-02 08:43:43.129331] [PID 1562] starting gen of new population
+[2025-05-02 08:43:43.167286] [PID 1562] starting survivor_selection
+[2025-05-02 08:43:43.167477] [PID 1562] starting evaluation individuals
+[2025-05-02 08:44:42.263089] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:44:42.263236] [PID 1562] Iteration 28: Fitness = 3.313951388599507
+[2025-05-02 08:44:42.263325] [PID 1562] starting gen of new population
+[2025-05-02 08:44:42.302691] [PID 1562] starting survivor_selection
+[2025-05-02 08:44:42.302986] [PID 1562] starting evaluation individuals
+[2025-05-02 08:45:41.676500] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:45:41.676603] [PID 1562] Iteration 29: Fitness = 3.313951388599507
+[2025-05-02 08:45:41.676750] [PID 1562] starting gen of new population
+[2025-05-02 08:45:41.712102] [PID 1562] starting survivor_selection
+[2025-05-02 08:45:41.712307] [PID 1562] starting evaluation individuals
+[2025-05-02 08:46:41.427513] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:46:41.427613] [PID 1562] Iteration 30: Fitness = 3.9443601269217274
+[2025-05-02 08:46:41.427731] [PID 1562] starting gen of new population
+[2025-05-02 08:46:41.458090] [PID 1562] starting survivor_selection
+[2025-05-02 08:46:41.458274] [PID 1562] starting evaluation individuals
+[2025-05-02 08:47:40.120516] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:47:40.120630] [PID 1562] Iteration 31: Fitness = 4.504517126003817
+[2025-05-02 08:47:40.120776] [PID 1562] starting gen of new population
+[2025-05-02 08:47:40.155961] [PID 1562] starting survivor_selection
+[2025-05-02 08:47:40.156159] [PID 1562] starting evaluation individuals
+[2025-05-02 08:48:39.461536] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:48:39.461668] [PID 1562] Iteration 32: Fitness = 4.504517126003817
+[2025-05-02 08:48:39.461754] [PID 1562] starting gen of new population
+[2025-05-02 08:48:39.497651] [PID 1562] starting survivor_selection
+[2025-05-02 08:48:39.497871] [PID 1562] starting evaluation individuals
+[2025-05-02 08:49:37.944226] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:49:37.944332] [PID 1562] Iteration 33: Fitness = 4.504517126003817
+[2025-05-02 08:49:37.944432] [PID 1562] starting gen of new population
+[2025-05-02 08:49:37.983037] [PID 1562] starting survivor_selection
+[2025-05-02 08:49:37.983276] [PID 1562] starting evaluation individuals
+[2025-05-02 08:50:36.983933] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:50:36.984075] [PID 1562] Iteration 34: Fitness = 4.504517126003817
+[2025-05-02 08:50:36.984165] [PID 1562] starting gen of new population
+[2025-05-02 08:50:37.024403] [PID 1562] starting survivor_selection
+[2025-05-02 08:50:37.024622] [PID 1562] starting evaluation individuals
+[2025-05-02 08:51:35.905845] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:51:35.905961] [PID 1562] Iteration 35: Fitness = 4.504517126003817
+[2025-05-02 08:51:35.906081] [PID 1562] starting gen of new population
+[2025-05-02 08:51:35.938573] [PID 1562] starting survivor_selection
+[2025-05-02 08:51:35.938769] [PID 1562] starting evaluation individuals
+[2025-05-02 08:52:35.534544] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:52:35.534721] [PID 1562] Iteration 36: Fitness = 4.504517126003817
+[2025-05-02 08:52:35.534815] [PID 1562] starting gen of new population
+[2025-05-02 08:52:35.573127] [PID 1562] starting survivor_selection
+[2025-05-02 08:52:35.573341] [PID 1562] starting evaluation individuals
+[2025-05-02 08:53:35.259087] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:53:35.259205] [PID 1562] Iteration 37: Fitness = 4.504517126003817
+[2025-05-02 08:53:35.259336] [PID 1562] starting gen of new population
+[2025-05-02 08:53:35.300922] [PID 1562] starting survivor_selection
+[2025-05-02 08:53:35.301160] [PID 1562] starting evaluation individuals
+[2025-05-02 08:54:34.826638] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:54:34.826857] [PID 1562] Iteration 38: Fitness = 4.907977880133849
+[2025-05-02 08:54:34.826969] [PID 1562] starting gen of new population
+[2025-05-02 08:54:34.868380] [PID 1562] starting survivor_selection
+[2025-05-02 08:54:34.868640] [PID 1562] starting evaluation individuals
+[2025-05-02 08:55:34.282303] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:55:34.282448] [PID 1562] Iteration 39: Fitness = 4.907977880133849
+[2025-05-02 08:55:34.282552] [PID 1562] starting gen of new population
+[2025-05-02 08:55:34.321721] [PID 1562] starting survivor_selection
+[2025-05-02 08:55:34.321957] [PID 1562] starting evaluation individuals
+[2025-05-02 08:56:33.286601] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:56:33.286720] [PID 1562] Iteration 40: Fitness = 4.907977880133849
+[2025-05-02 08:56:33.286847] [PID 1562] starting gen of new population
+[2025-05-02 08:56:33.323343] [PID 1562] starting survivor_selection
+[2025-05-02 08:56:33.323541] [PID 1562] starting evaluation individuals
+[2025-05-02 08:57:32.268591] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:57:32.268767] [PID 1562] Iteration 41: Fitness = 4.907977880133849
+[2025-05-02 08:57:32.268881] [PID 1562] starting gen of new population
+[2025-05-02 08:57:32.301646] [PID 1562] starting survivor_selection
+[2025-05-02 08:57:32.301892] [PID 1562] starting evaluation individuals
+[2025-05-02 08:58:31.272943] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:58:31.273069] [PID 1562] Iteration 42: Fitness = 5.299674804458657
+[2025-05-02 08:58:31.273240] [PID 1562] starting gen of new population
+[2025-05-02 08:58:31.309027] [PID 1562] starting survivor_selection
+[2025-05-02 08:58:31.309258] [PID 1562] starting evaluation individuals
+[2025-05-02 08:59:30.960682] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 08:59:30.960839] [PID 1562] Iteration 43: Fitness = 5.299674804458657
+[2025-05-02 08:59:30.960932] [PID 1562] starting gen of new population
+[2025-05-02 08:59:30.997116] [PID 1562] starting survivor_selection
+[2025-05-02 08:59:30.997323] [PID 1562] starting evaluation individuals
+[2025-05-02 09:00:30.348347] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:00:30.348497] [PID 1562] Iteration 44: Fitness = 5.299674804458657
+[2025-05-02 09:00:30.348590] [PID 1562] starting gen of new population
+[2025-05-02 09:00:30.382703] [PID 1562] starting survivor_selection
+[2025-05-02 09:00:30.382948] [PID 1562] starting evaluation individuals
+[2025-05-02 09:01:28.952619] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:01:28.952756] [PID 1562] Iteration 45: Fitness = 5.583655750461661
+[2025-05-02 09:01:28.952888] [PID 1562] starting gen of new population
+[2025-05-02 09:01:28.989930] [PID 1562] starting survivor_selection
+[2025-05-02 09:01:28.990199] [PID 1562] starting evaluation individuals
+[2025-05-02 09:02:27.488119] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:02:27.488259] [PID 1562] Iteration 46: Fitness = 5.583655750461661
+[2025-05-02 09:02:27.488915] [PID 1562] starting gen of new population
+[2025-05-02 09:02:27.522414] [PID 1562] starting survivor_selection
+[2025-05-02 09:02:27.522707] [PID 1562] starting evaluation individuals
+[2025-05-02 09:03:26.871264] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:03:26.871413] [PID 1562] Iteration 47: Fitness = 5.583655750461661
+[2025-05-02 09:03:26.871509] [PID 1562] starting gen of new population
+[2025-05-02 09:03:26.905838] [PID 1562] starting survivor_selection
+[2025-05-02 09:03:26.906060] [PID 1562] starting evaluation individuals
+[2025-05-02 09:04:26.288495] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:04:26.288638] [PID 1562] Iteration 48: Fitness = 5.583655750461661
+[2025-05-02 09:04:26.289103] [PID 1562] starting gen of new population
+[2025-05-02 09:04:26.323654] [PID 1562] starting survivor_selection
+[2025-05-02 09:04:26.323903] [PID 1562] starting evaluation individuals
+[2025-05-02 09:05:25.228470] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:05:25.228615] [PID 1562] Iteration 49: Fitness = 5.583655750461661
+[2025-05-02 09:05:25.228821] [PID 1562] starting gen of new population
+[2025-05-02 09:05:25.262489] [PID 1562] starting survivor_selection
+[2025-05-02 09:05:25.262731] [PID 1562] starting evaluation individuals
+[2025-05-02 09:06:24.020060] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:06:24.020185] [PID 1562] Iteration 50: Fitness = 5.583655750461661
+[2025-05-02 09:06:24.020308] [PID 1562] starting gen of new population
+[2025-05-02 09:06:24.054852] [PID 1562] starting survivor_selection
+[2025-05-02 09:06:24.055098] [PID 1562] starting evaluation individuals
+[2025-05-02 09:07:23.984258] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:07:23.984402] [PID 1562] Iteration 51: Fitness = 5.583655750461661
+[2025-05-02 09:07:23.984508] [PID 1562] starting gen of new population
+[2025-05-02 09:07:24.021228] [PID 1562] starting survivor_selection
+[2025-05-02 09:07:24.021467] [PID 1562] starting evaluation individuals
+[2025-05-02 09:08:24.023513] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:08:24.023707] [PID 1562] Iteration 52: Fitness = 5.583655750461661
+[2025-05-02 09:08:24.023831] [PID 1562] starting gen of new population
+[2025-05-02 09:08:24.061946] [PID 1562] starting survivor_selection
+[2025-05-02 09:08:24.062209] [PID 1562] starting evaluation individuals
+[2025-05-02 09:09:22.887976] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:09:22.888095] [PID 1562] Iteration 53: Fitness = 5.583655750461661
+[2025-05-02 09:09:22.888188] [PID 1562] starting gen of new population
+[2025-05-02 09:09:22.925386] [PID 1562] starting survivor_selection
+[2025-05-02 09:09:22.925616] [PID 1562] starting evaluation individuals
+[2025-05-02 09:10:21.368863] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:10:21.369091] [PID 1562] Iteration 54: Fitness = 5.583655750461661
+[2025-05-02 09:10:21.369281] [PID 1562] starting gen of new population
+[2025-05-02 09:10:21.398467] [PID 1562] starting survivor_selection
+[2025-05-02 09:10:21.398671] [PID 1562] starting evaluation individuals
+[2025-05-02 09:11:19.877459] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:11:19.877625] [PID 1562] Iteration 55: Fitness = 5.583655750461661
+[2025-05-02 09:11:19.878018] [PID 1562] starting gen of new population
+[2025-05-02 09:11:19.912788] [PID 1562] starting survivor_selection
+[2025-05-02 09:11:19.913025] [PID 1562] starting evaluation individuals
+[2025-05-02 09:12:18.973546] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:12:18.973714] [PID 1562] Iteration 56: Fitness = 5.583655750461661
+[2025-05-02 09:12:18.973835] [PID 1562] starting gen of new population
+[2025-05-02 09:12:19.000652] [PID 1562] starting survivor_selection
+[2025-05-02 09:12:19.000865] [PID 1562] starting evaluation individuals
+[2025-05-02 09:13:18.279247] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:13:18.279402] [PID 1562] Iteration 57: Fitness = 5.583655750461661
+[2025-05-02 09:13:18.279609] [PID 1562] starting gen of new population
+[2025-05-02 09:13:18.315567] [PID 1562] starting survivor_selection
+[2025-05-02 09:13:18.315840] [PID 1562] starting evaluation individuals
+[2025-05-02 09:14:17.540919] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:14:17.541063] [PID 1562] Iteration 58: Fitness = 5.583655750461661
+[2025-05-02 09:14:17.541161] [PID 1562] starting gen of new population
+[2025-05-02 09:14:17.574062] [PID 1562] starting survivor_selection
+[2025-05-02 09:14:17.574308] [PID 1562] starting evaluation individuals
+[2025-05-02 09:15:16.636052] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:15:16.636234] [PID 1562] Iteration 59: Fitness = 5.583655750461661
+[2025-05-02 09:15:16.636352] [PID 1562] starting gen of new population
+[2025-05-02 09:15:16.672142] [PID 1562] starting survivor_selection
+[2025-05-02 09:15:16.672399] [PID 1562] starting evaluation individuals
+[2025-05-02 09:16:16.573147] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:16:16.573325] [PID 1562] Iteration 60: Fitness = 5.583655750461661
+[2025-05-02 09:16:16.573466] [PID 1562] starting gen of new population
+[2025-05-02 09:16:16.613422] [PID 1562] starting survivor_selection
+[2025-05-02 09:16:16.613670] [PID 1562] starting evaluation individuals
+[2025-05-02 09:17:16.140594] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:17:16.140755] [PID 1562] Iteration 61: Fitness = 5.583655750461661
+[2025-05-02 09:17:16.140923] [PID 1562] starting gen of new population
+[2025-05-02 09:17:16.177305] [PID 1562] starting survivor_selection
+[2025-05-02 09:17:16.177634] [PID 1562] starting evaluation individuals
+[2025-05-02 09:18:15.196004] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:18:15.196163] [PID 1562] Iteration 62: Fitness = 5.583655750461661
+[2025-05-02 09:18:15.196259] [PID 1562] starting gen of new population
+[2025-05-02 09:18:15.230761] [PID 1562] starting survivor_selection
+[2025-05-02 09:18:15.230994] [PID 1562] starting evaluation individuals
+[2025-05-02 09:19:15.501745] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:19:15.501878] [PID 1562] Iteration 63: Fitness = 5.583655750461661
+[2025-05-02 09:19:15.502044] [PID 1562] starting gen of new population
+[2025-05-02 09:19:15.532379] [PID 1562] starting survivor_selection
+[2025-05-02 09:19:15.532635] [PID 1562] starting evaluation individuals
+[2025-05-02 09:20:14.797677] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:20:14.797827] [PID 1562] Iteration 64: Fitness = 5.583655750461661
+[2025-05-02 09:20:14.798028] [PID 1562] starting gen of new population
+[2025-05-02 09:20:14.834538] [PID 1562] starting survivor_selection
+[2025-05-02 09:20:14.834779] [PID 1562] starting evaluation individuals
+[2025-05-02 09:21:13.990373] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:21:13.990526] [PID 1562] Iteration 65: Fitness = 5.583655750461661
+[2025-05-02 09:21:13.990620] [PID 1562] starting gen of new population
+[2025-05-02 09:21:14.020697] [PID 1562] starting survivor_selection
+[2025-05-02 09:21:14.020927] [PID 1562] starting evaluation individuals
+[2025-05-02 09:22:13.766605] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:22:13.766735] [PID 1562] Iteration 66: Fitness = 5.583655750461661
+[2025-05-02 09:22:13.766863] [PID 1562] starting gen of new population
+[2025-05-02 09:22:13.803292] [PID 1562] starting survivor_selection
+[2025-05-02 09:22:13.803539] [PID 1562] starting evaluation individuals
+[2025-05-02 09:23:13.469304] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:23:13.469505] [PID 1562] Iteration 67: Fitness = 5.583655750461661
+[2025-05-02 09:23:13.469611] [PID 1562] starting gen of new population
+[2025-05-02 09:23:13.506794] [PID 1562] starting survivor_selection
+[2025-05-02 09:23:13.507045] [PID 1562] starting evaluation individuals
+[2025-05-02 09:24:12.894176] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:24:12.894297] [PID 1562] Iteration 68: Fitness = 5.583655750461661
+[2025-05-02 09:24:12.894432] [PID 1562] starting gen of new population
+[2025-05-02 09:24:12.934384] [PID 1562] starting survivor_selection
+[2025-05-02 09:24:12.934611] [PID 1562] starting evaluation individuals
+[2025-05-02 09:25:11.946796] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:25:11.946921] [PID 1562] Iteration 69: Fitness = 5.583655750461661
+[2025-05-02 09:25:11.947051] [PID 1562] starting gen of new population
+[2025-05-02 09:25:11.985717] [PID 1562] starting survivor_selection
+[2025-05-02 09:25:11.985935] [PID 1562] starting evaluation individuals
+[2025-05-02 09:26:10.956415] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:26:10.956535] [PID 1562] Iteration 70: Fitness = 5.583655750461661
+[2025-05-02 09:26:10.956717] [PID 1562] starting gen of new population
+[2025-05-02 09:26:10.998737] [PID 1562] starting survivor_selection
+[2025-05-02 09:26:10.999070] [PID 1562] starting evaluation individuals
+[2025-05-02 09:27:09.568225] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:27:09.568364] [PID 1562] Iteration 71: Fitness = 5.583655750461661
+[2025-05-02 09:27:09.568489] [PID 1562] starting gen of new population
+[2025-05-02 09:27:09.605423] [PID 1562] starting survivor_selection
+[2025-05-02 09:27:09.605657] [PID 1562] starting evaluation individuals
+[2025-05-02 09:28:08.664489] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:28:08.664641] [PID 1562] Iteration 72: Fitness = 5.583655750461661
+[2025-05-02 09:28:08.664785] [PID 1562] starting gen of new population
+[2025-05-02 09:28:08.694603] [PID 1562] starting survivor_selection
+[2025-05-02 09:28:08.694841] [PID 1562] starting evaluation individuals
+[2025-05-02 09:29:07.248908] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:29:07.249032] [PID 1562] Iteration 73: Fitness = 5.583655750461661
+[2025-05-02 09:29:07.249205] [PID 1562] starting gen of new population
+[2025-05-02 09:29:07.283676] [PID 1562] starting survivor_selection
+[2025-05-02 09:29:07.283891] [PID 1562] starting evaluation individuals
+[2025-05-02 09:30:05.825529] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:30:05.825843] [PID 1562] Iteration 74: Fitness = 5.583655750461661
+[2025-05-02 09:30:05.826076] [PID 1562] starting gen of new population
+[2025-05-02 09:30:05.874338] [PID 1562] starting survivor_selection
+[2025-05-02 09:30:05.874643] [PID 1562] starting evaluation individuals
+[2025-05-02 09:31:04.740315] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:31:04.740476] [PID 1562] Iteration 75: Fitness = 5.583655750461661
+[2025-05-02 09:31:04.740590] [PID 1562] starting gen of new population
+[2025-05-02 09:31:04.771884] [PID 1562] starting survivor_selection
+[2025-05-02 09:31:04.772134] [PID 1562] starting evaluation individuals
+[2025-05-02 09:32:04.112027] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:32:04.112152] [PID 1562] Iteration 76: Fitness = 5.583655750461661
+[2025-05-02 09:32:04.112247] [PID 1562] starting gen of new population
+[2025-05-02 09:32:04.149899] [PID 1562] starting survivor_selection
+[2025-05-02 09:32:04.150139] [PID 1562] starting evaluation individuals
+[2025-05-02 09:33:02.856546] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:33:02.856683] [PID 1562] Iteration 77: Fitness = 5.583655750461661
+[2025-05-02 09:33:02.856781] [PID 1562] starting gen of new population
+[2025-05-02 09:33:02.886056] [PID 1562] starting survivor_selection
+[2025-05-02 09:33:02.886260] [PID 1562] starting evaluation individuals
+[2025-05-02 09:34:01.788096] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:34:01.788244] [PID 1562] Iteration 78: Fitness = 5.583655750461661
+[2025-05-02 09:34:01.788373] [PID 1562] starting gen of new population
+[2025-05-02 09:34:01.823114] [PID 1562] starting survivor_selection
+[2025-05-02 09:34:01.823362] [PID 1562] starting evaluation individuals
+[2025-05-02 09:35:01.634882] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:35:01.635034] [PID 1562] Iteration 79: Fitness = 5.583655750461661
+[2025-05-02 09:35:01.635129] [PID 1562] starting gen of new population
+[2025-05-02 09:35:01.668858] [PID 1562] starting survivor_selection
+[2025-05-02 09:35:01.669119] [PID 1562] starting evaluation individuals
+[2025-05-02 09:36:01.423677] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:36:01.423827] [PID 1562] Iteration 80: Fitness = 5.583655750461661
+[2025-05-02 09:36:01.423926] [PID 1562] starting gen of new population
+[2025-05-02 09:36:01.459638] [PID 1562] starting survivor_selection
+[2025-05-02 09:36:01.459918] [PID 1562] starting evaluation individuals
+[2025-05-02 09:37:01.785756] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:37:01.785953] [PID 1562] Iteration 81: Fitness = 5.847613698577655
+[2025-05-02 09:37:01.786065] [PID 1562] starting gen of new population
+[2025-05-02 09:37:01.823089] [PID 1562] starting survivor_selection
+[2025-05-02 09:37:01.823337] [PID 1562] starting evaluation individuals
+[2025-05-02 09:38:02.480026] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:38:02.480140] [PID 1562] Iteration 82: Fitness = 5.847613698577655
+[2025-05-02 09:38:02.480257] [PID 1562] starting gen of new population
+[2025-05-02 09:38:02.515012] [PID 1562] starting survivor_selection
+[2025-05-02 09:38:02.515216] [PID 1562] starting evaluation individuals
+[2025-05-02 09:39:02.490024] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:39:02.490150] [PID 1562] Iteration 83: Fitness = 5.867921672500804
+[2025-05-02 09:39:02.490270] [PID 1562] starting gen of new population
+[2025-05-02 09:39:02.525900] [PID 1562] starting survivor_selection
+[2025-05-02 09:39:02.526145] [PID 1562] starting evaluation individuals
+[2025-05-02 09:40:02.220542] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:40:02.220672] [PID 1562] Iteration 84: Fitness = 5.867921672500804
+[2025-05-02 09:40:02.220811] [PID 1562] starting gen of new population
+[2025-05-02 09:40:02.254852] [PID 1562] starting survivor_selection
+[2025-05-02 09:40:02.255066] [PID 1562] starting evaluation individuals
+[2025-05-02 09:41:01.446173] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:41:01.446310] [PID 1562] Iteration 85: Fitness = 5.867921672500804
+[2025-05-02 09:41:01.446443] [PID 1562] starting gen of new population
+[2025-05-02 09:41:01.475584] [PID 1562] starting survivor_selection
+[2025-05-02 09:41:01.475812] [PID 1562] starting evaluation individuals
+[2025-05-02 09:42:01.264338] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 09:42:01.264467] [PID 1562] Iteration 86: Fitness = 5.867921672500804
+[2025-05-02 09:42:01.264558] [PID 1562] starting gen of new population
+[2025-05-02 09:42:01.297950] [PID 1562] starting survivor_selection
+[2025-05-02 09:42:01.298277] [PID 1562] starting evaluation individuals
+[2025-05-02 09:42:59.885992] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:42:59.886139] [PID 1562] Iteration 87: Fitness = 6.35609438552634
+[2025-05-02 09:42:59.886238] [PID 1562] starting gen of new population
+[2025-05-02 09:42:59.917326] [PID 1562] starting survivor_selection
+[2025-05-02 09:42:59.917519] [PID 1562] starting evaluation individuals
+[2025-05-02 09:43:59.400994] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:43:59.401123] [PID 1562] Iteration 88: Fitness = 6.35609438552634
+[2025-05-02 09:43:59.401224] [PID 1562] starting gen of new population
+[2025-05-02 09:43:59.439646] [PID 1562] starting survivor_selection
+[2025-05-02 09:43:59.439892] [PID 1562] starting evaluation individuals
+[2025-05-02 09:44:59.157156] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:44:59.157350] [PID 1562] Iteration 89: Fitness = 6.35609438552634
+[2025-05-02 09:44:59.157463] [PID 1562] starting gen of new population
+[2025-05-02 09:44:59.198895] [PID 1562] starting survivor_selection
+[2025-05-02 09:44:59.199155] [PID 1562] starting evaluation individuals
+[2025-05-02 09:45:59.514087] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:45:59.514242] [PID 1562] Iteration 90: Fitness = 6.35609438552634
+[2025-05-02 09:45:59.514360] [PID 1562] starting gen of new population
+[2025-05-02 09:45:59.551290] [PID 1562] starting survivor_selection
+[2025-05-02 09:45:59.551564] [PID 1562] starting evaluation individuals
+[2025-05-02 09:46:59.308760] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:46:59.308981] [PID 1562] Iteration 91: Fitness = 6.35609438552634
+[2025-05-02 09:46:59.309304] [PID 1562] starting gen of new population
+[2025-05-02 09:46:59.344800] [PID 1562] starting survivor_selection
+[2025-05-02 09:46:59.345040] [PID 1562] starting evaluation individuals
+[2025-05-02 09:47:59.096094] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:47:59.096251] [PID 1562] Iteration 92: Fitness = 6.35609438552634
+[2025-05-02 09:47:59.096388] [PID 1562] starting gen of new population
+[2025-05-02 09:47:59.136331] [PID 1562] starting survivor_selection
+[2025-05-02 09:47:59.136539] [PID 1562] starting evaluation individuals
+[2025-05-02 09:48:58.527474] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:48:58.527597] [PID 1562] Iteration 93: Fitness = 6.35609438552634
+[2025-05-02 09:48:58.527740] [PID 1562] starting gen of new population
+[2025-05-02 09:48:58.562157] [PID 1562] starting survivor_selection
+[2025-05-02 09:48:58.562393] [PID 1562] starting evaluation individuals
+[2025-05-02 09:49:57.066609] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:49:57.066741] [PID 1562] Iteration 94: Fitness = 6.35609438552634
+[2025-05-02 09:49:57.066864] [PID 1562] starting gen of new population
+[2025-05-02 09:49:57.102175] [PID 1562] starting survivor_selection
+[2025-05-02 09:49:57.102406] [PID 1562] starting evaluation individuals
+[2025-05-02 09:50:56.313100] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:50:56.313219] [PID 1562] Iteration 95: Fitness = 6.35609438552634
+[2025-05-02 09:50:56.313341] [PID 1562] starting gen of new population
+[2025-05-02 09:50:56.351290] [PID 1562] starting survivor_selection
+[2025-05-02 09:50:56.351513] [PID 1562] starting evaluation individuals
+[2025-05-02 09:51:55.503824] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:51:55.504100] [PID 1562] Iteration 96: Fitness = 6.35609438552634
+[2025-05-02 09:51:55.504337] [PID 1562] starting gen of new population
+[2025-05-02 09:51:55.536489] [PID 1562] starting survivor_selection
+[2025-05-02 09:51:55.536792] [PID 1562] starting evaluation individuals
+[2025-05-02 09:52:54.924186] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:52:54.924340] [PID 1562] Iteration 97: Fitness = 6.35609438552634
+[2025-05-02 09:52:54.924439] [PID 1562] starting gen of new population
+[2025-05-02 09:52:54.960197] [PID 1562] starting survivor_selection
+[2025-05-02 09:52:54.960422] [PID 1562] starting evaluation individuals
+[2025-05-02 09:53:53.418646] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:53:53.418867] [PID 1562] Iteration 98: Fitness = 6.35609438552634
+[2025-05-02 09:53:53.418983] [PID 1562] starting gen of new population
+[2025-05-02 09:53:53.453543] [PID 1562] starting survivor_selection
+[2025-05-02 09:53:53.453798] [PID 1562] starting evaluation individuals
+[2025-05-02 09:54:51.847547] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:54:51.847698] [PID 1562] Iteration 99: Fitness = 6.35609438552634
+[2025-05-02 09:54:51.847811] [PID 1562] starting gen of new population
+[2025-05-02 09:54:51.883936] [PID 1562] starting survivor_selection
+[2025-05-02 09:54:51.884150] [PID 1562] starting evaluation individuals
+[2025-05-02 09:55:50.328300] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.71 MB; Peak = 2.85 MB
+[2025-05-02 09:55:50.328431] [PID 1562] Iteration 100: Fitness = 6.35609438552634
+[2025-05-02 09:55:50.329035] [PID 1562] starting gen of new population
+[2025-05-02 09:55:50.365947] [PID 1562] starting survivor_selection
+[2025-05-02 09:55:51.182250] [PID 1562] starting evaluation individuals
+[2025-05-02 09:56:53.945387] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.68 MB; Peak = 2.85 MB
+[2025-05-02 09:56:53.945670] [PID 1562] Iteration 1: Fitness = 1.1200182148153395
+[2025-05-02 09:56:53.945853] [PID 1562] starting gen of new population
+[2025-05-02 09:56:53.987051] [PID 1562] starting survivor_selection
+[2025-05-02 09:56:53.987298] [PID 1562] starting evaluation individuals
+[2025-05-02 09:57:52.311127] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:57:52.311315] [PID 1562] Iteration 2: Fitness = 1.5546696833052898
+[2025-05-02 09:57:52.311423] [PID 1562] starting gen of new population
+[2025-05-02 09:57:52.348793] [PID 1562] starting survivor_selection
+[2025-05-02 09:57:52.349048] [PID 1562] starting evaluation individuals
+[2025-05-02 09:58:51.241941] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:58:51.242099] [PID 1562] Iteration 3: Fitness = 1.5546696833052898
+[2025-05-02 09:58:51.242245] [PID 1562] starting gen of new population
+[2025-05-02 09:58:51.287825] [PID 1562] starting survivor_selection
+[2025-05-02 09:58:51.288111] [PID 1562] starting evaluation individuals
+[2025-05-02 09:59:50.076613] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 09:59:50.076776] [PID 1562] Iteration 4: Fitness = 1.6913978531003935
+[2025-05-02 09:59:50.076893] [PID 1562] starting gen of new population
+[2025-05-02 09:59:50.107169] [PID 1562] starting survivor_selection
+[2025-05-02 09:59:50.107390] [PID 1562] starting evaluation individuals
+[2025-05-02 10:00:49.190498] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 10:00:49.190643] [PID 1562] Iteration 5: Fitness = 2.483823123995128
+[2025-05-02 10:00:49.190736] [PID 1562] starting gen of new population
+[2025-05-02 10:00:49.223550] [PID 1562] starting survivor_selection
+[2025-05-02 10:00:49.223769] [PID 1562] starting evaluation individuals
+[2025-05-02 10:01:47.751565] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 10:01:47.751690] [PID 1562] Iteration 6: Fitness = 2.5072257317709825
+[2025-05-02 10:01:47.751815] [PID 1562] starting gen of new population
+[2025-05-02 10:01:47.787665] [PID 1562] starting survivor_selection
+[2025-05-02 10:01:47.787966] [PID 1562] starting evaluation individuals
+[2025-05-02 10:02:46.440961] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 10:02:46.441113] [PID 1562] Iteration 7: Fitness = 2.5072257317709825
+[2025-05-02 10:02:46.441210] [PID 1562] starting gen of new population
+[2025-05-02 10:02:46.475267] [PID 1562] starting survivor_selection
+[2025-05-02 10:02:46.475486] [PID 1562] starting evaluation individuals
+[2025-05-02 10:03:45.759346] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.69 MB; Peak = 2.85 MB
+[2025-05-02 10:03:45.759587] [PID 1562] Iteration 8: Fitness = 2.874084140369937
+[2025-05-02 10:03:45.759711] [PID 1562] starting gen of new population
+[2025-05-02 10:03:45.793453] [PID 1562] starting survivor_selection
+[2025-05-02 10:03:45.793754] [PID 1562] starting evaluation individuals
+[2025-05-02 10:04:44.529019] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:04:44.529179] [PID 1562] Iteration 9: Fitness = 2.874084140369937
+[2025-05-02 10:04:44.529587] [PID 1562] starting gen of new population
+[2025-05-02 10:04:44.562503] [PID 1562] starting survivor_selection
+[2025-05-02 10:04:44.562745] [PID 1562] starting evaluation individuals
+[2025-05-02 10:05:43.495299] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:05:43.495437] [PID 1562] Iteration 10: Fitness = 3.194330886765765
+[2025-05-02 10:05:43.495687] [PID 1562] starting gen of new population
+[2025-05-02 10:05:43.530121] [PID 1562] starting survivor_selection
+[2025-05-02 10:05:43.530387] [PID 1562] starting evaluation individuals
+[2025-05-02 10:06:42.309744] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:06:42.310400] [PID 1562] Iteration 11: Fitness = 3.194330886765765
+[2025-05-02 10:06:42.310550] [PID 1562] starting gen of new population
+[2025-05-02 10:06:42.340939] [PID 1562] starting survivor_selection
+[2025-05-02 10:06:42.341168] [PID 1562] starting evaluation individuals
+[2025-05-02 10:07:40.654268] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:07:40.654384] [PID 1562] Iteration 12: Fitness = 3.194330886765765
+[2025-05-02 10:07:40.654512] [PID 1562] starting gen of new population
+[2025-05-02 10:07:40.685017] [PID 1562] starting survivor_selection
+[2025-05-02 10:07:40.685278] [PID 1562] starting evaluation individuals
+[2025-05-02 10:08:39.022206] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:08:39.022338] [PID 1562] Iteration 13: Fitness = 3.194330886765765
+[2025-05-02 10:08:39.022574] [PID 1562] starting gen of new population
+[2025-05-02 10:08:39.062819] [PID 1562] starting survivor_selection
+[2025-05-02 10:08:39.063102] [PID 1562] starting evaluation individuals
+[2025-05-02 10:09:37.623267] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:09:37.623423] [PID 1562] Iteration 14: Fitness = 3.3200329402702238
+[2025-05-02 10:09:37.623516] [PID 1562] starting gen of new population
+[2025-05-02 10:09:37.657776] [PID 1562] starting survivor_selection
+[2025-05-02 10:09:37.657996] [PID 1562] starting evaluation individuals
+[2025-05-02 10:10:36.102565] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:10:36.102762] [PID 1562] Iteration 15: Fitness = 3.4502668704191013
+[2025-05-02 10:10:36.102874] [PID 1562] starting gen of new population
+[2025-05-02 10:10:36.135239] [PID 1562] starting survivor_selection
+[2025-05-02 10:10:36.135523] [PID 1562] starting evaluation individuals
+[2025-05-02 10:11:34.098582] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:11:34.098795] [PID 1562] Iteration 16: Fitness = 3.457284532322728
+[2025-05-02 10:11:34.098901] [PID 1562] starting gen of new population
+[2025-05-02 10:11:34.129332] [PID 1562] starting survivor_selection
+[2025-05-02 10:11:34.129610] [PID 1562] starting evaluation individuals
+[2025-05-02 10:12:32.315661] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:12:32.316051] [PID 1562] Iteration 17: Fitness = 3.457284532322728
+[2025-05-02 10:12:32.316141] [PID 1562] starting gen of new population
+[2025-05-02 10:12:32.354296] [PID 1562] starting survivor_selection
+[2025-05-02 10:12:32.354499] [PID 1562] starting evaluation individuals
+[2025-05-02 10:13:30.824169] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:13:30.824723] [PID 1562] Iteration 18: Fitness = 3.457284532322728
+[2025-05-02 10:13:30.824868] [PID 1562] starting gen of new population
+[2025-05-02 10:13:30.864263] [PID 1562] starting survivor_selection
+[2025-05-02 10:13:30.864493] [PID 1562] starting evaluation individuals
+[2025-05-02 10:14:29.707191] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:14:29.707645] [PID 1562] Iteration 19: Fitness = 3.457284532322728
+[2025-05-02 10:14:29.707737] [PID 1562] starting gen of new population
+[2025-05-02 10:14:29.741920] [PID 1562] starting survivor_selection
+[2025-05-02 10:14:29.742150] [PID 1562] starting evaluation individuals
+[2025-05-02 10:15:28.596198] [PID 1562] [PID 1562] Memory after evaluate_fitness: Current = 1.70 MB; Peak = 2.85 MB
+[2025-05-02 10:15:28.596536] [PID 1562] Iteration 20: Fitness = 3.457284532322728
+[2025-05-02 10:15:28.596631] [PID 1562] starting gen of new population
+[2025-05-02 10:15:28.632482] [PID 1562] starting survivor_selection
+[2025-05-02 10:15:28.632709] [PID 1562] starting evaluation individuals

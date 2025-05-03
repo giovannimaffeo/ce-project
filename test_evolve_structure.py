@@ -7,17 +7,18 @@ import gc
 
 from evolve_structure import ea_search, one_point_crossover, two_point_crossover, two_point_crossover2, uniform_crossover
 from fixed_controllers import alternating_gait
+from random_structure import random_search
 import utils
 
 import tracemalloc
 tracemalloc.start()
 
-def basic_test(params, output_dir=None, should_create_gif=True):
+def basic_test(params, algorithm, output_dir=None, should_create_gif=True):
   if output_dir is None:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    output_dir = f"outputs/evolve_structure/ea_search/basic_tests/{timestamp}"
+    output_dir = f"outputs/evolve_structure/{algorithm.__name__}/basic_test/{timestamp}"
 
-  best_robot, best_fitness, fitness_history = ea_search(**params)
+  best_robot, best_fitness, fitness_history = algorithm(**params)
   print("Best robot structure found:")
   print(best_robot)
   print("Best fitness score:")
@@ -29,8 +30,8 @@ def basic_test(params, output_dir=None, should_create_gif=True):
   return best_robot, best_fitness, fitness_history
 
 def run_combination(args):
-  i, combination, variable_param_keys, fixed_params, SEEDS, timestamp = args
-  combination_output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}/combination{i+1}"
+  i, combination, variable_param_keys, fixed_params, SEEDS, algorithm, output_dir = args
+  combination_output_dir = os.path.join(output_dir, f"combination{i+1}")
   os.makedirs(combination_output_dir, exist_ok=True)
 
   combination_variable_params = dict(zip(variable_param_keys, combination))
@@ -45,7 +46,7 @@ def run_combination(args):
       "LOG_FILE": os.path.join(combination_output_dir, f"log_combination{i + 1}_pid{os.getpid()}.txt")        
     }
     run_output_dir = os.path.join(combination_output_dir, f"run{j+1}")
-    _, best_fitness, fitness_history = basic_test(params, run_output_dir, False)
+    _, best_fitness, fitness_history = basic_test(params, algorithm, run_output_dir, False)
     best_fitnesses.append(best_fitness)
 
     current, peak = tracemalloc.get_traced_memory()
@@ -64,6 +65,32 @@ def run_combination(args):
   )
   return list(result)
 
+def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_type):
+  SEEDS = [3223, 19676, 85960, 12577, 62400]
+  timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+  output_dir = f"outputs/evolve_structure/{algorithm.__name__}/{test_type}/{timestamp}"
+
+  variable_param_keys = list(variable_params_grid.keys())
+  all_combinations = list(itertools.product(*variable_params_grid.values()))
+
+  # Cria args para cada combinação
+  args_list = [
+    (i, combination, variable_param_keys, fixed_params, SEEDS, algorithm, output_dir)
+    for i, combination in enumerate(all_combinations)
+  ]
+
+  with Pool(processes=min(cpu_count(), len(args_list))) as pool:
+    combinations_results = pool.map(run_combination, args_list)
+
+  utils.generate_param_combinations_results(
+    fixed_params, 
+    variable_params_grid, 
+    combinations_results, 
+    output_dir,
+    test_type
+  )
+
+test_types = ["hiperparams_fatorial_test"]
 def hiperparams_fatorial_test():
   fixed_params = {
     "NUM_GENERATIONS": 100,
@@ -83,48 +110,32 @@ def hiperparams_fatorial_test():
     "SURVIVORS_COUNT": [3, 5],
     "PARENT_SELECTION_COUNT": [3, 4]
   }
+  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[0])
 
-  SEEDS = [3223, 19676, 85960, 12577, 62400]
-  timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-  output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/{timestamp}"
+def ea_search_basic_test():
+  params = {
+    # ---- PARAMETERS ----
+    "NUM_GENERATIONS": 100,  # Number of generations to evolve
+    "MIN_GRID_SIZE": (5, 5),  # Minimum size of the robot grid
+    "MAX_GRID_SIZE": (5, 5),  # Maximum size of the robot grid
+    "STEPS": 500,
+    "SCENARIO": "Walker-v0",  # "BridgeWalkerv0"
+    "POP_SIZE": 30,  # 15
+    "CROSSOVER_RATE": 0.95,
+    "CROSSOVER_TYPE": two_point_crossover2,
+    "MUTATION_RATE": 0.03,
+    "SURVIVORS_COUNT": 5,
+    "PARENT_SELECTION_COUNT": 4,  # 4
+    # ---- VOXEL TYPES ----
+    "VOXEL_TYPES": [0, 1, 2, 3, 4],  # Empty, Rigid, Soft, Active (+/-)
+    "CONTROLLER": alternating_gait,
+    "SEED": 3223
+  }
+  basic_test(params, ea_search)
 
-  variable_param_keys = list(variable_params_grid.keys())
-  all_combinations = list(itertools.product(*variable_params_grid.values()))
+def random_search_basic_test():
+  basic_test({}, random_search)
 
-  # Cria args para cada combinação
-  args_list = [
-    (i, combination, variable_param_keys, fixed_params, SEEDS, timestamp)
-    for i, combination in enumerate(all_combinations)
-  ]
-
-  with Pool(processes=min(cpu_count(), len(args_list))) as pool:
-    combinations_results = pool.map(run_combination, args_list)
-
-  utils.generate_hiperparams_fatorial_test_results(
-    fixed_params, 
-    variable_params_grid, 
-    combinations_results, 
-    output_dir
-  )
-
-seeds = [3223, 19676, 85960, 12577, 62400]
-params = {
-  # ---- PARAMETERS ----
-  "NUM_GENERATIONS": 100,  # Number of generations to evolve
-  "MIN_GRID_SIZE": (5, 5),  # Minimum size of the robot grid
-  "MAX_GRID_SIZE": (5, 5),  # Maximum size of the robot grid
-  "STEPS": 500,
-  "SCENARIO": "Walker-v0",  # "BridgeWalkerv0"
-  "POP_SIZE": 30,  # 15
-  "CROSSOVER_RATE": 0.95,
-  "CROSSOVER_TYPE": two_point_crossover2,
-  "MUTATION_RATE": 0.03,
-  "SURVIVORS_COUNT": 5,
-  "PARENT_SELECTION_COUNT": 4,  # 4
-  # ---- VOXEL TYPES ----
-  "VOXEL_TYPES": [0, 1, 2, 3, 4],  # Empty, Rigid, Soft, Active (+/-)
-  "CONTROLLER": alternating_gait,
-  "SEED": 3223
-}
-# basic_test(params)
-hiperparams_fatorial_test()
+# ea_search_basic_test()
+# hiperparams_fatorial_test()
+random_search_basic_test()

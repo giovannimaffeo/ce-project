@@ -57,25 +57,31 @@ def create_random_robot():
     return random_robot
 
 def random_search(seed=None):
-    """Perform a random search to find the best robot structure."""
     if seed is not None:
         random.seed(seed)
         np.random.seed(seed)
 
     best_robot = None
     best_fitness = -float('inf')
-    
+    fitness_history = []
+
     for it in range(NUM_GENERATIONS):
-        robot = create_random_robot() 
+        robot = create_random_robot()
         fitness_score = evaluate_fitness(robot)
-        
+
         if fitness_score > best_fitness:
             best_fitness = fitness_score
             best_robot = robot
-        
+
+        fitness_history.append({
+            "generation": it + 1,
+            "best_fitness": fitness_score,
+            "mean_fitness": fitness_score
+        })
+
         print(f"Iteration {it + 1}: Fitness = {fitness_score}")
-    
-    return best_robot, best_fitness
+
+    return best_robot, best_fitness, fitness_history
 
 # Example usage
 """best_robot, best_fitness = random_search()

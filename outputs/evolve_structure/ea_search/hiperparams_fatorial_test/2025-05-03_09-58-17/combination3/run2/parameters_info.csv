@@ -1,0 +1,2 @@
+NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,SCENARIO,POP_SIZE,CROSSOVER_TYPE,VOXEL_TYPES,CONTROLLER,SURVIVORS_COUNT,PARENT_SELECTION_COUNT,MUTATION_RATE,CROSSOVER_RATE,SEED,LOG_FILE
+2,"(5, 5)","(5, 5)",500,Walker-v0,5,uniform_crossover,"[0, 1, 2, 3, 4]",alternating_gait,3,4,0.05,0.9,19676,outputs/evolve_structure/ea_search/hiperparams_fatorial_test/2025-05-03_09-58-17/combination3/log_combination3_pid10969.txt
