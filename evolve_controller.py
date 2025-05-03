@@ -9,14 +9,16 @@ import copy
 
 
 # ---- FITNESS FUNCTION ----
-def evaluate_fitness_2(weights, brain, connectivity, view=False):
+def evaluate_fitness_2(args, view=False):
         weights = args["population_to_evaluate"]
         brain = args["brain"]
         connectivity = args["connectivity"]
         robot_structure = args["robot_structure"]
+        scenario = args["scenario"]
+        steps = args["steps"]
         weights = copy.deepcopy(weights[0])
         set_weights(brain, weights)  # Load weights into the network
-        env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
+        env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
         sim = env
         viewer = EvoViewer(sim)
         viewer.track_objects('robot')
@@ -24,7 +26,7 @@ def evaluate_fitness_2(weights, brain, connectivity, view=False):
         t_reward = 0
         original_reward = 0
         initial_position = sim.object_pos_at_time(sim.get_time(), 'robot')
-        for t in range(STEPS):  
+        for t in range(steps):  
             # Update actuation before stepping
             state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
             action = brain(state_tensor).detach().numpy().flatten() # Get action
@@ -115,7 +117,7 @@ def es_search(
         NUM_OFFSPRINGS = 3, 
         POP_SIZE = 50,#30, 
         NUM_GENERATIONS = 100, 
-        sigma = 0.01):
+        SIGMA = 0.1):
 
     if SEED is not None:
         random.seed(SEED)
@@ -150,7 +152,7 @@ def es_search(
             #each parent generates lambda offsprings
             for j in range(NUM_OFFSPRINGS):
                 mutation_mask = np.random.rand(num_params) < MUTATION_RATE
-                noise = sigma * np.random.randn(num_params) * mutation_mask
+                noise = SIGMA * np.random.randn(num_params) * mutation_mask
                 ind = population[i][0] + noise
                 population.append([ind, None])
                 
@@ -171,33 +173,36 @@ def es_search(
             "std": std_fitness
         })
 
+        #keep the best #POP_SIZE individuals
+        population = population[:POP_SIZE]
         print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {population[0][1]}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}")
     # Set the best weights found
     set_weights(brain, best_weights)
     print(f"Best Fitness: {best_fitness}")
     return best_weights
-es_search(STEPS=500, SCENARIO="Walker-v0", MUTATION_RATE=0.05, SEED=42)
-    
-def random_search(brain):
-    # ---- RANDOM SEARCH ALGORITHM ----
-    best_fitness = -np.inf
-    best_weights = None
 
-    for generation in range(NUM_GENERATIONS):
-        # Generate random weights for the neural network
-        random_weights = [np.random.randn(*param.shape) for param in brain.parameters()]
-        
-        # Evaluate the fitness of the current weights
-        fitness = evaluate_fitness(random_weights)
-        
-        # Check if the current weights are the best so far
-        if fitness > best_fitness:
-            best_fitness = fitness
-            best_weights = random_weights
-        
-        print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Fitness: {fitness}")
+es_search(STEPS=500, SCENARIO="Walker-v0", MUTATION_RATE=0.1, SEED=42)
 
-    # Set the best weights found
-    set_weights(brain, best_weights)
-    print(f"Best Fitness: {best_fitness}")
-    return best_weights
+# def random_search(brain):
+#     # ---- RANDOM SEARCH ALGORITHM ----
+#     best_fitness = -np.inf
+#     best_weights = None
+
+#     for generation in range(NUM_GENERATIONS):
+#         # Generate random weights for the neural network
+#         random_weights = [np.random.randn(*param.shape) for param in brain.parameters()]
+        
+#         # Evaluate the fitness of the current weights
+#         fitness = evaluate_fitness(random_weights)
+        
+#         # Check if the current weights are the best so far
+#         if fitness > best_fitness:
+#             best_fitness = fitness
+#             best_weights = random_weights
+        
+#         print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Fitness: {fitness}")
+
+#     # Set the best weights found
+#     set_weights(brain, best_weights)
+#     print(f"Best Fitness: {best_fitness}")
+#     return best_weights
