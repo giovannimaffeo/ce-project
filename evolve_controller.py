@@ -7,23 +7,13 @@ from neural_controller import *
 from multiprocessing import Pool
 import copy
 
-NUM_GENERATIONS = 100  # Number of generations to evolve
-POPULATION_SIZE = 30#50#20
-STEPS = 500
-SCENARIO = 'DownStepper-v0'
-SEED = 42
-
-robot_structure = np.array([ 
-    [1,3,1,0,0],
-    [4,1,3,2,2],
-    [3,4,4,4,4],
-    [3,0,0,3,2],
-    [0,0,0,0,2]
-])
-
 
 # ---- FITNESS FUNCTION ----
 def evaluate_fitness_2(weights, brain, connectivity, view=False):
+        weights = args["population_to_evaluate"]
+        brain = args["brain"]
+        connectivity = args["connectivity"]
+        robot_structure = args["robot_structure"]
         weights = copy.deepcopy(weights[0])
         set_weights(brain, weights)  # Load weights into the network
         env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
@@ -68,15 +58,18 @@ def evaluate_fitness(args, view=False):
         weights = args["population_to_evaluate"]
         brain = args["brain"]
         connectivity = args["connectivity"]
+        robot_structure = args["robot_structure"]
+        scenario = args["scenario"]
+        steps = args["steps"]
         weights = copy.deepcopy(weights[0])
         set_weights(brain, weights)  # Load weights into the network
-        env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
+        env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
         sim = env
         viewer = EvoViewer(sim)
         viewer.track_objects('robot')
         state = env.reset()[0]  # Get initial state
         t_reward = 0
-        for t in range(STEPS):  
+        for t in range(steps):  
             # Update actuation before stepping
             state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
             action = brain(state_tensor).detach().numpy().flatten() # Get action
@@ -94,7 +87,7 @@ def evaluate_fitness(args, view=False):
     except Exception as e:
         print("Exception: " + str(e))
 
-def evaluate_fitness_parallel(population, brain, connectivity):
+def evaluate_fitness_parallel(population, brain, connectivity, robot_structure, scenario, steps):
     population_to_evaluate = [ind for ind in population if ind[1] is None]
     # args = {
     #     "population_to_evaluate": population_to_evaluate,
@@ -104,7 +97,10 @@ def evaluate_fitness_parallel(population, brain, connectivity):
     args_list = [{
         "population_to_evaluate": ind,
         "brain": brain,
-        "connectivity": connectivity
+        "connectivity": connectivity,
+        "robot_structure": robot_structure,
+        "scenario": scenario,
+        "steps": steps
     } for ind in population_to_evaluate]
     with Pool() as pool:
         population = np.array(pool.map(evaluate_fitness, args_list))
@@ -117,13 +113,21 @@ def es_search(
         MUTATION_RATE,
         SEED,
         NUM_OFFSPRINGS = 3, 
-        POP_SIZE = 200, 
-        NUM_GENERATIONS = 20, 
-        sigma = 0.1):
+        POP_SIZE = 50,#30, 
+        NUM_GENERATIONS = 100, 
+        sigma = 0.01):
 
     if SEED is not None:
         random.seed(SEED)
         np.random.seed(SEED)
+
+    robot_structure = np.array([ 
+        [1,3,1,0,0],
+        [4,1,3,2,2],
+        [3,4,4,4,4],
+        [3,0,0,3,2],
+        [0,0,0,0,2]
+    ])
 
     connectivity = get_full_connectivity(robot_structure)
     env = gym.make(SCENARIO, max_episode_steps=STEPS, body=robot_structure, connections=connectivity)
@@ -131,7 +135,7 @@ def es_search(
     input_size = env.observation_space.shape[0]  # Observation size
     output_size = env.action_space.shape[0]  # Action size
     brain = NeuralController(input_size, output_size)
-
+    print(brain)
     best_fitness = -np.inf
     param_vector = get_weights(brain)
     best_weights = param_vector
@@ -150,14 +154,14 @@ def es_search(
                 ind = population[i][0] + noise
                 population.append([ind, None])
                 
-        population = evaluate_fitness_parallel(population, brain, connectivity)
+        population = evaluate_fitness_parallel(population, brain, connectivity, robot_structure, SCENARIO, STEPS)
         population = sorted(population, key=lambda x: x[1], reverse=True)
         
-        if population[0] > best_fitness:
+        if population[0][1] > best_fitness:
             best_fitness = population[0][1]
             best_weights = population[0][0]
         
-        fitnesses = [fintess for fintess in population[1]]
+        fitnesses = [fintess[1] for fintess in population]
         mean_fitness = np.mean(fitnesses)
         std_fitness = np.std(fitnesses)
         fitness_history.append({
@@ -167,12 +171,12 @@ def es_search(
             "std": std_fitness
         })
 
-        print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {population[0][1]}, Best global fitness: {best_fitness}, Avg fitness: {np.mean(np.array(population[0][1]))}")
+        print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {population[0][1]}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}")
     # Set the best weights found
     set_weights(brain, best_weights)
     print(f"Best Fitness: {best_fitness}")
     return best_weights
-es_search(500, "Walker-v0", MUTATION_RATE=0.05, SEED=42)
+es_search(STEPS=500, SCENARIO="Walker-v0", MUTATION_RATE=0.05, SEED=42)
     
 def random_search(brain):
     # ---- RANDOM SEARCH ALGORITHM ----
