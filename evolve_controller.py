@@ -90,12 +90,10 @@ def evaluate_fitness(args, view=False):
         print("Exception: " + str(e))
 
 def evaluate_fitness_parallel(population, brain, connectivity, robot_structure, scenario, steps):
+    population = copy.deepcopy(population)
     population_to_evaluate = [ind for ind in population if ind[1] is None]
-    # args = {
-    #     "population_to_evaluate": population_to_evaluate,
-    #     "brain": brain, 
-    #     "connectivity": connectivity
-    # }
+    already_evaluated_population = [ind for ind in population if ind[1] is not None]
+
     args_list = [{
         "population_to_evaluate": ind,
         "brain": brain,
@@ -104,10 +102,11 @@ def evaluate_fitness_parallel(population, brain, connectivity, robot_structure, 
         "scenario": scenario,
         "steps": steps
     } for ind in population_to_evaluate]
-    with Pool() as pool:
-        population = np.array(pool.map(evaluate_fitness, args_list))
-    return population
 
+    with Pool() as pool:
+        evaluated_population = np.array(pool.map(evaluate_fitness, args_list))
+    #if its the first time running
+    return evaluated_population if len(already_evaluated_population) == 0 else np.concatenate((np.array(already_evaluated_population), evaluated_population),axis=0)
 
 def es_search(
         STEPS,
@@ -117,7 +116,7 @@ def es_search(
         NUM_OFFSPRINGS = 3, 
         POP_SIZE = 50,#30, 
         NUM_GENERATIONS = 100, 
-        SIGMA = 0.1):
+        SIGMA = 0.3):
 
     if SEED is not None:
         random.seed(SEED)
@@ -158,7 +157,7 @@ def es_search(
                 
         population = evaluate_fitness_parallel(population, brain, connectivity, robot_structure, SCENARIO, STEPS)
         population = sorted(population, key=lambda x: x[1], reverse=True)
-        
+
         if population[0][1] > best_fitness:
             best_fitness = population[0][1]
             best_weights = population[0][0]
@@ -172,16 +171,16 @@ def es_search(
             "mean_fitness": mean_fitness,
             "std": std_fitness
         })
-
-        #keep the best #POP_SIZE individuals
+        
+        #keep best #POP_SIZE individuals
         population = population[:POP_SIZE]
         print(f"Generation {generation + 1}/{NUM_GENERATIONS}, Best current fitness: {population[0][1]}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}")
     # Set the best weights found
     set_weights(brain, best_weights)
     print(f"Best Fitness: {best_fitness}")
     return best_weights
-
-es_search(STEPS=500, SCENARIO="Walker-v0", MUTATION_RATE=0.1, SEED=42)
+#DownStepper-v0, Walker-v0
+es_search(STEPS=500, SCENARIO="DownStepper-v0", MUTATION_RATE=0.3, SEED=42)
 
 # def random_search(brain):
 #     # ---- RANDOM SEARCH ALGORITHM ----
