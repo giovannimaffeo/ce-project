@@ -236,7 +236,7 @@ def generate_hiperparams_fatorial_test_results(fixed_params, variable_params_gri
     hiperparams_fatorial_test_best_result_file_path = os.path.join(hiperparams_fatorial_test_output_dir, "hiperparams_fatorial_test_best_result.csv")
     hiperparams_fatorial_test_best_result_df.to_csv(hiperparams_fatorial_test_best_result_file_path, index=False)
 
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(10, 8))
     for i, (_, _, combination_fitness_history_df) in enumerate(combinations_results):
         plt.plot(
             combination_fitness_history_df["generation"],
