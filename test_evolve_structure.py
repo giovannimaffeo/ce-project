@@ -183,5 +183,5 @@ def random_search_controller_scenario_test():
 # ea_search_basic_test()
 # random_search_basic_test()
 # ea_search_hiperparams_fatorial_test()
-# ea_search_controller_scenario_test()
-random_search_controller_scenario_test()
+ea_search_controller_scenario_test()
+# random_search_controller_scenario_test()
