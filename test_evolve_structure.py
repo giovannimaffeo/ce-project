@@ -5,8 +5,8 @@ import pandas as pd
 from datetime import datetime
 import gc
 
-from evolve_structure import ea_search, one_point_crossover, two_point_crossover, two_point_crossover2, uniform_crossover
-from fixed_controllers import alternating_gait
+from ea_structure import ea_search, one_point_crossover, two_point_crossover, two_point_crossover2, uniform_crossover
+from fixed_controllers import alternating_gait, hopping_motion, sinusoidal_wave
 from random_structure import random_search
 import utils
 
@@ -90,28 +90,7 @@ def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_t
     test_type
   )
 
-test_types = ["hiperparams_fatorial_test"]
-def hiperparams_fatorial_test():
-  fixed_params = {
-    "NUM_GENERATIONS": 100,
-    "MIN_GRID_SIZE": (5, 5),
-    "MAX_GRID_SIZE": (5, 5),
-    "STEPS": 500,
-    "SCENARIO": "Walker-v0",
-    "POP_SIZE": 50,
-    "CROSSOVER_TYPE": uniform_crossover,
-    "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER": alternating_gait
-  }
-
-  variable_params_grid = {
-    "MUTATION_RATE": [0.03, 0.05],
-    "CROSSOVER_RATE": [0.9, 0.95],
-    "SURVIVORS_COUNT": [3, 5],
-    "PARENT_SELECTION_COUNT": [3, 4]
-  }
-  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[0])
-
+test_types = ["hiperparams_fatorial_test", "controller_scenario_test"]
 def ea_search_basic_test():
   params = {
     # ---- PARAMETERS ----
@@ -134,8 +113,75 @@ def ea_search_basic_test():
   basic_test(params, ea_search)
 
 def random_search_basic_test():
-  basic_test({}, random_search)
+  # ---- PARAMETERS ----
+  params = {
+    "NUM_GENERATIONS": 2,             # 250  # Number of generations to evolve
+    "MIN_GRID_SIZE": (5, 5),          # Minimum size of the robot grid
+    "MAX_GRID_SIZE": (5, 5),          # Maximum size of the robot grid
+    "STEPS": 500,
+    "SCENARIO": "Walker-v0",
+    # ---- VOXEL TYPES ----
+    "VOXEL_TYPES": [0, 1, 2, 3, 4],   # Empty, Rigid, Soft, Active (+/-)
+    "CONTROLLER": alternating_gait
+  }
+  basic_test(params, random_search)
+
+def ea_search_hiperparams_fatorial_test():
+  fixed_params = {
+    "NUM_GENERATIONS": 100,
+    "MIN_GRID_SIZE": (5, 5),
+    "MAX_GRID_SIZE": (5, 5),
+    "STEPS": 500,
+    "SCENARIO": "Walker-v0",
+    "POP_SIZE": 50,
+    "CROSSOVER_TYPE": uniform_crossover,
+    "VOXEL_TYPES": [0, 1, 2, 3, 4],
+    "CONTROLLER": alternating_gait
+  }
+  variable_params_grid = {
+    "MUTATION_RATE": [0.03, 0.05],
+    "CROSSOVER_RATE": [0.9, 0.95],
+    "SURVIVORS_COUNT": [3, 5],
+    "PARENT_SELECTION_COUNT": [3, 4]
+  }
+  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[0])
+
+def ea_search_controller_scenario_test():
+  fixed_params = {
+    "NUM_GENERATIONS": 100,
+    "MIN_GRID_SIZE": (5, 5),
+    "MAX_GRID_SIZE": (5, 5),
+    "STEPS": 500,
+    "POP_SIZE": 50,
+    "CROSSOVER_TYPE": uniform_crossover,
+    "VOXEL_TYPES": [0, 1, 2, 3, 4],
+    "MUTATION_RATE": 0.05,
+    "CROSSOVER_RATE": 0.95,
+    "SURVIVORS_COUNT": 5,
+    "PARENT_SELECTION_COUNT": 4
+  }
+  variable_params_grid = {
+    "SCENARIO": ["BridgeWalker-v0", "Walker-v0"],
+    "CONTROLLER": [sinusoidal_wave, alternating_gait, hopping_motion]
+  }
+  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[1])
+
+def random_search_controller_scenario_test():
+  fixed_params = {
+    "NUM_GENERATIONS": 100,
+    "MIN_GRID_SIZE": (5, 5),
+    "MAX_GRID_SIZE": (5, 5),
+    "STEPS": 500,
+    "VOXEL_TYPES": [0, 1, 2, 3, 4]
+  }
+  variable_params_grid = {
+    "SCENARIO": ["BridgeWalker-v0", "Walker-v0"],
+    "CONTROLLER": [sinusoidal_wave, alternating_gait, hopping_motion]
+  }
+  run_param_combinations(fixed_params, variable_params_grid, random_search, test_types[1])
 
 # ea_search_basic_test()
-# hiperparams_fatorial_test()
-random_search_basic_test()
+# random_search_basic_test()
+# ea_search_hiperparams_fatorial_test()
+# ea_search_controller_scenario_test()
+random_search_controller_scenario_test()

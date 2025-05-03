@@ -1,4 +1,3 @@
-from datetime import datetime
 import gc
 import os
 import numpy as np
@@ -11,6 +10,7 @@ import tracemalloc
 
 from evogym import EvoWorld, EvoSim, EvoViewer, sample_robot, get_full_connectivity, is_connected
 from fixed_controllers import *
+from utils import log
 
 def evaluate_fitness(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):    
   try:
@@ -267,11 +267,6 @@ def ea_search(
   SEED,
   LOG_FILE=None
 ):
-  def log(msg):
-    if LOG_FILE:
-      with open(LOG_FILE, "a") as f:
-        f.write(f"[{datetime.now()}] [PID {os.getpid()}] {msg}\n")
-
   if SEED is not None:
     random.seed(SEED)
     np.random.seed(SEED)
@@ -285,7 +280,7 @@ def ea_search(
   fitness_history = []
 
   for it in range(NUM_GENERATIONS):
-    log("starting evaluation individuals")
+    log("starting evaluation individuals", LOG_FILE)
     # get individuals fitness for sorting population
     for i, individual in enumerate(population):
       # calculate the fitness only for the new individuals (fitness is None)
@@ -295,14 +290,14 @@ def ea_search(
     # sort population by individual fitness
     population = sorted(population, key=lambda x: x[1], reverse=True)
     current, peak = tracemalloc.get_traced_memory()
-    log(f"[PID {os.getpid()}] Memory after evaluate_fitness: Current = {current / 1024**2:.2f} MB; Peak = {peak / 1024**2:.2f} MB")
+    log(f"[PID {os.getpid()}] Memory after evaluate_fitness: Current = {current / 1024**2:.2f} MB; Peak = {peak / 1024**2:.2f} MB", LOG_FILE)
 
     # update best_fitness and best_robot
     best_current_fitness = population[0][1]
     if best_current_fitness > best_fitness:
       best_fitness = best_current_fitness
       best_robot = population[0][0]
-    log(f"Iteration {it + 1}: Fitness = {best_fitness}")
+    log(f"Iteration {it + 1}: Fitness = {best_fitness}", LOG_FILE)
     # store best and mean fitness in the history
     mean_fitness = sum(ind[1] for ind in population) / len(population)
     fitness_history.append({
@@ -311,7 +306,7 @@ def ea_search(
       "mean_fitness": mean_fitness
     })
 
-    log("starting gen of new population")
+    log("starting gen of new population", LOG_FILE)
     new_population = []
     # generate new population with length of (POP_SIZE - SURVIVORS_COUNT)
     for i in range(POP_SIZE - SURVIVORS_COUNT):
@@ -320,7 +315,7 @@ def ea_search(
       child = mutate(child, MUTATION_RATE, VOXEL_TYPES)
       new_population.append(child)
 
-    log("starting survivor_selection")
+    log("starting survivor_selection", LOG_FILE)
     # set population as new population plus best individuals of previous population
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
 

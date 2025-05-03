@@ -1,3 +1,4 @@
+from datetime import datetime
 import gc
 import numpy as np
 import json
@@ -113,12 +114,9 @@ def generate_results(fitness_history_df, best_robot, params, output_dir, should_
     params_df.to_csv(params_csv_path, index=False)
 
     if should_create_gif:
-        scenario = params.get("SCENARIO", "Walker-v0")
-        controller = params.get("CONTROLLER", alternating_gait)
-        steps = params.get("STEPS", 500)
         # generate and save gif of best robot
         gif_path = os.path.join(output_dir, "evolve_structure.gif")
-        create_gif(best_robot, filename=gif_path, scenario=scenario, steps=steps, controller=controller)
+        create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
 
 def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historic_paths, combination_output_dir):
     combination_variable_parameters_info_df = pd.DataFrame([list(combination_variable_params.values())], columns=list(combination_variable_params.keys()))
@@ -260,3 +258,10 @@ def generate_param_combinations_results(fixed_params, variable_params_grid, comb
     plot_path = os.path.join(output_dir, f"{test_type}_plot.png")
     plt.savefig(plot_path)
     plt.close()
+
+def log(msg, LOG_FILE):
+    if LOG_FILE:
+        with open(LOG_FILE, "a") as f:
+            f.write(f"[{datetime.now()}] [PID {os.getpid()}] {msg}\n")
+    else:
+            print(f"[{datetime.now()}] [PID {os.getpid()}] {msg}")

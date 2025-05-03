@@ -2,7 +2,7 @@ import itertools
 import os
 import pandas as pd
 
-from evolve_structure import uniform_crossover
+from ea_structure import uniform_crossover
 from fixed_controllers import alternating_gait
 import utils
 

@@ -1,6 +1,6 @@
 import random
 
-from evolve_structure import ea_search
+from ea_structure import ea_search
 from random_structure import random_search
 
 
