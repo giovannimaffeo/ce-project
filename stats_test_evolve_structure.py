@@ -124,6 +124,16 @@ def stats_random_search_controller_scenario_test():
     if is_different:
       check_pairwise_non_parametric_comparisons(algorithm, test_type)
 
-stats_ea_search_hiperparams_fatorial_test()
+def stats_ea_search_controller_scenario_test():
+  algorithm = ea_search
+  test_type = utils.test_types[1]
+
+  is_parametric = check_combinations_normality(algorithm, test_type)
+  if not is_parametric:
+    is_different = check_non_parametric_combinations_difference(algorithm, test_type) 
+    if is_different:
+      check_pairwise_non_parametric_comparisons(algorithm, test_type)
+
+# stats_ea_search_hiperparams_fatorial_test()
 # stats_random_search_controller_scenario_test()
-  
+stats_ea_search_controller_scenario_test()

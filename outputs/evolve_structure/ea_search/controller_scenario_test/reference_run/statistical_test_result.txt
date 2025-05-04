@@ -1,0 +1,39 @@
+1. Shapiro-Wilk normality test results for algorithm 'ea_search' and test 'controller_scenario_test':
+
+Combination 1: p = 0.2011 → Normal
+Combination 2: p = 0.2254 → Normal
+Combination 3: p = 0.9611 → Normal
+Combination 4: p = 0.8452 → Normal
+Combination 5: p = 0.0080 → Not normal
+Combination 6: p = 0.3228 → Normal
+
+Result: At least one combination is not parametric.
+
+2. Due to the normality test indicating non-parametric data, performing Kruskal-Wallis test for differences between parameter combinations of algorithm 'ea_search' and test 'controller_scenario_test':
+Result: p = 0.0001
+Conclusion: At least one combination differs significantly from the others.
+
+3. Pairwise Mann-Whitney U tests for combinations of algorithm 'ea_search' and test 'controller_scenario_test':
+Combination 2 beats Combination 1 (p = 0.0079)
+Combination 3 beats Combination 1 (p = 0.0079)
+Combination 4 beats Combination 1 (p = 0.0079)
+Combination 5 beats Combination 1 (p = 0.0079)
+Combination 6 beats Combination 1 (p = 0.0079)
+Combination 2 vs Combination 3: Not significant (p = 1.0000)
+Combination 2 beats Combination 4 (p = 0.0079)
+Combination 5 beats Combination 2 (p = 0.0079)
+Combination 6 beats Combination 2 (p = 0.0079)
+Combination 3 beats Combination 4 (p = 0.0159)
+Combination 5 beats Combination 3 (p = 0.0079)
+Combination 6 beats Combination 3 (p = 0.0079)
+Combination 5 beats Combination 4 (p = 0.0079)
+Combination 6 beats Combination 4 (p = 0.0079)
+Combination 5 vs Combination 6: Not significant (p = 0.0952)
+
+Ranking based on number of pairwise wins:
+1. Combination 5 — 4 wins
+2. Combination 6 — 4 wins
+3. Combination 2 — 2 wins
+4. Combination 3 — 2 wins
+5. Combination 4 — 1 wins
+6. Combination 1 — 0 wins
