@@ -90,7 +90,6 @@ def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_t
     test_type
   )
 
-test_types = ["hiperparams_fatorial_test", "controller_scenario_test"]
 def ea_search_basic_test():
   params = {
     # ---- PARAMETERS ----
@@ -144,7 +143,7 @@ def ea_search_hiperparams_fatorial_test():
     "SURVIVORS_COUNT": [3, 5],
     "PARENT_SELECTION_COUNT": [3, 4]
   }
-  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[0])
+  run_param_combinations(fixed_params, variable_params_grid, ea_search, utils.test_types[0])
 
 def ea_search_controller_scenario_test():
   fixed_params = {
@@ -164,7 +163,7 @@ def ea_search_controller_scenario_test():
     "SCENARIO": ["BridgeWalker-v0", "Walker-v0"],
     "CONTROLLER": [sinusoidal_wave, alternating_gait, hopping_motion]
   }
-  run_param_combinations(fixed_params, variable_params_grid, ea_search, test_types[1])
+  run_param_combinations(fixed_params, variable_params_grid, ea_search, utils.test_types[1])
 
 def random_search_controller_scenario_test():
   fixed_params = {
@@ -178,7 +177,7 @@ def random_search_controller_scenario_test():
     "SCENARIO": ["BridgeWalker-v0", "Walker-v0"],
     "CONTROLLER": [sinusoidal_wave, alternating_gait, hopping_motion]
   }
-  run_param_combinations(fixed_params, variable_params_grid, random_search, test_types[1])
+  run_param_combinations(fixed_params, variable_params_grid, random_search, utils.test_types[1])
 
 # ea_search_basic_test()
 # random_search_basic_test()

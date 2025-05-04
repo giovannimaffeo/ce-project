@@ -14,6 +14,8 @@ from fixed_controllers import *
 
 import tracemalloc
 
+test_types = ["hiperparams_fatorial_test", "controller_scenario_test"]
+
 # ---- SIMULATE BEST ROBOT ----
 def simulate_best_robot(robot_structure, scenario=None, steps=500, controller = alternating_gait):
     
