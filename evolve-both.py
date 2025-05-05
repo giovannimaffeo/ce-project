@@ -194,6 +194,8 @@ def mutate(ind: Individual, MUTATION_RATE: float, VOXEL_TYPES: list):
                         break
             
     # return mutated child with no fitness calculated
+    #ind.robot_structure = child
+    #return ind
     return Individual(ind.scenario, ind.steps, child)
 
 def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM_OFFSPRINGS: int):
@@ -212,25 +214,40 @@ def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM
 
     #the robot is bigger now, increment the vector
     if input_size > child.input_size:
-        for i, param_vector in enumerate(new_neural_controller):
-            #copy the parameters from the previous model to the new
-            for j in range(len(previous_controller[i][0])):
-                for k in range(len(previous_controller[i][0][j])):
-                    new_neural_controller[i][0][j][k] = previous_controller[i][0][j][k]
+        for i in range(0, len(previous_controller), 2):
+            old_weights = previous_controller[i]
+            old_bias = previous_controller[i + 1]
+            new_weights = new_neural_controller[i]
+            new_bias = new_neural_controller[i + 1]
 
-            for j in range(len(previous_controller[i][1])):
-                new_neural_controller[i][1][j] = previous_controller[i][1][j]
+            # Copy weights
+            min_rows = min(old_weights.shape[0], new_weights.shape[0])
+            min_cols = min(old_weights.shape[1], new_weights.shape[1])
+            new_weights[:min_rows, :min_cols] = old_weights[:min_rows, :min_cols]
+
+            # Copy biases
+            min_bias_len = min(len(old_bias), len(new_bias))
+            new_bias[:min_bias_len] = old_bias[:min_bias_len]
+
+
                 
     #the robot is smaller, cut the vector
     elif input_size < child.input_size:
-        for i, param_vector in enumerate(new_neural_controller):
-            #copy the parameters from the previous model to the new
-            for j in range(len(new_neural_controller[i][0])):
-                for k in range(len(new_neural_controller[i][0][j])):
-                    new_neural_controller[i][0][j][k] = previous_controller[i][0][j][k]
+        for i in range(0, len(previous_controller), 2):
+            old_weights = previous_controller[i]
+            old_bias = previous_controller[i + 1]
+            new_weights = new_neural_controller[i]
+            new_bias = new_neural_controller[i + 1]
 
-            for j in range(len(new_neural_controller[i][1])):
-                new_neural_controller[i][1][j] = previous_controller[i][1][j]
+            # Copy weights
+            min_rows = min(old_weights.shape[0], new_weights.shape[0])
+            min_cols = min(old_weights.shape[1], new_weights.shape[1])
+            new_weights[:min_rows, :min_cols] = old_weights[:min_rows, :min_cols]
+
+            # Copy biases
+            min_bias_len = min(len(old_bias), len(new_bias))
+            new_bias[:min_bias_len] = old_bias[:min_bias_len]
+
 
     for j, param_vector in enumerate(new_neural_controller):
         shape = param_vector.shape
