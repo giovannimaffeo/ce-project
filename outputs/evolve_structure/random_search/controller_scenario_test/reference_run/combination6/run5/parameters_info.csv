@@ -1,2 +1,2 @@
 NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,VOXEL_TYPES,SCENARIO,CONTROLLER,SEED,LOG_FILE
-100,"(5, 5)","(5, 5)",500,"[0, 1, 2, 3, 4]",Walker-v0,hopping_motion,62400,outputs/evolve_structure/random_search/controller_scenario_test/2025-05-03_13-49-34/combination6/log_combination6_pid23255.txt
+100,"(5, 5)","(5, 5)",500,"[0, 1, 2, 3, 4]",Walker-v0,hopping_motion,62400,outputs/evolve_structure/random_search/controller_scenario_test/2025-05-04_23-14-44/combination6/log_combination6_pid336878.txt
