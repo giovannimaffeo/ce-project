@@ -73,11 +73,11 @@ def random_search(
 
         fitness_history.append({
             "generation": it + 1,
-            "best_fitness": fitness_score,
-            "mean_fitness": fitness_score
+            "best_fitness": best_fitness,
+            "mean_fitness": best_fitness
         })
 
-        log(f"Iteration {it + 1}: Fitness = {fitness_score}", LOG_FILE)
+        log(f"Iteration {it + 1}: Fitness = {best_fitness}", LOG_FILE)
 
     return best_robot, best_fitness, fitness_history
 
