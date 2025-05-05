@@ -133,26 +133,83 @@ def create_random_robot(MIN_GRID_SIZE, MAX_GRID_SIZE):
     return random_robot
 
 def parent_selection(population, PARENT_SELECTION_COUNT):
-    pass
+    # select a subset of "t" random individuals
+    selected_parents = random.sample(population, PARENT_SELECTION_COUNT)
+    # sort the set by individual fitness
+    selected_parents = sorted(selected_parents, key=lambda x: x.fitness, reverse=True)
 
-def crossover(p1: Individual, p2: Individual, CROSSOVER_RATE:float):
-    pass
+    # return the two with the best fitness
+    return selected_parents[0], selected_parents[1]
 
-def mutate(child: Individual, MUTATION_RATE: float, VOXEL_TYPES: list):
-    pass
+def crossover(parent1: Individual, parent2: Individual, CROSSOVER_RATE:float):
+    # skip crossover with probability (1 - crossover_rate) and return parent 1
+    if random.random() > CROSSOVER_RATE:
+        return parent1
+
+    # flatten the parents
+    p1 = parent1.robot_structure.flatten()
+    p2 = parent2.robot_structure.flatten()
+    individual_length = len(p1)
+
+    # keep trying until a connected offspring is generated
+    max_attempts = 1000
+    for _ in range(max_attempts):
+        # for each gene, randomly choose from parent1 or parent2
+        offspring_flat = np.array([
+            p1[i] if random.random() < 0.5 else p2[i]
+            for i in range(individual_length)
+        ])
+
+        # reshape the offspring to 5x5 matrix
+        offspring = offspring_flat.reshape((5, 5))
+
+        # return the offspring if it is connected
+        if is_connected(offspring):
+            # return offspring with no fitness calculated
+            return Individual(parent1.scenario, parent1.steps, offspring)
+
+    print(f"[Warning] Failed to produce connected offspring after {max_attempts} attempts. Returning p1.")
+    return parent1
+
+def mutate(ind: Individual, MUTATION_RATE: float, VOXEL_TYPES: list):
+    child = copy.deepcopy(ind.robot_structure)
+
+    # iterate through each gene in robot (or element on matrix 5x5)
+    for i, chromosome in enumerate(child):
+        for j, gene in enumerate(chromosome):
+            # skip mutation of gene with probability (1 - mutation_rate)
+            if random.random() <= MUTATION_RATE:
+                # generate possible mutations for gene
+                possibilities = [x for x in VOXEL_TYPES if x != gene]
+                # shuffle possibilities to choose randomly
+                random.shuffle(possibilities)
+                
+                # apply all possible mutations until a connected robot is generated
+                # if is not possible, skip mutation 
+                new_child = child.copy()
+                for value in possibilities:
+                    new_child[i][j] = value
+                    if is_connected(new_child):
+                        child[i][j] = value 
+                        break
+            
+    # return mutated child with no fitness calculated
+    return Individual(ind.scenario, ind.steps, child)
 
 def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM_OFFSPRINGS: int):
     #começar por fazer um parent só gera um indivíduo novo se nao nunca mais saimos daqui
     #for i in range(NUM_OFFSPRINGS):
     previous_controller = copy.deepcopy(child.neural_controller)
-    
+    previous_controller = get_weights(previous_controller)
+
     connectivity = get_full_connectivity(child.robot_structure)
     env = gym.make(child.scenario, max_episode_steps=child.steps, body=child.robot_structure, connections=connectivity)
     sim = env.sim
     input_size = env.observation_space.shape[0]  # Observation size
     output_size = env.action_space.shape[0]  # Action size
     new_neural_controller = NeuralController(input_size, output_size)
-    
+    new_neural_controller = get_weights(new_neural_controller)
+
     #the robot is bigger now, increment the vector
     if input_size > child.input_size:
         for i, param_vector in enumerate(new_neural_controller):
@@ -180,12 +237,15 @@ def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM
         mutation_mask = (np.random.rand(*shape) < MUTATION_RATE).astype(float)
         noise = SIGMA * np.random.randn(*shape) * mutation_mask
         new_neural_controller[j] = param_vector + noise
-    child.neural_controller = new_neural_controller
-
+    set_weights(child.neural_controller, new_neural_controller)
     return child 
 
-def survivor_selection(population, new_population, SURVIVORS_COUNT):
-    pass
+def survivor_selection(population, new_population, t):
+    # tira t elementos melhores da antiga, e randoms da nova
+    survivors = population[:t]
+    new_population = [*new_population, *survivors]
+
+    return new_population
 
 def evolve_both(
     NUM_GENERATIONS,
@@ -195,7 +255,6 @@ def evolve_both(
     SCENARIO,
     POP_SIZE,
     CROSSOVER_RATE,
-    CROSSOVER_TYPE,
     MUTATION_RATE,
     SURVIVORS_COUNT,
     PARENT_SELECTION_COUNT,
@@ -205,7 +264,11 @@ def evolve_both(
     SEED,
     LOG_FILE=None
     ):
-
+    
+    if SEED is not None:
+        random.seed(SEED)
+        np.random.seed(SEED)
+        
     best_fitness = -np.inf
     best_robot = None
     best_controller = None
@@ -217,14 +280,15 @@ def evolve_both(
             if(individual.fitness == None):
                 individual.fitness = evalaute_fitness(individual)
         
-        population = sorted()
+        population = sorted(population, key=lambda x: x.fitness, reverse=True)
+
         best_current_fitness = population[0].fitness
         if best_current_fitness > best_fitness:
             best_fitness = best_current_fitness
             best_robot = population[0].robot_structure
             best_controller = population[0].neural_controller
         
-        mean_fitness = sum(ind[1] for ind in population) / len(population)
+        mean_fitness = sum(ind.fitness for ind in population) / len(population)
         fitness_history.append({
             "generation": it+1,
             "best_fitness": best_current_fitness,
@@ -242,3 +306,25 @@ def evolve_both(
             new_population.append(child)
 
         population = survivor_selection(population, new_population, SURVIVORS_COUNT)
+        print(f"Generation {it + 1}/{NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}")
+
+    print("Best robot: " + str(best_robot))
+    print("Best fitness: " + str(best_fitness))
+
+evolve_both(
+    100,
+    (5, 5),
+    (5, 5),
+    500,
+    "Walker-v0",
+    5,
+    0.9,
+    0.3,
+    3,
+    2,
+    [0, 1, 2, 3, 4],
+    3,
+    0.3,
+    42,
+    LOG_FILE=None
+    )
