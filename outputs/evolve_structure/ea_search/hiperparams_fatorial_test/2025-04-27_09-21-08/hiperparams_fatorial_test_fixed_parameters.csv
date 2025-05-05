@@ -1,0 +1,2 @@
+NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,SCENARIO,POP_SIZE,CROSSOVER_TYPE,VOXEL_TYPES,CONTROLLER
+2,"(5, 5)","(5, 5)",500,Walker-v0,50,<function uniform_crossover at 0x7df916af55a0>,"[0, 1, 2, 3, 4]",<function alternating_gait at 0x7df916af4ee0>

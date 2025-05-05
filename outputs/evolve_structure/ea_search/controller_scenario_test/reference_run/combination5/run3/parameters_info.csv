@@ -1,0 +1,2 @@
+NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,POP_SIZE,CROSSOVER_TYPE,VOXEL_TYPES,MUTATION_RATE,CROSSOVER_RATE,SURVIVORS_COUNT,PARENT_SELECTION_COUNT,SCENARIO,CONTROLLER,SEED,LOG_FILE
+100,"(5, 5)","(5, 5)",500,50,uniform_crossover,"[0, 1, 2, 3, 4]",0.05,0.95,5,4,Walker-v0,alternating_gait,85960,outputs/evolve_structure/ea_search/controller_scenario_test/2025-05-03_19-20-35/combination5/log_combination5_pid14847.txt
