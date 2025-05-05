@@ -70,8 +70,6 @@ def evaluate_fitness_controller(args, view=False):
     except Exception as e:
         print("Exception: " + str(e))
 
-
-
 def evaluate_fitness_structure(robot_structure, SCENARIO, STEPS, CONTROLLER, view=False):    
     try:
         connectivity = get_full_connectivity(robot_structure)
@@ -100,9 +98,31 @@ def evaluate_fitness_structure(robot_structure, SCENARIO, STEPS, CONTROLLER, vie
         return 0.0
 
 
-def evalaute_fitness(args, view=False):
+def evalaute_fitness(child: Individual, view=False):
     try:
-        pass
+        connectivity = get_full_connectivity(child.robot_structure)
+        env = gym.make(child.scenario, max_episode_steps=child.steps, body=child.robot_structure, connections=connectivity)
+        env.reset()
+        sim = env.sim
+        viewer = EvoViewer(sim)
+        viewer.track_objects("robot")
+        t_reward = 0
+        #action_size = sim.get_dim_action_space("robot")  # Get correct action size
+        state = env.reset()[0]  # Get initial state
+        for t in range(child.steps):  
+            # Update actuation before stepping
+            state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
+            action = child.neural_controller(state_tensor).detach().numpy().flatten() # Get action
+            if view:
+                viewer.render("screen") 
+            state, reward, terminated, truncated, info = env.step(action)
+            t_reward += reward
+            if terminated or truncated:
+                env.reset()
+                break
+        viewer.close()
+        env.close()
+        return t_reward
     except (ValueError, IndexError) as e:
         return [0.0, None]
 
@@ -142,7 +162,7 @@ def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM
                     new_neural_controller[i][0][j][k] = previous_controller[i][0][j][k]
 
             for j in range(len(previous_controller[i][1])):
-                new_neural_controller[i][1][j] = new_neural_controller[i][1][j]
+                new_neural_controller[i][1][j] = previous_controller[i][1][j]
                 
     #the robot is smaller, cut the vector
     elif input_size < child.input_size:
@@ -153,7 +173,7 @@ def evolve_controller(child: Individual, MUTATION_RATE: float, SIGMA: float, NUM
                     new_neural_controller[i][0][j][k] = previous_controller[i][0][j][k]
 
             for j in range(len(new_neural_controller[i][1])):
-                new_neural_controller[i][1][j] = new_neural_controller[i][1][j]
+                new_neural_controller[i][1][j] = previous_controller[i][1][j]
 
     for j, param_vector in enumerate(new_neural_controller):
         shape = param_vector.shape
