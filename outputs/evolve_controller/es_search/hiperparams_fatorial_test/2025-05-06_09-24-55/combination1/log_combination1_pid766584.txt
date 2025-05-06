@@ -1,0 +1,14 @@
+[2025-05-06 09:24:55.592037] [PID 766584] starting gen offsprings
+[2025-05-06 09:24:55.635265] [PID 766584] starting evaluation individuals
+[2025-05-06 09:35:03.135419] [PID 766584] Iteration 1/100, Best current fitness: 0.4854106045967493, Best global fitness: 0.4854106045967493, Avg fitness: 0.05940835271225563
+[2025-05-06 09:35:03.135587] [PID 766584] starting gen offsprings
+[2025-05-06 09:35:03.172066] [PID 766584] starting evaluation individuals
+[2025-05-06 09:42:26.233552] [PID 766584] Iteration 2/100, Best current fitness: 0.8058349464753949, Best global fitness: 0.8058349464753949, Avg fitness: 0.21254510186703726
+[2025-05-06 09:42:26.233934] [PID 766584] starting gen offsprings
+[2025-05-06 09:42:26.274876] [PID 766584] starting evaluation individuals
+[2025-05-06 09:50:32.498108] [PID 766584] Iteration 3/100, Best current fitness: 0.8058349464753949, Best global fitness: 0.8058349464753949, Avg fitness: 0.400447553696944
+[2025-05-06 09:50:32.498419] [PID 766584] starting gen offsprings
+[2025-05-06 09:50:32.531902] [PID 766584] starting evaluation individuals
+[2025-05-06 09:58:35.827281] [PID 766584] Iteration 4/100, Best current fitness: 1.457104058442637, Best global fitness: 1.457104058442637, Avg fitness: 0.7452575209268967
+[2025-05-06 09:58:35.827438] [PID 766584] starting gen offsprings
+[2025-05-06 09:58:35.860416] [PID 766584] starting evaluation individuals
