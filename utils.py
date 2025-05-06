@@ -78,23 +78,33 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
     except ValueError as e:
         print('Invalid')
 
-def generate_results(fitness_history_df, best_robot, params, output_dir, should_create_gif=True):
+evolve_types = {
+    "evolve_structure": {
+        "entity": "robot"
+    },
+    "evolve_controller": {
+        "entity": "weights"
+    }
+}
+
+def generate_results(fitness_history_df, best_entity, params, output_dir, should_create_gif=True, evolve_type="evolve_structure"):
     os.makedirs(output_dir, exist_ok=True)
 
-    # save best result (fitness + robot matrix) as csv
+    best_entity_name = f"best_{evolve_types[evolve_type]['entity']}"
     best_result_path = os.path.join(output_dir, "best_result.csv")
-    robot_str = json.dumps(best_robot.tolist()) 
+    if evolve_type == "evolve_structure":
+        best_entity_str = json.dumps(best_entity.tolist())
+    else:
+        best_entity_str = json.dumps([w.tolist() for w in best_entity])
     best_result_df = pd.DataFrame([{
         "best_fitness": fitness_history_df["best_fitness"].max(),
-        "best_robot": robot_str
+        best_entity_name: best_entity_str
     }])
     best_result_df.to_csv(best_result_path, index=False)
 
-    # save fitness history df as csv
     fitness_csv_path = os.path.join(output_dir, "fitness_history.csv")
     fitness_history_df.to_csv(fitness_csv_path, index=False)
 
-    # generate and save plot for fitness history
     plt.figure()
     plt.plot(fitness_history_df["generation"], fitness_history_df["best_fitness"], "b-", label="Best Fitness")
     plt.plot(fitness_history_df["generation"], fitness_history_df["mean_fitness"], "r-", label="Mean Fitness")
@@ -107,7 +117,6 @@ def generate_results(fitness_history_df, best_robot, params, output_dir, should_
     plt.savefig(plot_path)
     plt.close()
 
-    # convert function to string and save global parameters of execution as csv
     params_df = pd.DataFrame([{
         k: (v.__name__ if callable(v) else v)
         for k, v in params.items()
@@ -116,9 +125,8 @@ def generate_results(fitness_history_df, best_robot, params, output_dir, should_
     params_df.to_csv(params_csv_path, index=False)
 
     if should_create_gif:
-        # generate and save gif of best robot
-        gif_path = os.path.join(output_dir, "evolve_structure.gif")
-        create_gif(best_robot, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
+        gif_path = os.path.join(output_dir, f"{evolve_type}.gif")
+        create_gif(best_entity, filename=gif_path, scenario=params["SCENARIO"], steps=params["STEPS"], controller=params["CONTROLLER"])
 
 def generate_combination_results(combination_variable_params, best_fitnesses, fitness_historic_paths, combination_output_dir):
     combination_variable_parameters_info_df = pd.DataFrame([list(combination_variable_params.values())], columns=list(combination_variable_params.keys()))
