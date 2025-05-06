@@ -78,9 +78,11 @@ def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_t
     (i, combination, variable_param_keys, fixed_params, SEEDS, algorithm, output_dir)
     for i, combination in enumerate(all_combinations)
   ]
-
-  with Pool(processes=min(cpu_count(), len(args_list))) as pool:
-    combinations_results = pool.map(run_combination, args_list)
+ 
+  combinations_results = []
+  for args in args_list:
+    result = run_combination(args)
+    combinations_results.append(result)
 
   utils.generate_param_combinations_results(
     fixed_params, 
@@ -119,12 +121,12 @@ def es_search_hiperparams_fatorial_test():
     "NUM_GENERATIONS": 100,
     "STEPS": 500,
     "SCENARIO": "DownStepper-v0",
-    "POP_SIZE": 30
+    "POP_SIZE": 50
   }
   variable_params_grid = {
     "MUTATION_RATE": [0.1, 0.3],
     "SIGMA": [0.3, 0.5],
-    "NUM_OFFSPRINGS": [2, 3]
+    "NUM_OFFSPRINGS": [3, 5]
   }
   run_param_combinations(fixed_params, variable_params_grid, es_search, utils.test_types[0])
 
