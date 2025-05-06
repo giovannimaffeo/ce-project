@@ -124,7 +124,7 @@ def es_search_hiperparams_fatorial_test():
   variable_params_grid = {
     "MUTATION_RATE": [0.1, 0.3],
     "SIGMA": [0.3, 0.5],
-    "NUM_OFFSPRINGS": [3, 5]
+    "NUM_OFFSPRINGS": [2, 3]
   }
   run_param_combinations(fixed_params, variable_params_grid, es_search, utils.test_types[0])
 
