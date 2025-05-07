@@ -1,20 +1,13 @@
-import gc
-import os
+from multiprocessing import Pool, current_process
 from ea_structure import create_random_robot, mutate, parent_selection, survivor_selection, uniform_crossover
 import numpy as np
-import pandas as pd
 import random
-import matplotlib.pyplot as plt
 import gymnasium as gym
 from evogym.envs import *
-import tracemalloc
-from evogym import EvoWorld, EvoSim, EvoViewer, sample_robot, get_full_connectivity, is_connected
-from evogym import EvoViewer, get_full_connectivity, EvoSim, EvoWorld
+from evogym import get_full_connectivity
 from fixed_controllers import *
 from utils import log
 from neural_controller import *
-from multiprocessing import Pool
-import copy
 from es_controller import es_search, evaluate_fitness
 
 class Individual():  
@@ -31,6 +24,30 @@ class Individual():
     output_size = env.action_space.shape[0]
     self.brain = NeuralController(input_size, output_size)
     self.weights = weights if weights is not None else [np.random.randn(*param.shape) for param in self.brain.parameters()]
+
+def evaluate_fitness_parallel(population, scenario, steps):
+  indexes_to_evaluate = [i for i, ind in enumerate(population) if ind.fitness is None]
+  
+  args_list = [
+    (
+      population[i].weights,
+      population[i].brain,
+      scenario,
+      steps,
+      population[i].structure,
+      get_full_connectivity(population[i].structure)
+    ) for i in indexes_to_evaluate
+  ]
+  if current_process().daemon:
+    fitnesses = [evaluate_fitness(*args) for args in args_list]
+  else:
+    with Pool() as pool:
+      fitnesses = pool.starmap(evaluate_fitness, args_list)
+
+  for i, fit in zip(indexes_to_evaluate, fitnesses):
+    population[i].fitness = fit
+
+  return population
 
 def evolve_both(
   STRUCTURE_NUM_GENERATIONS,
@@ -63,18 +80,8 @@ def evolve_both(
   fitness_history = []
 
   for it in range(STRUCTURE_NUM_GENERATIONS):
-    for individual in population:
-      if individual.fitness is None:
-        connectivity = get_full_connectivity(individual.structure)
-        individual.fitness = evaluate_fitness(
-          individual.weights, 
-          individual.brain,
-          SCENARIO, 
-          STEPS, 
-          individual.structure,
-          connectivity
-        )
-    
+    log("starting evaluation structure population", LOG_FILE)
+    population = evaluate_fitness_parallel(population, SCENARIO, STEPS)
     population = sorted(population, key=lambda x: x.fitness, reverse=True)
 
     best_current_fitness = population[0].fitness
@@ -88,6 +95,8 @@ def evolve_both(
       "best_fitness": best_fitness,
       "mean_fitness": mean_fitness
     })
+
+    log("starting gen of new population", LOG_FILE)
     new_population = []
     for _ in range(STRUCTURE_POP_SIZE - SURVIVORS_COUNT):
       # evolve structure
@@ -125,8 +134,9 @@ def evolve_both(
       set_weights(child.brain, best_weights)
       new_population.append(child)
 
-      population = survivor_selection(population, new_population, SURVIVORS_COUNT)
-      print(f"Structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}")
+    log("starting survivor_selection", LOG_FILE)
+    population = survivor_selection(population, new_population, SURVIVORS_COUNT)
+    log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
 
   return best_individual, best_fitness, fitness_history
 
