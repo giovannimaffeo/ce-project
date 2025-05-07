@@ -139,25 +139,3 @@ def evolve_both(
     log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
 
   return best_individual, best_fitness, fitness_history
-
-evolve_both(
-  STRUCTURE_NUM_GENERATIONS=100,
-  MIN_GRID_SIZE=(5, 5),
-  MAX_GRID_SIZE=(5, 5),
-  STEPS=500,
-  SCENARIO="Walker-v0",
-  STRUCTURE_POP_SIZE=5,
-  CROSSOVER_RATE=0.9,
-  CROSSOVER_TYPE=uniform_crossover,
-  STRUCTURE_MUTATION_RATE=0.3,
-  SURVIVORS_COUNT=3,
-  PARENT_SELECTION_COUNT=2,
-  VOXEL_TYPES=[0, 1, 2, 3, 4],
-  CONTROLLER_NUM_GENERATIONS=2, #10,
-  CONTROLLER_POP_SIZE=10,
-  CONTROLLER_MUTATION_RATE=0.5,
-  SIGMA=0.5,
-  NUM_OFFSPRINGS=3,
-  SEED=42,
-  LOG_FILE=None
-)

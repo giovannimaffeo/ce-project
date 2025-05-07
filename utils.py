@@ -86,22 +86,40 @@ evolve_types = {
     "evolve_controller": {
         "entity": "weights",
         "label": "evolve_controller"
+    },
+    "evolve_both": {
+        "entity": ["robot", "weights"],
+        "label": "evolve_both"
     }
 }
 
 def generate_results(fitness_history_df, best_entity, params, output_dir, should_create_gif=True, evolve_type="evolve_structure"):
     os.makedirs(output_dir, exist_ok=True)
 
-    best_entity_name = f"best_{evolve_types[evolve_type]['entity']}"
     best_result_path = os.path.join(output_dir, "best_result.csv")
     if evolve_type == "evolve_structure":
+        best_entity_name = f"best_{evolve_types[evolve_type]['entity']}"
         best_entity_str = json.dumps(best_entity.tolist())
-    else:
+        best_result_df = pd.DataFrame([{
+            "best_fitness": fitness_history_df["best_fitness"].max(),
+            best_entity_name: best_entity_str
+        }])
+    elif evolve_type == "evolve_controller":
+        best_entity_name = f"best_{evolve_types[evolve_type]['entity']}"
         best_entity_str = json.dumps([w.tolist() for w in best_entity])
-    best_result_df = pd.DataFrame([{
-        "best_fitness": fitness_history_df["best_fitness"].max(),
-        best_entity_name: best_entity_str
-    }])
+        best_result_df = pd.DataFrame([{
+            "best_fitness": fitness_history_df["best_fitness"].max(),
+            best_entity_name: best_entity_str
+        }])
+    else:
+        best_entity_names = [f"best_{entity}" for entity in evolve_types[evolve_type]['entity']]
+        best_robot_str = json.dumps(best_entity.structure.tolist())
+        best_weights_str = json.dumps([w.tolist() for w in best_entity.weights])
+        best_result_df = pd.DataFrame([{
+            "best_fitness": fitness_history_df["best_fitness"].max(),
+            best_entity_names[0]: best_robot_str,
+            best_entity_names[1]: best_weights_str
+        }])
     best_result_df.to_csv(best_result_path, index=False)
 
     fitness_csv_path = os.path.join(output_dir, "fitness_history.csv")
