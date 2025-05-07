@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from itertools import combinations
 
-from stat_alunos import test_normal_sw, kruskal_wallis, mann_whitney
+from stat_alunos import t_test_ind, test_normal_sw, kruskal_wallis, mann_whitney
 
 def log_stats_msg(log_file, msg, reset=False):
   print(msg)
@@ -58,11 +58,11 @@ def check_non_parametric_combinations_difference(evolve_type, algorithm, test_ty
   log_stats_msg(log_file, "Conclusion: No significant difference between combinations." if p > 0.05 else "Conclusion: At least one combination differs significantly from the others.")
   return p <= 0.05
 
-def check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type):
+def check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type, only_two):
   reference_run_dir = f"outputs/{evolve_type}/{algorithm.__name__}/{test_type}/reference_run"
   log_file = os.path.join(reference_run_dir, "statistical_test_result.txt")
-
-  log_stats_msg(log_file, f"\n3. Pairwise Mann-Whitney U tests for combinations of algorithm '{algorithm.__name__}' and test '{test_type}':")
+  step = "2" if only_two else "3"
+  log_stats_msg(log_file, f"\n{step}. Pairwise Mann-Whitney U tests for combinations of algorithm '{algorithm.__name__}' and test '{test_type}':")
 
   combination_dirs = sorted([os.path.join(reference_run_dir, d) for d in os.listdir(reference_run_dir) if d.startswith("combination")])
   all_combination_fitnesses = []
@@ -103,9 +103,59 @@ def check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type)
   for rank, (idx, win_count) in enumerate(ranked, start=1):
     log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
 
-def base_stat_test(evolve_type, algorithm, test_type):
+def check_pairwise_parametric_comparisons(evolve_type, algorithm, test_type, only_two):
+  reference_run_dir = f"outputs/{evolve_type}/{algorithm.__name__}/{test_type}/reference_run"
+  log_file = os.path.join(reference_run_dir, "statistical_test_result.txt")
+  step = "2" if only_two else "3"
+  log_stats_msg(log_file, f"\n{step}. Pairwise Independent t-tests for combinations of algorithm '{algorithm.__name__}' and test '{test_type}':")
+
+  combination_dirs = sorted([os.path.join(reference_run_dir, d) for d in os.listdir(reference_run_dir) if d.startswith("combination")])
+  all_combination_fitnesses = []
+
+  for combination_dir in combination_dirs:
+    combination_fitness_values = []
+
+    for run_index in range(1, 6): 
+      run_path = os.path.join(combination_dir, f"run{run_index}", "best_result.csv")
+      best_result_df = pd.read_csv(run_path)
+      combination_fitness_values.append(best_result_df["best_fitness"].iloc[-1])
+
+    all_combination_fitnesses.append(combination_fitness_values)
+
+  n = len(all_combination_fitnesses)
+  wins = [0] * n
+
+  for (i, data1), (j, data2) in combinations(enumerate(all_combination_fitnesses), 2):
+    t, p = t_test_ind(data1, data2)
+    mean1 = np.mean(data1)
+    mean2 = np.mean(data2)
+
+    if p <= 0.05:
+      if mean1 > mean2:
+        wins[i] += 1
+        result = f"Combination {i+1} beats Combination {j+1} (p = {p:.4f}, t = {t:.2f})"
+      else:
+        wins[j] += 1
+        result = f"Combination {j+1} beats Combination {i+1} (p = {p:.4f}, t = {t:.2f})"
+    else:
+      result = f"Combination {i+1} vs Combination {j+1}: Not significant (p = {p:.4f}, t = {t:.2f})"
+
+    log_stats_msg(log_file, result)
+
+  # Generate ranking
+  ranked = sorted(enumerate(wins), key=lambda x: x[1], reverse=True)
+  log_stats_msg(log_file, "\nRanking based on number of pairwise wins:")
+  for rank, (idx, win_count) in enumerate(ranked, start=1):
+    log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
+
+def base_stat_test(evolve_type, algorithm, test_type, only_two=False):
   is_parametric = check_combinations_normality(evolve_type, algorithm, test_type)
-  if not is_parametric:
-    is_different = check_non_parametric_combinations_difference(evolve_type, algorithm, test_type) 
-    if is_different:
-      check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type)
+  
+  if only_two:
+    if is_parametric: check_pairwise_parametric_comparisons(evolve_type, algorithm, test_type, only_two)
+    else: check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type, only_two) 
+  else:
+    if not is_parametric:
+      is_different = check_non_parametric_combinations_difference(evolve_type, algorithm, test_type) 
+      if is_different:
+        check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type, only_two)

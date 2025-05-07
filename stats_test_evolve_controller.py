@@ -13,13 +13,13 @@ def stats_es_search_hiperparams_fatorial_test():
 def stats_random_search_scenario_test():
   algorithm = random_search
   test_type = utils.test_types[1]
-  base_stat_test(evolve_type, algorithm, test_type)
+  base_stat_test(evolve_type, algorithm, test_type, True)
 
 def stats_es_search_scenario_test():
   algorithm = es_search
   test_type = utils.test_types[1]
-  base_stat_test(evolve_type, algorithm, test_type)
+  base_stat_test(evolve_type, algorithm, test_type, True)
 
 # stats_es_search_hiperparams_fatorial_test()
-# stats_random_search_scenario_test()
-stats_es_search_scenario_test()
+stats_random_search_scenario_test()
+# stats_es_search_scenario_test()
