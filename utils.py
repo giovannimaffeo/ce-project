@@ -80,10 +80,12 @@ def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scena
 
 evolve_types = {
     "evolve_structure": {
-        "entity": "robot"
+        "entity": "robot",
+        "label": "evolve_structure"
     },
     "evolve_controller": {
-        "entity": "weights"
+        "entity": "weights",
+        "label": "evolve_controller"
     }
 }
 

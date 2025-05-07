@@ -1,12 +1,10 @@
 import itertools
-from multiprocessing import Pool, cpu_count
 import os
 import pandas as pd
 from datetime import datetime
 import gc
 
 from es_controller import es_search
-from fixed_controllers import alternating_gait, hopping_motion, sinusoidal_wave
 from random_controller import random_search
 import utils
 
@@ -156,6 +154,6 @@ def random_search_scenario_test():
 
 # es_search_basic_test()
 # random_search_basic_test()
-es_search_hiperparams_fatorial_test()
+# es_search_hiperparams_fatorial_test()
 # es_search_scenario_test()
-# random_search_scenario_test()
+random_search_scenario_test()
