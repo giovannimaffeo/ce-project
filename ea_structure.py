@@ -302,7 +302,7 @@ def ea_search(
     mean_fitness = sum(ind[1] for ind in population) / len(population)
     fitness_history.append({
       "generation": it+1,
-      "best_fitness": best_current_fitness,
+      "best_fitness": best_fitness,
       "mean_fitness": mean_fitness
     })
 
