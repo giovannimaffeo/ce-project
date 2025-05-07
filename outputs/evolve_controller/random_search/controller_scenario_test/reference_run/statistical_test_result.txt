@@ -1,0 +1,13 @@
+1. Shapiro-Wilk normality test results for algorithm 'random_search' and test 'controller_scenario_test':
+
+Combination 1: p = 0.8806 → Normal
+Combination 2: p = 0.2402 → Normal
+
+Result: All combinations are parametric.
+
+2. Pairwise Independent t-tests for combinations of algorithm 'random_search' and test 'controller_scenario_test':
+Combination 1 vs Combination 2: Not significant (p = 0.2592, t = 1.21)
+
+Ranking based on number of pairwise wins:
+1. Combination 1 — 0 wins
+2. Combination 2 — 0 wins
