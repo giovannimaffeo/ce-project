@@ -4,14 +4,15 @@ import numpy as np
 import random
 import gymnasium as gym
 from evogym.envs import *
-from evogym import get_full_connectivity
+from evogym import EvoViewer, get_full_connectivity, EvoSim, EvoWorld
 from fixed_controllers import *
 from utils import log
 from neural_controller import *
-from es_controller import es_search, evaluate_fitness
+from es_controller import es_search, evaluate_fitness, evaluate_fitness3
 
 class Individual():  
-  def __init__(self, scenario, steps, min_grid_size, max_grid_size, structure=None, weights=None, fitness=None):
+  def __init__(self, scenario, steps, min_grid_size, max_grid_size, structure=None, weights=None, fitness=None, reward=None):
+    self.reward = reward
     self.fitness = fitness
     
     # structure
@@ -25,8 +26,8 @@ class Individual():
     self.brain = NeuralController(input_size, output_size)
     self.weights = weights if weights is not None else [np.random.randn(*param.shape) for param in self.brain.parameters()]
 
-def evaluate_fitness_parallel(population, scenario, steps):
-  indexes_to_evaluate = [i for i, ind in enumerate(population) if ind.fitness is None]
+def evaluate_fitness_parallel(population, scenario, steps, evaluate_fitness_fn):
+  indexes_to_evaluate = [i for i, ind in enumerate(population) if ind.reward is None]
   
   args_list = [
     (
@@ -35,17 +36,19 @@ def evaluate_fitness_parallel(population, scenario, steps):
       scenario,
       steps,
       population[i].structure,
-      get_full_connectivity(population[i].structure)
+      get_full_connectivity(population[i].structure),
+      True
     ) for i in indexes_to_evaluate
   ]
   if current_process().daemon:
-    fitnesses = [evaluate_fitness(*args) for args in args_list]
+    evaluations = [evaluate_fitness_fn(*args) for args in args_list]
   else:
     with Pool() as pool:
-      fitnesses = pool.starmap(evaluate_fitness, args_list)
+      evaluations = pool.starmap(evaluate_fitness_fn, args_list)
 
-  for i, fit in zip(indexes_to_evaluate, fitnesses):
-    population[i].fitness = fit
+  for i, evaluation in zip(indexes_to_evaluate, evaluations):
+    population[i].fitness = evaluation[0]
+    population[i].reward = evaluation[1]
 
   return population
 
@@ -68,32 +71,33 @@ def evolve_both(
   SIGMA,
   NUM_OFFSPRINGS,
   SEED,
-  LOG_FILE=None
+  LOG_FILE=None,
+  evaluate_fitness_fn=evaluate_fitness
 ): 
   if SEED is not None:
     random.seed(SEED)
     np.random.seed(SEED)
 
   best_individual = None
-  best_fitness = -np.inf
+  best_reward = -np.inf
   population = [Individual(SCENARIO, STEPS, MIN_GRID_SIZE, MAX_GRID_SIZE) for _ in range(STRUCTURE_POP_SIZE)]
   fitness_history = []
 
   for it in range(STRUCTURE_NUM_GENERATIONS):
     log("starting evaluation structure population", LOG_FILE)
-    population = evaluate_fitness_parallel(population, SCENARIO, STEPS)
+    population = evaluate_fitness_parallel(population, SCENARIO, STEPS, evaluate_fitness_fn)
     population = sorted(population, key=lambda x: x.fitness, reverse=True)
 
-    best_current_fitness = population[0].fitness
-    if best_current_fitness > best_fitness:
-      best_fitness = best_current_fitness
+    best_current_reward = population[0].reward
+    if best_current_reward > best_reward:
+      best_reward = best_current_reward
       best_individual = population[0]
     
-    mean_fitness = sum(ind.fitness for ind in population) / len(population)
+    mean_reward = sum(ind.reward for ind in population) / len(population)
     fitness_history.append({
       "generation": it+1,
-      "best_fitness": best_fitness,
-      "mean_fitness": mean_fitness
+      "best_fitness": best_reward,
+      "mean_fitness": mean_reward
     })
 
     log("starting gen of new population", LOG_FILE)
@@ -118,7 +122,8 @@ def evolve_both(
         NUM_OFFSPRINGS,
         SEED,
         LOG_FILE,
-        robot_structure=structure
+        robot_structure=structure,
+        evaluate_fitness_fn=evaluate_fitness_fn
       )
 
       # add new individual
@@ -129,13 +134,14 @@ def evolve_both(
         MAX_GRID_SIZE,
         structure,
         best_weights,
-        best_fitness
+        best_fitness,
+        None
       )
       set_weights(child.brain, best_weights)
       new_population.append(child)
 
     log("starting survivor_selection", LOG_FILE)
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
-    log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
+    log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_reward}, Best global fitness: {best_reward}, Avg fitness: {mean_reward}", LOG_FILE)
 
   return best_individual, fitness_history

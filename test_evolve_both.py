@@ -5,6 +5,7 @@ import pandas as pd
 from datetime import datetime
 
 from ea_structure import uniform_crossover
+from es_controller import evaluate_fitness3
 from evolve_both import evolve_both
 import utils
 
@@ -99,20 +100,21 @@ def evolve_both_basic_test():
     "MAX_GRID_SIZE": (5, 5),
     "STEPS": 500,
     "SCENARIO": "GapJumper-v0",
-    "STRUCTURE_POP_SIZE": 5,
+    "STRUCTURE_POP_SIZE": 2,
     "CROSSOVER_RATE": 0.9,
     "CROSSOVER_TYPE": uniform_crossover,
     "STRUCTURE_MUTATION_RATE": 0.3,
-    "SURVIVORS_COUNT": 3,
+    "SURVIVORS_COUNT": 0,
     "PARENT_SELECTION_COUNT": 2,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
     "CONTROLLER_NUM_GENERATIONS": 2,
-    "CONTROLLER_POP_SIZE": 30,
+    "CONTROLLER_POP_SIZE": 2,
     "CONTROLLER_MUTATION_RATE": 0.5,
     "SIGMA": 0.7,
     "NUM_OFFSPRINGS": 5,
     "SEED": 42,
-    "LOG_FILE": None
+    "LOG_FILE": None,
+    "evaluate_fitness_fn": evaluate_fitness3
   }  
   basic_test(params, evolve_both, None, False)
 

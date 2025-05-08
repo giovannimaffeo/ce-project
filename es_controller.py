@@ -9,6 +9,56 @@ import copy
 
 from utils import log
 
+def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connectivity, return_reward=False, view=False):
+  set_weights(brain, weights)
+  env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
+  sim = env.sim
+  viewer = EvoViewer(sim)
+  viewer.track_objects('robot')
+
+  state = env.reset()[0]
+  t_reward = 0
+
+  initial_pos = np.array(sim.object_pos_at_time(sim.get_time(), "robot"))
+  initial_x = np.max(initial_pos[:, 0])  # maior x
+  initial_y = np.max(initial_pos[:, 1])  # maior y (altura)
+  max_height = initial_y
+
+  for t in range(steps):
+    state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
+    action = brain(state_tensor).detach().numpy().flatten()
+    if view:
+      viewer.render('screen')
+    state, reward, terminated, truncated, info = env.step(action)
+    t_reward += reward
+
+    current_pos = np.array(sim.object_pos_at_time(sim.get_time(), "robot"))
+    current_y = np.max(current_pos[:, 1])
+    max_height = max(max_height, current_y)
+
+    if terminated or truncated:
+      break
+
+  final_pos = np.array(sim.object_pos_at_time(sim.get_time(), "robot"))
+  final_vel = np.array(sim.object_vel_at_time(sim.get_time(), "robot"))
+
+  final_x = np.max(final_pos[:, 0])
+  final_vx = np.mean(final_vel[:, 0])  # média das velocidades horizontais
+
+  horizontal_progress = final_x - initial_x
+  jump_height = max_height - initial_y
+  horizontal_velocity = final_vx
+
+  fitness = (
+    1.0 * horizontal_progress +
+    0.5 * jump_height +
+    0.3 * horizontal_velocity
+  )
+
+  viewer.close()
+  env.close()
+
+  return [fitness, reward] if return_reward else fitness
 
 # ---- FITNESS FUNCTION ----
 def evaluate_fitness_2(args, view=False):
@@ -81,7 +131,7 @@ def evaluate_fitness(weights, brain, scenario, steps, robot_structure, connectiv
   env.close()
   return t_reward 
 
-def evaluate_fitness_parallel(all_candidates, brain, connectivity, robot_structure, scenario, steps):
+def evaluate_fitness_parallel(all_candidates, brain, connectivity, robot_structure, scenario, steps, evaluate_fitnes_fn):
   indexes_to_evaluate = [i for i, ind in enumerate(all_candidates) if ind[1] is None]
   
   args_list = [
@@ -95,10 +145,10 @@ def evaluate_fitness_parallel(all_candidates, brain, connectivity, robot_structu
     ) for i in indexes_to_evaluate
   ]
   if current_process().daemon:
-    fitnesses = [evaluate_fitness(*args) for args in args_list]
+    fitnesses = [evaluate_fitnes_fn(*args) for args in args_list]
   else:
     with Pool() as pool:
-      fitnesses = pool.starmap(evaluate_fitness, args_list)
+      fitnesses = pool.starmap(evaluate_fitnes_fn, args_list)
 
   for i, fit in zip(indexes_to_evaluate, fitnesses):
     all_candidates[i][1] = fit
@@ -122,7 +172,8 @@ def es_search(
   NUM_OFFSPRINGS,
   SEED,
   LOG_FILE=None,
-  robot_structure=default_robot_structure
+  robot_structure=default_robot_structure,
+  evaluate_fitness_fn=evaluate_fitness
 ):
   if SEED is not None:
     random.seed(SEED)
@@ -157,7 +208,7 @@ def es_search(
 
     all_candidates = population + offsprings
     log("starting evaluation individuals", LOG_FILE)
-    all_candidates = evaluate_fitness_parallel(all_candidates, brain, connectivity, robot_structure, SCENARIO, STEPS)
+    all_candidates = evaluate_fitness_parallel(all_candidates, brain, connectivity, robot_structure, SCENARIO, STEPS, evaluate_fitness_fn)
     all_candidates = sorted(all_candidates, key=lambda x: x[1], reverse=True)
     # keep best individuals as population
     population = all_candidates[:POP_SIZE]
