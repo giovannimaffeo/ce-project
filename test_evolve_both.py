@@ -28,7 +28,7 @@ def basic_test(params, algorithm, output_dir=None, should_create_gif=True):
   # generate results
   fitness_history_df = pd.DataFrame(fitness_history)
   utils.generate_results(fitness_history_df, best_individual, params, output_dir, should_create_gif, "evolve_both")
-  return best_individual.structure, best_individual.weights, best_individual.fitness, fitness_history
+  return best_individual.structure, best_individual.weights, best_individual.reward, fitness_history
 
 def run_combination(args):
   i, combination, variable_param_keys, fixed_params, SEEDS, algorithm, output_dir = args
@@ -47,7 +47,7 @@ def run_combination(args):
       "LOG_FILE": os.path.join(combination_output_dir, f"log_combination{i + 1}_pid{os.getpid()}.txt")        
     }
     run_output_dir = os.path.join(combination_output_dir, f"run{j+1}")
-    _, best_fitness, fitness_history = basic_test(params, algorithm, run_output_dir, False)
+    _, _, best_fitness, fitness_history = basic_test(params, algorithm, run_output_dir, False)
     best_fitnesses.append(best_fitness)
 
     current, peak = tracemalloc.get_traced_memory()
@@ -120,21 +120,23 @@ def evolve_both_basic_test():
 
 def evolve_both_hiperparams_fatorial_test():
   fixed_params = {
-    "STRUCTURE_NUM_GENERATIONS": 100,
+    "STRUCTURE_NUM_GENERATIONS": 2,
     "MIN_GRID_SIZE": (5, 5),
     "MAX_GRID_SIZE": (5, 5),
     "STEPS": 500,
     "SCENARIO": "GapJumper-v0",
-    "STRUCTURE_POP_SIZE": 5,
+    "STRUCTURE_POP_SIZE": 3,
     "CROSSOVER_RATE": 0.95,
     "CROSSOVER_TYPE": uniform_crossover,
-    "SURVIVORS_COUNT": 3,
+    "SURVIVORS_COUNT": 0,
     "PARENT_SELECTION_COUNT": 2,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER_NUM_GENERATIONS": 30,
-    "CONTROLLER_POP_SIZE": 30,
+    "CONTROLLER_NUM_GENERATIONS": 2,
+    "CONTROLLER_POP_SIZE": 2,
     "CONTROLLER_MUTATION_RATE": 0.3,
-    "NUM_OFFSPRINGS": 5
+    "NUM_OFFSPRINGS": 1,
+    "LOG_FILE": None,
+    "evaluate_fitness_fn": evaluate_fitness3
   }  
   variable_params_grid = {
     "STRUCTURE_MUTATION_RATE": [0.05, 0.1],
@@ -160,11 +162,15 @@ def evolve_both_scenario_test():
     "CONTROLLER_POP_SIZE": 30,
     "CONTROLLER_MUTATION_RATE": 0.3,
     "SIGMA": 0.7, # complete
-    "NUM_OFFSPRINGS": 5
+    "NUM_OFFSPRINGS": 5,
+    "LOG_FILE": None,
+    "evaluate_fitness_fn": evaluate_fitness3
   }  
   variable_params_grid = {
     "SCENARIO": ["GapJumper-v0", "CaveCrawler-v0"]
   }
   run_param_combinations(fixed_params, variable_params_grid, evolve_both, utils.test_types[1])
 
-evolve_both_basic_test()
+# evolve_both_basic_test()
+evolve_both_hiperparams_fatorial_test()
+# evolve_both_scenario_test()
