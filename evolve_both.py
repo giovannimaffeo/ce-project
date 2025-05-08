@@ -15,9 +15,8 @@ from evogym import EvoViewer
 import imageio
 import torch
 
-def create_gif(weights, brain, scenario, steps, robot_structure, filename='best_robot.gif', duration=0.066, view=False):
+def create_gif(brain, scenario, steps, robot_structure, filename='best_robot.gif', duration=0.066, view=False):
   try:
-    set_weights(brain, weights)  # Load weights into the network
     connectivity = get_full_connectivity(robot_structure)
     env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
     env.reset()
@@ -238,30 +237,34 @@ def evolve_both(
       set_weights(child.brain, best_weights)
       new_population.append(child)
 
-    log("starting survivor_selection", LOG_FILE)
-    population = survivor_selection(population, new_population, SURVIVORS_COUNT)
+      log("starting survivor_selection", LOG_FILE)
+      population = survivor_selection(population, new_population, SURVIVORS_COUNT)
     log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
-    create_gif(best_weights, population[0].brain, SCENARIO, STEPS, population[0].structure)
+    create_gif(population[0].brain, SCENARIO, STEPS, population[0].structure)
   return best_individual, best_fitness, fitness_history
 
-evolve_both(
-  STRUCTURE_NUM_GENERATIONS=100,
-  MIN_GRID_SIZE=(5, 5),
-  MAX_GRID_SIZE=(5, 5),
-  STEPS=500,
-  SCENARIO="GapJumper-v0",
-  STRUCTURE_POP_SIZE=5,
-  CROSSOVER_RATE=0.9,
-  CROSSOVER_TYPE=uniform_crossover,
-  STRUCTURE_MUTATION_RATE=0.3,
-  SURVIVORS_COUNT=3,
-  PARENT_SELECTION_COUNT=2,
-  VOXEL_TYPES=[0, 1, 2, 3, 4],
-  CONTROLLER_NUM_GENERATIONS=10, #10,
-  CONTROLLER_POP_SIZE=5,#30,
-  CONTROLLER_MUTATION_RATE=0.5,
-  SIGMA=0.7,
-  NUM_OFFSPRINGS=1,
-  SEED=42,
-  LOG_FILE=None
-)
+
+def main():
+  evolve_both(
+    STRUCTURE_NUM_GENERATIONS=100,
+    MIN_GRID_SIZE=(5, 5),
+    MAX_GRID_SIZE=(5, 5),
+    STEPS=500,
+    SCENARIO="GapJumper-v0",
+    STRUCTURE_POP_SIZE=5,
+    CROSSOVER_RATE=0.9,
+    CROSSOVER_TYPE=uniform_crossover,
+    STRUCTURE_MUTATION_RATE=0.3,
+    SURVIVORS_COUNT=3,
+    PARENT_SELECTION_COUNT=2,
+    VOXEL_TYPES=[0, 1, 2, 3, 4],
+    CONTROLLER_NUM_GENERATIONS=20, #10,
+    CONTROLLER_POP_SIZE=15,#30,
+    CONTROLLER_MUTATION_RATE=0.7,
+    SIGMA=0.7,
+    NUM_OFFSPRINGS=3,
+    SEED=42,
+    LOG_FILE=None
+  )
+if __name__ == "__main__":
+  main()
