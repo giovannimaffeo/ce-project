@@ -138,4 +138,4 @@ def evolve_both(
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
     log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
 
-  return best_individual, best_fitness, fitness_history
+  return best_individual, fitness_history

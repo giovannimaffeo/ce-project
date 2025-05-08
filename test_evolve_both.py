@@ -16,42 +16,18 @@ def basic_test(params, algorithm, output_dir=None, should_create_gif=True):
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     output_dir = f"outputs/evolve_both/{algorithm.__name__}/basic_test/{timestamp}"
 
-  individual, fitness_history = algorithm(**params)
+  best_individual, fitness_history = algorithm(**params)
   print("Best structure found:")
-  print(individual.structure)
+  print(best_individual.structure)
   print("Best weights found:")
-  print(individual.weights)
+  print(best_individual.weights)
   print("Best fitness score:")
-  print(individual.fitness)
+  print(best_individual.fitness)
 
   # generate results
   fitness_history_df = pd.DataFrame(fitness_history)
-  utils.generate_results(fitness_history_df, individual, params, output_dir, should_create_gif, "evolve_both")
-  return individual.structure, individual.weights, individual.fitness, fitness_history
-
-def evolve_both_basic_test():
-  params = {
-    "STRUCTURE_NUM_GENERATIONS": 2,
-    "MIN_GRID_SIZE": (5, 5),
-    "MAX_GRID_SIZE": (5, 5),
-    "STEPS": 500,
-    "SCENARIO": "GapJumper-v0",
-    "STRUCTURE_POP_SIZE": 5,
-    "CROSSOVER_RATE": 0.9,
-    "CROSSOVER_TYPE": uniform_crossover,
-    "STRUCTURE_MUTATION_RATE": 0.3,
-    "SURVIVORS_COUNT": 3,
-    "PARENT_SELECTION_COUNT": 2,
-    "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER_NUM_GENERATIONS": 2,
-    "CONTROLLER_POP_SIZE": 30,
-    "CONTROLLER_MUTATION_RATE": 0.5,
-    "SIGMA": 0.7,
-    "NUM_OFFSPRINGS": 5,
-    "SEED": 42,
-    "LOG_FILE": None
-  }  
-  basic_test(params, evolve_both, None, False)
+  utils.generate_results(fitness_history_df, best_individual, params, output_dir, should_create_gif, "evolve_both")
+  return best_individual.structure, best_individual.weights, best_individual.fitness, fitness_history
 
 def run_combination(args):
   i, combination, variable_param_keys, fixed_params, SEEDS, algorithm, output_dir = args
@@ -115,6 +91,30 @@ def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_t
     output_dir,
     test_type
   )
+
+def evolve_both_basic_test():
+  params = {
+    "STRUCTURE_NUM_GENERATIONS": 2,
+    "MIN_GRID_SIZE": (5, 5),
+    "MAX_GRID_SIZE": (5, 5),
+    "STEPS": 500,
+    "SCENARIO": "GapJumper-v0",
+    "STRUCTURE_POP_SIZE": 5,
+    "CROSSOVER_RATE": 0.9,
+    "CROSSOVER_TYPE": uniform_crossover,
+    "STRUCTURE_MUTATION_RATE": 0.3,
+    "SURVIVORS_COUNT": 3,
+    "PARENT_SELECTION_COUNT": 2,
+    "VOXEL_TYPES": [0, 1, 2, 3, 4],
+    "CONTROLLER_NUM_GENERATIONS": 2,
+    "CONTROLLER_POP_SIZE": 30,
+    "CONTROLLER_MUTATION_RATE": 0.5,
+    "SIGMA": 0.7,
+    "NUM_OFFSPRINGS": 5,
+    "SEED": 42,
+    "LOG_FILE": None
+  }  
+  basic_test(params, evolve_both, None, False)
 
 def evolve_both_hiperparams_fatorial_test():
   fixed_params = {
