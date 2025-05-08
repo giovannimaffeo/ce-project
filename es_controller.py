@@ -62,10 +62,10 @@ def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connecti
   fall_penalty = -5.0 if final_y < initial_y - 1.0 else 0.0  # queda brusca
 
   fitness = (
-    1.0 * horizontal_velocity +         # foco em se mover, mesmo que não atravesse
-    0.7 * jump_height +                 # salto eficiente
-    success_bonus +                     # atravessou o gap
-    fall_penalty                        # caiu feio? penaliza
+    1.0 * horizontal_velocity +           # foco em se mover, mesmo que não atravesse
+    0.7 * jump_height                     # salto eficiente
+    # success_bonus +                     # atravessou o gap
+    # fall_penalty                        # caiu feio? penaliza
   )
 
   # --- LOG EM CSV ---
