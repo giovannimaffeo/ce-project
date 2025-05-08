@@ -103,6 +103,7 @@ def evolve_both(
     log("starting gen of new population", LOG_FILE)
     new_population = []
     for _ in range(STRUCTURE_POP_SIZE - SURVIVORS_COUNT):
+      log("starting evolve structure", LOG_FILE)
       # evolve structure
       evolve_structure_population = [
         [individual.structure, individual.fitness] for individual in population
@@ -111,6 +112,7 @@ def evolve_both(
       [structure, fitness] = CROSSOVER_TYPE(p1, p2, CROSSOVER_RATE)
       [structure, fitness] = mutate([structure, fitness], STRUCTURE_MUTATION_RATE, VOXEL_TYPES)
 
+      log("starting evolve controller", LOG_FILE)
       # evolve controller
       best_weights, best_fitness, _ = es_search(
         CONTROLLER_NUM_GENERATIONS,
@@ -126,6 +128,7 @@ def evolve_both(
         evaluate_fitness_fn=evaluate_fitness_fn
       )
 
+      log("add new individual", LOG_FILE)
       # add new individual
       child = Individual(
         SCENARIO, 

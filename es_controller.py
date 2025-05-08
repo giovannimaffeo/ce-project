@@ -1,3 +1,5 @@
+import csv
+import os
 import numpy as np
 import random
 import gymnasium as gym
@@ -43,17 +45,37 @@ def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connecti
   final_vel = np.array(sim.object_vel_at_time(sim.get_time(), "robot"))
 
   final_x = np.max(final_pos[:, 0])
-  final_vx = np.mean(final_vel[:, 0])  # média das velocidades horizontais
+  final_vx = np.mean(final_vel[:, 0])
 
+  # Métricas de interesse
   horizontal_progress = final_x - initial_x
-  jump_height = max_height - initial_y
+  jump_height = np.tanh(max_height - initial_y)   # normalização
   horizontal_velocity = final_vx
 
+  # Bonificação por atravessar gap
+  gap_threshold = 5.0  # pode ajustar conforme tamanho médio do gap
+  crossed_gap = horizontal_progress > gap_threshold
+  success_bonus = 10.0 if crossed_gap else 0.0
+
+  # Penalidade se caiu abruptamente
+  final_y = np.max(final_pos[:, 1])
+  fall_penalty = -5.0 if final_y < initial_y - 1.0 else 0.0  # queda brusca
+
   fitness = (
-    1.0 * horizontal_progress +
-    0.5 * jump_height +
-    0.3 * horizontal_velocity
+    1.0 * horizontal_velocity +         # foco em se mover, mesmo que não atravesse
+    0.6 * np.tanh(jump_height) +        # salto eficiente
+    success_bonus +                     # atravessou o gap
+    fall_penalty                        # caiu feio? penaliza
   )
+
+  # --- LOG EM CSV ---
+  log_path = "fitness_reward_log.csv"
+  file_exists = os.path.isfile(log_path)
+  with open(log_path, mode='a', newline='') as file:
+    writer = csv.writer(file)
+    if not file_exists:
+      writer.writerow(["fitness", "reward"])
+    writer.writerow([fitness, t_reward])
 
   viewer.close()
   env.close()
