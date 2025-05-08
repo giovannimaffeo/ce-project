@@ -10,6 +10,110 @@ from utils import log
 from neural_controller import *
 from es_controller import es_search, evaluate_fitness
 
+
+from evogym import EvoViewer
+import imageio
+import torch
+
+def create_gif(weights, brain, scenario, steps, robot_structure, filename='best_robot.gif', duration=0.066, view=False):
+  try:
+    set_weights(brain, weights)  # Load weights into the network
+    connectivity = get_full_connectivity(robot_structure)
+    env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
+    env.reset()
+    sim = env.sim
+    viewer = EvoViewer(sim)
+    viewer.track_objects('robot')
+    state = env.reset()[0]  # Get initial state
+    t_reward = 0
+    
+    frames = []
+    for t in range(steps):  
+      # Update actuation before stepping
+      state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)  # Convert to tensor
+      action = brain(state_tensor).detach().numpy().flatten() # Get action
+      if view:
+        viewer.render('screen') 
+      state, reward, terminated, truncated, info = env.step(action)
+      t_reward += reward
+      if terminated or truncated:
+        env.reset()
+        break
+      frame = viewer.render('rgb_array')
+      frames.append(frame)
+
+    viewer.close()
+    imageio.mimsave(filename, frames, duration=duration, optimize=True)
+  except Exception as e:
+    print("Exception while creating the gif: " + str(e))
+
+def create_gif_2(robot_structure, filename='best_robot.gif', duration=0.066, scenario=None, steps=500, controller=alternating_gait):
+  try:
+    """Create a smooth GIF of the robot simulation at 30fps."""
+    connectivity = get_full_connectivity(robot_structure)
+    env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
+    env.reset()
+    sim = env.sim
+    viewer = EvoViewer(sim)
+    viewer.track_objects('robot')
+
+    action_size = sim.get_dim_action_space('robot')  # Get correct action size
+    t_reward = 0
+
+    frames = []
+    for t in range(steps):
+      actuation = controller(action_size,t)
+      ob, reward, terminated, truncated, info = env.step(actuation)
+      t_reward += reward
+      if terminated or truncated:
+        env.reset()
+        break
+      frame = viewer.render('rgb_array')
+      frames.append(frame)
+
+    viewer.close()
+    imageio.mimsave(filename, frames, duration=duration, optimize=True)
+  except ValueError as e:
+    print('Invalid')
+
+# def create_gif(robot_structure, filename='best_robot.gif', duration=0.066, scenario=None, steps=500, controller=alternating_gait):
+#     print(f'body: {robot_structure}')
+#     """Create a GIF of the robot simulation, handling both controller types"""
+#     try:
+#         connectivity = get_full_connectivity(robot_structure)
+#         env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
+#         state = env.reset()[0]
+#         sim = env.sim
+#         viewer = EvoViewer(sim)
+#         viewer.track_objects('robot')
+
+#         if hasattr(controller, 'forward'):
+#             print('===>>> Using neural network controller')
+#         else:
+#             print('===>>> Using fixed controller')
+
+#         frames = []
+#         for t in range(steps):
+#             # Handle different controller types
+#             if hasattr(controller, 'forward'):  # Neural network controller
+#                 state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
+#                 actuation = controller(state_tensor).detach().numpy().flatten()
+#             else:  # Fixed controller
+#                 action_size = sim.get_dim_action_space('robot')
+#                 actuation = controller(action_size, t)
+
+#             state, reward, terminated, truncated, _ = env.step(actuation)
+#             if terminated or truncated:
+#                 break
+#             frame = viewer.render('rgb_array')
+#             frames.append(frame)
+
+#         viewer.close()
+#         env.close()
+#         imageio.mimsave(filename, frames, duration=duration, optimize=True)
+#     except ValueError as e:
+#         print(f'Error creating GIF: {e}')
+
 class Individual():  
   def __init__(self, scenario, steps, min_grid_size, max_grid_size, structure=None, weights=None, fitness=None):
     self.fitness = fitness
@@ -137,7 +241,7 @@ def evolve_both(
     log("starting survivor_selection", LOG_FILE)
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
     log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_fitness}, Best global fitness: {best_fitness}, Avg fitness: {mean_fitness}", LOG_FILE)
-
+    create_gif(best_weights, population[0].brain, SCENARIO, STEPS, population[0].structure)
   return best_individual, best_fitness, fitness_history
 
 evolve_both(
@@ -145,7 +249,7 @@ evolve_both(
   MIN_GRID_SIZE=(5, 5),
   MAX_GRID_SIZE=(5, 5),
   STEPS=500,
-  SCENARIO="Walker-v0",
+  SCENARIO="GapJumper-v0",
   STRUCTURE_POP_SIZE=5,
   CROSSOVER_RATE=0.9,
   CROSSOVER_TYPE=uniform_crossover,
@@ -153,11 +257,11 @@ evolve_both(
   SURVIVORS_COUNT=3,
   PARENT_SELECTION_COUNT=2,
   VOXEL_TYPES=[0, 1, 2, 3, 4],
-  CONTROLLER_NUM_GENERATIONS=2, #10,
-  CONTROLLER_POP_SIZE=10,
+  CONTROLLER_NUM_GENERATIONS=10, #10,
+  CONTROLLER_POP_SIZE=5,#30,
   CONTROLLER_MUTATION_RATE=0.5,
-  SIGMA=0.5,
-  NUM_OFFSPRINGS=3,
+  SIGMA=0.7,
+  NUM_OFFSPRINGS=1,
   SEED=42,
   LOG_FILE=None
 )
