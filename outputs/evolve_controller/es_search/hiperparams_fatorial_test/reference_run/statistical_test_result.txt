@@ -1,0 +1,16 @@
+1. Shapiro-Wilk normality test results for algorithm 'es_search' and test 'hiperparams_fatorial_test':
+
+Combination 1: p = 0.9701 → Normal
+Combination 2: p = 0.3919 → Normal
+Combination 3: p = 0.2981 → Normal
+Combination 4: p = 0.0097 → Not normal
+Combination 5: p = 0.0818 → Normal
+Combination 6: p = 0.9924 → Normal
+Combination 7: p = 0.2470 → Normal
+Combination 8: p = 0.4967 → Normal
+
+Result: At least one combination is not parametric.
+
+2. Due to the normality test indicating non-parametric data, performing Kruskal-Wallis test for differences between parameter combinations of algorithm 'es_search' and test 'hiperparams_fatorial_test':
+Result: p = 0.1072
+Conclusion: No significant difference between combinations.

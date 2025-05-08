@@ -1,0 +1,1500 @@
+[2025-05-06 17:42:35.034381] [PID 23079] starting gen offsprings
+[2025-05-06 17:42:35.050544] [PID 23079] starting evaluation individuals
+[2025-05-06 17:42:53.255049] [PID 23079] Iteration 1/100, Best current fitness: 0.6889520445868251, Best global fitness: 0.6889520445868251, Avg fitness: 0.10770758246989423
+[2025-05-06 17:42:53.255142] [PID 23079] starting gen offsprings
+[2025-05-06 17:42:53.276727] [PID 23079] starting evaluation individuals
+[2025-05-06 17:43:10.002087] [PID 23079] Iteration 2/100, Best current fitness: 1.4657850269045682, Best global fitness: 1.4657850269045682, Avg fitness: 0.38687676450092723
+[2025-05-06 17:43:10.002210] [PID 23079] starting gen offsprings
+[2025-05-06 17:43:10.024613] [PID 23079] starting evaluation individuals
+[2025-05-06 17:43:26.386039] [PID 23079] Iteration 3/100, Best current fitness: 1.5397686922447036, Best global fitness: 1.5397686922447036, Avg fitness: 0.6706749234452434
+[2025-05-06 17:43:26.386218] [PID 23079] starting gen offsprings
+[2025-05-06 17:43:26.418099] [PID 23079] starting evaluation individuals
+[2025-05-06 17:43:43.752373] [PID 23079] Iteration 4/100, Best current fitness: 1.6829742772404632, Best global fitness: 1.6829742772404632, Avg fitness: 1.0224165964858871
+[2025-05-06 17:43:43.752569] [PID 23079] starting gen offsprings
+[2025-05-06 17:43:43.785240] [PID 23079] starting evaluation individuals
+[2025-05-06 17:43:59.938769] [PID 23079] Iteration 5/100, Best current fitness: 1.8490699109228572, Best global fitness: 1.8490699109228572, Avg fitness: 1.3085559903168582
+[2025-05-06 17:43:59.938882] [PID 23079] starting gen offsprings
+[2025-05-06 17:43:59.965357] [PID 23079] starting evaluation individuals
+[2025-05-06 17:44:15.268244] [PID 23079] Iteration 6/100, Best current fitness: 1.9981414156777073, Best global fitness: 1.9981414156777073, Avg fitness: 1.514696556873233
+[2025-05-06 17:44:15.268495] [PID 23079] starting gen offsprings
+[2025-05-06 17:44:15.297469] [PID 23079] starting evaluation individuals
+[2025-05-06 17:44:31.085818] [PID 23079] Iteration 7/100, Best current fitness: 2.0445908513896294, Best global fitness: 2.0445908513896294, Avg fitness: 1.6833911278192315
+[2025-05-06 17:44:31.085941] [PID 23079] starting gen offsprings
+[2025-05-06 17:44:31.107043] [PID 23079] starting evaluation individuals
+[2025-05-06 17:44:46.545749] [PID 23079] Iteration 8/100, Best current fitness: 2.5324691655592244, Best global fitness: 2.5324691655592244, Avg fitness: 1.8803064758295103
+[2025-05-06 17:44:46.545864] [PID 23079] starting gen offsprings
+[2025-05-06 17:44:46.566891] [PID 23079] starting evaluation individuals
+[2025-05-06 17:45:02.609322] [PID 23079] Iteration 9/100, Best current fitness: 2.995029766741132, Best global fitness: 2.995029766741132, Avg fitness: 2.0098857889845045
+[2025-05-06 17:45:02.609465] [PID 23079] starting gen offsprings
+[2025-05-06 17:45:02.631033] [PID 23079] starting evaluation individuals
+[2025-05-06 17:45:17.370098] [PID 23079] Iteration 10/100, Best current fitness: 2.995029766741132, Best global fitness: 2.995029766741132, Avg fitness: 2.1605224190157433
+[2025-05-06 17:45:17.370250] [PID 23079] starting gen offsprings
+[2025-05-06 17:45:17.393770] [PID 23079] starting evaluation individuals
+[2025-05-06 17:45:33.282274] [PID 23079] Iteration 11/100, Best current fitness: 3.1091796560904306, Best global fitness: 3.1091796560904306, Avg fitness: 2.4239571970944827
+[2025-05-06 17:45:33.282388] [PID 23079] starting gen offsprings
+[2025-05-06 17:45:33.303878] [PID 23079] starting evaluation individuals
+[2025-05-06 17:45:48.075668] [PID 23079] Iteration 12/100, Best current fitness: 3.1093986547464687, Best global fitness: 3.1093986547464687, Avg fitness: 2.6668501501259243
+[2025-05-06 17:45:48.075778] [PID 23079] starting gen offsprings
+[2025-05-06 17:45:48.102703] [PID 23079] starting evaluation individuals
+[2025-05-06 17:46:04.112926] [PID 23079] Iteration 13/100, Best current fitness: 3.9167074956800665, Best global fitness: 3.9167074956800665, Avg fitness: 2.909024233967446
+[2025-05-06 17:46:04.113059] [PID 23079] starting gen offsprings
+[2025-05-06 17:46:04.134607] [PID 23079] starting evaluation individuals
+[2025-05-06 17:46:19.647502] [PID 23079] Iteration 14/100, Best current fitness: 3.9167074956800665, Best global fitness: 3.9167074956800665, Avg fitness: 3.103260720945458
+[2025-05-06 17:46:19.647650] [PID 23079] starting gen offsprings
+[2025-05-06 17:46:19.677019] [PID 23079] starting evaluation individuals
+[2025-05-06 17:46:34.545318] [PID 23079] Iteration 15/100, Best current fitness: 3.9167074956800665, Best global fitness: 3.9167074956800665, Avg fitness: 3.254363816980401
+[2025-05-06 17:46:34.545439] [PID 23079] starting gen offsprings
+[2025-05-06 17:46:34.568882] [PID 23079] starting evaluation individuals
+[2025-05-06 17:46:50.086893] [PID 23079] Iteration 16/100, Best current fitness: 3.9167074956800665, Best global fitness: 3.9167074956800665, Avg fitness: 3.3568122130941123
+[2025-05-06 17:46:50.087039] [PID 23079] starting gen offsprings
+[2025-05-06 17:46:50.111933] [PID 23079] starting evaluation individuals
+[2025-05-06 17:47:06.002736] [PID 23079] Iteration 17/100, Best current fitness: 3.9167074956800665, Best global fitness: 3.9167074956800665, Avg fitness: 3.4664077086276746
+[2025-05-06 17:47:06.002863] [PID 23079] starting gen offsprings
+[2025-05-06 17:47:06.026592] [PID 23079] starting evaluation individuals
+[2025-05-06 17:47:20.972349] [PID 23079] Iteration 18/100, Best current fitness: 3.9287523156398763, Best global fitness: 3.9287523156398763, Avg fitness: 3.5381650793371424
+[2025-05-06 17:47:20.972475] [PID 23079] starting gen offsprings
+[2025-05-06 17:47:20.994734] [PID 23079] starting evaluation individuals
+[2025-05-06 17:47:35.539758] [PID 23079] Iteration 19/100, Best current fitness: 4.031931284799958, Best global fitness: 4.031931284799958, Avg fitness: 3.591655781260396
+[2025-05-06 17:47:35.539882] [PID 23079] starting gen offsprings
+[2025-05-06 17:47:35.565964] [PID 23079] starting evaluation individuals
+[2025-05-06 17:47:50.540792] [PID 23079] Iteration 20/100, Best current fitness: 4.031931284799958, Best global fitness: 4.031931284799958, Avg fitness: 3.6181517776460037
+[2025-05-06 17:47:50.540975] [PID 23079] starting gen offsprings
+[2025-05-06 17:47:50.562501] [PID 23079] starting evaluation individuals
+[2025-05-06 17:48:06.267395] [PID 23079] Iteration 21/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.692886067973089
+[2025-05-06 17:48:06.267574] [PID 23079] starting gen offsprings
+[2025-05-06 17:48:06.301422] [PID 23079] starting evaluation individuals
+[2025-05-06 17:48:22.462536] [PID 23079] Iteration 22/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.723336501042785
+[2025-05-06 17:48:22.462656] [PID 23079] starting gen offsprings
+[2025-05-06 17:48:22.484012] [PID 23079] starting evaluation individuals
+[2025-05-06 17:48:37.900238] [PID 23079] Iteration 23/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.7564186336262275
+[2025-05-06 17:48:37.900370] [PID 23079] starting gen offsprings
+[2025-05-06 17:48:37.921265] [PID 23079] starting evaluation individuals
+[2025-05-06 17:48:51.980625] [PID 23079] Iteration 24/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.792241735861661
+[2025-05-06 17:48:51.980757] [PID 23079] starting gen offsprings
+[2025-05-06 17:48:52.002101] [PID 23079] starting evaluation individuals
+[2025-05-06 17:49:06.152438] [PID 23079] Iteration 25/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.8162376951896975
+[2025-05-06 17:49:06.152582] [PID 23079] starting gen offsprings
+[2025-05-06 17:49:06.176137] [PID 23079] starting evaluation individuals
+[2025-05-06 17:49:21.990924] [PID 23079] Iteration 26/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.8445474941713567
+[2025-05-06 17:49:21.991117] [PID 23079] starting gen offsprings
+[2025-05-06 17:49:22.025678] [PID 23079] starting evaluation individuals
+[2025-05-06 17:49:35.828736] [PID 23079] Iteration 27/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.871899371615978
+[2025-05-06 17:49:35.828837] [PID 23079] starting gen offsprings
+[2025-05-06 17:49:35.846225] [PID 23079] starting evaluation individuals
+[2025-05-06 17:49:49.871770] [PID 23079] Iteration 28/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.9191735061728745
+[2025-05-06 17:49:49.871873] [PID 23079] starting gen offsprings
+[2025-05-06 17:49:49.891620] [PID 23079] starting evaluation individuals
+[2025-05-06 17:50:04.097610] [PID 23079] Iteration 29/100, Best current fitness: 4.299261286405488, Best global fitness: 4.299261286405488, Avg fitness: 3.9309414875561903
+[2025-05-06 17:50:04.097716] [PID 23079] starting gen offsprings
+[2025-05-06 17:50:04.115309] [PID 23079] starting evaluation individuals
+[2025-05-06 17:50:18.966745] [PID 23079] Iteration 30/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 3.9627240005900046
+[2025-05-06 17:50:18.966863] [PID 23079] starting gen offsprings
+[2025-05-06 17:50:18.988694] [PID 23079] starting evaluation individuals
+[2025-05-06 17:50:33.277475] [PID 23079] Iteration 31/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 3.9798157688337317
+[2025-05-06 17:50:33.277687] [PID 23079] starting gen offsprings
+[2025-05-06 17:50:33.313345] [PID 23079] starting evaluation individuals
+[2025-05-06 17:50:47.233080] [PID 23079] Iteration 32/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 3.9821709939761347
+[2025-05-06 17:50:47.233235] [PID 23079] starting gen offsprings
+[2025-05-06 17:50:47.257869] [PID 23079] starting evaluation individuals
+[2025-05-06 17:51:00.809849] [PID 23079] Iteration 33/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 4.006550097344797
+[2025-05-06 17:51:00.809965] [PID 23079] starting gen offsprings
+[2025-05-06 17:51:00.832110] [PID 23079] starting evaluation individuals
+[2025-05-06 17:51:15.096062] [PID 23079] Iteration 34/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 4.0107879015834955
+[2025-05-06 17:51:15.096279] [PID 23079] starting gen offsprings
+[2025-05-06 17:51:15.129351] [PID 23079] starting evaluation individuals
+[2025-05-06 17:51:29.073451] [PID 23079] Iteration 35/100, Best current fitness: 4.306693181559819, Best global fitness: 4.306693181559819, Avg fitness: 4.025690354124996
+[2025-05-06 17:51:29.073544] [PID 23079] starting gen offsprings
+[2025-05-06 17:51:29.091358] [PID 23079] starting evaluation individuals
+[2025-05-06 17:51:43.058744] [PID 23079] Iteration 36/100, Best current fitness: 4.406610802912876, Best global fitness: 4.406610802912876, Avg fitness: 4.054123075820764
+[2025-05-06 17:51:43.058912] [PID 23079] starting gen offsprings
+[2025-05-06 17:51:43.089812] [PID 23079] starting evaluation individuals
+[2025-05-06 17:51:57.541934] [PID 23079] Iteration 37/100, Best current fitness: 4.429200027659603, Best global fitness: 4.429200027659603, Avg fitness: 4.077438859041011
+[2025-05-06 17:51:57.542052] [PID 23079] starting gen offsprings
+[2025-05-06 17:51:57.562800] [PID 23079] starting evaluation individuals
+[2025-05-06 17:52:11.461923] [PID 23079] Iteration 38/100, Best current fitness: 4.554403511714106, Best global fitness: 4.554403511714106, Avg fitness: 4.12321834190234
+[2025-05-06 17:52:11.462037] [PID 23079] starting gen offsprings
+[2025-05-06 17:52:11.483461] [PID 23079] starting evaluation individuals
+[2025-05-06 17:52:25.458559] [PID 23079] Iteration 39/100, Best current fitness: 4.554403511714106, Best global fitness: 4.554403511714106, Avg fitness: 4.150005894403259
+[2025-05-06 17:52:25.458694] [PID 23079] starting gen offsprings
+[2025-05-06 17:52:25.481502] [PID 23079] starting evaluation individuals
+[2025-05-06 17:52:40.223010] [PID 23079] Iteration 40/100, Best current fitness: 4.554403511714106, Best global fitness: 4.554403511714106, Avg fitness: 4.185051950282509
+[2025-05-06 17:52:40.223139] [PID 23079] starting gen offsprings
+[2025-05-06 17:52:40.244952] [PID 23079] starting evaluation individuals
+[2025-05-06 17:52:54.979417] [PID 23079] Iteration 41/100, Best current fitness: 4.554403511714106, Best global fitness: 4.554403511714106, Avg fitness: 4.207418865808943
+[2025-05-06 17:52:54.979605] [PID 23079] starting gen offsprings
+[2025-05-06 17:52:55.015144] [PID 23079] starting evaluation individuals
+[2025-05-06 17:53:09.133688] [PID 23079] Iteration 42/100, Best current fitness: 4.765835998700391, Best global fitness: 4.765835998700391, Avg fitness: 4.245986193091029
+[2025-05-06 17:53:09.133846] [PID 23079] starting gen offsprings
+[2025-05-06 17:53:09.153709] [PID 23079] starting evaluation individuals
+[2025-05-06 17:53:24.193522] [PID 23079] Iteration 43/100, Best current fitness: 4.862213046146755, Best global fitness: 4.862213046146755, Avg fitness: 4.292418775090273
+[2025-05-06 17:53:24.193660] [PID 23079] starting gen offsprings
+[2025-05-06 17:53:24.221549] [PID 23079] starting evaluation individuals
+[2025-05-06 17:53:39.118743] [PID 23079] Iteration 44/100, Best current fitness: 4.862213046146755, Best global fitness: 4.862213046146755, Avg fitness: 4.308677042127389
+[2025-05-06 17:53:39.118910] [PID 23079] starting gen offsprings
+[2025-05-06 17:53:39.147030] [PID 23079] starting evaluation individuals
+[2025-05-06 17:53:53.416860] [PID 23079] Iteration 45/100, Best current fitness: 4.862213046146755, Best global fitness: 4.862213046146755, Avg fitness: 4.342413456181431
+[2025-05-06 17:53:53.416958] [PID 23079] starting gen offsprings
+[2025-05-06 17:53:53.439739] [PID 23079] starting evaluation individuals
+[2025-05-06 17:54:06.866254] [PID 23079] Iteration 46/100, Best current fitness: 4.865395201130134, Best global fitness: 4.865395201130134, Avg fitness: 4.4065791444459315
+[2025-05-06 17:54:06.866349] [PID 23079] starting gen offsprings
+[2025-05-06 17:54:06.883753] [PID 23079] starting evaluation individuals
+[2025-05-06 17:54:21.383958] [PID 23079] Iteration 47/100, Best current fitness: 4.865395201130134, Best global fitness: 4.865395201130134, Avg fitness: 4.458827137809539
+[2025-05-06 17:54:21.384073] [PID 23079] starting gen offsprings
+[2025-05-06 17:54:21.405245] [PID 23079] starting evaluation individuals
+[2025-05-06 17:54:36.531960] [PID 23079] Iteration 48/100, Best current fitness: 5.19738098151003, Best global fitness: 5.19738098151003, Avg fitness: 4.523219119073624
+[2025-05-06 17:54:36.532157] [PID 23079] starting gen offsprings
+[2025-05-06 17:54:36.567914] [PID 23079] starting evaluation individuals
+[2025-05-06 17:54:50.394446] [PID 23079] Iteration 49/100, Best current fitness: 5.19738098151003, Best global fitness: 5.19738098151003, Avg fitness: 4.581472948879052
+[2025-05-06 17:54:50.394569] [PID 23079] starting gen offsprings
+[2025-05-06 17:54:50.412074] [PID 23079] starting evaluation individuals
+[2025-05-06 17:55:03.724864] [PID 23079] Iteration 50/100, Best current fitness: 5.19738098151003, Best global fitness: 5.19738098151003, Avg fitness: 4.599289205466126
+[2025-05-06 17:55:03.724998] [PID 23079] starting gen offsprings
+[2025-05-06 17:55:03.746653] [PID 23079] starting evaluation individuals
+[2025-05-06 17:55:17.482291] [PID 23079] Iteration 51/100, Best current fitness: 5.19738098151003, Best global fitness: 5.19738098151003, Avg fitness: 4.644001868474458
+[2025-05-06 17:55:17.482410] [PID 23079] starting gen offsprings
+[2025-05-06 17:55:17.510928] [PID 23079] starting evaluation individuals
+[2025-05-06 17:55:31.139049] [PID 23079] Iteration 52/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.702292175810862
+[2025-05-06 17:55:31.139200] [PID 23079] starting gen offsprings
+[2025-05-06 17:55:31.167711] [PID 23079] starting evaluation individuals
+[2025-05-06 17:55:44.808843] [PID 23079] Iteration 53/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.761612283700228
+[2025-05-06 17:55:44.808992] [PID 23079] starting gen offsprings
+[2025-05-06 17:55:44.830712] [PID 23079] starting evaluation individuals
+[2025-05-06 17:55:58.519433] [PID 23079] Iteration 54/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.834783785045009
+[2025-05-06 17:55:58.519606] [PID 23079] starting gen offsprings
+[2025-05-06 17:55:58.547600] [PID 23079] starting evaluation individuals
+[2025-05-06 17:56:12.599883] [PID 23079] Iteration 55/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.8838653372017165
+[2025-05-06 17:56:12.600022] [PID 23079] starting gen offsprings
+[2025-05-06 17:56:12.621379] [PID 23079] starting evaluation individuals
+[2025-05-06 17:56:27.469889] [PID 23079] Iteration 56/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.941910084086963
+[2025-05-06 17:56:27.470003] [PID 23079] starting gen offsprings
+[2025-05-06 17:56:27.495154] [PID 23079] starting evaluation individuals
+[2025-05-06 17:56:42.025513] [PID 23079] Iteration 57/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.965483136588315
+[2025-05-06 17:56:42.025682] [PID 23079] starting gen offsprings
+[2025-05-06 17:56:42.060380] [PID 23079] starting evaluation individuals
+[2025-05-06 17:56:55.292108] [PID 23079] Iteration 58/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 4.985545480746445
+[2025-05-06 17:56:55.292229] [PID 23079] starting gen offsprings
+[2025-05-06 17:56:55.314148] [PID 23079] starting evaluation individuals
+[2025-05-06 17:57:08.806806] [PID 23079] Iteration 59/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.00392903596783
+[2025-05-06 17:57:08.806925] [PID 23079] starting gen offsprings
+[2025-05-06 17:57:08.828408] [PID 23079] starting evaluation individuals
+[2025-05-06 17:57:22.060369] [PID 23079] Iteration 60/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.024378355820664
+[2025-05-06 17:57:22.060525] [PID 23079] starting gen offsprings
+[2025-05-06 17:57:22.103341] [PID 23079] starting evaluation individuals
+[2025-05-06 17:57:35.662715] [PID 23079] Iteration 61/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.028922704807626
+[2025-05-06 17:57:35.662820] [PID 23079] starting gen offsprings
+[2025-05-06 17:57:35.686312] [PID 23079] starting evaluation individuals
+[2025-05-06 17:57:48.739797] [PID 23079] Iteration 62/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.037524719626534
+[2025-05-06 17:57:48.739893] [PID 23079] starting gen offsprings
+[2025-05-06 17:57:48.757032] [PID 23079] starting evaluation individuals
+[2025-05-06 17:58:02.389229] [PID 23079] Iteration 63/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.04880697196302
+[2025-05-06 17:58:02.389379] [PID 23079] starting gen offsprings
+[2025-05-06 17:58:02.416651] [PID 23079] starting evaluation individuals
+[2025-05-06 17:58:16.249274] [PID 23079] Iteration 64/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.085137617721183
+[2025-05-06 17:58:16.249399] [PID 23079] starting gen offsprings
+[2025-05-06 17:58:16.270742] [PID 23079] starting evaluation individuals
+[2025-05-06 17:58:29.398840] [PID 23079] Iteration 65/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.098959645259485
+[2025-05-06 17:58:29.398960] [PID 23079] starting gen offsprings
+[2025-05-06 17:58:29.420007] [PID 23079] starting evaluation individuals
+[2025-05-06 17:58:42.623410] [PID 23079] Iteration 66/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.105457072519631
+[2025-05-06 17:58:42.623578] [PID 23079] starting gen offsprings
+[2025-05-06 17:58:42.659190] [PID 23079] starting evaluation individuals
+[2025-05-06 17:58:56.540814] [PID 23079] Iteration 67/100, Best current fitness: 5.605688741821313, Best global fitness: 5.605688741821313, Avg fitness: 5.108707054830953
+[2025-05-06 17:58:56.540963] [PID 23079] starting gen offsprings
+[2025-05-06 17:58:56.565758] [PID 23079] starting evaluation individuals
+[2025-05-06 17:59:11.024630] [PID 23079] Iteration 68/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.181616054716224
+[2025-05-06 17:59:11.024759] [PID 23079] starting gen offsprings
+[2025-05-06 17:59:11.044905] [PID 23079] starting evaluation individuals
+[2025-05-06 17:59:25.447189] [PID 23079] Iteration 69/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.187052652983259
+[2025-05-06 17:59:25.447314] [PID 23079] starting gen offsprings
+[2025-05-06 17:59:25.464847] [PID 23079] starting evaluation individuals
+[2025-05-06 17:59:39.520134] [PID 23079] Iteration 70/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.202058577618873
+[2025-05-06 17:59:39.520304] [PID 23079] starting gen offsprings
+[2025-05-06 17:59:39.552318] [PID 23079] starting evaluation individuals
+[2025-05-06 17:59:52.813766] [PID 23079] Iteration 71/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.2284971460744405
+[2025-05-06 17:59:52.813889] [PID 23079] starting gen offsprings
+[2025-05-06 17:59:52.835814] [PID 23079] starting evaluation individuals
+[2025-05-06 18:00:06.595608] [PID 23079] Iteration 72/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.239925164501394
+[2025-05-06 18:00:06.595736] [PID 23079] starting gen offsprings
+[2025-05-06 18:00:06.618195] [PID 23079] starting evaluation individuals
+[2025-05-06 18:00:20.257016] [PID 23079] Iteration 73/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.266485169359473
+[2025-05-06 18:00:20.257160] [PID 23079] starting gen offsprings
+[2025-05-06 18:00:20.278302] [PID 23079] starting evaluation individuals
+[2025-05-06 18:00:33.161627] [PID 23079] Iteration 74/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.282550885122588
+[2025-05-06 18:00:33.161744] [PID 23079] starting gen offsprings
+[2025-05-06 18:00:33.186061] [PID 23079] starting evaluation individuals
+[2025-05-06 18:00:47.974837] [PID 23079] Iteration 75/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.290715022161489
+[2025-05-06 18:00:47.974963] [PID 23079] starting gen offsprings
+[2025-05-06 18:00:47.996425] [PID 23079] starting evaluation individuals
+[2025-05-06 18:01:02.167978] [PID 23079] Iteration 76/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.29768164368407
+[2025-05-06 18:01:02.168157] [PID 23079] starting gen offsprings
+[2025-05-06 18:01:02.199689] [PID 23079] starting evaluation individuals
+[2025-05-06 18:01:15.967210] [PID 23079] Iteration 77/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.313143032419568
+[2025-05-06 18:01:15.967329] [PID 23079] starting gen offsprings
+[2025-05-06 18:01:15.989354] [PID 23079] starting evaluation individuals
+[2025-05-06 18:01:29.724320] [PID 23079] Iteration 78/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.322525225477429
+[2025-05-06 18:01:29.724486] [PID 23079] starting gen offsprings
+[2025-05-06 18:01:29.749700] [PID 23079] starting evaluation individuals
+[2025-05-06 18:01:43.401450] [PID 23079] Iteration 79/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.3315499679895675
+[2025-05-06 18:01:43.401541] [PID 23079] starting gen offsprings
+[2025-05-06 18:01:43.420089] [PID 23079] starting evaluation individuals
+[2025-05-06 18:01:57.389626] [PID 23079] Iteration 80/100, Best current fitness: 5.949996527930801, Best global fitness: 5.949996527930801, Avg fitness: 5.343156652112168
+[2025-05-06 18:01:57.389745] [PID 23079] starting gen offsprings
+[2025-05-06 18:01:57.412200] [PID 23079] starting evaluation individuals
+[2025-05-06 18:02:11.020143] [PID 23079] Iteration 81/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.388249362436191
+[2025-05-06 18:02:11.020287] [PID 23079] starting gen offsprings
+[2025-05-06 18:02:11.040848] [PID 23079] starting evaluation individuals
+[2025-05-06 18:02:24.756733] [PID 23079] Iteration 82/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.399601775298356
+[2025-05-06 18:02:24.756846] [PID 23079] starting gen offsprings
+[2025-05-06 18:02:24.778412] [PID 23079] starting evaluation individuals
+[2025-05-06 18:02:38.558250] [PID 23079] Iteration 83/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.429402810572063
+[2025-05-06 18:02:38.558375] [PID 23079] starting gen offsprings
+[2025-05-06 18:02:38.579618] [PID 23079] starting evaluation individuals
+[2025-05-06 18:02:51.046601] [PID 23079] Iteration 84/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.43716657902913
+[2025-05-06 18:02:51.046710] [PID 23079] starting gen offsprings
+[2025-05-06 18:02:51.065568] [PID 23079] starting evaluation individuals
+[2025-05-06 18:03:03.914521] [PID 23079] Iteration 85/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.442929583677782
+[2025-05-06 18:03:03.914644] [PID 23079] starting gen offsprings
+[2025-05-06 18:03:03.936205] [PID 23079] starting evaluation individuals
+[2025-05-06 18:03:17.055830] [PID 23079] Iteration 86/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.442929583677782
+[2025-05-06 18:03:17.055961] [PID 23079] starting gen offsprings
+[2025-05-06 18:03:17.073919] [PID 23079] starting evaluation individuals
+[2025-05-06 18:03:31.035470] [PID 23079] Iteration 87/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.452301300192197
+[2025-05-06 18:03:31.035625] [PID 23079] starting gen offsprings
+[2025-05-06 18:03:31.057021] [PID 23079] starting evaluation individuals
+[2025-05-06 18:03:44.002467] [PID 23079] Iteration 88/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.455192511492227
+[2025-05-06 18:03:44.002586] [PID 23079] starting gen offsprings
+[2025-05-06 18:03:44.023562] [PID 23079] starting evaluation individuals
+[2025-05-06 18:03:56.548194] [PID 23079] Iteration 89/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.46068648721477
+[2025-05-06 18:03:56.548310] [PID 23079] starting gen offsprings
+[2025-05-06 18:03:56.569864] [PID 23079] starting evaluation individuals
+[2025-05-06 18:04:09.894308] [PID 23079] Iteration 90/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.465781369538421
+[2025-05-06 18:04:09.894424] [PID 23079] starting gen offsprings
+[2025-05-06 18:04:09.917944] [PID 23079] starting evaluation individuals
+[2025-05-06 18:04:22.525145] [PID 23079] Iteration 91/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.469413150165118
+[2025-05-06 18:04:22.525270] [PID 23079] starting gen offsprings
+[2025-05-06 18:04:22.546523] [PID 23079] starting evaluation individuals
+[2025-05-06 18:04:35.771576] [PID 23079] Iteration 92/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.475975917183988
+[2025-05-06 18:04:35.771689] [PID 23079] starting gen offsprings
+[2025-05-06 18:04:35.788885] [PID 23079] starting evaluation individuals
+[2025-05-06 18:04:48.277149] [PID 23079] Iteration 93/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.483533027464638
+[2025-05-06 18:04:48.277260] [PID 23079] starting gen offsprings
+[2025-05-06 18:04:48.294881] [PID 23079] starting evaluation individuals
+[2025-05-06 18:05:00.792032] [PID 23079] Iteration 94/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.524371315988709
+[2025-05-06 18:05:00.792135] [PID 23079] starting gen offsprings
+[2025-05-06 18:05:00.811602] [PID 23079] starting evaluation individuals
+[2025-05-06 18:05:13.999263] [PID 23079] Iteration 95/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.561512865629469
+[2025-05-06 18:05:13.999381] [PID 23079] starting gen offsprings
+[2025-05-06 18:05:14.020996] [PID 23079] starting evaluation individuals
+[2025-05-06 18:05:26.945940] [PID 23079] Iteration 96/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.5645706677241655
+[2025-05-06 18:05:26.946078] [PID 23079] starting gen offsprings
+[2025-05-06 18:05:26.975637] [PID 23079] starting evaluation individuals
+[2025-05-06 18:05:40.141200] [PID 23079] Iteration 97/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.576067318496659
+[2025-05-06 18:05:40.141319] [PID 23079] starting gen offsprings
+[2025-05-06 18:05:40.162433] [PID 23079] starting evaluation individuals
+[2025-05-06 18:05:53.395002] [PID 23079] Iteration 98/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.579667855645997
+[2025-05-06 18:05:53.395125] [PID 23079] starting gen offsprings
+[2025-05-06 18:05:53.418633] [PID 23079] starting evaluation individuals
+[2025-05-06 18:06:06.129823] [PID 23079] Iteration 99/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.593974783248822
+[2025-05-06 18:06:06.129928] [PID 23079] starting gen offsprings
+[2025-05-06 18:06:06.147666] [PID 23079] starting evaluation individuals
+[2025-05-06 18:06:19.240653] [PID 23079] Iteration 100/100, Best current fitness: 6.068850749740286, Best global fitness: 6.068850749740286, Avg fitness: 5.60898545694543
+[2025-05-06 18:06:19.630128] [PID 23079] starting gen offsprings
+[2025-05-06 18:06:19.646140] [PID 23079] starting evaluation individuals
+[2025-05-06 18:06:39.588458] [PID 23079] Iteration 1/100, Best current fitness: 1.2237706832902602, Best global fitness: 1.2237706832902602, Avg fitness: 0.17292370374382973
+[2025-05-06 18:06:39.588578] [PID 23079] starting gen offsprings
+[2025-05-06 18:06:39.610445] [PID 23079] starting evaluation individuals
+[2025-05-06 18:06:55.052531] [PID 23079] Iteration 2/100, Best current fitness: 1.2237706832902602, Best global fitness: 1.2237706832902602, Avg fitness: 0.3467798950928509
+[2025-05-06 18:06:55.052653] [PID 23079] starting gen offsprings
+[2025-05-06 18:06:55.078457] [PID 23079] starting evaluation individuals
+[2025-05-06 18:07:11.491985] [PID 23079] Iteration 3/100, Best current fitness: 1.4749616173359166, Best global fitness: 1.4749616173359166, Avg fitness: 0.6798929233629903
+[2025-05-06 18:07:11.492098] [PID 23079] starting gen offsprings
+[2025-05-06 18:07:11.516500] [PID 23079] starting evaluation individuals
+[2025-05-06 18:07:28.427478] [PID 23079] Iteration 4/100, Best current fitness: 1.8396810920929885, Best global fitness: 1.8396810920929885, Avg fitness: 1.0180012265334575
+[2025-05-06 18:07:28.427605] [PID 23079] starting gen offsprings
+[2025-05-06 18:07:28.446464] [PID 23079] starting evaluation individuals
+[2025-05-06 18:07:46.029303] [PID 23079] Iteration 5/100, Best current fitness: 1.8396810920929885, Best global fitness: 1.8396810920929885, Avg fitness: 1.224441267303003
+[2025-05-06 18:07:46.029497] [PID 23079] starting gen offsprings
+[2025-05-06 18:07:46.063649] [PID 23079] starting evaluation individuals
+[2025-05-06 18:08:03.440452] [PID 23079] Iteration 6/100, Best current fitness: 1.8396810920929885, Best global fitness: 1.8396810920929885, Avg fitness: 1.3492757731769869
+[2025-05-06 18:08:03.440591] [PID 23079] starting gen offsprings
+[2025-05-06 18:08:03.462563] [PID 23079] starting evaluation individuals
+[2025-05-06 18:08:20.988701] [PID 23079] Iteration 7/100, Best current fitness: 1.8459371274342693, Best global fitness: 1.8459371274342693, Avg fitness: 1.4544748432190984
+[2025-05-06 18:08:20.988828] [PID 23079] starting gen offsprings
+[2025-05-06 18:08:21.006704] [PID 23079] starting evaluation individuals
+[2025-05-06 18:08:38.603660] [PID 23079] Iteration 8/100, Best current fitness: 2.03744143842574, Best global fitness: 2.03744143842574, Avg fitness: 1.5615137835197939
+[2025-05-06 18:08:38.603835] [PID 23079] starting gen offsprings
+[2025-05-06 18:08:38.632018] [PID 23079] starting evaluation individuals
+[2025-05-06 18:08:56.127389] [PID 23079] Iteration 9/100, Best current fitness: 2.03744143842574, Best global fitness: 2.03744143842574, Avg fitness: 1.6755821544923066
+[2025-05-06 18:08:56.127517] [PID 23079] starting gen offsprings
+[2025-05-06 18:08:56.154444] [PID 23079] starting evaluation individuals
+[2025-05-06 18:09:14.141883] [PID 23079] Iteration 10/100, Best current fitness: 2.03744143842574, Best global fitness: 2.03744143842574, Avg fitness: 1.747104738868427
+[2025-05-06 18:09:14.142079] [PID 23079] starting gen offsprings
+[2025-05-06 18:09:14.174906] [PID 23079] starting evaluation individuals
+[2025-05-06 18:09:31.568080] [PID 23079] Iteration 11/100, Best current fitness: 2.03744143842574, Best global fitness: 2.03744143842574, Avg fitness: 1.82615502144538
+[2025-05-06 18:09:31.568192] [PID 23079] starting gen offsprings
+[2025-05-06 18:09:31.586921] [PID 23079] starting evaluation individuals
+[2025-05-06 18:09:47.987214] [PID 23079] Iteration 12/100, Best current fitness: 2.1525304151704274, Best global fitness: 2.1525304151704274, Avg fitness: 1.891118317279888
+[2025-05-06 18:09:47.987455] [PID 23079] starting gen offsprings
+[2025-05-06 18:09:48.011062] [PID 23079] starting evaluation individuals
+[2025-05-06 18:10:05.120508] [PID 23079] Iteration 13/100, Best current fitness: 2.8558878105770207, Best global fitness: 2.8558878105770207, Avg fitness: 1.9392427659078038
+[2025-05-06 18:10:05.120627] [PID 23079] starting gen offsprings
+[2025-05-06 18:10:05.142455] [PID 23079] starting evaluation individuals
+[2025-05-06 18:10:21.739590] [PID 23079] Iteration 14/100, Best current fitness: 2.8558878105770207, Best global fitness: 2.8558878105770207, Avg fitness: 1.9781856458781677
+[2025-05-06 18:10:21.739722] [PID 23079] starting gen offsprings
+[2025-05-06 18:10:21.763981] [PID 23079] starting evaluation individuals
+[2025-05-06 18:10:39.163710] [PID 23079] Iteration 15/100, Best current fitness: 2.8558878105770207, Best global fitness: 2.8558878105770207, Avg fitness: 2.0260028739025673
+[2025-05-06 18:10:39.163834] [PID 23079] starting gen offsprings
+[2025-05-06 18:10:39.184262] [PID 23079] starting evaluation individuals
+[2025-05-06 18:10:55.569766] [PID 23079] Iteration 16/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.122517848118985
+[2025-05-06 18:10:55.569883] [PID 23079] starting gen offsprings
+[2025-05-06 18:10:55.594292] [PID 23079] starting evaluation individuals
+[2025-05-06 18:11:12.861726] [PID 23079] Iteration 17/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.1930238912138096
+[2025-05-06 18:11:12.861876] [PID 23079] starting gen offsprings
+[2025-05-06 18:11:12.892899] [PID 23079] starting evaluation individuals
+[2025-05-06 18:11:29.296218] [PID 23079] Iteration 18/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.251485332561391
+[2025-05-06 18:11:29.296424] [PID 23079] starting gen offsprings
+[2025-05-06 18:11:29.329536] [PID 23079] starting evaluation individuals
+[2025-05-06 18:11:46.738801] [PID 23079] Iteration 19/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.3123108804671535
+[2025-05-06 18:11:46.738911] [PID 23079] starting gen offsprings
+[2025-05-06 18:11:46.756886] [PID 23079] starting evaluation individuals
+[2025-05-06 18:12:04.231027] [PID 23079] Iteration 20/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.4000838246680276
+[2025-05-06 18:12:04.231154] [PID 23079] starting gen offsprings
+[2025-05-06 18:12:04.254437] [PID 23079] starting evaluation individuals
+[2025-05-06 18:12:21.766196] [PID 23079] Iteration 21/100, Best current fitness: 2.9398825292902826, Best global fitness: 2.9398825292902826, Avg fitness: 2.49740244566645
+[2025-05-06 18:12:21.766331] [PID 23079] starting gen offsprings
+[2025-05-06 18:12:21.789385] [PID 23079] starting evaluation individuals
+[2025-05-06 18:12:38.838928] [PID 23079] Iteration 22/100, Best current fitness: 2.965426587093721, Best global fitness: 2.965426587093721, Avg fitness: 2.6101224776205654
+[2025-05-06 18:12:38.839052] [PID 23079] starting gen offsprings
+[2025-05-06 18:12:38.857363] [PID 23079] starting evaluation individuals
+[2025-05-06 18:12:56.204129] [PID 23079] Iteration 23/100, Best current fitness: 3.0909125767037757, Best global fitness: 3.0909125767037757, Avg fitness: 2.6799478379947583
+[2025-05-06 18:12:56.204256] [PID 23079] starting gen offsprings
+[2025-05-06 18:12:56.226034] [PID 23079] starting evaluation individuals
+[2025-05-06 18:13:13.002510] [PID 23079] Iteration 24/100, Best current fitness: 3.0909125767037757, Best global fitness: 3.0909125767037757, Avg fitness: 2.729435543887547
+[2025-05-06 18:13:13.002637] [PID 23079] starting gen offsprings
+[2025-05-06 18:13:13.025060] [PID 23079] starting evaluation individuals
+[2025-05-06 18:13:29.268332] [PID 23079] Iteration 25/100, Best current fitness: 3.0909125767037757, Best global fitness: 3.0909125767037757, Avg fitness: 2.7898894122441056
+[2025-05-06 18:13:29.268514] [PID 23079] starting gen offsprings
+[2025-05-06 18:13:29.302625] [PID 23079] starting evaluation individuals
+[2025-05-06 18:13:45.567160] [PID 23079] Iteration 26/100, Best current fitness: 3.356369990848286, Best global fitness: 3.356369990848286, Avg fitness: 2.8417371716965225
+[2025-05-06 18:13:45.567279] [PID 23079] starting gen offsprings
+[2025-05-06 18:13:45.589469] [PID 23079] starting evaluation individuals
+[2025-05-06 18:14:02.003698] [PID 23079] Iteration 27/100, Best current fitness: 3.3567661137607163, Best global fitness: 3.3567661137607163, Avg fitness: 2.89285182400902
+[2025-05-06 18:14:02.003867] [PID 23079] starting gen offsprings
+[2025-05-06 18:14:02.029296] [PID 23079] starting evaluation individuals
+[2025-05-06 18:14:18.304911] [PID 23079] Iteration 28/100, Best current fitness: 3.3567661137607163, Best global fitness: 3.3567661137607163, Avg fitness: 2.9295540927213044
+[2025-05-06 18:14:18.305076] [PID 23079] starting gen offsprings
+[2025-05-06 18:14:18.325381] [PID 23079] starting evaluation individuals
+[2025-05-06 18:14:33.159256] [PID 23079] Iteration 29/100, Best current fitness: 3.3567661137607163, Best global fitness: 3.3567661137607163, Avg fitness: 2.9604332842437997
+[2025-05-06 18:14:33.159361] [PID 23079] starting gen offsprings
+[2025-05-06 18:14:33.177093] [PID 23079] starting evaluation individuals
+[2025-05-06 18:14:50.607129] [PID 23079] Iteration 30/100, Best current fitness: 3.3567661137607163, Best global fitness: 3.3567661137607163, Avg fitness: 2.974903078851808
+[2025-05-06 18:14:50.607237] [PID 23079] starting gen offsprings
+[2025-05-06 18:14:50.632314] [PID 23079] starting evaluation individuals
+[2025-05-06 18:15:07.306836] [PID 23079] Iteration 31/100, Best current fitness: 3.3567661137607163, Best global fitness: 3.3567661137607163, Avg fitness: 2.983083294971786
+[2025-05-06 18:15:07.306953] [PID 23079] starting gen offsprings
+[2025-05-06 18:15:07.325195] [PID 23079] starting evaluation individuals
+[2025-05-06 18:15:24.848606] [PID 23079] Iteration 32/100, Best current fitness: 3.451197997578148, Best global fitness: 3.451197997578148, Avg fitness: 3.0120098994223423
+[2025-05-06 18:15:24.848718] [PID 23079] starting gen offsprings
+[2025-05-06 18:15:24.866745] [PID 23079] starting evaluation individuals
+[2025-05-06 18:15:42.141642] [PID 23079] Iteration 33/100, Best current fitness: 3.451197997578148, Best global fitness: 3.451197997578148, Avg fitness: 3.0271668447245847
+[2025-05-06 18:15:42.141802] [PID 23079] starting gen offsprings
+[2025-05-06 18:15:42.165337] [PID 23079] starting evaluation individuals
+[2025-05-06 18:15:58.434311] [PID 23079] Iteration 34/100, Best current fitness: 3.451197997578148, Best global fitness: 3.451197997578148, Avg fitness: 3.0327161579833954
+[2025-05-06 18:15:58.434414] [PID 23079] starting gen offsprings
+[2025-05-06 18:15:58.452317] [PID 23079] starting evaluation individuals
+[2025-05-06 18:16:14.798568] [PID 23079] Iteration 35/100, Best current fitness: 3.451197997578148, Best global fitness: 3.451197997578148, Avg fitness: 3.053113494292897
+[2025-05-06 18:16:14.798684] [PID 23079] starting gen offsprings
+[2025-05-06 18:16:14.827530] [PID 23079] starting evaluation individuals
+[2025-05-06 18:16:32.414815] [PID 23079] Iteration 36/100, Best current fitness: 3.5742692570624883, Best global fitness: 3.5742692570624883, Avg fitness: 3.1009842299866968
+[2025-05-06 18:16:32.414944] [PID 23079] starting gen offsprings
+[2025-05-06 18:16:32.439384] [PID 23079] starting evaluation individuals
+[2025-05-06 18:16:49.851178] [PID 23079] Iteration 37/100, Best current fitness: 3.5742692570624883, Best global fitness: 3.5742692570624883, Avg fitness: 3.137203386782953
+[2025-05-06 18:16:49.851312] [PID 23079] starting gen offsprings
+[2025-05-06 18:16:49.873471] [PID 23079] starting evaluation individuals
+[2025-05-06 18:17:06.530576] [PID 23079] Iteration 38/100, Best current fitness: 3.5742692570624883, Best global fitness: 3.5742692570624883, Avg fitness: 3.1691597191252385
+[2025-05-06 18:17:06.530716] [PID 23079] starting gen offsprings
+[2025-05-06 18:17:06.553681] [PID 23079] starting evaluation individuals
+[2025-05-06 18:17:23.455435] [PID 23079] Iteration 39/100, Best current fitness: 3.583312952253094, Best global fitness: 3.583312952253094, Avg fitness: 3.203485295705022
+[2025-05-06 18:17:23.455541] [PID 23079] starting gen offsprings
+[2025-05-06 18:17:23.473163] [PID 23079] starting evaluation individuals
+[2025-05-06 18:17:40.966825] [PID 23079] Iteration 40/100, Best current fitness: 3.616051338294434, Best global fitness: 3.616051338294434, Avg fitness: 3.2263129144263156
+[2025-05-06 18:17:40.966970] [PID 23079] starting gen offsprings
+[2025-05-06 18:17:40.988462] [PID 23079] starting evaluation individuals
+[2025-05-06 18:17:58.698150] [PID 23079] Iteration 41/100, Best current fitness: 3.9291779104100124, Best global fitness: 3.9291779104100124, Avg fitness: 3.257604258656972
+[2025-05-06 18:17:58.698264] [PID 23079] starting gen offsprings
+[2025-05-06 18:17:58.716467] [PID 23079] starting evaluation individuals
+[2025-05-06 18:18:16.186153] [PID 23079] Iteration 42/100, Best current fitness: 3.9291779104100124, Best global fitness: 3.9291779104100124, Avg fitness: 3.2796821144320307
+[2025-05-06 18:18:16.186312] [PID 23079] starting gen offsprings
+[2025-05-06 18:18:16.211648] [PID 23079] starting evaluation individuals
+[2025-05-06 18:18:33.375457] [PID 23079] Iteration 43/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.3098227136661422
+[2025-05-06 18:18:33.375584] [PID 23079] starting gen offsprings
+[2025-05-06 18:18:33.397829] [PID 23079] starting evaluation individuals
+[2025-05-06 18:18:50.454144] [PID 23079] Iteration 44/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.328128843531494
+[2025-05-06 18:18:50.454277] [PID 23079] starting gen offsprings
+[2025-05-06 18:18:50.476004] [PID 23079] starting evaluation individuals
+[2025-05-06 18:19:06.998401] [PID 23079] Iteration 45/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.3522293049788994
+[2025-05-06 18:19:06.998530] [PID 23079] starting gen offsprings
+[2025-05-06 18:19:07.021723] [PID 23079] starting evaluation individuals
+[2025-05-06 18:19:23.604025] [PID 23079] Iteration 46/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.3876387650642066
+[2025-05-06 18:19:23.604176] [PID 23079] starting gen offsprings
+[2025-05-06 18:19:23.626333] [PID 23079] starting evaluation individuals
+[2025-05-06 18:19:40.007984] [PID 23079] Iteration 47/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.401184578806369
+[2025-05-06 18:19:40.008196] [PID 23079] starting gen offsprings
+[2025-05-06 18:19:40.042431] [PID 23079] starting evaluation individuals
+[2025-05-06 18:19:56.001080] [PID 23079] Iteration 48/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4110726075323545
+[2025-05-06 18:19:56.001212] [PID 23079] starting gen offsprings
+[2025-05-06 18:19:56.023583] [PID 23079] starting evaluation individuals
+[2025-05-06 18:20:12.738926] [PID 23079] Iteration 49/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4118427280530135
+[2025-05-06 18:20:12.739134] [PID 23079] starting gen offsprings
+[2025-05-06 18:20:12.773722] [PID 23079] starting evaluation individuals
+[2025-05-06 18:20:29.647565] [PID 23079] Iteration 50/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.438328856111576
+[2025-05-06 18:20:29.647722] [PID 23079] starting gen offsprings
+[2025-05-06 18:20:29.675286] [PID 23079] starting evaluation individuals
+[2025-05-06 18:20:44.992149] [PID 23079] Iteration 51/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4464350473095156
+[2025-05-06 18:20:44.992251] [PID 23079] starting gen offsprings
+[2025-05-06 18:20:45.011785] [PID 23079] starting evaluation individuals
+[2025-05-06 18:21:01.668685] [PID 23079] Iteration 52/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4615168175548905
+[2025-05-06 18:21:01.668823] [PID 23079] starting gen offsprings
+[2025-05-06 18:21:01.686581] [PID 23079] starting evaluation individuals
+[2025-05-06 18:21:16.958848] [PID 23079] Iteration 53/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.480392915396874
+[2025-05-06 18:21:16.958964] [PID 23079] starting gen offsprings
+[2025-05-06 18:21:16.987305] [PID 23079] starting evaluation individuals
+[2025-05-06 18:21:33.397104] [PID 23079] Iteration 54/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4897177382471756
+[2025-05-06 18:21:33.397208] [PID 23079] starting gen offsprings
+[2025-05-06 18:21:33.418899] [PID 23079] starting evaluation individuals
+[2025-05-06 18:21:49.389934] [PID 23079] Iteration 55/100, Best current fitness: 3.959574410931067, Best global fitness: 3.959574410931067, Avg fitness: 3.4993687826615845
+[2025-05-06 18:21:49.390059] [PID 23079] starting gen offsprings
+[2025-05-06 18:21:49.411779] [PID 23079] starting evaluation individuals
+[2025-05-06 18:22:05.408275] [PID 23079] Iteration 56/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5361922433835717
+[2025-05-06 18:22:05.408443] [PID 23079] starting gen offsprings
+[2025-05-06 18:22:05.443642] [PID 23079] starting evaluation individuals
+[2025-05-06 18:22:21.849684] [PID 23079] Iteration 57/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5391487159868418
+[2025-05-06 18:22:21.849803] [PID 23079] starting gen offsprings
+[2025-05-06 18:22:21.881185] [PID 23079] starting evaluation individuals
+[2025-05-06 18:22:39.003571] [PID 23079] Iteration 58/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5493142437635994
+[2025-05-06 18:22:39.003684] [PID 23079] starting gen offsprings
+[2025-05-06 18:22:39.026861] [PID 23079] starting evaluation individuals
+[2025-05-06 18:22:55.776854] [PID 23079] Iteration 59/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5572675968446763
+[2025-05-06 18:22:55.776998] [PID 23079] starting gen offsprings
+[2025-05-06 18:22:55.798614] [PID 23079] starting evaluation individuals
+[2025-05-06 18:23:12.255581] [PID 23079] Iteration 60/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.579748068140758
+[2025-05-06 18:23:12.255692] [PID 23079] starting gen offsprings
+[2025-05-06 18:23:12.278958] [PID 23079] starting evaluation individuals
+[2025-05-06 18:23:28.610013] [PID 23079] Iteration 61/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5817844330770674
+[2025-05-06 18:23:28.610155] [PID 23079] starting gen offsprings
+[2025-05-06 18:23:28.638814] [PID 23079] starting evaluation individuals
+[2025-05-06 18:23:45.963986] [PID 23079] Iteration 62/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.5944392879343434
+[2025-05-06 18:23:45.964123] [PID 23079] starting gen offsprings
+[2025-05-06 18:23:45.987433] [PID 23079] starting evaluation individuals
+[2025-05-06 18:24:02.473419] [PID 23079] Iteration 63/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.607166749553451
+[2025-05-06 18:24:02.473547] [PID 23079] starting gen offsprings
+[2025-05-06 18:24:02.494321] [PID 23079] starting evaluation individuals
+[2025-05-06 18:24:20.167968] [PID 23079] Iteration 64/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.616821952269181
+[2025-05-06 18:24:20.168130] [PID 23079] starting gen offsprings
+[2025-05-06 18:24:20.197413] [PID 23079] starting evaluation individuals
+[2025-05-06 18:24:36.442552] [PID 23079] Iteration 65/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.616821952269181
+[2025-05-06 18:24:36.442700] [PID 23079] starting gen offsprings
+[2025-05-06 18:24:36.466318] [PID 23079] starting evaluation individuals
+[2025-05-06 18:24:53.748180] [PID 23079] Iteration 66/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.638143511198428
+[2025-05-06 18:24:53.748320] [PID 23079] starting gen offsprings
+[2025-05-06 18:24:53.771137] [PID 23079] starting evaluation individuals
+[2025-05-06 18:25:10.579218] [PID 23079] Iteration 67/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.647098843281087
+[2025-05-06 18:25:10.579325] [PID 23079] starting gen offsprings
+[2025-05-06 18:25:10.596995] [PID 23079] starting evaluation individuals
+[2025-05-06 18:25:25.957140] [PID 23079] Iteration 68/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.6580594497187104
+[2025-05-06 18:25:25.957305] [PID 23079] starting gen offsprings
+[2025-05-06 18:25:25.985197] [PID 23079] starting evaluation individuals
+[2025-05-06 18:25:42.518649] [PID 23079] Iteration 69/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.674513328350966
+[2025-05-06 18:25:42.518775] [PID 23079] starting gen offsprings
+[2025-05-06 18:25:42.544370] [PID 23079] starting evaluation individuals
+[2025-05-06 18:25:59.119507] [PID 23079] Iteration 70/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.6941592800903025
+[2025-05-06 18:25:59.119739] [PID 23079] starting gen offsprings
+[2025-05-06 18:25:59.155543] [PID 23079] starting evaluation individuals
+[2025-05-06 18:26:15.613226] [PID 23079] Iteration 71/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.709410153263401
+[2025-05-06 18:26:15.613344] [PID 23079] starting gen offsprings
+[2025-05-06 18:26:15.634985] [PID 23079] starting evaluation individuals
+[2025-05-06 18:26:32.126276] [PID 23079] Iteration 72/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.7144536914863484
+[2025-05-06 18:26:32.126425] [PID 23079] starting gen offsprings
+[2025-05-06 18:26:32.154731] [PID 23079] starting evaluation individuals
+[2025-05-06 18:26:49.627570] [PID 23079] Iteration 73/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.7370654223416984
+[2025-05-06 18:26:49.627697] [PID 23079] starting gen offsprings
+[2025-05-06 18:26:49.651786] [PID 23079] starting evaluation individuals
+[2025-05-06 18:27:06.393193] [PID 23079] Iteration 74/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.7481346567838885
+[2025-05-06 18:27:06.393319] [PID 23079] starting gen offsprings
+[2025-05-06 18:27:06.416141] [PID 23079] starting evaluation individuals
+[2025-05-06 18:27:22.219812] [PID 23079] Iteration 75/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.7569251468009237
+[2025-05-06 18:27:22.219980] [PID 23079] starting gen offsprings
+[2025-05-06 18:27:22.253318] [PID 23079] starting evaluation individuals
+[2025-05-06 18:27:38.336460] [PID 23079] Iteration 76/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.763432371787187
+[2025-05-06 18:27:38.336591] [PID 23079] starting gen offsprings
+[2025-05-06 18:27:38.357641] [PID 23079] starting evaluation individuals
+[2025-05-06 18:27:55.824685] [PID 23079] Iteration 77/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.7856014549382957
+[2025-05-06 18:27:55.824863] [PID 23079] starting gen offsprings
+[2025-05-06 18:27:55.851347] [PID 23079] starting evaluation individuals
+[2025-05-06 18:28:11.971225] [PID 23079] Iteration 78/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.795032468642737
+[2025-05-06 18:28:11.971327] [PID 23079] starting gen offsprings
+[2025-05-06 18:28:11.989234] [PID 23079] starting evaluation individuals
+[2025-05-06 18:28:29.471260] [PID 23079] Iteration 79/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.806898965288073
+[2025-05-06 18:28:29.471391] [PID 23079] starting gen offsprings
+[2025-05-06 18:28:29.493501] [PID 23079] starting evaluation individuals
+[2025-05-06 18:28:46.881544] [PID 23079] Iteration 80/100, Best current fitness: 4.171421350745086, Best global fitness: 4.171421350745086, Avg fitness: 3.8181978189064494
+[2025-05-06 18:28:46.881804] [PID 23079] starting gen offsprings
+[2025-05-06 18:28:46.911801] [PID 23079] starting evaluation individuals
+[2025-05-06 18:29:04.255815] [PID 23079] Iteration 81/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.8540971340277945
+[2025-05-06 18:29:04.255987] [PID 23079] starting gen offsprings
+[2025-05-06 18:29:04.279976] [PID 23079] starting evaluation individuals
+[2025-05-06 18:29:22.113960] [PID 23079] Iteration 82/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.872192045912976
+[2025-05-06 18:29:22.114125] [PID 23079] starting gen offsprings
+[2025-05-06 18:29:22.133743] [PID 23079] starting evaluation individuals
+[2025-05-06 18:29:40.815989] [PID 23079] Iteration 83/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.8755064002745696
+[2025-05-06 18:29:40.816144] [PID 23079] starting gen offsprings
+[2025-05-06 18:29:40.836043] [PID 23079] starting evaluation individuals
+[2025-05-06 18:29:58.761604] [PID 23079] Iteration 84/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.881273229851783
+[2025-05-06 18:29:58.761772] [PID 23079] starting gen offsprings
+[2025-05-06 18:29:58.785139] [PID 23079] starting evaluation individuals
+[2025-05-06 18:30:16.060189] [PID 23079] Iteration 85/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.890223101078507
+[2025-05-06 18:30:16.060382] [PID 23079] starting gen offsprings
+[2025-05-06 18:30:16.083758] [PID 23079] starting evaluation individuals
+[2025-05-06 18:30:33.856978] [PID 23079] Iteration 86/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.9014210908550955
+[2025-05-06 18:30:33.857117] [PID 23079] starting gen offsprings
+[2025-05-06 18:30:33.875202] [PID 23079] starting evaluation individuals
+[2025-05-06 18:30:52.103056] [PID 23079] Iteration 87/100, Best current fitness: 4.269288227375491, Best global fitness: 4.269288227375491, Avg fitness: 3.9090920230519446
+[2025-05-06 18:30:52.103171] [PID 23079] starting gen offsprings
+[2025-05-06 18:30:52.122613] [PID 23079] starting evaluation individuals
+[2025-05-06 18:31:09.057489] [PID 23079] Iteration 88/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.9365811549049328
+[2025-05-06 18:31:09.057638] [PID 23079] starting gen offsprings
+[2025-05-06 18:31:09.079025] [PID 23079] starting evaluation individuals
+[2025-05-06 18:31:27.095019] [PID 23079] Iteration 89/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.949834412103597
+[2025-05-06 18:31:27.095154] [PID 23079] starting gen offsprings
+[2025-05-06 18:31:27.117121] [PID 23079] starting evaluation individuals
+[2025-05-06 18:31:45.111578] [PID 23079] Iteration 90/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.9705834499019415
+[2025-05-06 18:31:45.111710] [PID 23079] starting gen offsprings
+[2025-05-06 18:31:45.133690] [PID 23079] starting evaluation individuals
+[2025-05-06 18:32:02.418615] [PID 23079] Iteration 91/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.9862477087872996
+[2025-05-06 18:32:02.418783] [PID 23079] starting gen offsprings
+[2025-05-06 18:32:02.437717] [PID 23079] starting evaluation individuals
+[2025-05-06 18:32:19.810313] [PID 23079] Iteration 92/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.9868430964827968
+[2025-05-06 18:32:19.810437] [PID 23079] starting gen offsprings
+[2025-05-06 18:32:19.832297] [PID 23079] starting evaluation individuals
+[2025-05-06 18:32:37.138783] [PID 23079] Iteration 93/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.987547265217056
+[2025-05-06 18:32:37.138962] [PID 23079] starting gen offsprings
+[2025-05-06 18:32:37.174170] [PID 23079] starting evaluation individuals
+[2025-05-06 18:32:55.228645] [PID 23079] Iteration 94/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 3.9891285283448434
+[2025-05-06 18:32:55.228786] [PID 23079] starting gen offsprings
+[2025-05-06 18:32:55.250087] [PID 23079] starting evaluation individuals
+[2025-05-06 18:33:13.335222] [PID 23079] Iteration 95/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.003150672214839
+[2025-05-06 18:33:13.335349] [PID 23079] starting gen offsprings
+[2025-05-06 18:33:13.357321] [PID 23079] starting evaluation individuals
+[2025-05-06 18:33:30.124233] [PID 23079] Iteration 96/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.003150672214839
+[2025-05-06 18:33:30.124452] [PID 23079] starting gen offsprings
+[2025-05-06 18:33:30.161148] [PID 23079] starting evaluation individuals
+[2025-05-06 18:33:48.320439] [PID 23079] Iteration 97/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.0043902161019815
+[2025-05-06 18:33:48.320578] [PID 23079] starting gen offsprings
+[2025-05-06 18:33:48.342078] [PID 23079] starting evaluation individuals
+[2025-05-06 18:34:06.207800] [PID 23079] Iteration 98/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.02044590551051
+[2025-05-06 18:34:06.208001] [PID 23079] starting gen offsprings
+[2025-05-06 18:34:06.240246] [PID 23079] starting evaluation individuals
+[2025-05-06 18:34:22.268057] [PID 23079] Iteration 99/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.02289176106902
+[2025-05-06 18:34:22.268211] [PID 23079] starting gen offsprings
+[2025-05-06 18:34:22.292204] [PID 23079] starting evaluation individuals
+[2025-05-06 18:34:39.446115] [PID 23079] Iteration 100/100, Best current fitness: 4.597819828148896, Best global fitness: 4.597819828148896, Avg fitness: 4.030608055543739
+[2025-05-06 18:34:39.818873] [PID 23079] starting gen offsprings
+[2025-05-06 18:34:39.836827] [PID 23079] starting evaluation individuals
+[2025-05-06 18:34:59.034255] [PID 23079] Iteration 1/100, Best current fitness: 1.5872414935602859, Best global fitness: 1.5872414935602859, Avg fitness: 0.19842716995622559
+[2025-05-06 18:34:59.034358] [PID 23079] starting gen offsprings
+[2025-05-06 18:34:59.052199] [PID 23079] starting evaluation individuals
+[2025-05-06 18:35:15.378242] [PID 23079] Iteration 2/100, Best current fitness: 2.047583085435373, Best global fitness: 2.047583085435373, Avg fitness: 0.613281393905421
+[2025-05-06 18:35:15.378358] [PID 23079] starting gen offsprings
+[2025-05-06 18:35:15.400253] [PID 23079] starting evaluation individuals
+[2025-05-06 18:35:32.546741] [PID 23079] Iteration 3/100, Best current fitness: 2.331052187725843, Best global fitness: 2.331052187725843, Avg fitness: 1.342096427419235
+[2025-05-06 18:35:32.546848] [PID 23079] starting gen offsprings
+[2025-05-06 18:35:32.564565] [PID 23079] starting evaluation individuals
+[2025-05-06 18:35:48.817532] [PID 23079] Iteration 4/100, Best current fitness: 2.996593354644635, Best global fitness: 2.996593354644635, Avg fitness: 1.8764164392099867
+[2025-05-06 18:35:48.817724] [PID 23079] starting gen offsprings
+[2025-05-06 18:35:48.840343] [PID 23079] starting evaluation individuals
+[2025-05-06 18:36:05.019548] [PID 23079] Iteration 5/100, Best current fitness: 2.996789109297177, Best global fitness: 2.996789109297177, Avg fitness: 2.1420091971765447
+[2025-05-06 18:36:05.019814] [PID 23079] starting gen offsprings
+[2025-05-06 18:36:05.054379] [PID 23079] starting evaluation individuals
+[2025-05-06 18:36:20.527099] [PID 23079] Iteration 6/100, Best current fitness: 2.996789109297177, Best global fitness: 2.996789109297177, Avg fitness: 2.30556889362108
+[2025-05-06 18:36:20.527264] [PID 23079] starting gen offsprings
+[2025-05-06 18:36:20.558072] [PID 23079] starting evaluation individuals
+[2025-05-06 18:36:35.232084] [PID 23079] Iteration 7/100, Best current fitness: 2.996789109297177, Best global fitness: 2.996789109297177, Avg fitness: 2.5378498911531744
+[2025-05-06 18:36:35.232267] [PID 23079] starting gen offsprings
+[2025-05-06 18:36:35.266951] [PID 23079] starting evaluation individuals
+[2025-05-06 18:36:49.349842] [PID 23079] Iteration 8/100, Best current fitness: 2.996789109297177, Best global fitness: 2.996789109297177, Avg fitness: 2.6625595805332707
+[2025-05-06 18:36:49.349953] [PID 23079] starting gen offsprings
+[2025-05-06 18:36:49.367960] [PID 23079] starting evaluation individuals
+[2025-05-06 18:37:03.221974] [PID 23079] Iteration 9/100, Best current fitness: 3.186172175134711, Best global fitness: 3.186172175134711, Avg fitness: 2.8181675798613033
+[2025-05-06 18:37:03.222139] [PID 23079] starting gen offsprings
+[2025-05-06 18:37:03.244232] [PID 23079] starting evaluation individuals
+[2025-05-06 18:37:17.111770] [PID 23079] Iteration 10/100, Best current fitness: 3.6733628069488766, Best global fitness: 3.6733628069488766, Avg fitness: 2.946641206815765
+[2025-05-06 18:37:17.111894] [PID 23079] starting gen offsprings
+[2025-05-06 18:37:17.134106] [PID 23079] starting evaluation individuals
+[2025-05-06 18:37:31.023463] [PID 23079] Iteration 11/100, Best current fitness: 3.6733628069488766, Best global fitness: 3.6733628069488766, Avg fitness: 2.9660583483295757
+[2025-05-06 18:37:31.023646] [PID 23079] starting gen offsprings
+[2025-05-06 18:37:31.057110] [PID 23079] starting evaluation individuals
+[2025-05-06 18:37:44.576823] [PID 23079] Iteration 12/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.061007863877521
+[2025-05-06 18:37:44.576945] [PID 23079] starting gen offsprings
+[2025-05-06 18:37:44.603248] [PID 23079] starting evaluation individuals
+[2025-05-06 18:37:58.148345] [PID 23079] Iteration 13/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.096292632460918
+[2025-05-06 18:37:58.148455] [PID 23079] starting gen offsprings
+[2025-05-06 18:37:58.174827] [PID 23079] starting evaluation individuals
+[2025-05-06 18:38:11.949635] [PID 23079] Iteration 14/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.139250589652775
+[2025-05-06 18:38:11.949772] [PID 23079] starting gen offsprings
+[2025-05-06 18:38:11.975960] [PID 23079] starting evaluation individuals
+[2025-05-06 18:38:25.418640] [PID 23079] Iteration 15/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.176740177028589
+[2025-05-06 18:38:25.418811] [PID 23079] starting gen offsprings
+[2025-05-06 18:38:25.441835] [PID 23079] starting evaluation individuals
+[2025-05-06 18:38:38.623575] [PID 23079] Iteration 16/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.2381235933078636
+[2025-05-06 18:38:38.623806] [PID 23079] starting gen offsprings
+[2025-05-06 18:38:38.658736] [PID 23079] starting evaluation individuals
+[2025-05-06 18:38:52.061999] [PID 23079] Iteration 17/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.3042431537928185
+[2025-05-06 18:38:52.062118] [PID 23079] starting gen offsprings
+[2025-05-06 18:38:52.086392] [PID 23079] starting evaluation individuals
+[2025-05-06 18:39:06.719490] [PID 23079] Iteration 18/100, Best current fitness: 3.8238494209952854, Best global fitness: 3.8238494209952854, Avg fitness: 3.3628483495828396
+[2025-05-06 18:39:06.719606] [PID 23079] starting gen offsprings
+[2025-05-06 18:39:06.742102] [PID 23079] starting evaluation individuals
+[2025-05-06 18:39:19.702263] [PID 23079] Iteration 19/100, Best current fitness: 3.9175160494378094, Best global fitness: 3.9175160494378094, Avg fitness: 3.420486316717072
+[2025-05-06 18:39:19.702387] [PID 23079] starting gen offsprings
+[2025-05-06 18:39:19.724718] [PID 23079] starting evaluation individuals
+[2025-05-06 18:39:33.427256] [PID 23079] Iteration 20/100, Best current fitness: 3.9175160494378094, Best global fitness: 3.9175160494378094, Avg fitness: 3.445685650053366
+[2025-05-06 18:39:33.427433] [PID 23079] starting gen offsprings
+[2025-05-06 18:39:33.461020] [PID 23079] starting evaluation individuals
+[2025-05-06 18:39:46.857321] [PID 23079] Iteration 21/100, Best current fitness: 3.948652688139984, Best global fitness: 3.948652688139984, Avg fitness: 3.5057667503438976
+[2025-05-06 18:39:46.857522] [PID 23079] starting gen offsprings
+[2025-05-06 18:39:46.889464] [PID 23079] starting evaluation individuals
+[2025-05-06 18:40:00.654702] [PID 23079] Iteration 22/100, Best current fitness: 3.948652688139984, Best global fitness: 3.948652688139984, Avg fitness: 3.5758845167240256
+[2025-05-06 18:40:00.654834] [PID 23079] starting gen offsprings
+[2025-05-06 18:40:00.679975] [PID 23079] starting evaluation individuals
+[2025-05-06 18:40:14.615522] [PID 23079] Iteration 23/100, Best current fitness: 4.288519824259546, Best global fitness: 4.288519824259546, Avg fitness: 3.6676104616815848
+[2025-05-06 18:40:14.615647] [PID 23079] starting gen offsprings
+[2025-05-06 18:40:14.637525] [PID 23079] starting evaluation individuals
+[2025-05-06 18:40:27.026069] [PID 23079] Iteration 24/100, Best current fitness: 4.288519824259546, Best global fitness: 4.288519824259546, Avg fitness: 3.747119770938144
+[2025-05-06 18:40:27.026193] [PID 23079] starting gen offsprings
+[2025-05-06 18:40:27.048441] [PID 23079] starting evaluation individuals
+[2025-05-06 18:40:39.839093] [PID 23079] Iteration 25/100, Best current fitness: 4.515052293306216, Best global fitness: 4.515052293306216, Avg fitness: 3.857189267896562
+[2025-05-06 18:40:39.839208] [PID 23079] starting gen offsprings
+[2025-05-06 18:40:39.857128] [PID 23079] starting evaluation individuals
+[2025-05-06 18:40:52.945131] [PID 23079] Iteration 26/100, Best current fitness: 4.515235137771844, Best global fitness: 4.515235137771844, Avg fitness: 3.9537902801170297
+[2025-05-06 18:40:52.945228] [PID 23079] starting gen offsprings
+[2025-05-06 18:40:52.963014] [PID 23079] starting evaluation individuals
+[2025-05-06 18:41:05.851249] [PID 23079] Iteration 27/100, Best current fitness: 4.515235137771844, Best global fitness: 4.515235137771844, Avg fitness: 3.9902816727250077
+[2025-05-06 18:41:05.851373] [PID 23079] starting gen offsprings
+[2025-05-06 18:41:05.876720] [PID 23079] starting evaluation individuals
+[2025-05-06 18:41:19.137569] [PID 23079] Iteration 28/100, Best current fitness: 4.515235137771844, Best global fitness: 4.515235137771844, Avg fitness: 4.067050395408544
+[2025-05-06 18:41:19.137677] [PID 23079] starting gen offsprings
+[2025-05-06 18:41:19.155836] [PID 23079] starting evaluation individuals
+[2025-05-06 18:41:32.130045] [PID 23079] Iteration 29/100, Best current fitness: 4.553091968611206, Best global fitness: 4.553091968611206, Avg fitness: 4.115130601812799
+[2025-05-06 18:41:32.130241] [PID 23079] starting gen offsprings
+[2025-05-06 18:41:32.164960] [PID 23079] starting evaluation individuals
+[2025-05-06 18:41:45.131633] [PID 23079] Iteration 30/100, Best current fitness: 4.553091968611206, Best global fitness: 4.553091968611206, Avg fitness: 4.144998918723621
+[2025-05-06 18:41:45.131767] [PID 23079] starting gen offsprings
+[2025-05-06 18:41:45.156922] [PID 23079] starting evaluation individuals
+[2025-05-06 18:41:58.445075] [PID 23079] Iteration 31/100, Best current fitness: 4.696966097807709, Best global fitness: 4.696966097807709, Avg fitness: 4.2095669302303245
+[2025-05-06 18:41:58.445190] [PID 23079] starting gen offsprings
+[2025-05-06 18:41:58.471714] [PID 23079] starting evaluation individuals
+[2025-05-06 18:42:12.223481] [PID 23079] Iteration 32/100, Best current fitness: 4.696966097807709, Best global fitness: 4.696966097807709, Avg fitness: 4.232501598150803
+[2025-05-06 18:42:12.223633] [PID 23079] starting gen offsprings
+[2025-05-06 18:42:12.250721] [PID 23079] starting evaluation individuals
+[2025-05-06 18:42:24.960977] [PID 23079] Iteration 33/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.290024223993579
+[2025-05-06 18:42:24.961096] [PID 23079] starting gen offsprings
+[2025-05-06 18:42:24.978852] [PID 23079] starting evaluation individuals
+[2025-05-06 18:42:37.925397] [PID 23079] Iteration 34/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.335679257883657
+[2025-05-06 18:42:37.925528] [PID 23079] starting gen offsprings
+[2025-05-06 18:42:37.947402] [PID 23079] starting evaluation individuals
+[2025-05-06 18:42:51.581387] [PID 23079] Iteration 35/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.350445245719601
+[2025-05-06 18:42:51.581525] [PID 23079] starting gen offsprings
+[2025-05-06 18:42:51.605502] [PID 23079] starting evaluation individuals
+[2025-05-06 18:43:04.552524] [PID 23079] Iteration 36/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.367326826699962
+[2025-05-06 18:43:04.552653] [PID 23079] starting gen offsprings
+[2025-05-06 18:43:04.580207] [PID 23079] starting evaluation individuals
+[2025-05-06 18:43:18.373562] [PID 23079] Iteration 37/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.399132831559882
+[2025-05-06 18:43:18.373802] [PID 23079] starting gen offsprings
+[2025-05-06 18:43:18.406362] [PID 23079] starting evaluation individuals
+[2025-05-06 18:43:30.594207] [PID 23079] Iteration 38/100, Best current fitness: 4.962880763168978, Best global fitness: 4.962880763168978, Avg fitness: 4.407140927754967
+[2025-05-06 18:43:30.594330] [PID 23079] starting gen offsprings
+[2025-05-06 18:43:30.621828] [PID 23079] starting evaluation individuals
+[2025-05-06 18:43:44.031629] [PID 23079] Iteration 39/100, Best current fitness: 5.006107858492776, Best global fitness: 5.006107858492776, Avg fitness: 4.440593950244034
+[2025-05-06 18:43:44.031734] [PID 23079] starting gen offsprings
+[2025-05-06 18:43:44.052703] [PID 23079] starting evaluation individuals
+[2025-05-06 18:43:57.692912] [PID 23079] Iteration 40/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.500021588939727
+[2025-05-06 18:43:57.693034] [PID 23079] starting gen offsprings
+[2025-05-06 18:43:57.716340] [PID 23079] starting evaluation individuals
+[2025-05-06 18:44:11.552474] [PID 23079] Iteration 41/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.524382795135436
+[2025-05-06 18:44:11.552578] [PID 23079] starting gen offsprings
+[2025-05-06 18:44:11.570725] [PID 23079] starting evaluation individuals
+[2025-05-06 18:44:25.541315] [PID 23079] Iteration 42/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.541663786141819
+[2025-05-06 18:44:25.541418] [PID 23079] starting gen offsprings
+[2025-05-06 18:44:25.563797] [PID 23079] starting evaluation individuals
+[2025-05-06 18:44:39.317329] [PID 23079] Iteration 43/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.566816258445618
+[2025-05-06 18:44:39.317469] [PID 23079] starting gen offsprings
+[2025-05-06 18:44:39.347176] [PID 23079] starting evaluation individuals
+[2025-05-06 18:44:52.819089] [PID 23079] Iteration 44/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.579278076139153
+[2025-05-06 18:44:52.819195] [PID 23079] starting gen offsprings
+[2025-05-06 18:44:52.841805] [PID 23079] starting evaluation individuals
+[2025-05-06 18:45:06.699086] [PID 23079] Iteration 45/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.589250918756958
+[2025-05-06 18:45:06.699237] [PID 23079] starting gen offsprings
+[2025-05-06 18:45:06.728269] [PID 23079] starting evaluation individuals
+[2025-05-06 18:45:20.056299] [PID 23079] Iteration 46/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.591399193291597
+[2025-05-06 18:45:20.056419] [PID 23079] starting gen offsprings
+[2025-05-06 18:45:20.078445] [PID 23079] starting evaluation individuals
+[2025-05-06 18:45:33.552555] [PID 23079] Iteration 47/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.596807249556954
+[2025-05-06 18:45:33.552682] [PID 23079] starting gen offsprings
+[2025-05-06 18:45:33.574624] [PID 23079] starting evaluation individuals
+[2025-05-06 18:45:46.889869] [PID 23079] Iteration 48/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.59683533185432
+[2025-05-06 18:45:46.889992] [PID 23079] starting gen offsprings
+[2025-05-06 18:45:46.912073] [PID 23079] starting evaluation individuals
+[2025-05-06 18:46:00.459430] [PID 23079] Iteration 49/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.60452575487629
+[2025-05-06 18:46:00.459523] [PID 23079] starting gen offsprings
+[2025-05-06 18:46:00.477290] [PID 23079] starting evaluation individuals
+[2025-05-06 18:46:13.276620] [PID 23079] Iteration 50/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.624961845422236
+[2025-05-06 18:46:13.276773] [PID 23079] starting gen offsprings
+[2025-05-06 18:46:13.305873] [PID 23079] starting evaluation individuals
+[2025-05-06 18:46:26.202913] [PID 23079] Iteration 51/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.630299262883565
+[2025-05-06 18:46:26.203043] [PID 23079] starting gen offsprings
+[2025-05-06 18:46:26.230892] [PID 23079] starting evaluation individuals
+[2025-05-06 18:46:40.009154] [PID 23079] Iteration 52/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.652347944265517
+[2025-05-06 18:46:40.009282] [PID 23079] starting gen offsprings
+[2025-05-06 18:46:40.031821] [PID 23079] starting evaluation individuals
+[2025-05-06 18:46:53.569222] [PID 23079] Iteration 53/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.659182464096141
+[2025-05-06 18:46:53.569433] [PID 23079] starting gen offsprings
+[2025-05-06 18:46:53.601859] [PID 23079] starting evaluation individuals
+[2025-05-06 18:47:06.846905] [PID 23079] Iteration 54/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.663309030844243
+[2025-05-06 18:47:06.847021] [PID 23079] starting gen offsprings
+[2025-05-06 18:47:06.865084] [PID 23079] starting evaluation individuals
+[2025-05-06 18:47:20.736859] [PID 23079] Iteration 55/100, Best current fitness: 5.019720243991825, Best global fitness: 5.019720243991825, Avg fitness: 4.670480051611546
+[2025-05-06 18:47:20.736975] [PID 23079] starting gen offsprings
+[2025-05-06 18:47:20.755921] [PID 23079] starting evaluation individuals
+[2025-05-06 18:47:32.762015] [PID 23079] Iteration 56/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.7016242087709665
+[2025-05-06 18:47:32.762137] [PID 23079] starting gen offsprings
+[2025-05-06 18:47:32.783632] [PID 23079] starting evaluation individuals
+[2025-05-06 18:47:46.817103] [PID 23079] Iteration 57/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.702940242178802
+[2025-05-06 18:47:46.817221] [PID 23079] starting gen offsprings
+[2025-05-06 18:47:46.839151] [PID 23079] starting evaluation individuals
+[2025-05-06 18:48:00.570181] [PID 23079] Iteration 58/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.717444377009914
+[2025-05-06 18:48:00.570373] [PID 23079] starting gen offsprings
+[2025-05-06 18:48:00.605268] [PID 23079] starting evaluation individuals
+[2025-05-06 18:48:13.640871] [PID 23079] Iteration 59/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.721359667187497
+[2025-05-06 18:48:13.641057] [PID 23079] starting gen offsprings
+[2025-05-06 18:48:13.662246] [PID 23079] starting evaluation individuals
+[2025-05-06 18:48:27.263561] [PID 23079] Iteration 60/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.732560343515042
+[2025-05-06 18:48:27.263690] [PID 23079] starting gen offsprings
+[2025-05-06 18:48:27.287618] [PID 23079] starting evaluation individuals
+[2025-05-06 18:48:41.069317] [PID 23079] Iteration 61/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.738265118773105
+[2025-05-06 18:48:41.069427] [PID 23079] starting gen offsprings
+[2025-05-06 18:48:41.092405] [PID 23079] starting evaluation individuals
+[2025-05-06 18:48:53.799911] [PID 23079] Iteration 62/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.742694562176997
+[2025-05-06 18:48:53.800033] [PID 23079] starting gen offsprings
+[2025-05-06 18:48:53.820970] [PID 23079] starting evaluation individuals
+[2025-05-06 18:49:07.664208] [PID 23079] Iteration 63/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.750905844399787
+[2025-05-06 18:49:07.664364] [PID 23079] starting gen offsprings
+[2025-05-06 18:49:07.692166] [PID 23079] starting evaluation individuals
+[2025-05-06 18:49:20.404608] [PID 23079] Iteration 64/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.759038935469695
+[2025-05-06 18:49:20.404741] [PID 23079] starting gen offsprings
+[2025-05-06 18:49:20.428153] [PID 23079] starting evaluation individuals
+[2025-05-06 18:49:33.549518] [PID 23079] Iteration 65/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.766147555147061
+[2025-05-06 18:49:33.549730] [PID 23079] starting gen offsprings
+[2025-05-06 18:49:33.585278] [PID 23079] starting evaluation individuals
+[2025-05-06 18:49:46.896079] [PID 23079] Iteration 66/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.7719660042070435
+[2025-05-06 18:49:46.896266] [PID 23079] starting gen offsprings
+[2025-05-06 18:49:46.925991] [PID 23079] starting evaluation individuals
+[2025-05-06 18:50:00.569478] [PID 23079] Iteration 67/100, Best current fitness: 5.089381307777167, Best global fitness: 5.089381307777167, Avg fitness: 4.7889552434241125
+[2025-05-06 18:50:00.569597] [PID 23079] starting gen offsprings
+[2025-05-06 18:50:00.588419] [PID 23079] starting evaluation individuals
+[2025-05-06 18:50:14.289602] [PID 23079] Iteration 68/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.814055222081179
+[2025-05-06 18:50:14.289739] [PID 23079] starting gen offsprings
+[2025-05-06 18:50:14.311911] [PID 23079] starting evaluation individuals
+[2025-05-06 18:50:27.551017] [PID 23079] Iteration 69/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.82566627813631
+[2025-05-06 18:50:27.551136] [PID 23079] starting gen offsprings
+[2025-05-06 18:50:27.575063] [PID 23079] starting evaluation individuals
+[2025-05-06 18:50:40.170846] [PID 23079] Iteration 70/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.83483423426223
+[2025-05-06 18:50:40.171028] [PID 23079] starting gen offsprings
+[2025-05-06 18:50:40.199893] [PID 23079] starting evaluation individuals
+[2025-05-06 18:50:52.787921] [PID 23079] Iteration 71/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.854739375264356
+[2025-05-06 18:50:52.788166] [PID 23079] starting gen offsprings
+[2025-05-06 18:50:52.831704] [PID 23079] starting evaluation individuals
+[2025-05-06 18:51:05.432969] [PID 23079] Iteration 72/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.868440697638232
+[2025-05-06 18:51:05.433106] [PID 23079] starting gen offsprings
+[2025-05-06 18:51:05.454775] [PID 23079] starting evaluation individuals
+[2025-05-06 18:51:18.332604] [PID 23079] Iteration 73/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.8792011459665385
+[2025-05-06 18:51:18.332730] [PID 23079] starting gen offsprings
+[2025-05-06 18:51:18.357477] [PID 23079] starting evaluation individuals
+[2025-05-06 18:51:30.162843] [PID 23079] Iteration 74/100, Best current fitness: 5.125889342998197, Best global fitness: 5.125889342998197, Avg fitness: 4.886588893070945
+[2025-05-06 18:51:30.163055] [PID 23079] starting gen offsprings
+[2025-05-06 18:51:30.193526] [PID 23079] starting evaluation individuals
+[2025-05-06 18:51:42.412935] [PID 23079] Iteration 75/100, Best current fitness: 5.1318484605309145, Best global fitness: 5.1318484605309145, Avg fitness: 4.919889290527066
+[2025-05-06 18:51:42.413165] [PID 23079] starting gen offsprings
+[2025-05-06 18:51:42.448708] [PID 23079] starting evaluation individuals
+[2025-05-06 18:51:55.784083] [PID 23079] Iteration 76/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.941836801670535
+[2025-05-06 18:51:55.784215] [PID 23079] starting gen offsprings
+[2025-05-06 18:51:55.808712] [PID 23079] starting evaluation individuals
+[2025-05-06 18:52:07.218216] [PID 23079] Iteration 77/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.9526238763206045
+[2025-05-06 18:52:07.218332] [PID 23079] starting gen offsprings
+[2025-05-06 18:52:07.246323] [PID 23079] starting evaluation individuals
+[2025-05-06 18:52:20.017347] [PID 23079] Iteration 78/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.9622478940043315
+[2025-05-06 18:52:20.017489] [PID 23079] starting gen offsprings
+[2025-05-06 18:52:20.041369] [PID 23079] starting evaluation individuals
+[2025-05-06 18:52:31.015775] [PID 23079] Iteration 79/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.966323190944317
+[2025-05-06 18:52:31.015917] [PID 23079] starting gen offsprings
+[2025-05-06 18:52:31.037055] [PID 23079] starting evaluation individuals
+[2025-05-06 18:52:43.107925] [PID 23079] Iteration 80/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.978038093680163
+[2025-05-06 18:52:43.108090] [PID 23079] starting gen offsprings
+[2025-05-06 18:52:43.135028] [PID 23079] starting evaluation individuals
+[2025-05-06 18:52:54.894374] [PID 23079] Iteration 81/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.98127921788612
+[2025-05-06 18:52:54.894501] [PID 23079] starting gen offsprings
+[2025-05-06 18:52:54.917142] [PID 23079] starting evaluation individuals
+[2025-05-06 18:53:06.957111] [PID 23079] Iteration 82/100, Best current fitness: 5.1389256835632375, Best global fitness: 5.1389256835632375, Avg fitness: 4.989440295222406
+[2025-05-06 18:53:06.957261] [PID 23079] starting gen offsprings
+[2025-05-06 18:53:06.979952] [PID 23079] starting evaluation individuals
+[2025-05-06 18:53:18.134838] [PID 23079] Iteration 83/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.0089940849707055
+[2025-05-06 18:53:18.134974] [PID 23079] starting gen offsprings
+[2025-05-06 18:53:18.153129] [PID 23079] starting evaluation individuals
+[2025-05-06 18:53:29.800917] [PID 23079] Iteration 84/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.010354960540914
+[2025-05-06 18:53:29.801066] [PID 23079] starting gen offsprings
+[2025-05-06 18:53:29.823797] [PID 23079] starting evaluation individuals
+[2025-05-06 18:53:40.796301] [PID 23079] Iteration 85/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.016806543803262
+[2025-05-06 18:53:40.796408] [PID 23079] starting gen offsprings
+[2025-05-06 18:53:40.814726] [PID 23079] starting evaluation individuals
+[2025-05-06 18:53:53.112657] [PID 23079] Iteration 86/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.023501507447767
+[2025-05-06 18:53:53.112780] [PID 23079] starting gen offsprings
+[2025-05-06 18:53:53.134749] [PID 23079] starting evaluation individuals
+[2025-05-06 18:54:06.326660] [PID 23079] Iteration 87/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.028274383258378
+[2025-05-06 18:54:06.326784] [PID 23079] starting gen offsprings
+[2025-05-06 18:54:06.354478] [PID 23079] starting evaluation individuals
+[2025-05-06 18:54:17.897818] [PID 23079] Iteration 88/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.039292512992973
+[2025-05-06 18:54:17.898101] [PID 23079] starting gen offsprings
+[2025-05-06 18:54:17.921028] [PID 23079] starting evaluation individuals
+[2025-05-06 18:54:30.429488] [PID 23079] Iteration 89/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.048946989628192
+[2025-05-06 18:54:30.429596] [PID 23079] starting gen offsprings
+[2025-05-06 18:54:30.456690] [PID 23079] starting evaluation individuals
+[2025-05-06 18:54:42.322049] [PID 23079] Iteration 90/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.053142591444564
+[2025-05-06 18:54:42.322177] [PID 23079] starting gen offsprings
+[2025-05-06 18:54:42.346490] [PID 23079] starting evaluation individuals
+[2025-05-06 18:54:53.911257] [PID 23079] Iteration 91/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.061274270038029
+[2025-05-06 18:54:53.911395] [PID 23079] starting gen offsprings
+[2025-05-06 18:54:53.933630] [PID 23079] starting evaluation individuals
+[2025-05-06 18:55:06.155762] [PID 23079] Iteration 92/100, Best current fitness: 5.281238628930686, Best global fitness: 5.281238628930686, Avg fitness: 5.072427842102118
+[2025-05-06 18:55:06.155896] [PID 23079] starting gen offsprings
+[2025-05-06 18:55:06.177578] [PID 23079] starting evaluation individuals
+[2025-05-06 18:55:18.415280] [PID 23079] Iteration 93/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.085859802069363
+[2025-05-06 18:55:18.415403] [PID 23079] starting gen offsprings
+[2025-05-06 18:55:18.436763] [PID 23079] starting evaluation individuals
+[2025-05-06 18:55:30.246441] [PID 23079] Iteration 94/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.087720628800679
+[2025-05-06 18:55:30.246588] [PID 23079] starting gen offsprings
+[2025-05-06 18:55:30.275631] [PID 23079] starting evaluation individuals
+[2025-05-06 18:55:41.166977] [PID 23079] Iteration 95/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.101436830058927
+[2025-05-06 18:55:41.167083] [PID 23079] starting gen offsprings
+[2025-05-06 18:55:41.185224] [PID 23079] starting evaluation individuals
+[2025-05-06 18:55:52.177569] [PID 23079] Iteration 96/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.108727593951326
+[2025-05-06 18:55:52.177695] [PID 23079] starting gen offsprings
+[2025-05-06 18:55:52.199236] [PID 23079] starting evaluation individuals
+[2025-05-06 18:56:04.418967] [PID 23079] Iteration 97/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.114188684985902
+[2025-05-06 18:56:04.419109] [PID 23079] starting gen offsprings
+[2025-05-06 18:56:04.440414] [PID 23079] starting evaluation individuals
+[2025-05-06 18:56:16.349849] [PID 23079] Iteration 98/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.122224626757163
+[2025-05-06 18:56:16.350049] [PID 23079] starting gen offsprings
+[2025-05-06 18:56:16.380178] [PID 23079] starting evaluation individuals
+[2025-05-06 18:56:28.335941] [PID 23079] Iteration 99/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.13061329396102
+[2025-05-06 18:56:28.336097] [PID 23079] starting gen offsprings
+[2025-05-06 18:56:28.367306] [PID 23079] starting evaluation individuals
+[2025-05-06 18:56:39.840785] [PID 23079] Iteration 100/100, Best current fitness: 5.393868655086901, Best global fitness: 5.393868655086901, Avg fitness: 5.132710514814776
+[2025-05-06 18:56:40.212160] [PID 23079] starting gen offsprings
+[2025-05-06 18:56:40.228839] [PID 23079] starting evaluation individuals
+[2025-05-06 18:56:58.708901] [PID 23079] Iteration 1/100, Best current fitness: 1.2760437837096523, Best global fitness: 1.2760437837096523, Avg fitness: 0.20256650528303902
+[2025-05-06 18:56:58.709080] [PID 23079] starting gen offsprings
+[2025-05-06 18:56:58.733303] [PID 23079] starting evaluation individuals
+[2025-05-06 18:57:15.078933] [PID 23079] Iteration 2/100, Best current fitness: 1.732988872164042, Best global fitness: 1.732988872164042, Avg fitness: 0.44477887796673143
+[2025-05-06 18:57:15.079054] [PID 23079] starting gen offsprings
+[2025-05-06 18:57:15.103304] [PID 23079] starting evaluation individuals
+[2025-05-06 18:57:32.954767] [PID 23079] Iteration 3/100, Best current fitness: 1.8958828587564414, Best global fitness: 1.8958828587564414, Avg fitness: 0.6544078009743677
+[2025-05-06 18:57:32.954909] [PID 23079] starting gen offsprings
+[2025-05-06 18:57:32.982242] [PID 23079] starting evaluation individuals
+[2025-05-06 18:57:50.571960] [PID 23079] Iteration 4/100, Best current fitness: 1.8958828587564414, Best global fitness: 1.8958828587564414, Avg fitness: 0.9380886422626555
+[2025-05-06 18:57:50.572086] [PID 23079] starting gen offsprings
+[2025-05-06 18:57:50.594097] [PID 23079] starting evaluation individuals
+[2025-05-06 18:58:08.475621] [PID 23079] Iteration 5/100, Best current fitness: 1.8958828587564414, Best global fitness: 1.8958828587564414, Avg fitness: 1.3093277601460906
+[2025-05-06 18:58:08.475727] [PID 23079] starting gen offsprings
+[2025-05-06 18:58:08.493552] [PID 23079] starting evaluation individuals
+[2025-05-06 18:58:26.394601] [PID 23079] Iteration 6/100, Best current fitness: 2.0079600391655923, Best global fitness: 2.0079600391655923, Avg fitness: 1.5937409307285721
+[2025-05-06 18:58:26.394755] [PID 23079] starting gen offsprings
+[2025-05-06 18:58:26.417535] [PID 23079] starting evaluation individuals
+[2025-05-06 18:58:44.739443] [PID 23079] Iteration 7/100, Best current fitness: 2.0254974216967017, Best global fitness: 2.0254974216967017, Avg fitness: 1.7777739718805068
+[2025-05-06 18:58:44.739554] [PID 23079] starting gen offsprings
+[2025-05-06 18:58:44.760673] [PID 23079] starting evaluation individuals
+[2025-05-06 18:59:02.705644] [PID 23079] Iteration 8/100, Best current fitness: 2.1241170078697413, Best global fitness: 2.1241170078697413, Avg fitness: 1.8870087869184289
+[2025-05-06 18:59:02.705766] [PID 23079] starting gen offsprings
+[2025-05-06 18:59:02.728325] [PID 23079] starting evaluation individuals
+[2025-05-06 18:59:21.207085] [PID 23079] Iteration 9/100, Best current fitness: 2.204272787256899, Best global fitness: 2.204272787256899, Avg fitness: 1.9588128712607564
+[2025-05-06 18:59:21.207211] [PID 23079] starting gen offsprings
+[2025-05-06 18:59:21.229954] [PID 23079] starting evaluation individuals
+[2025-05-06 18:59:39.186337] [PID 23079] Iteration 10/100, Best current fitness: 2.3616501834029284, Best global fitness: 2.3616501834029284, Avg fitness: 2.039837777715211
+[2025-05-06 18:59:39.186491] [PID 23079] starting gen offsprings
+[2025-05-06 18:59:39.207810] [PID 23079] starting evaluation individuals
+[2025-05-06 18:59:57.504973] [PID 23079] Iteration 11/100, Best current fitness: 2.3630679371281964, Best global fitness: 2.3630679371281964, Avg fitness: 2.1213447046855007
+[2025-05-06 18:59:57.505145] [PID 23079] starting gen offsprings
+[2025-05-06 18:59:57.531892] [PID 23079] starting evaluation individuals
+[2025-05-06 19:00:15.950995] [PID 23079] Iteration 12/100, Best current fitness: 2.421133509184395, Best global fitness: 2.421133509184395, Avg fitness: 2.193303383049514
+[2025-05-06 19:00:15.951122] [PID 23079] starting gen offsprings
+[2025-05-06 19:00:15.973373] [PID 23079] starting evaluation individuals
+[2025-05-06 19:00:34.581756] [PID 23079] Iteration 13/100, Best current fitness: 2.5468860594228313, Best global fitness: 2.5468860594228313, Avg fitness: 2.2843455228071106
+[2025-05-06 19:00:34.581970] [PID 23079] starting gen offsprings
+[2025-05-06 19:00:34.620211] [PID 23079] starting evaluation individuals
+[2025-05-06 19:00:52.862078] [PID 23079] Iteration 14/100, Best current fitness: 2.5468860594228313, Best global fitness: 2.5468860594228313, Avg fitness: 2.3460852806320327
+[2025-05-06 19:00:52.862204] [PID 23079] starting gen offsprings
+[2025-05-06 19:00:52.892212] [PID 23079] starting evaluation individuals
+[2025-05-06 19:01:10.568429] [PID 23079] Iteration 15/100, Best current fitness: 2.589224271010859, Best global fitness: 2.589224271010859, Avg fitness: 2.3941371041911723
+[2025-05-06 19:01:10.568549] [PID 23079] starting gen offsprings
+[2025-05-06 19:01:10.590408] [PID 23079] starting evaluation individuals
+[2025-05-06 19:01:29.043800] [PID 23079] Iteration 16/100, Best current fitness: 2.603714310680766, Best global fitness: 2.603714310680766, Avg fitness: 2.4216469146917516
+[2025-05-06 19:01:29.043913] [PID 23079] starting gen offsprings
+[2025-05-06 19:01:29.061938] [PID 23079] starting evaluation individuals
+[2025-05-06 19:01:47.432490] [PID 23079] Iteration 17/100, Best current fitness: 2.631177819925804, Best global fitness: 2.631177819925804, Avg fitness: 2.437840535548163
+[2025-05-06 19:01:47.432620] [PID 23079] starting gen offsprings
+[2025-05-06 19:01:47.455426] [PID 23079] starting evaluation individuals
+[2025-05-06 19:02:05.717147] [PID 23079] Iteration 18/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.4678102726177995
+[2025-05-06 19:02:05.717388] [PID 23079] starting gen offsprings
+[2025-05-06 19:02:05.752034] [PID 23079] starting evaluation individuals
+[2025-05-06 19:02:23.848491] [PID 23079] Iteration 19/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.494214822722627
+[2025-05-06 19:02:23.848667] [PID 23079] starting gen offsprings
+[2025-05-06 19:02:23.878974] [PID 23079] starting evaluation individuals
+[2025-05-06 19:02:42.211738] [PID 23079] Iteration 20/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.52504634695477
+[2025-05-06 19:02:42.211863] [PID 23079] starting gen offsprings
+[2025-05-06 19:02:42.233522] [PID 23079] starting evaluation individuals
+[2025-05-06 19:03:00.108262] [PID 23079] Iteration 21/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.5554874816328526
+[2025-05-06 19:03:00.108375] [PID 23079] starting gen offsprings
+[2025-05-06 19:03:00.126365] [PID 23079] starting evaluation individuals
+[2025-05-06 19:03:17.744499] [PID 23079] Iteration 22/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.5856297034251825
+[2025-05-06 19:03:17.744651] [PID 23079] starting gen offsprings
+[2025-05-06 19:03:17.771497] [PID 23079] starting evaluation individuals
+[2025-05-06 19:03:35.585795] [PID 23079] Iteration 23/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.6176049397496057
+[2025-05-06 19:03:35.585926] [PID 23079] starting gen offsprings
+[2025-05-06 19:03:35.608268] [PID 23079] starting evaluation individuals
+[2025-05-06 19:03:53.397450] [PID 23079] Iteration 24/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.644434360262312
+[2025-05-06 19:03:53.397575] [PID 23079] starting gen offsprings
+[2025-05-06 19:03:53.427899] [PID 23079] starting evaluation individuals
+[2025-05-06 19:04:11.441390] [PID 23079] Iteration 25/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.659326766001775
+[2025-05-06 19:04:11.441512] [PID 23079] starting gen offsprings
+[2025-05-06 19:04:11.465805] [PID 23079] starting evaluation individuals
+[2025-05-06 19:04:29.466850] [PID 23079] Iteration 26/100, Best current fitness: 2.8187241677463595, Best global fitness: 2.8187241677463595, Avg fitness: 2.6720007902734775
+[2025-05-06 19:04:29.466973] [PID 23079] starting gen offsprings
+[2025-05-06 19:04:29.489425] [PID 23079] starting evaluation individuals
+[2025-05-06 19:04:47.242074] [PID 23079] Iteration 27/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.6897581627182405
+[2025-05-06 19:04:47.242206] [PID 23079] starting gen offsprings
+[2025-05-06 19:04:47.264502] [PID 23079] starting evaluation individuals
+[2025-05-06 19:05:04.988229] [PID 23079] Iteration 28/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7004975244655793
+[2025-05-06 19:05:04.988351] [PID 23079] starting gen offsprings
+[2025-05-06 19:05:05.010548] [PID 23079] starting evaluation individuals
+[2025-05-06 19:05:22.661836] [PID 23079] Iteration 29/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7071248150602703
+[2025-05-06 19:05:22.661965] [PID 23079] starting gen offsprings
+[2025-05-06 19:05:22.683720] [PID 23079] starting evaluation individuals
+[2025-05-06 19:05:40.961619] [PID 23079] Iteration 30/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7133834672708157
+[2025-05-06 19:05:40.961770] [PID 23079] starting gen offsprings
+[2025-05-06 19:05:40.985422] [PID 23079] starting evaluation individuals
+[2025-05-06 19:05:57.568487] [PID 23079] Iteration 31/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.724884604686872
+[2025-05-06 19:05:57.568690] [PID 23079] starting gen offsprings
+[2025-05-06 19:05:57.601513] [PID 23079] starting evaluation individuals
+[2025-05-06 19:06:15.032813] [PID 23079] Iteration 32/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7276471930480786
+[2025-05-06 19:06:15.032958] [PID 23079] starting gen offsprings
+[2025-05-06 19:06:15.057678] [PID 23079] starting evaluation individuals
+[2025-05-06 19:06:32.850470] [PID 23079] Iteration 33/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.732636035536455
+[2025-05-06 19:06:32.850598] [PID 23079] starting gen offsprings
+[2025-05-06 19:06:32.872729] [PID 23079] starting evaluation individuals
+[2025-05-06 19:06:50.976961] [PID 23079] Iteration 34/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7397644324039434
+[2025-05-06 19:06:50.977120] [PID 23079] starting gen offsprings
+[2025-05-06 19:06:50.999566] [PID 23079] starting evaluation individuals
+[2025-05-06 19:07:08.194262] [PID 23079] Iteration 35/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7461229357722523
+[2025-05-06 19:07:08.194383] [PID 23079] starting gen offsprings
+[2025-05-06 19:07:08.216615] [PID 23079] starting evaluation individuals
+[2025-05-06 19:07:25.573081] [PID 23079] Iteration 36/100, Best current fitness: 2.8417531382117778, Best global fitness: 2.8417531382117778, Avg fitness: 2.7495821999975076
+[2025-05-06 19:07:25.573216] [PID 23079] starting gen offsprings
+[2025-05-06 19:07:25.595051] [PID 23079] starting evaluation individuals
+[2025-05-06 19:07:44.643624] [PID 23079] Iteration 37/100, Best current fitness: 2.856100414712252, Best global fitness: 2.856100414712252, Avg fitness: 2.7638059561522117
+[2025-05-06 19:07:44.643789] [PID 23079] starting gen offsprings
+[2025-05-06 19:07:44.665757] [PID 23079] starting evaluation individuals
+[2025-05-06 19:08:02.343687] [PID 23079] Iteration 38/100, Best current fitness: 2.856100414712252, Best global fitness: 2.856100414712252, Avg fitness: 2.7750406640990555
+[2025-05-06 19:08:02.343828] [PID 23079] starting gen offsprings
+[2025-05-06 19:08:02.366099] [PID 23079] starting evaluation individuals
+[2025-05-06 19:08:19.814516] [PID 23079] Iteration 39/100, Best current fitness: 2.856100414712252, Best global fitness: 2.856100414712252, Avg fitness: 2.7838615831988154
+[2025-05-06 19:08:19.814629] [PID 23079] starting gen offsprings
+[2025-05-06 19:08:19.841269] [PID 23079] starting evaluation individuals
+[2025-05-06 19:08:37.402414] [PID 23079] Iteration 40/100, Best current fitness: 2.916289223016731, Best global fitness: 2.916289223016731, Avg fitness: 2.7927316051292457
+[2025-05-06 19:08:37.402542] [PID 23079] starting gen offsprings
+[2025-05-06 19:08:37.426208] [PID 23079] starting evaluation individuals
+[2025-05-06 19:08:55.109577] [PID 23079] Iteration 41/100, Best current fitness: 2.916289223016731, Best global fitness: 2.916289223016731, Avg fitness: 2.7957812708167595
+[2025-05-06 19:08:55.109748] [PID 23079] starting gen offsprings
+[2025-05-06 19:08:55.133474] [PID 23079] starting evaluation individuals
+[2025-05-06 19:09:13.354088] [PID 23079] Iteration 42/100, Best current fitness: 2.916289223016731, Best global fitness: 2.916289223016731, Avg fitness: 2.799691711341231
+[2025-05-06 19:09:13.354284] [PID 23079] starting gen offsprings
+[2025-05-06 19:09:13.379992] [PID 23079] starting evaluation individuals
+[2025-05-06 19:09:31.940863] [PID 23079] Iteration 43/100, Best current fitness: 2.916289223016731, Best global fitness: 2.916289223016731, Avg fitness: 2.802794599635336
+[2025-05-06 19:09:31.940994] [PID 23079] starting gen offsprings
+[2025-05-06 19:09:31.963971] [PID 23079] starting evaluation individuals
+[2025-05-06 19:09:50.126014] [PID 23079] Iteration 44/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.8130868794980346
+[2025-05-06 19:09:50.126144] [PID 23079] starting gen offsprings
+[2025-05-06 19:09:50.148577] [PID 23079] starting evaluation individuals
+[2025-05-06 19:10:09.217238] [PID 23079] Iteration 45/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.815344118745716
+[2025-05-06 19:10:09.217401] [PID 23079] starting gen offsprings
+[2025-05-06 19:10:09.239571] [PID 23079] starting evaluation individuals
+[2025-05-06 19:10:27.812933] [PID 23079] Iteration 46/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.8181676463533414
+[2025-05-06 19:10:27.813080] [PID 23079] starting gen offsprings
+[2025-05-06 19:10:27.834492] [PID 23079] starting evaluation individuals
+[2025-05-06 19:10:47.161296] [PID 23079] Iteration 47/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.818332097123067
+[2025-05-06 19:10:47.161426] [PID 23079] starting gen offsprings
+[2025-05-06 19:10:47.188190] [PID 23079] starting evaluation individuals
+[2025-05-06 19:11:05.515650] [PID 23079] Iteration 48/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.822564284681365
+[2025-05-06 19:11:05.515800] [PID 23079] starting gen offsprings
+[2025-05-06 19:11:05.536721] [PID 23079] starting evaluation individuals
+[2025-05-06 19:11:23.876516] [PID 23079] Iteration 49/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.8242246526160284
+[2025-05-06 19:11:23.876643] [PID 23079] starting gen offsprings
+[2025-05-06 19:11:23.898935] [PID 23079] starting evaluation individuals
+[2025-05-06 19:11:42.006992] [PID 23079] Iteration 50/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.8254892372774343
+[2025-05-06 19:11:42.007122] [PID 23079] starting gen offsprings
+[2025-05-06 19:11:42.028657] [PID 23079] starting evaluation individuals
+[2025-05-06 19:12:00.168654] [PID 23079] Iteration 51/100, Best current fitness: 2.921068417923407, Best global fitness: 2.921068417923407, Avg fitness: 2.8347861279736146
+[2025-05-06 19:12:00.168782] [PID 23079] starting gen offsprings
+[2025-05-06 19:12:00.189154] [PID 23079] starting evaluation individuals
+[2025-05-06 19:12:18.383405] [PID 23079] Iteration 52/100, Best current fitness: 2.9386591910423383, Best global fitness: 2.9386591910423383, Avg fitness: 2.8392964823227116
+[2025-05-06 19:12:18.383594] [PID 23079] starting gen offsprings
+[2025-05-06 19:12:18.413050] [PID 23079] starting evaluation individuals
+[2025-05-06 19:12:36.065722] [PID 23079] Iteration 53/100, Best current fitness: 2.9386591910423383, Best global fitness: 2.9386591910423383, Avg fitness: 2.8452612670923054
+[2025-05-06 19:12:36.065832] [PID 23079] starting gen offsprings
+[2025-05-06 19:12:36.083487] [PID 23079] starting evaluation individuals
+[2025-05-06 19:12:53.312715] [PID 23079] Iteration 54/100, Best current fitness: 2.9386591910423383, Best global fitness: 2.9386591910423383, Avg fitness: 2.8484033860368227
+[2025-05-06 19:12:53.312839] [PID 23079] starting gen offsprings
+[2025-05-06 19:12:53.341808] [PID 23079] starting evaluation individuals
+[2025-05-06 19:13:11.257960] [PID 23079] Iteration 55/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8579384771678855
+[2025-05-06 19:13:11.258101] [PID 23079] starting gen offsprings
+[2025-05-06 19:13:11.285889] [PID 23079] starting evaluation individuals
+[2025-05-06 19:13:29.323469] [PID 23079] Iteration 56/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8643119469509686
+[2025-05-06 19:13:29.323586] [PID 23079] starting gen offsprings
+[2025-05-06 19:13:29.345475] [PID 23079] starting evaluation individuals
+[2025-05-06 19:13:46.806367] [PID 23079] Iteration 57/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8653588114798407
+[2025-05-06 19:13:46.806500] [PID 23079] starting gen offsprings
+[2025-05-06 19:13:46.828037] [PID 23079] starting evaluation individuals
+[2025-05-06 19:14:05.074364] [PID 23079] Iteration 58/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8653588114798407
+[2025-05-06 19:14:05.074488] [PID 23079] starting gen offsprings
+[2025-05-06 19:14:05.097179] [PID 23079] starting evaluation individuals
+[2025-05-06 19:14:22.846409] [PID 23079] Iteration 59/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8727124063571465
+[2025-05-06 19:14:22.846534] [PID 23079] starting gen offsprings
+[2025-05-06 19:14:22.864635] [PID 23079] starting evaluation individuals
+[2025-05-06 19:14:40.122615] [PID 23079] Iteration 60/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.875864530879644
+[2025-05-06 19:14:40.122750] [PID 23079] starting gen offsprings
+[2025-05-06 19:14:40.145448] [PID 23079] starting evaluation individuals
+[2025-05-06 19:14:57.743010] [PID 23079] Iteration 61/100, Best current fitness: 2.996791962449646, Best global fitness: 2.996791962449646, Avg fitness: 2.8795266399998356
+[2025-05-06 19:14:57.743226] [PID 23079] starting gen offsprings
+[2025-05-06 19:14:57.776374] [PID 23079] starting evaluation individuals
+[2025-05-06 19:15:15.697182] [PID 23079] Iteration 62/100, Best current fitness: 3.0283341706576667, Best global fitness: 3.0283341706576667, Avg fitness: 2.887851029439554
+[2025-05-06 19:15:15.697333] [PID 23079] starting gen offsprings
+[2025-05-06 19:15:15.724312] [PID 23079] starting evaluation individuals
+[2025-05-06 19:15:33.970528] [PID 23079] Iteration 63/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.9015562891557862
+[2025-05-06 19:15:33.970727] [PID 23079] starting gen offsprings
+[2025-05-06 19:15:34.005333] [PID 23079] starting evaluation individuals
+[2025-05-06 19:15:51.572139] [PID 23079] Iteration 64/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.906629935917585
+[2025-05-06 19:15:51.572336] [PID 23079] starting gen offsprings
+[2025-05-06 19:15:51.610782] [PID 23079] starting evaluation individuals
+[2025-05-06 19:16:09.458573] [PID 23079] Iteration 65/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.921860943184133
+[2025-05-06 19:16:09.458711] [PID 23079] starting gen offsprings
+[2025-05-06 19:16:09.482229] [PID 23079] starting evaluation individuals
+[2025-05-06 19:16:27.938552] [PID 23079] Iteration 66/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.9277075140060305
+[2025-05-06 19:16:27.938667] [PID 23079] starting gen offsprings
+[2025-05-06 19:16:27.956800] [PID 23079] starting evaluation individuals
+[2025-05-06 19:16:46.177910] [PID 23079] Iteration 67/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.930560141505606
+[2025-05-06 19:16:46.178033] [PID 23079] starting gen offsprings
+[2025-05-06 19:16:46.203128] [PID 23079] starting evaluation individuals
+[2025-05-06 19:17:04.142604] [PID 23079] Iteration 68/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.9398261875563128
+[2025-05-06 19:17:04.142812] [PID 23079] starting gen offsprings
+[2025-05-06 19:17:04.176827] [PID 23079] starting evaluation individuals
+[2025-05-06 19:17:21.884689] [PID 23079] Iteration 69/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.944876411448016
+[2025-05-06 19:17:21.884844] [PID 23079] starting gen offsprings
+[2025-05-06 19:17:21.904645] [PID 23079] starting evaluation individuals
+[2025-05-06 19:17:40.341843] [PID 23079] Iteration 70/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.948837494101819
+[2025-05-06 19:17:40.342000] [PID 23079] starting gen offsprings
+[2025-05-06 19:17:40.368961] [PID 23079] starting evaluation individuals
+[2025-05-06 19:17:58.855371] [PID 23079] Iteration 71/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.9520961553651426
+[2025-05-06 19:17:58.855553] [PID 23079] starting gen offsprings
+[2025-05-06 19:17:58.891239] [PID 23079] starting evaluation individuals
+[2025-05-06 19:18:17.386791] [PID 23079] Iteration 72/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.956473459875042
+[2025-05-06 19:18:17.386919] [PID 23079] starting gen offsprings
+[2025-05-06 19:18:17.419615] [PID 23079] starting evaluation individuals
+[2025-05-06 19:18:35.845279] [PID 23079] Iteration 73/100, Best current fitness: 3.104313036045213, Best global fitness: 3.104313036045213, Avg fitness: 2.9595712271054366
+[2025-05-06 19:18:35.845455] [PID 23079] starting gen offsprings
+[2025-05-06 19:18:35.878097] [PID 23079] starting evaluation individuals
+[2025-05-06 19:18:54.191258] [PID 23079] Iteration 74/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 2.973631572778586
+[2025-05-06 19:18:54.191462] [PID 23079] starting gen offsprings
+[2025-05-06 19:18:54.227314] [PID 23079] starting evaluation individuals
+[2025-05-06 19:19:11.698327] [PID 23079] Iteration 75/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 2.980231560409058
+[2025-05-06 19:19:11.698480] [PID 23079] starting gen offsprings
+[2025-05-06 19:19:11.727209] [PID 23079] starting evaluation individuals
+[2025-05-06 19:19:30.162850] [PID 23079] Iteration 76/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 2.9891716507566937
+[2025-05-06 19:19:30.163029] [PID 23079] starting gen offsprings
+[2025-05-06 19:19:30.189499] [PID 23079] starting evaluation individuals
+[2025-05-06 19:19:48.738473] [PID 23079] Iteration 77/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 2.9946980757331096
+[2025-05-06 19:19:48.738604] [PID 23079] starting gen offsprings
+[2025-05-06 19:19:48.761914] [PID 23079] starting evaluation individuals
+[2025-05-06 19:20:06.847013] [PID 23079] Iteration 78/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 3.0021424808555923
+[2025-05-06 19:20:06.847305] [PID 23079] starting gen offsprings
+[2025-05-06 19:20:06.882047] [PID 23079] starting evaluation individuals
+[2025-05-06 19:20:24.987849] [PID 23079] Iteration 79/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 3.0067120738383255
+[2025-05-06 19:20:24.988029] [PID 23079] starting gen offsprings
+[2025-05-06 19:20:25.010836] [PID 23079] starting evaluation individuals
+[2025-05-06 19:20:42.773894] [PID 23079] Iteration 80/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 3.010251815575868
+[2025-05-06 19:20:42.774091] [PID 23079] starting gen offsprings
+[2025-05-06 19:20:42.806301] [PID 23079] starting evaluation individuals
+[2025-05-06 19:21:01.028821] [PID 23079] Iteration 81/100, Best current fitness: 3.2376920878042914, Best global fitness: 3.2376920878042914, Avg fitness: 3.0119904635298633
+[2025-05-06 19:21:01.029023] [PID 23079] starting gen offsprings
+[2025-05-06 19:21:01.062717] [PID 23079] starting evaluation individuals
+[2025-05-06 19:21:19.393915] [PID 23079] Iteration 82/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.024627227129997
+[2025-05-06 19:21:19.394044] [PID 23079] starting gen offsprings
+[2025-05-06 19:21:19.415601] [PID 23079] starting evaluation individuals
+[2025-05-06 19:21:37.840962] [PID 23079] Iteration 83/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.024627227129997
+[2025-05-06 19:21:37.841102] [PID 23079] starting gen offsprings
+[2025-05-06 19:21:37.863847] [PID 23079] starting evaluation individuals
+[2025-05-06 19:21:56.354088] [PID 23079] Iteration 84/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0282136012987917
+[2025-05-06 19:21:56.354210] [PID 23079] starting gen offsprings
+[2025-05-06 19:21:56.381034] [PID 23079] starting evaluation individuals
+[2025-05-06 19:22:14.660464] [PID 23079] Iteration 85/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.029421822498156
+[2025-05-06 19:22:14.660661] [PID 23079] starting gen offsprings
+[2025-05-06 19:22:14.695026] [PID 23079] starting evaluation individuals
+[2025-05-06 19:22:33.232663] [PID 23079] Iteration 86/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.040588795177739
+[2025-05-06 19:22:33.232794] [PID 23079] starting gen offsprings
+[2025-05-06 19:22:33.251646] [PID 23079] starting evaluation individuals
+[2025-05-06 19:22:51.539973] [PID 23079] Iteration 87/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.042496050180063
+[2025-05-06 19:22:51.540092] [PID 23079] starting gen offsprings
+[2025-05-06 19:22:51.566841] [PID 23079] starting evaluation individuals
+[2025-05-06 19:23:09.941422] [PID 23079] Iteration 88/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.044974229204019
+[2025-05-06 19:23:09.941570] [PID 23079] starting gen offsprings
+[2025-05-06 19:23:09.964102] [PID 23079] starting evaluation individuals
+[2025-05-06 19:23:28.096649] [PID 23079] Iteration 89/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.051378196582157
+[2025-05-06 19:23:28.096823] [PID 23079] starting gen offsprings
+[2025-05-06 19:23:28.118485] [PID 23079] starting evaluation individuals
+[2025-05-06 19:23:46.516539] [PID 23079] Iteration 90/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.057682081040002
+[2025-05-06 19:23:46.516682] [PID 23079] starting gen offsprings
+[2025-05-06 19:23:46.539121] [PID 23079] starting evaluation individuals
+[2025-05-06 19:24:05.522159] [PID 23079] Iteration 91/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0577153228447655
+[2025-05-06 19:24:05.522289] [PID 23079] starting gen offsprings
+[2025-05-06 19:24:05.544610] [PID 23079] starting evaluation individuals
+[2025-05-06 19:24:23.932256] [PID 23079] Iteration 92/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0625144906961257
+[2025-05-06 19:24:23.932407] [PID 23079] starting gen offsprings
+[2025-05-06 19:24:23.963321] [PID 23079] starting evaluation individuals
+[2025-05-06 19:24:42.775433] [PID 23079] Iteration 93/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0628372435509936
+[2025-05-06 19:24:42.775555] [PID 23079] starting gen offsprings
+[2025-05-06 19:24:42.797554] [PID 23079] starting evaluation individuals
+[2025-05-06 19:25:01.426225] [PID 23079] Iteration 94/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0668058004334626
+[2025-05-06 19:25:01.426427] [PID 23079] starting gen offsprings
+[2025-05-06 19:25:01.450061] [PID 23079] starting evaluation individuals
+[2025-05-06 19:25:19.684175] [PID 23079] Iteration 95/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.071795115955173
+[2025-05-06 19:25:19.684305] [PID 23079] starting gen offsprings
+[2025-05-06 19:25:19.710041] [PID 23079] starting evaluation individuals
+[2025-05-06 19:25:37.728599] [PID 23079] Iteration 96/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0792996158641976
+[2025-05-06 19:25:37.728864] [PID 23079] starting gen offsprings
+[2025-05-06 19:25:37.753882] [PID 23079] starting evaluation individuals
+[2025-05-06 19:25:55.757585] [PID 23079] Iteration 97/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.0889380900710894
+[2025-05-06 19:25:55.757735] [PID 23079] starting gen offsprings
+[2025-05-06 19:25:55.780653] [PID 23079] starting evaluation individuals
+[2025-05-06 19:26:14.241612] [PID 23079] Iteration 98/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.090099674033117
+[2025-05-06 19:26:14.241743] [PID 23079] starting gen offsprings
+[2025-05-06 19:26:14.263727] [PID 23079] starting evaluation individuals
+[2025-05-06 19:26:32.345688] [PID 23079] Iteration 99/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.097619561063336
+[2025-05-06 19:26:32.345945] [PID 23079] starting gen offsprings
+[2025-05-06 19:26:32.381880] [PID 23079] starting evaluation individuals
+[2025-05-06 19:26:50.640320] [PID 23079] Iteration 100/100, Best current fitness: 3.3807946293386033, Best global fitness: 3.3807946293386033, Avg fitness: 3.1047726508754145
+[2025-05-06 19:26:51.018781] [PID 23079] starting gen offsprings
+[2025-05-06 19:26:51.035056] [PID 23079] starting evaluation individuals
+[2025-05-06 19:27:08.976330] [PID 23079] Iteration 1/100, Best current fitness: 1.888045361905923, Best global fitness: 1.888045361905923, Avg fitness: 0.19994320365697152
+[2025-05-06 19:27:08.976477] [PID 23079] starting gen offsprings
+[2025-05-06 19:27:09.005779] [PID 23079] starting evaluation individuals
+[2025-05-06 19:27:26.225382] [PID 23079] Iteration 2/100, Best current fitness: 1.888045361905923, Best global fitness: 1.888045361905923, Avg fitness: 0.44437362104614697
+[2025-05-06 19:27:26.225541] [PID 23079] starting gen offsprings
+[2025-05-06 19:27:26.254407] [PID 23079] starting evaluation individuals
+[2025-05-06 19:27:42.869401] [PID 23079] Iteration 3/100, Best current fitness: 1.888045361905923, Best global fitness: 1.888045361905923, Avg fitness: 0.8038860923694547
+[2025-05-06 19:27:42.869548] [PID 23079] starting gen offsprings
+[2025-05-06 19:27:42.895391] [PID 23079] starting evaluation individuals
+[2025-05-06 19:28:00.134849] [PID 23079] Iteration 4/100, Best current fitness: 1.9656905865060212, Best global fitness: 1.9656905865060212, Avg fitness: 1.147204573676657
+[2025-05-06 19:28:00.135037] [PID 23079] starting gen offsprings
+[2025-05-06 19:28:00.166895] [PID 23079] starting evaluation individuals
+[2025-05-06 19:28:16.637929] [PID 23079] Iteration 5/100, Best current fitness: 1.9656905865060212, Best global fitness: 1.9656905865060212, Avg fitness: 1.427676002380564
+[2025-05-06 19:28:16.638040] [PID 23079] starting gen offsprings
+[2025-05-06 19:28:16.659969] [PID 23079] starting evaluation individuals
+[2025-05-06 19:28:34.120927] [PID 23079] Iteration 6/100, Best current fitness: 1.9656905865060212, Best global fitness: 1.9656905865060212, Avg fitness: 1.7180290597730106
+[2025-05-06 19:28:34.121073] [PID 23079] starting gen offsprings
+[2025-05-06 19:28:34.143621] [PID 23079] starting evaluation individuals
+[2025-05-06 19:28:51.641847] [PID 23079] Iteration 7/100, Best current fitness: 1.9656905865060212, Best global fitness: 1.9656905865060212, Avg fitness: 1.8340267835574908
+[2025-05-06 19:28:51.641994] [PID 23079] starting gen offsprings
+[2025-05-06 19:28:51.664054] [PID 23079] starting evaluation individuals
+[2025-05-06 19:29:09.112638] [PID 23079] Iteration 8/100, Best current fitness: 1.9656905865060212, Best global fitness: 1.9656905865060212, Avg fitness: 1.8681486460895487
+[2025-05-06 19:29:09.112780] [PID 23079] starting gen offsprings
+[2025-05-06 19:29:09.135334] [PID 23079] starting evaluation individuals
+[2025-05-06 19:29:27.519694] [PID 23079] Iteration 9/100, Best current fitness: 2.040243426181422, Best global fitness: 2.040243426181422, Avg fitness: 1.8959320470384642
+[2025-05-06 19:29:27.519822] [PID 23079] starting gen offsprings
+[2025-05-06 19:29:27.542277] [PID 23079] starting evaluation individuals
+[2025-05-06 19:29:45.136756] [PID 23079] Iteration 10/100, Best current fitness: 2.3603269326595404, Best global fitness: 2.3603269326595404, Avg fitness: 1.9511830465272575
+[2025-05-06 19:29:45.136894] [PID 23079] starting gen offsprings
+[2025-05-06 19:29:45.155048] [PID 23079] starting evaluation individuals
+[2025-05-06 19:30:02.828730] [PID 23079] Iteration 11/100, Best current fitness: 2.3603269326595404, Best global fitness: 2.3603269326595404, Avg fitness: 1.9955289583617155
+[2025-05-06 19:30:02.828854] [PID 23079] starting gen offsprings
+[2025-05-06 19:30:02.853495] [PID 23079] starting evaluation individuals
+[2025-05-06 19:30:20.389074] [PID 23079] Iteration 12/100, Best current fitness: 2.463658797787208, Best global fitness: 2.463658797787208, Avg fitness: 2.0461851987766444
+[2025-05-06 19:30:20.389209] [PID 23079] starting gen offsprings
+[2025-05-06 19:30:20.416430] [PID 23079] starting evaluation individuals
+[2025-05-06 19:30:38.828844] [PID 23079] Iteration 13/100, Best current fitness: 2.463658797787208, Best global fitness: 2.463658797787208, Avg fitness: 2.1067706662009855
+[2025-05-06 19:30:38.829015] [PID 23079] starting gen offsprings
+[2025-05-06 19:30:38.854678] [PID 23079] starting evaluation individuals
+[2025-05-06 19:30:57.124857] [PID 23079] Iteration 14/100, Best current fitness: 2.463658797787208, Best global fitness: 2.463658797787208, Avg fitness: 2.1669746986372744
+[2025-05-06 19:30:57.124989] [PID 23079] starting gen offsprings
+[2025-05-06 19:30:57.146905] [PID 23079] starting evaluation individuals
+[2025-05-06 19:31:15.732429] [PID 23079] Iteration 15/100, Best current fitness: 2.473237171575324, Best global fitness: 2.473237171575324, Avg fitness: 2.2122735105440237
+[2025-05-06 19:31:15.732554] [PID 23079] starting gen offsprings
+[2025-05-06 19:31:15.755273] [PID 23079] starting evaluation individuals
+[2025-05-06 19:31:34.155351] [PID 23079] Iteration 16/100, Best current fitness: 2.5262967906368137, Best global fitness: 2.5262967906368137, Avg fitness: 2.255056782192688
+[2025-05-06 19:31:34.155504] [PID 23079] starting gen offsprings
+[2025-05-06 19:31:34.185172] [PID 23079] starting evaluation individuals
+[2025-05-06 19:31:52.637914] [PID 23079] Iteration 17/100, Best current fitness: 2.6306876873632694, Best global fitness: 2.6306876873632694, Avg fitness: 2.3081783971765644
+[2025-05-06 19:31:52.638039] [PID 23079] starting gen offsprings
+[2025-05-06 19:31:52.662961] [PID 23079] starting evaluation individuals
+[2025-05-06 19:32:11.091800] [PID 23079] Iteration 18/100, Best current fitness: 2.769173677698041, Best global fitness: 2.769173677698041, Avg fitness: 2.403189705919749
+[2025-05-06 19:32:11.091972] [PID 23079] starting gen offsprings
+[2025-05-06 19:32:11.118544] [PID 23079] starting evaluation individuals
+[2025-05-06 19:32:29.519154] [PID 23079] Iteration 19/100, Best current fitness: 2.769173677698041, Best global fitness: 2.769173677698041, Avg fitness: 2.489153939769204
+[2025-05-06 19:32:29.519278] [PID 23079] starting gen offsprings
+[2025-05-06 19:32:29.555019] [PID 23079] starting evaluation individuals
+[2025-05-06 19:32:47.111483] [PID 23079] Iteration 20/100, Best current fitness: 2.923998959874723, Best global fitness: 2.923998959874723, Avg fitness: 2.574132734726237
+[2025-05-06 19:32:47.111603] [PID 23079] starting gen offsprings
+[2025-05-06 19:32:47.135535] [PID 23079] starting evaluation individuals
+[2025-05-06 19:33:05.583548] [PID 23079] Iteration 21/100, Best current fitness: 2.977722933424259, Best global fitness: 2.977722933424259, Avg fitness: 2.6489207111199162
+[2025-05-06 19:33:05.583669] [PID 23079] starting gen offsprings
+[2025-05-06 19:33:05.611922] [PID 23079] starting evaluation individuals
+[2025-05-06 19:33:23.228765] [PID 23079] Iteration 22/100, Best current fitness: 2.977722933424259, Best global fitness: 2.977722933424259, Avg fitness: 2.693675497875568
+[2025-05-06 19:33:23.228943] [PID 23079] starting gen offsprings
+[2025-05-06 19:33:23.264088] [PID 23079] starting evaluation individuals
+[2025-05-06 19:33:41.718727] [PID 23079] Iteration 23/100, Best current fitness: 3.0951126013255714, Best global fitness: 3.0951126013255714, Avg fitness: 2.7662609497360573
+[2025-05-06 19:33:41.718917] [PID 23079] starting gen offsprings
+[2025-05-06 19:33:41.737484] [PID 23079] starting evaluation individuals
+[2025-05-06 19:33:59.229979] [PID 23079] Iteration 24/100, Best current fitness: 3.0951126013255714, Best global fitness: 3.0951126013255714, Avg fitness: 2.8123824090717795
+[2025-05-06 19:33:59.230087] [PID 23079] starting gen offsprings
+[2025-05-06 19:33:59.248097] [PID 23079] starting evaluation individuals
+[2025-05-06 19:34:17.668390] [PID 23079] Iteration 25/100, Best current fitness: 3.0951126013255714, Best global fitness: 3.0951126013255714, Avg fitness: 2.883909189370338
+[2025-05-06 19:34:17.668515] [PID 23079] starting gen offsprings
+[2025-05-06 19:34:17.690965] [PID 23079] starting evaluation individuals
+[2025-05-06 19:34:36.053113] [PID 23079] Iteration 26/100, Best current fitness: 3.1438627611775236, Best global fitness: 3.1438627611775236, Avg fitness: 2.9348495898872886
+[2025-05-06 19:34:36.053303] [PID 23079] starting gen offsprings
+[2025-05-06 19:34:36.090415] [PID 23079] starting evaluation individuals
+[2025-05-06 19:34:54.322521] [PID 23079] Iteration 27/100, Best current fitness: 3.4756702717054346, Best global fitness: 3.4756702717054346, Avg fitness: 2.9910575368499717
+[2025-05-06 19:34:54.322634] [PID 23079] starting gen offsprings
+[2025-05-06 19:34:54.340963] [PID 23079] starting evaluation individuals
+[2025-05-06 19:35:11.937421] [PID 23079] Iteration 28/100, Best current fitness: 3.4756702717054346, Best global fitness: 3.4756702717054346, Avg fitness: 3.02853283931612
+[2025-05-06 19:35:11.937548] [PID 23079] starting gen offsprings
+[2025-05-06 19:35:11.965110] [PID 23079] starting evaluation individuals
+[2025-05-06 19:35:30.344900] [PID 23079] Iteration 29/100, Best current fitness: 3.4756702717054346, Best global fitness: 3.4756702717054346, Avg fitness: 3.0971144764595517
+[2025-05-06 19:35:30.345081] [PID 23079] starting gen offsprings
+[2025-05-06 19:35:30.367841] [PID 23079] starting evaluation individuals
+[2025-05-06 19:35:48.738774] [PID 23079] Iteration 30/100, Best current fitness: 3.4756702717054346, Best global fitness: 3.4756702717054346, Avg fitness: 3.1377414394275984
+[2025-05-06 19:35:48.738902] [PID 23079] starting gen offsprings
+[2025-05-06 19:35:48.761363] [PID 23079] starting evaluation individuals
+[2025-05-06 19:36:07.247502] [PID 23079] Iteration 31/100, Best current fitness: 3.4756702717054346, Best global fitness: 3.4756702717054346, Avg fitness: 3.1658895746059392
+[2025-05-06 19:36:07.247626] [PID 23079] starting gen offsprings
+[2025-05-06 19:36:07.270052] [PID 23079] starting evaluation individuals
+[2025-05-06 19:36:25.503585] [PID 23079] Iteration 32/100, Best current fitness: 3.5625352094872227, Best global fitness: 3.5625352094872227, Avg fitness: 3.190247013424912
+[2025-05-06 19:36:25.503707] [PID 23079] starting gen offsprings
+[2025-05-06 19:36:25.526203] [PID 23079] starting evaluation individuals
+[2025-05-06 19:36:43.868768] [PID 23079] Iteration 33/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.2505368612430248
+[2025-05-06 19:36:43.868896] [PID 23079] starting gen offsprings
+[2025-05-06 19:36:43.892302] [PID 23079] starting evaluation individuals
+[2025-05-06 19:37:02.297238] [PID 23079] Iteration 34/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.277802331301735
+[2025-05-06 19:37:02.297359] [PID 23079] starting gen offsprings
+[2025-05-06 19:37:02.319590] [PID 23079] starting evaluation individuals
+[2025-05-06 19:37:20.813200] [PID 23079] Iteration 35/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.313583767724127
+[2025-05-06 19:37:20.813328] [PID 23079] starting gen offsprings
+[2025-05-06 19:37:20.841253] [PID 23079] starting evaluation individuals
+[2025-05-06 19:37:39.337894] [PID 23079] Iteration 36/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.3728804175149127
+[2025-05-06 19:37:39.338025] [PID 23079] starting gen offsprings
+[2025-05-06 19:37:39.360927] [PID 23079] starting evaluation individuals
+[2025-05-06 19:37:57.914228] [PID 23079] Iteration 37/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.39989558093518
+[2025-05-06 19:37:57.914357] [PID 23079] starting gen offsprings
+[2025-05-06 19:37:57.942952] [PID 23079] starting evaluation individuals
+[2025-05-06 19:38:16.364596] [PID 23079] Iteration 38/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.4286166124980038
+[2025-05-06 19:38:16.364799] [PID 23079] starting gen offsprings
+[2025-05-06 19:38:16.389305] [PID 23079] starting evaluation individuals
+[2025-05-06 19:38:34.655675] [PID 23079] Iteration 39/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.454626993052052
+[2025-05-06 19:38:34.655809] [PID 23079] starting gen offsprings
+[2025-05-06 19:38:34.678436] [PID 23079] starting evaluation individuals
+[2025-05-06 19:38:53.158972] [PID 23079] Iteration 40/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.4631981851167266
+[2025-05-06 19:38:53.159203] [PID 23079] starting gen offsprings
+[2025-05-06 19:38:53.194640] [PID 23079] starting evaluation individuals
+[2025-05-06 19:39:11.602071] [PID 23079] Iteration 41/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.473691224007625
+[2025-05-06 19:39:11.602278] [PID 23079] starting gen offsprings
+[2025-05-06 19:39:11.631880] [PID 23079] starting evaluation individuals
+[2025-05-06 19:39:30.073619] [PID 23079] Iteration 42/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.4916785607524856
+[2025-05-06 19:39:30.073746] [PID 23079] starting gen offsprings
+[2025-05-06 19:39:30.100647] [PID 23079] starting evaluation individuals
+[2025-05-06 19:39:48.283593] [PID 23079] Iteration 43/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.5073552923122993
+[2025-05-06 19:39:48.283781] [PID 23079] starting gen offsprings
+[2025-05-06 19:39:48.323290] [PID 23079] starting evaluation individuals
+[2025-05-06 19:40:06.703023] [PID 23079] Iteration 44/100, Best current fitness: 3.8455533045592256, Best global fitness: 3.8455533045592256, Avg fitness: 3.5145855494254117
+[2025-05-06 19:40:06.703229] [PID 23079] starting gen offsprings
+[2025-05-06 19:40:06.741069] [PID 23079] starting evaluation individuals
+[2025-05-06 19:40:25.174614] [PID 23079] Iteration 45/100, Best current fitness: 4.050429850539615, Best global fitness: 4.050429850539615, Avg fitness: 3.5526019622477816
+[2025-05-06 19:40:25.174732] [PID 23079] starting gen offsprings
+[2025-05-06 19:40:25.203344] [PID 23079] starting evaluation individuals
+[2025-05-06 19:40:43.657432] [PID 23079] Iteration 46/100, Best current fitness: 4.050429850539615, Best global fitness: 4.050429850539615, Avg fitness: 3.5730512999354263
+[2025-05-06 19:40:43.657578] [PID 23079] starting gen offsprings
+[2025-05-06 19:40:43.683031] [PID 23079] starting evaluation individuals
+[2025-05-06 19:41:02.084338] [PID 23079] Iteration 47/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.5965633463768256
+[2025-05-06 19:41:02.084440] [PID 23079] starting gen offsprings
+[2025-05-06 19:41:02.102570] [PID 23079] starting evaluation individuals
+[2025-05-06 19:41:20.367534] [PID 23079] Iteration 48/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.60376087635529
+[2025-05-06 19:41:20.367670] [PID 23079] starting gen offsprings
+[2025-05-06 19:41:20.392009] [PID 23079] starting evaluation individuals
+[2025-05-06 19:41:38.790059] [PID 23079] Iteration 49/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.613351924953394
+[2025-05-06 19:41:38.790184] [PID 23079] starting gen offsprings
+[2025-05-06 19:41:38.812409] [PID 23079] starting evaluation individuals
+[2025-05-06 19:41:57.309020] [PID 23079] Iteration 50/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.6285975688433423
+[2025-05-06 19:41:57.309179] [PID 23079] starting gen offsprings
+[2025-05-06 19:41:57.332183] [PID 23079] starting evaluation individuals
+[2025-05-06 19:42:15.674010] [PID 23079] Iteration 51/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.646402344052126
+[2025-05-06 19:42:15.674160] [PID 23079] starting gen offsprings
+[2025-05-06 19:42:15.693070] [PID 23079] starting evaluation individuals
+[2025-05-06 19:42:34.075700] [PID 23079] Iteration 52/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.6611325643919543
+[2025-05-06 19:42:34.075856] [PID 23079] starting gen offsprings
+[2025-05-06 19:42:34.106740] [PID 23079] starting evaluation individuals
+[2025-05-06 19:42:52.579003] [PID 23079] Iteration 53/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.6675317315286486
+[2025-05-06 19:42:52.579119] [PID 23079] starting gen offsprings
+[2025-05-06 19:42:52.597479] [PID 23079] starting evaluation individuals
+[2025-05-06 19:43:11.019784] [PID 23079] Iteration 54/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.6849343429072703
+[2025-05-06 19:43:11.019910] [PID 23079] starting gen offsprings
+[2025-05-06 19:43:11.041155] [PID 23079] starting evaluation individuals
+[2025-05-06 19:43:29.375897] [PID 23079] Iteration 55/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.709581635437727
+[2025-05-06 19:43:29.376005] [PID 23079] starting gen offsprings
+[2025-05-06 19:43:29.394984] [PID 23079] starting evaluation individuals
+[2025-05-06 19:43:47.732879] [PID 23079] Iteration 56/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7215078028178463
+[2025-05-06 19:43:47.733003] [PID 23079] starting gen offsprings
+[2025-05-06 19:43:47.751462] [PID 23079] starting evaluation individuals
+[2025-05-06 19:44:05.974718] [PID 23079] Iteration 57/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7300806272144262
+[2025-05-06 19:44:05.974877] [PID 23079] starting gen offsprings
+[2025-05-06 19:44:06.002197] [PID 23079] starting evaluation individuals
+[2025-05-06 19:44:24.446851] [PID 23079] Iteration 58/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.732354468085549
+[2025-05-06 19:44:24.447015] [PID 23079] starting gen offsprings
+[2025-05-06 19:44:24.469903] [PID 23079] starting evaluation individuals
+[2025-05-06 19:44:42.833190] [PID 23079] Iteration 59/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7346015511188266
+[2025-05-06 19:44:42.833335] [PID 23079] starting gen offsprings
+[2025-05-06 19:44:42.855135] [PID 23079] starting evaluation individuals
+[2025-05-06 19:45:01.136631] [PID 23079] Iteration 60/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7370878386970827
+[2025-05-06 19:45:01.136741] [PID 23079] starting gen offsprings
+[2025-05-06 19:45:01.155041] [PID 23079] starting evaluation individuals
+[2025-05-06 19:45:18.984260] [PID 23079] Iteration 61/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.74127144382556
+[2025-05-06 19:45:18.984373] [PID 23079] starting gen offsprings
+[2025-05-06 19:45:19.002372] [PID 23079] starting evaluation individuals
+[2025-05-06 19:45:37.189508] [PID 23079] Iteration 62/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7462714329491367
+[2025-05-06 19:45:37.189706] [PID 23079] starting gen offsprings
+[2025-05-06 19:45:37.219161] [PID 23079] starting evaluation individuals
+[2025-05-06 19:45:55.605315] [PID 23079] Iteration 63/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7573919038417474
+[2025-05-06 19:45:55.605482] [PID 23079] starting gen offsprings
+[2025-05-06 19:45:55.633489] [PID 23079] starting evaluation individuals
+[2025-05-06 19:46:13.901823] [PID 23079] Iteration 64/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.7706884282615625
+[2025-05-06 19:46:13.901952] [PID 23079] starting gen offsprings
+[2025-05-06 19:46:13.923312] [PID 23079] starting evaluation individuals
+[2025-05-06 19:46:31.989452] [PID 23079] Iteration 65/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.779294114837869
+[2025-05-06 19:46:31.989617] [PID 23079] starting gen offsprings
+[2025-05-06 19:46:32.021021] [PID 23079] starting evaluation individuals
+[2025-05-06 19:46:50.501798] [PID 23079] Iteration 66/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.788384031006541
+[2025-05-06 19:46:50.501926] [PID 23079] starting gen offsprings
+[2025-05-06 19:46:50.523975] [PID 23079] starting evaluation individuals
+[2025-05-06 19:47:08.900454] [PID 23079] Iteration 67/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.792883588889522
+[2025-05-06 19:47:08.900605] [PID 23079] starting gen offsprings
+[2025-05-06 19:47:08.927221] [PID 23079] starting evaluation individuals
+[2025-05-06 19:47:26.775850] [PID 23079] Iteration 68/100, Best current fitness: 4.051773988432753, Best global fitness: 4.051773988432753, Avg fitness: 3.8045258090124507
+[2025-05-06 19:47:26.776082] [PID 23079] starting gen offsprings
+[2025-05-06 19:47:26.807712] [PID 23079] starting evaluation individuals
+[2025-05-06 19:47:45.200302] [PID 23079] Iteration 69/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.822002871153968
+[2025-05-06 19:47:45.200431] [PID 23079] starting gen offsprings
+[2025-05-06 19:47:45.223332] [PID 23079] starting evaluation individuals
+[2025-05-06 19:48:03.531691] [PID 23079] Iteration 70/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8268194249507714
+[2025-05-06 19:48:03.531823] [PID 23079] starting gen offsprings
+[2025-05-06 19:48:03.553779] [PID 23079] starting evaluation individuals
+[2025-05-06 19:48:22.072707] [PID 23079] Iteration 71/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8445425764246584
+[2025-05-06 19:48:22.072833] [PID 23079] starting gen offsprings
+[2025-05-06 19:48:22.095711] [PID 23079] starting evaluation individuals
+[2025-05-06 19:48:39.526728] [PID 23079] Iteration 72/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.853949998667868
+[2025-05-06 19:48:39.526848] [PID 23079] starting gen offsprings
+[2025-05-06 19:48:39.554271] [PID 23079] starting evaluation individuals
+[2025-05-06 19:48:57.967026] [PID 23079] Iteration 73/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8719733576000936
+[2025-05-06 19:48:57.967187] [PID 23079] starting gen offsprings
+[2025-05-06 19:48:57.989846] [PID 23079] starting evaluation individuals
+[2025-05-06 19:49:15.813337] [PID 23079] Iteration 74/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8726455569342573
+[2025-05-06 19:49:15.813489] [PID 23079] starting gen offsprings
+[2025-05-06 19:49:15.837102] [PID 23079] starting evaluation individuals
+[2025-05-06 19:49:33.733877] [PID 23079] Iteration 75/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8800070257015817
+[2025-05-06 19:49:33.734013] [PID 23079] starting gen offsprings
+[2025-05-06 19:49:33.757203] [PID 23079] starting evaluation individuals
+[2025-05-06 19:49:52.150706] [PID 23079] Iteration 76/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8828917424183196
+[2025-05-06 19:49:52.150854] [PID 23079] starting gen offsprings
+[2025-05-06 19:49:52.173820] [PID 23079] starting evaluation individuals
+[2025-05-06 19:50:10.650861] [PID 23079] Iteration 77/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8874986913618494
+[2025-05-06 19:50:10.650983] [PID 23079] starting gen offsprings
+[2025-05-06 19:50:10.673297] [PID 23079] starting evaluation individuals
+[2025-05-06 19:50:29.038786] [PID 23079] Iteration 78/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8929762656646347
+[2025-05-06 19:50:29.038897] [PID 23079] starting gen offsprings
+[2025-05-06 19:50:29.057098] [PID 23079] starting evaluation individuals
+[2025-05-06 19:50:47.613392] [PID 23079] Iteration 79/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.8965503306344687
+[2025-05-06 19:50:47.613498] [PID 23079] starting gen offsprings
+[2025-05-06 19:50:47.631637] [PID 23079] starting evaluation individuals
+[2025-05-06 19:51:05.833413] [PID 23079] Iteration 80/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.9053194809315013
+[2025-05-06 19:51:05.833590] [PID 23079] starting gen offsprings
+[2025-05-06 19:51:05.851563] [PID 23079] starting evaluation individuals
+[2025-05-06 19:51:24.180621] [PID 23079] Iteration 81/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.9053194809315013
+[2025-05-06 19:51:24.180799] [PID 23079] starting gen offsprings
+[2025-05-06 19:51:24.214494] [PID 23079] starting evaluation individuals
+[2025-05-06 19:51:42.170993] [PID 23079] Iteration 82/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.9082263756054676
+[2025-05-06 19:51:42.171121] [PID 23079] starting gen offsprings
+[2025-05-06 19:51:42.204765] [PID 23079] starting evaluation individuals
+[2025-05-06 19:52:00.509540] [PID 23079] Iteration 83/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.913503721249848
+[2025-05-06 19:52:00.509650] [PID 23079] starting gen offsprings
+[2025-05-06 19:52:00.527571] [PID 23079] starting evaluation individuals
+[2025-05-06 19:52:19.031220] [PID 23079] Iteration 84/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.924609839639584
+[2025-05-06 19:52:19.031324] [PID 23079] starting gen offsprings
+[2025-05-06 19:52:19.055503] [PID 23079] starting evaluation individuals
+[2025-05-06 19:52:37.381005] [PID 23079] Iteration 85/100, Best current fitness: 4.2202839491919155, Best global fitness: 4.2202839491919155, Avg fitness: 3.9267006760441303
+[2025-05-06 19:52:37.381160] [PID 23079] starting gen offsprings
+[2025-05-06 19:52:37.405432] [PID 23079] starting evaluation individuals
+[2025-05-06 19:52:55.904007] [PID 23079] Iteration 86/100, Best current fitness: 4.260119667304756, Best global fitness: 4.260119667304756, Avg fitness: 3.9422792609497037
+[2025-05-06 19:52:55.904133] [PID 23079] starting gen offsprings
+[2025-05-06 19:52:55.925842] [PID 23079] starting evaluation individuals
+[2025-05-06 19:53:14.398594] [PID 23079] Iteration 87/100, Best current fitness: 4.260119667304756, Best global fitness: 4.260119667304756, Avg fitness: 3.9552108575069354
+[2025-05-06 19:53:14.398723] [PID 23079] starting gen offsprings
+[2025-05-06 19:53:14.423969] [PID 23079] starting evaluation individuals
+[2025-05-06 19:53:32.737945] [PID 23079] Iteration 88/100, Best current fitness: 4.260119667304756, Best global fitness: 4.260119667304756, Avg fitness: 3.9552108575069354
+[2025-05-06 19:53:32.738059] [PID 23079] starting gen offsprings
+[2025-05-06 19:53:32.759264] [PID 23079] starting evaluation individuals
+[2025-05-06 19:53:51.074615] [PID 23079] Iteration 89/100, Best current fitness: 4.260119667304756, Best global fitness: 4.260119667304756, Avg fitness: 3.9552108575069354
+[2025-05-06 19:53:51.074745] [PID 23079] starting gen offsprings
+[2025-05-06 19:53:51.097325] [PID 23079] starting evaluation individuals
+[2025-05-06 19:54:09.202915] [PID 23079] Iteration 90/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.9695778203441243
+[2025-05-06 19:54:09.203104] [PID 23079] starting gen offsprings
+[2025-05-06 19:54:09.230923] [PID 23079] starting evaluation individuals
+[2025-05-06 19:54:27.555032] [PID 23079] Iteration 91/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.975388734263345
+[2025-05-06 19:54:27.555141] [PID 23079] starting gen offsprings
+[2025-05-06 19:54:27.573031] [PID 23079] starting evaluation individuals
+[2025-05-06 19:54:45.907616] [PID 23079] Iteration 92/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.9775686953648024
+[2025-05-06 19:54:45.907749] [PID 23079] starting gen offsprings
+[2025-05-06 19:54:45.932461] [PID 23079] starting evaluation individuals
+[2025-05-06 19:55:03.456313] [PID 23079] Iteration 93/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.98552536281642
+[2025-05-06 19:55:03.456443] [PID 23079] starting gen offsprings
+[2025-05-06 19:55:03.484531] [PID 23079] starting evaluation individuals
+[2025-05-06 19:55:21.886964] [PID 23079] Iteration 94/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.988915674151981
+[2025-05-06 19:55:21.887148] [PID 23079] starting gen offsprings
+[2025-05-06 19:55:21.916165] [PID 23079] starting evaluation individuals
+[2025-05-06 19:55:40.393408] [PID 23079] Iteration 95/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 3.997374311103378
+[2025-05-06 19:55:40.393534] [PID 23079] starting gen offsprings
+[2025-05-06 19:55:40.416476] [PID 23079] starting evaluation individuals
+[2025-05-06 19:55:58.210889] [PID 23079] Iteration 96/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 4.0006433043341545
+[2025-05-06 19:55:58.211167] [PID 23079] starting gen offsprings
+[2025-05-06 19:55:58.247348] [PID 23079] starting evaluation individuals
+[2025-05-06 19:56:16.800158] [PID 23079] Iteration 97/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 4.003309788124409
+[2025-05-06 19:56:16.800288] [PID 23079] starting gen offsprings
+[2025-05-06 19:56:16.819275] [PID 23079] starting evaluation individuals
+[2025-05-06 19:56:35.156152] [PID 23079] Iteration 98/100, Best current fitness: 4.324198394927305, Best global fitness: 4.324198394927305, Avg fitness: 4.0179958539723915
+[2025-05-06 19:56:35.156367] [PID 23079] starting gen offsprings
+[2025-05-06 19:56:35.185139] [PID 23079] starting evaluation individuals
+[2025-05-06 19:56:53.516927] [PID 23079] Iteration 99/100, Best current fitness: 4.331522829061693, Best global fitness: 4.331522829061693, Avg fitness: 4.026671216812987
+[2025-05-06 19:56:53.517166] [PID 23079] starting gen offsprings
+[2025-05-06 19:56:53.542041] [PID 23079] starting evaluation individuals
+[2025-05-06 19:57:11.934364] [PID 23079] Iteration 100/100, Best current fitness: 4.331522829061693, Best global fitness: 4.331522829061693, Avg fitness: 4.0306377207689845
