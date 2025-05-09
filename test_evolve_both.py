@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 
 from ea_structure import uniform_crossover
-from es_controller import evaluate_fitness3
+from es_controller import evaluate_fitness3, evaluate_fitness4
 from evolve_both import evolve_both
 import utils
 
@@ -136,7 +136,7 @@ def evolve_both_hiperparams_fatorial_test():
     "CONTROLLER_MUTATION_RATE": 0.6,
     "NUM_OFFSPRINGS": 3,
     "LOG_FILE": None,
-    "evaluate_fitness_fn": evaluate_fitness3
+    "evaluate_fitness_fn": evaluate_fitness4
   }  
   variable_params_grid = {
     "STRUCTURE_MUTATION_RATE": [0.5, 0.7],
