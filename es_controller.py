@@ -11,6 +11,57 @@ import copy
 
 from utils import log
 
+def evaluate_fitness4(weights, brain, scenario, steps, robot_structure, connectivity, return_reward=False, view=False):
+  set_weights(brain, weights)  # Load weights into the network
+  env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
+  sim = env
+  viewer = EvoViewer(sim)
+  viewer.track_objects('robot')
+
+  state = env.reset()[0]
+  t_reward = 0
+  actuation_history = []
+  initial_x = env.get_robot_com()[0]  # Posição x inicial do centro de massa
+
+  for t in range(steps):
+    state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
+    action = brain(state_tensor).detach().numpy().flatten()
+    actuation_history.append(action)
+
+    if view:
+      viewer.render('screen')
+
+    state, reward, terminated, truncated, info = env.step(action)
+    t_reward += reward
+
+    if terminated or truncated:
+      break
+
+  final_x = env.get_robot_com()[0]  # Posição x final do centro de massa
+  delta_x = final_x - initial_x
+
+  # Detecta se o robô caiu (ex: Y muito baixo ou reward negativo)
+  robot_fell = info.get("robot_fell", False)
+  if not robot_fell:
+    y_pos = env.get_robot_com()[1]
+    robot_fell = y_pos < 1.0  # Ajuste esse valor de limiar conforme necessário
+
+  # Penalidade por queda
+  penalty = 5.0 if robot_fell else 0.0
+
+  # Penalidade por movimentos bruscos
+  total_actuation_change = sum(
+    np.abs(actuation_history[i+1] - actuation_history[i]).sum()
+    for i in range(len(actuation_history) - 1)
+  )
+  smoothness_bonus = -0.01 * total_actuation_change
+
+  fitness = delta_x - penalty + smoothness_bonus
+
+  viewer.close()
+  env.close()
+  return [fitness, reward] if return_reward else fitness
+
 def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connectivity, return_reward=False, view=False):
   set_weights(brain, weights)
   env = gym.make(scenario, max_episode_steps=steps, body=robot_structure, connections=connectivity)
@@ -62,9 +113,8 @@ def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connecti
   fall_penalty = -5.0 if final_y < initial_y - 1.0 else 0.0  # queda brusca
 
   fitness = (
-    0.05 * horizontal_velocity +          # foco em se mover, mesmo que não atravesse
-    0.15 * jump_height +
-    0.8 * t_reward                       # salto eficiente
+    1.0 * horizontal_velocity +           # foco em se mover, mesmo que não atravesse
+    0.7 * jump_height                       # salto eficiente
     # success_bonus +                     # atravessou o gap
     # fall_penalty                        # caiu feio? penaliza
   )
