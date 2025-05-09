@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 
 from ea_structure import uniform_crossover
-from es_controller import evaluate_fitness3
+from es_controller import evaluate_fitness3, evaluate_fitness
 from evolve_both import evolve_both
 import utils
 
@@ -120,27 +120,27 @@ def evolve_both_basic_test():
 
 def evolve_both_hiperparams_fatorial_test():
   fixed_params = {
-    "STRUCTURE_NUM_GENERATIONS": 2,
+    "STRUCTURE_NUM_GENERATIONS": 7,
     "MIN_GRID_SIZE": (5, 5),
     "MAX_GRID_SIZE": (5, 5),
     "STEPS": 500,
     "SCENARIO": "GapJumper-v0",
-    "STRUCTURE_POP_SIZE": 3,
-    "CROSSOVER_RATE": 0.95,
+    "STRUCTURE_POP_SIZE": 5,
+    "CROSSOVER_RATE": 0.9,
     "CROSSOVER_TYPE": uniform_crossover,
-    "SURVIVORS_COUNT": 0,
+    "SURVIVORS_COUNT": 3,
     "PARENT_SELECTION_COUNT": 2,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER_NUM_GENERATIONS": 2,
-    "CONTROLLER_POP_SIZE": 2,
-    "CONTROLLER_MUTATION_RATE": 0.3,
-    "NUM_OFFSPRINGS": 1,
+    "CONTROLLER_NUM_GENERATIONS": 30,
+    "CONTROLLER_POP_SIZE": 30,
+    "CONTROLLER_MUTATION_RATE": 0.5,
+    "SIGMA": 0.5,
+    "NUM_OFFSPRINGS": 5,
     "LOG_FILE": None,
-    "evaluate_fitness_fn": evaluate_fitness3
+    "evaluate_fitness_fn": evaluate_fitness#evaluate_fitness3
   }  
   variable_params_grid = {
-    "STRUCTURE_MUTATION_RATE": [0.05, 0.1],
-    "SIGMA": [0.5, 0.7]
+    "STRUCTURE_MUTATION_RATE": [0.1, 0.3],
   }
   run_param_combinations(fixed_params, variable_params_grid, evolve_both, utils.test_types[0])
 

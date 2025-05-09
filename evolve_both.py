@@ -36,8 +36,8 @@ def evaluate_fitness_parallel(population, scenario, steps, evaluate_fitness_fn):
       scenario,
       steps,
       population[i].structure,
-      get_full_connectivity(population[i].structure),
-      True
+      get_full_connectivity(population[i].structure)
+      #True
     ) for i in indexes_to_evaluate
   ]
   if current_process().daemon:
@@ -47,8 +47,8 @@ def evaluate_fitness_parallel(population, scenario, steps, evaluate_fitness_fn):
       evaluations = pool.starmap(evaluate_fitness_fn, args_list)
 
   for i, evaluation in zip(indexes_to_evaluate, evaluations):
-    population[i].fitness = evaluation[0]
-    population[i].reward = evaluation[1]
+    population[i].fitness = evaluation#[0]
+    population[i].reward = evaluation#[1]
 
   return population
 
