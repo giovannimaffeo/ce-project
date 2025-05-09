@@ -63,8 +63,8 @@ def evaluate_fitness3(weights, brain, scenario, steps, robot_structure, connecti
 
   fitness = (
     0.05 * horizontal_velocity +          # foco em se mover, mesmo que não atravesse
-    0.30 * jump_height +
-    0.65 * t_reward                       # salto eficiente
+    0.15 * jump_height +
+    0.8 * t_reward                       # salto eficiente
     # success_bonus +                     # atravessou o gap
     # fall_penalty                        # caiu feio? penaliza
   )
