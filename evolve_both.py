@@ -88,10 +88,10 @@ def evolve_both(
     population = evaluate_fitness_parallel(population, SCENARIO, STEPS, evaluate_fitness_fn)
     population = sorted(population, key=lambda x: x.fitness, reverse=True)
 
-    best_current_reward = population[0].reward
-    if best_current_reward > best_reward:
-      best_reward = best_current_reward
-      best_individual = population[0]
+    best_current_individual = max(population, key=lambda ind: ind.reward)
+    if best_current_individual.reward > best_reward:
+      best_reward = best_current_individual.reward
+      best_individual = best_current_individual
     
     mean_reward = sum(ind.reward for ind in population) / len(population)
     fitness_history.append({
@@ -99,6 +99,7 @@ def evolve_both(
       "best_fitness": best_reward,
       "mean_fitness": mean_reward
     })
+    log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_individual.reward}, Best global fitness: {best_reward}, Avg fitness: {mean_reward}", LOG_FILE)
 
     log("starting gen of new population", LOG_FILE)
     new_population = []
@@ -145,6 +146,5 @@ def evolve_both(
 
     log("starting survivor_selection", LOG_FILE)
     population = survivor_selection(population, new_population, SURVIVORS_COUNT)
-    log(f"structure generation {it + 1}/{STRUCTURE_NUM_GENERATIONS}, Best current fitness: {best_current_reward}, Best global fitness: {best_reward}, Avg fitness: {mean_reward}", LOG_FILE)
 
   return best_individual, fitness_history

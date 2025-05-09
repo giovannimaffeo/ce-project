@@ -120,27 +120,27 @@ def evolve_both_basic_test():
 
 def evolve_both_hiperparams_fatorial_test():
   fixed_params = {
-    "STRUCTURE_NUM_GENERATIONS": 2,
+    "STRUCTURE_NUM_GENERATIONS": 3,
     "MIN_GRID_SIZE": (5, 5),
     "MAX_GRID_SIZE": (5, 5),
     "STEPS": 500,
     "SCENARIO": "GapJumper-v0",
-    "STRUCTURE_POP_SIZE": 3,
+    "STRUCTURE_POP_SIZE": 30,
     "CROSSOVER_RATE": 0.95,
     "CROSSOVER_TYPE": uniform_crossover,
-    "SURVIVORS_COUNT": 0,
-    "PARENT_SELECTION_COUNT": 2,
+    "SURVIVORS_COUNT": 25,
+    "PARENT_SELECTION_COUNT": 10,
     "VOXEL_TYPES": [0, 1, 2, 3, 4],
-    "CONTROLLER_NUM_GENERATIONS": 2,
-    "CONTROLLER_POP_SIZE": 2,
-    "CONTROLLER_MUTATION_RATE": 0.3,
-    "NUM_OFFSPRINGS": 1,
+    "CONTROLLER_NUM_GENERATIONS": 100,
+    "CONTROLLER_POP_SIZE": 15,
+    "CONTROLLER_MUTATION_RATE": 0.6,
+    "NUM_OFFSPRINGS": 3,
     "LOG_FILE": None,
     "evaluate_fitness_fn": evaluate_fitness3
   }  
   variable_params_grid = {
-    "STRUCTURE_MUTATION_RATE": [0.05, 0.1],
-    "SIGMA": [0.5, 0.7]
+    "STRUCTURE_MUTATION_RATE": [0.5, 0.7],
+    "SIGMA": [0.6, 0.8]
   }
   run_param_combinations(fixed_params, variable_params_grid, evolve_both, utils.test_types[0])
 
