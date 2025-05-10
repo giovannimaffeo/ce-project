@@ -67,7 +67,7 @@ def run_combination(args):
   return list(result)
 
 def run_param_combinations(fixed_params, variable_params_grid, algorithm, test_type):
-  SEEDS = [3223, 19676, 85960, 12577, 62400]
+  SEEDS = [62400]#[3223, 19676, 85960, 12577, 62400]
   timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
   output_dir = f"outputs/evolve_both/{algorithm.__name__}/{test_type}/{timestamp}"
 
@@ -140,7 +140,7 @@ def evolve_both_hiperparams_fatorial_test():
     "evaluate_fitness_fn": evaluate_fitness#evaluate_fitness3
   }  
   variable_params_grid = {
-    "STRUCTURE_MUTATION_RATE": [0.1, 0.3],
+    "STRUCTURE_MUTATION_RATE": [0.1]#[0.1, 0.3],
   }
   run_param_combinations(fixed_params, variable_params_grid, evolve_both, utils.test_types[0])
 
