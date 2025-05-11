@@ -14,5 +14,5 @@ def stats_evolve_both_scenario_test():
   test_type = utils.test_types[1]
   base_stat_test(evolve_type, algorithm, test_type, True)
 
-stats_evolve_both_hiperparams_fatorial_test()
-# stats_evolve_both_scenario_test()
+# stats_evolve_both_hiperparams_fatorial_test()
+stats_evolve_both_scenario_test()

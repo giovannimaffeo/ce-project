@@ -1,0 +1,22 @@
+1. Shapiro-Wilk normality test results for algorithm 'evolve_both' and test 'controller_scenario_test':
+
+Combination 1: p = 0.7805 → Normal
+Combination 2: p = 0.7024 → Normal
+
+Result: All combinations are parametric.
+
+2. Pairwise Independent t-tests for combinations of algorithm 'evolve_both' and test 'controller_scenario_test':
+
+→ Results without Bonferroni correction:
+Combination 1 beats Combination 2 (raw p = 0.0040, t = 3.99)
+
+→ Results with Bonferroni correction:
+Combination 1 beats Combination 2 (adjusted p = 0.0040, t = 3.99)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 1 — 1 wins
+2. Combination 2 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 1 — 1 wins
+2. Combination 2 — 0 wins

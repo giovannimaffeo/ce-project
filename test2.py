@@ -4,7 +4,7 @@ import pandas as pd
 import utils
 
 # Caminho base da combinação
-combination_path = "outputs/evolve_both/evolve_both/hiperparams_fatorial_test/reference_run2/combination1"
+combination_path = "outputs/evolve_both/evolve_both/controller_scenario_test/reference_run/combination2"
 
 # Caminhos dos CSVs
 fitness_historic_paths = [
@@ -20,7 +20,7 @@ best_fitnesses = [
 
 # Parâmetros da combinação (você deve preencher manualmente ou ler de outro CSV se existir)
 combination_variable_params = {
-  "STRUCUTRE_MUTATION_RATE": 0.1
+  "SCENARIO": "CaveCrawler-v0"
 }
 
 # Executar

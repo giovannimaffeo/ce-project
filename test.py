@@ -27,7 +27,7 @@ def load_combinations_results_from_disk(base_output_dir):
 
   return combinations_results
 
-combinations_results = load_combinations_results_from_disk("outputs/evolve_both/evolve_both/hiperparams_fatorial_test/reference_run2")
+combinations_results = load_combinations_results_from_disk(f"outputs/evolve_both/evolve_both/{utils.test_types[1]}/reference_run")
 print(combinations_results)
 
 fixed_params = {
@@ -35,10 +35,10 @@ fixed_params = {
   "MIN_GRID_SIZE": (5, 5),
   "MAX_GRID_SIZE": (5, 5),
   "STEPS": 500,
-  "SCENARIO": "GapJumper-v0",
   "STRUCTURE_POP_SIZE": 5,
   "CROSSOVER_RATE": 0.9,
   "CROSSOVER_TYPE": uniform_crossover,
+  "STRUCTURE_MUTATION_RATE": 0.3,
   "SURVIVORS_COUNT": 3,
   "PARENT_SELECTION_COUNT": 2,
   "VOXEL_TYPES": [0, 1, 2, 3, 4],
@@ -52,10 +52,10 @@ fixed_params = {
 }
 
 variable_params_grid = {
-  "STRUCTURE_MUTATION_RATE": [0.1, 0.3],
+  "SCENARIO": ["GapJumper-v0", "CaveCrawler-v0"]
 }
 
-output_dir = f"outputs/evolve_both/evolve_both/hiperparams_fatorial_test/reference_run2"
+output_dir = f"outputs/evolve_both/evolve_both/{utils.test_types[1]}/reference_run"
 variable_param_keys = list(variable_params_grid.keys())
 all_combinations = list(itertools.product(*variable_params_grid.values()))
 utils.generate_param_combinations_results(
@@ -63,5 +63,5 @@ utils.generate_param_combinations_results(
   variable_params_grid,
   combinations_results,
   output_dir,
-  utils.test_types[0]
+  utils.test_types[1]
 )
