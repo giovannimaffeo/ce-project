@@ -2,6 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 from itertools import combinations
+from statsmodels.stats.multitest import multipletests
 
 from stat_alunos import t_test_ind, test_normal_sw, kruskal_wallis, mann_whitney
 
@@ -64,43 +65,72 @@ def check_pairwise_non_parametric_comparisons(evolve_type, algorithm, test_type,
   step = "2" if only_two else "3"
   log_stats_msg(log_file, f"\n{step}. Pairwise Mann-Whitney U tests for combinations of algorithm '{algorithm.__name__}' and test '{test_type}':")
 
-  combination_dirs = sorted([os.path.join(reference_run_dir, d) for d in os.listdir(reference_run_dir) if d.startswith("combination")])
+  combination_dirs = sorted([
+    os.path.join(reference_run_dir, d)
+    for d in os.listdir(reference_run_dir)
+    if d.startswith("combination")
+  ])
   all_combination_fitnesses = []
 
   for combination_dir in combination_dirs:
     combination_fitness_values = []
-
     for run_index in range(1, 6):
       run_path = os.path.join(combination_dir, f"run{run_index}", "best_result.csv")
       best_result_df = pd.read_csv(run_path)
       combination_fitness_values.append(best_result_df["best_fitness"].iloc[-1])
-
     all_combination_fitnesses.append(combination_fitness_values)
 
   n = len(all_combination_fitnesses)
-  wins = [0] * n
+  wins_uncorrected = [0] * n
+  wins_corrected = [0] * n
+
+  pair_indices = []
+  raw_p_values = []
+  means = []
 
   for (i, data1), (j, data2) in combinations(enumerate(all_combination_fitnesses), 2):
     _, p = mann_whitney(data1, data2)
-    mean1 = np.mean(data1)
-    mean2 = np.mean(data2)
+    pair_indices.append((i, j))
+    raw_p_values.append(p)
+    means.append((np.mean(data1), np.mean(data2)))
 
+  log_stats_msg(log_file, "\n→ Results without Bonferroni correction:")
+  for (i, j), p, (mean1, mean2) in zip(pair_indices, raw_p_values, means):
     if p <= 0.05:
       if mean1 > mean2:
-        wins[i] += 1
-        result = f"Combination {i+1} beats Combination {j+1} (p = {p:.4f})"
+        wins_uncorrected[i] += 1
+        result = f"Combination {i+1} beats Combination {j+1} (raw p = {p:.4f})"
       else:
-        wins[j] += 1
-        result = f"Combination {j+1} beats Combination {i+1} (p = {p:.4f})"
+        wins_uncorrected[j] += 1
+        result = f"Combination {j+1} beats Combination {i+1} (raw p = {p:.4f})"
     else:
-      result = f"Combination {i+1} vs Combination {j+1}: Not significant (p = {p:.4f})"
-
+      result = f"Combination {i+1} vs Combination {j+1}: Not significant (raw p = {p:.4f})"
     log_stats_msg(log_file, result)
 
-  # Generate ranking
-  ranked = sorted(enumerate(wins), key=lambda x: x[1], reverse=True)
-  log_stats_msg(log_file, "\nRanking based on number of pairwise wins:")
-  for rank, (idx, win_count) in enumerate(ranked, start=1):
+  corrected_results = multipletests(raw_p_values, alpha=0.05, method='bonferroni')
+  adjusted_p_values = corrected_results[1]
+
+  log_stats_msg(log_file, "\n→ Results with Bonferroni correction:")
+  for (i, j), adj_p, (mean1, mean2) in zip(pair_indices, adjusted_p_values, means):
+    if adj_p <= 0.05:
+      if mean1 > mean2:
+        wins_corrected[i] += 1
+        result = f"Combination {i+1} beats Combination {j+1} (adjusted p = {adj_p:.4f})"
+      else:
+        wins_corrected[j] += 1
+        result = f"Combination {j+1} beats Combination {i+1} (adjusted p = {adj_p:.4f})"
+    else:
+      result = f"Combination {i+1} vs Combination {j+1}: Not significant (adjusted p = {adj_p:.4f})"
+    log_stats_msg(log_file, result)
+
+  log_stats_msg(log_file, "\n→ Ranking based on number of pairwise wins (without correction):")
+  ranked_uncorrected = sorted(enumerate(wins_uncorrected), key=lambda x: x[1], reverse=True)
+  for rank, (idx, win_count) in enumerate(ranked_uncorrected, start=1):
+    log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
+
+  log_stats_msg(log_file, "\n→ Ranking based on number of pairwise wins (with Bonferroni correction):")
+  ranked_corrected = sorted(enumerate(wins_corrected), key=lambda x: x[1], reverse=True)
+  for rank, (idx, win_count) in enumerate(ranked_corrected, start=1):
     log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
 
 def check_pairwise_parametric_comparisons(evolve_type, algorithm, test_type, only_two):
@@ -109,43 +139,74 @@ def check_pairwise_parametric_comparisons(evolve_type, algorithm, test_type, onl
   step = "2" if only_two else "3"
   log_stats_msg(log_file, f"\n{step}. Pairwise Independent t-tests for combinations of algorithm '{algorithm.__name__}' and test '{test_type}':")
 
-  combination_dirs = sorted([os.path.join(reference_run_dir, d) for d in os.listdir(reference_run_dir) if d.startswith("combination")])
+  combination_dirs = sorted([
+    os.path.join(reference_run_dir, d)
+    for d in os.listdir(reference_run_dir)
+    if d.startswith("combination")
+  ])
   all_combination_fitnesses = []
 
   for combination_dir in combination_dirs:
     combination_fitness_values = []
-
     for run_index in range(1, 6): 
       run_path = os.path.join(combination_dir, f"run{run_index}", "best_result.csv")
       best_result_df = pd.read_csv(run_path)
       combination_fitness_values.append(best_result_df["best_fitness"].iloc[-1])
-
     all_combination_fitnesses.append(combination_fitness_values)
 
   n = len(all_combination_fitnesses)
-  wins = [0] * n
+  wins_uncorrected = [0] * n
+  wins_corrected = [0] * n
+
+  pair_indices = []
+  raw_p_values = []
+  t_values = []
+  means = []
 
   for (i, data1), (j, data2) in combinations(enumerate(all_combination_fitnesses), 2):
     t, p = t_test_ind(data1, data2)
-    mean1 = np.mean(data1)
-    mean2 = np.mean(data2)
+    pair_indices.append((i, j))
+    raw_p_values.append(p)
+    t_values.append(t)
+    means.append((np.mean(data1), np.mean(data2)))
 
+  log_stats_msg(log_file, "\n→ Results without Bonferroni correction:")
+  for (i, j), p, t, (mean1, mean2) in zip(pair_indices, raw_p_values, t_values, means):
     if p <= 0.05:
       if mean1 > mean2:
-        wins[i] += 1
-        result = f"Combination {i+1} beats Combination {j+1} (p = {p:.4f}, t = {t:.2f})"
+        wins_uncorrected[i] += 1
+        result = f"Combination {i+1} beats Combination {j+1} (raw p = {p:.4f}, t = {t:.2f})"
       else:
-        wins[j] += 1
-        result = f"Combination {j+1} beats Combination {i+1} (p = {p:.4f}, t = {t:.2f})"
+        wins_uncorrected[j] += 1
+        result = f"Combination {j+1} beats Combination {i+1} (raw p = {p:.4f}, t = {t:.2f})"
     else:
-      result = f"Combination {i+1} vs Combination {j+1}: Not significant (p = {p:.4f}, t = {t:.2f})"
-
+      result = f"Combination {i+1} vs Combination {j+1}: Not significant (raw p = {p:.4f}, t = {t:.2f})"
     log_stats_msg(log_file, result)
 
-  # Generate ranking
-  ranked = sorted(enumerate(wins), key=lambda x: x[1], reverse=True)
-  log_stats_msg(log_file, "\nRanking based on number of pairwise wins:")
-  for rank, (idx, win_count) in enumerate(ranked, start=1):
+  corrected_results = multipletests(raw_p_values, alpha=0.05, method='bonferroni')
+  adjusted_p_values = corrected_results[1]
+
+  log_stats_msg(log_file, "\n→ Results with Bonferroni correction:")
+  for (i, j), adj_p, t, (mean1, mean2) in zip(pair_indices, adjusted_p_values, t_values, means):
+    if adj_p <= 0.05:
+      if mean1 > mean2:
+        wins_corrected[i] += 1
+        result = f"Combination {i+1} beats Combination {j+1} (adjusted p = {adj_p:.4f}, t = {t:.2f})"
+      else:
+        wins_corrected[j] += 1
+        result = f"Combination {j+1} beats Combination {i+1} (adjusted p = {adj_p:.4f}, t = {t:.2f})"
+    else:
+      result = f"Combination {i+1} vs Combination {j+1}: Not significant (adjusted p = {adj_p:.4f}, t = {t:.2f})"
+    log_stats_msg(log_file, result)
+
+  log_stats_msg(log_file, "\n→ Ranking based on number of pairwise wins (without correction):")
+  ranked_uncorrected = sorted(enumerate(wins_uncorrected), key=lambda x: x[1], reverse=True)
+  for rank, (idx, win_count) in enumerate(ranked_uncorrected, start=1):
+    log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
+
+  log_stats_msg(log_file, "\n→ Ranking based on number of pairwise wins (with Bonferroni correction):")
+  ranked_corrected = sorted(enumerate(wins_corrected), key=lambda x: x[1], reverse=True)
+  for rank, (idx, win_count) in enumerate(ranked_corrected, start=1):
     log_stats_msg(log_file, f"{rank}. Combination {idx+1} — {win_count} wins")
 
 def base_stat_test(evolve_type, algorithm, test_type, only_two=False):

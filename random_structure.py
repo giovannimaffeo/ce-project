@@ -44,7 +44,7 @@ def create_random_robot(min_grid_size, max_grid_size):
     random_robot, _ = sample_robot(grid_size)
     return random_robot
 
-def random_search_structure(
+def random_search(
     NUM_GENERATIONS,
     MIN_GRID_SIZE,
     MAX_GRID_SIZE,
