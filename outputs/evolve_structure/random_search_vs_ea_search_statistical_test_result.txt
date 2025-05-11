@@ -1,0 +1,22 @@
+1. Shapiro-Wilk normality test results:
+
+Random Search (Combination 6): p = 0.0367 → Not normal
+EA Search (Combination 6): p = 0.3228 → Normal
+
+Result: At least one combination is not parametric.
+
+2. Pairwise Mann-Whitney U tests for combination 1 (Random Search) and combination 2 (EA Search):
+
+→ Results without Bonferroni correction:
+Combination 2 beats Combination 1 (raw p = 0.0079)
+
+→ Results with Bonferroni correction:
+Combination 2 beats Combination 1 (adjusted p = 0.0079)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
