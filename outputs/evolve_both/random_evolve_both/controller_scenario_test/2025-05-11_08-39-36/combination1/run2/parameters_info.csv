@@ -1,0 +1,2 @@
+STRUCTURE_NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,STRUCTURE_POP_SIZE,SURVIVORS_COUNT,CONTROLLER_NUM_GENERATIONS,LOG_FILE,evaluate_fitness_fn,SCENARIO,SEED
+2,"(5, 5)","(5, 5)",500,5,3,2,outputs/evolve_both/random_evolve_both/controller_scenario_test/2025-05-11_08-39-36\combination1\log_combination1_pid17040.txt,evaluate_fitness,GapJumper-v0,19676

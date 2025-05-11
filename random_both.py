@@ -39,7 +39,7 @@ def evaluate_fitness_parallel(population, scenario, steps, evaluate_fitness_fn):
       steps,
       population[i].structure,
       get_full_connectivity(population[i].structure),
-      True
+      False
     ) for i in indexes_to_evaluate
   ]
   if current_process().daemon:
@@ -49,29 +49,20 @@ def evaluate_fitness_parallel(population, scenario, steps, evaluate_fitness_fn):
       evaluations = pool.starmap(evaluate_fitness_fn, args_list)
 
   for i, evaluation in zip(indexes_to_evaluate, evaluations):
-    population[i].fitness = evaluation[0]
-    population[i].reward = evaluation[1]
+    population[i].fitness = evaluation
+    population[i].reward = evaluation
 
   return population
 
-def evolve_both(
+def random_evolve_both(
   STRUCTURE_NUM_GENERATIONS,
   MIN_GRID_SIZE,
   MAX_GRID_SIZE,
   STEPS,
   SCENARIO,
   STRUCTURE_POP_SIZE,
-  CROSSOVER_RATE,
-  CROSSOVER_TYPE,
-  STRUCTURE_MUTATION_RATE,
   SURVIVORS_COUNT,
-  PARENT_SELECTION_COUNT,
-  VOXEL_TYPES,
   CONTROLLER_NUM_GENERATIONS,
-  CONTROLLER_POP_SIZE,
-  CONTROLLER_MUTATION_RATE,
-  SIGMA,
-  NUM_OFFSPRINGS,
   SEED,
   LOG_FILE=None,
   evaluate_fitness_fn=evaluate_fitness

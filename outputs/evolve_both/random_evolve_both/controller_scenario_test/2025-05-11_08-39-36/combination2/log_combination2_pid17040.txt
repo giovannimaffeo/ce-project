@@ -1,0 +1,100 @@
+[2025-05-11 08:41:34.385331] [PID 17040] starting evaluation structure population
+[2025-05-11 08:41:42.534479] [PID 17040] structure generation 1/2, Best current fitness: 0.041351171479174054, Best global fitness: 0.041351171479174054, Avg fitness: -0.016303087484358224
+[2025-05-11 08:41:42.534479] [PID 17040] starting gen of new population
+[2025-05-11 08:41:42.535519] [PID 17040] starting evolve structure
+[2025-05-11 08:41:42.539523] [PID 17040] starting evolve controller
+[2025-05-11 08:41:47.165668] [PID 17040] add new individual
+[2025-05-11 08:41:47.178911] [PID 17040] starting evolve structure
+[2025-05-11 08:41:47.193458] [PID 17040] starting evolve controller
+[2025-05-11 08:41:51.852603] [PID 17040] add new individual
+[2025-05-11 08:41:51.863610] [PID 17040] starting survivor_selection
+[2025-05-11 08:41:51.864610] [PID 17040] starting evaluation structure population
+[2025-05-11 08:41:59.253327] [PID 17040] structure generation 2/2, Best current fitness: 0.2219977309667494, Best global fitness: 0.2219977309667494, Avg fitness: 0.046724420556999414
+[2025-05-11 08:41:59.255339] [PID 17040] starting gen of new population
+[2025-05-11 08:41:59.255339] [PID 17040] starting evolve structure
+[2025-05-11 08:41:59.266102] [PID 17040] starting evolve controller
+[2025-05-11 08:42:03.786525] [PID 17040] add new individual
+[2025-05-11 08:42:03.799540] [PID 17040] starting evolve structure
+[2025-05-11 08:42:03.811729] [PID 17040] starting evolve controller
+[2025-05-11 08:42:08.290335] [PID 17040] add new individual
+[2025-05-11 08:42:08.302733] [PID 17040] starting survivor_selection
+[2025-05-11 08:42:08.607250] [PID 17040] starting evaluation structure population
+[2025-05-11 08:42:16.280476] [PID 17040] structure generation 1/2, Best current fitness: 0.12602949575339195, Best global fitness: 0.12602949575339195, Avg fitness: 0.068075449429529
+[2025-05-11 08:42:16.280476] [PID 17040] starting gen of new population
+[2025-05-11 08:42:16.281475] [PID 17040] starting evolve structure
+[2025-05-11 08:42:16.291496] [PID 17040] starting evolve controller
+[2025-05-11 08:42:20.754590] [PID 17040] add new individual
+[2025-05-11 08:42:20.766634] [PID 17040] starting evolve structure
+[2025-05-11 08:42:20.771633] [PID 17040] starting evolve controller
+[2025-05-11 08:42:25.319498] [PID 17040] add new individual
+[2025-05-11 08:42:25.331560] [PID 17040] starting survivor_selection
+[2025-05-11 08:42:25.331560] [PID 17040] starting evaluation structure population
+[2025-05-11 08:42:33.034460] [PID 17040] structure generation 2/2, Best current fitness: 0.21339884023879885, Best global fitness: 0.21339884023879885, Avg fitness: 0.10853724655201853
+[2025-05-11 08:42:33.034460] [PID 17040] starting gen of new population
+[2025-05-11 08:42:33.034460] [PID 17040] starting evolve structure
+[2025-05-11 08:42:33.040468] [PID 17040] starting evolve controller
+[2025-05-11 08:42:37.598171] [PID 17040] add new individual
+[2025-05-11 08:42:37.611174] [PID 17040] starting evolve structure
+[2025-05-11 08:42:37.617171] [PID 17040] starting evolve controller
+[2025-05-11 08:42:42.061995] [PID 17040] add new individual
+[2025-05-11 08:42:42.073992] [PID 17040] starting survivor_selection
+[2025-05-11 08:42:42.403710] [PID 17040] starting evaluation structure population
+[2025-05-11 08:42:50.491623] [PID 17040] structure generation 1/2, Best current fitness: 0.10104338382456507, Best global fitness: 0.10104338382456507, Avg fitness: -0.04916398755922906
+[2025-05-11 08:42:50.492594] [PID 17040] starting gen of new population
+[2025-05-11 08:42:50.492594] [PID 17040] starting evolve structure
+[2025-05-11 08:42:50.499585] [PID 17040] starting evolve controller
+[2025-05-11 08:42:55.030490] [PID 17040] add new individual
+[2025-05-11 08:42:55.041495] [PID 17040] starting evolve structure
+[2025-05-11 08:42:55.045494] [PID 17040] starting evolve controller
+[2025-05-11 08:42:59.859286] [PID 17040] add new individual
+[2025-05-11 08:42:59.870793] [PID 17040] starting survivor_selection
+[2025-05-11 08:42:59.871296] [PID 17040] starting evaluation structure population
+[2025-05-11 08:43:07.034749] [PID 17040] structure generation 2/2, Best current fitness: 0.12275121740036815, Best global fitness: 0.12275121740036815, Avg fitness: 0.07713415609888685
+[2025-05-11 08:43:07.034749] [PID 17040] starting gen of new population
+[2025-05-11 08:43:07.034749] [PID 17040] starting evolve structure
+[2025-05-11 08:43:07.038749] [PID 17040] starting evolve controller
+[2025-05-11 08:43:11.566154] [PID 17040] add new individual
+[2025-05-11 08:43:11.582158] [PID 17040] starting evolve structure
+[2025-05-11 08:43:11.586153] [PID 17040] starting evolve controller
+[2025-05-11 08:43:16.366098] [PID 17040] add new individual
+[2025-05-11 08:43:16.378098] [PID 17040] starting survivor_selection
+[2025-05-11 08:43:16.718532] [PID 17040] starting evaluation structure population
+[2025-05-11 08:43:25.387180] [PID 17040] structure generation 1/2, Best current fitness: 0.27335153055439576, Best global fitness: 0.27335153055439576, Avg fitness: 0.12170153133397425
+[2025-05-11 08:43:25.388179] [PID 17040] starting gen of new population
+[2025-05-11 08:43:25.389181] [PID 17040] starting evolve structure
+[2025-05-11 08:43:25.393179] [PID 17040] starting evolve controller
+[2025-05-11 08:43:36.730632] [PID 17040] add new individual
+[2025-05-11 08:43:36.762636] [PID 17040] starting evolve structure
+[2025-05-11 08:43:36.784635] [PID 17040] starting evolve controller
+[2025-05-11 08:43:48.405922] [PID 17040] add new individual
+[2025-05-11 08:43:48.430543] [PID 17040] starting survivor_selection
+[2025-05-11 08:43:48.431541] [PID 17040] starting evaluation structure population
+[2025-05-11 08:43:55.793562] [PID 17040] structure generation 2/2, Best current fitness: 0.27335153055439576, Best global fitness: 0.27335153055439576, Avg fitness: 0.170377825199938
+[2025-05-11 08:43:55.794564] [PID 17040] starting gen of new population
+[2025-05-11 08:43:55.795565] [PID 17040] starting evolve structure
+[2025-05-11 08:43:55.822562] [PID 17040] starting evolve controller
+[2025-05-11 08:44:00.548405] [PID 17040] add new individual
+[2025-05-11 08:44:00.560408] [PID 17040] starting evolve structure
+[2025-05-11 08:44:00.569407] [PID 17040] starting evolve controller
+[2025-05-11 08:44:04.866746] [PID 17040] add new individual
+[2025-05-11 08:44:04.877947] [PID 17040] starting survivor_selection
+[2025-05-11 08:44:05.204740] [PID 17040] starting evaluation structure population
+[2025-05-11 08:44:12.651627] [PID 17040] structure generation 1/2, Best current fitness: 0.7114835206882906, Best global fitness: 0.7114835206882906, Avg fitness: 0.015618660982327625
+[2025-05-11 08:44:12.651627] [PID 17040] starting gen of new population
+[2025-05-11 08:44:12.652631] [PID 17040] starting evolve structure
+[2025-05-11 08:44:12.658627] [PID 17040] starting evolve controller
+[2025-05-11 08:44:17.022286] [PID 17040] add new individual
+[2025-05-11 08:44:17.033285] [PID 17040] starting evolve structure
+[2025-05-11 08:44:17.036288] [PID 17040] starting evolve controller
+[2025-05-11 08:44:21.804234] [PID 17040] add new individual
+[2025-05-11 08:44:21.816233] [PID 17040] starting survivor_selection
+[2025-05-11 08:44:21.816233] [PID 17040] starting evaluation structure population
+[2025-05-11 08:44:29.484905] [PID 17040] structure generation 2/2, Best current fitness: 0.7114835206882906, Best global fitness: 0.7114835206882906, Avg fitness: 0.3030206985363235
+[2025-05-11 08:44:29.485909] [PID 17040] starting gen of new population
+[2025-05-11 08:44:29.485909] [PID 17040] starting evolve structure
+[2025-05-11 08:44:29.488012] [PID 17040] starting evolve controller
+[2025-05-11 08:44:33.996538] [PID 17040] add new individual
+[2025-05-11 08:44:34.008545] [PID 17040] starting evolve structure
+[2025-05-11 08:44:34.010712] [PID 17040] starting evolve controller
+[2025-05-11 08:44:38.511348] [PID 17040] add new individual
+[2025-05-11 08:44:38.523356] [PID 17040] starting survivor_selection
