@@ -27,12 +27,13 @@ def stats_random_both_vs_evolve_both_scenario_test():
     test_type="random_search_vs_evolve_both_test",
     only_two=True,
     combination_dirs=[
-      "outputs/evolve_both/random_evolve_both/controller_scenario_test/reference_run/combination1",
-      "outputs/evolve_both/evolve_both/controller_scenario_test/reference_run/combination1"
+      "outputs/evolve_both/random_evolve_both/controller_scenario_test/reference_run/combination2",
+      "outputs/evolve_both/evolve_both/controller_scenario_test/reference_run/combination2"
     ],
     reference_run_dir="outputs/evolve_both"
   )
 
+stats_random_both_vs_evolve_both_scenario_test()
 # stats_evolve_both_hiperparams_fatorial_test()
 # stats_evolve_both_scenario_test()
-stats_random_both_scenario_test()
+#stats_random_both_scenario_test()
