@@ -7,7 +7,7 @@ evolve_type = utils.evolve_types["evolve_both"]["label"]
 def stats_evolve_both_hiperparams_fatorial_test():
   algorithm = evolve_both
   test_type = utils.test_types[0]
-  base_stat_test(evolve_type, algorithm, test_type)
+  base_stat_test(evolve_type, algorithm, test_type, True)
 
 def stats_evolve_both_scenario_test():
   algorithm = evolve_both
