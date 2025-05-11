@@ -7,6 +7,7 @@ from datetime import datetime
 from ea_structure import uniform_crossover
 from es_controller import evaluate_fitness3, evaluate_fitness
 from evolve_both import evolve_both
+from random_both import random_evolve_both
 import utils
 
 import tracemalloc
@@ -171,6 +172,29 @@ def evolve_both_scenario_test():
   }
   run_param_combinations(fixed_params, variable_params_grid, evolve_both, utils.test_types[1])
 
-# evolve_both_basic_test()
-evolve_both_hiperparams_fatorial_test()
-# evolve_both_scenario_test()
+def random_search_scenario_test():
+  fixed_params = {
+    "STRUCTURE_NUM_GENERATIONS": 7,
+    "MIN_GRID_SIZE": (5, 5),
+    "MAX_GRID_SIZE": (5, 5),
+    "STEPS": 500,
+    "STRUCTURE_POP_SIZE": 5,
+    "SURVIVORS_COUNT": 3,
+    "CONTROLLER_NUM_GENERATIONS": 30,
+    "LOG_FILE": None,
+    "evaluate_fitness_fn":evaluate_fitness,
+  } 
+  variable_params_grid = {
+    "SCENARIO": ["GapJumper-v0", "CaveCrawler-v0"]
+  }
+  run_param_combinations(fixed_params, variable_params_grid, random_evolve_both, utils.test_types[1])
+
+
+def main():
+  # evolve_both_basic_test()
+  #evolve_both_hiperparams_fatorial_test()
+  random_search_scenario_test()
+  # evolve_both_scenario_test()
+
+if __name__ == "__main__":
+  main()
