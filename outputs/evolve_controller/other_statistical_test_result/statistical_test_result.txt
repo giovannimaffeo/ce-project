@@ -1,0 +1,22 @@
+1. Shapiro-Wilk normality test results:
+
+Random Search (Combination 2): p = 0.2402 → Normal
+ES Search (Combination 2): p = 0.1337 → Normal
+
+Result: All combinations are parametric.
+
+2. Pairwise Independent t-tests for combination 1 (Random Search) and combination 2 (ES Search):
+
+→ Results without Bonferroni correction:
+Combination 2 beats Combination 1 (raw p = 0.0004, t = -5.75)
+
+→ Results with Bonferroni correction:
+Combination 2 beats Combination 1 (adjusted p = 0.0004, t = -5.75)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
