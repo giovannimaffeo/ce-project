@@ -2,7 +2,7 @@ import itertools
 import os
 import pandas as pd
 
-from ea_structure import uniform_crossover
+from ea_structure import evaluate_fitness, uniform_crossover
 from fixed_controllers import alternating_gait
 import utils
 
@@ -27,34 +27,41 @@ def load_combinations_results_from_disk(base_output_dir):
 
   return combinations_results
 
-combinations_results = load_combinations_results_from_disk("outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/reference_run")
+combinations_results = load_combinations_results_from_disk(f"outputs/evolve_both/evolve_both/{utils.test_types[1]}/reference_run")
 print(combinations_results)
 
 fixed_params = {
-  "NUM_GENERATIONS": 100,
+  "STRUCTURE_NUM_GENERATIONS": 7,
   "MIN_GRID_SIZE": (5, 5),
   "MAX_GRID_SIZE": (5, 5),
   "STEPS": 500,
-  "SCENARIO": "Walker-v0",
-  "POP_SIZE": 50,
+  "STRUCTURE_POP_SIZE": 5,
+  "CROSSOVER_RATE": 0.9,
   "CROSSOVER_TYPE": uniform_crossover,
+  "STRUCTURE_MUTATION_RATE": 0.3,
+  "SURVIVORS_COUNT": 3,
+  "PARENT_SELECTION_COUNT": 2,
   "VOXEL_TYPES": [0, 1, 2, 3, 4],
-  "CONTROLLER": alternating_gait
+  "CONTROLLER_NUM_GENERATIONS": 30,
+  "CONTROLLER_POP_SIZE": 30,
+  "CONTROLLER_MUTATION_RATE": 0.5,
+  "SIGMA": 0.5,
+  "NUM_OFFSPRINGS": 5,
+  "LOG_FILE": None,
+  "evaluate_fitness_fn": evaluate_fitness#evaluate_fitness3
 }
 
 variable_params_grid = {
-  "MUTATION_RATE": [0.03, 0.05],
-  "CROSSOVER_RATE": [0.9, 0.95],
-  "SURVIVORS_COUNT": [3, 5],
-  "PARENT_SELECTION_COUNT": [3, 4]
+  "SCENARIO": ["GapJumper-v0", "CaveCrawler-v0"]
 }
 
-output_dir = f"outputs/evolve_structure/ea_search/hiperparams_fatorial_tests/reference_run"
+output_dir = f"outputs/evolve_both/evolve_both/{utils.test_types[1]}/reference_run"
 variable_param_keys = list(variable_params_grid.keys())
 all_combinations = list(itertools.product(*variable_params_grid.values()))
-utils.generate_hiperparams_fatorial_test_results(
+utils.generate_param_combinations_results(
   fixed_params,
   variable_params_grid,
   combinations_results,
-  output_dir
+  output_dir,
+  utils.test_types[1]
 )

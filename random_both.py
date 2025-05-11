@@ -9,8 +9,7 @@ from fixed_controllers import *
 from utils import log
 from neural_controller import *
 from es_controller import es_search, evaluate_fitness, evaluate_fitness3
-from random_controller import random_search_controller
-from random_structure import random_search_structure
+from random_controller import random_search as random_search_controller
 
 class Individual():  
   def __init__(self, scenario, steps, min_grid_size, max_grid_size, structure=None, weights=None, fitness=None, reward=None):

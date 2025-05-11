@@ -1,0 +1,22 @@
+1. Shapiro-Wilk normality test results for algorithm 'evolve_both' and test 'hiperparams_fatorial_test':
+
+Combination 1: p = 0.3771 → Normal
+Combination 2: p = 0.7805 → Normal
+
+Result: All combinations are parametric.
+
+2. Pairwise Independent t-tests for combinations of algorithm 'evolve_both' and test 'hiperparams_fatorial_test':
+
+→ Results without Bonferroni correction:
+Combination 1 vs Combination 2: Not significant (raw p = 0.0558, t = -2.24)
+
+→ Results with Bonferroni correction:
+Combination 1 vs Combination 2: Not significant (adjusted p = 0.0558, t = -2.24)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 1 — 0 wins
+2. Combination 2 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 1 — 0 wins
+2. Combination 2 — 0 wins

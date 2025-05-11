@@ -11,7 +11,8 @@ def install_requirements():
         "imageio==2.36.1",
         "matplotlib",  
         "scipy",       
-        "pandas"
+        "pandas",
+        "statsmodels"
     ]
     
     print("Installing required packages...")

@@ -6,8 +6,17 @@ Combination 2: p = 0.1337 → Normal
 Result: All combinations are parametric.
 
 2. Pairwise Independent t-tests for combinations of algorithm 'es_search' and test 'controller_scenario_test':
-Combination 1 beats Combination 2 (p = 0.0002, t = 6.64)
 
-Ranking based on number of pairwise wins:
+→ Results without Bonferroni correction:
+Combination 1 beats Combination 2 (raw p = 0.0002, t = 6.64)
+
+→ Results with Bonferroni correction:
+Combination 1 beats Combination 2 (adjusted p = 0.0002, t = 6.64)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 1 — 1 wins
+2. Combination 2 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
 1. Combination 1 — 1 wins
 2. Combination 2 — 0 wins

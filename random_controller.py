@@ -40,7 +40,7 @@ default_robot_structure = np.array([
     [0,0,0,0,2]
 ])
 # ---- RANDOM SEARCH ALGORITHM ----
-def random_search_controller(
+def random_search(
     NUM_GENERATIONS, 
     STEPS, 
     SCENARIO, 

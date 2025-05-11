@@ -14,26 +14,53 @@ Result: p = 0.0015
 Conclusion: At least one combination differs significantly from the others.
 
 3. Pairwise Mann-Whitney U tests for combinations of algorithm 'random_search' and test 'controller_scenario_test':
-Combination 2 beats Combination 1 (p = 0.0317)
-Combination 1 vs Combination 3: Not significant (p = 0.2222)
-Combination 4 beats Combination 1 (p = 0.0079)
-Combination 5 beats Combination 1 (p = 0.0079)
-Combination 6 beats Combination 1 (p = 0.0079)
-Combination 2 vs Combination 3: Not significant (p = 1.0000)
-Combination 2 vs Combination 4: Not significant (p = 0.4206)
-Combination 2 vs Combination 5: Not significant (p = 0.1508)
-Combination 2 vs Combination 6: Not significant (p = 0.0556)
-Combination 3 vs Combination 4: Not significant (p = 0.6905)
-Combination 3 vs Combination 5: Not significant (p = 0.0556)
-Combination 6 beats Combination 3 (p = 0.0079)
-Combination 5 beats Combination 4 (p = 0.0079)
-Combination 6 beats Combination 4 (p = 0.0079)
-Combination 5 vs Combination 6: Not significant (p = 0.5476)
 
-Ranking based on number of pairwise wins:
+→ Results without Bonferroni correction:
+Combination 2 beats Combination 1 (raw p = 0.0317)
+Combination 1 vs Combination 3: Not significant (raw p = 0.2222)
+Combination 4 beats Combination 1 (raw p = 0.0079)
+Combination 5 beats Combination 1 (raw p = 0.0079)
+Combination 6 beats Combination 1 (raw p = 0.0079)
+Combination 2 vs Combination 3: Not significant (raw p = 1.0000)
+Combination 2 vs Combination 4: Not significant (raw p = 0.4206)
+Combination 2 vs Combination 5: Not significant (raw p = 0.1508)
+Combination 2 vs Combination 6: Not significant (raw p = 0.0556)
+Combination 3 vs Combination 4: Not significant (raw p = 0.6905)
+Combination 3 vs Combination 5: Not significant (raw p = 0.0556)
+Combination 6 beats Combination 3 (raw p = 0.0079)
+Combination 5 beats Combination 4 (raw p = 0.0079)
+Combination 6 beats Combination 4 (raw p = 0.0079)
+Combination 5 vs Combination 6: Not significant (raw p = 0.5476)
+
+→ Results with Bonferroni correction:
+Combination 1 vs Combination 2: Not significant (adjusted p = 0.4762)
+Combination 1 vs Combination 3: Not significant (adjusted p = 1.0000)
+Combination 1 vs Combination 4: Not significant (adjusted p = 0.1190)
+Combination 1 vs Combination 5: Not significant (adjusted p = 0.1190)
+Combination 1 vs Combination 6: Not significant (adjusted p = 0.1190)
+Combination 2 vs Combination 3: Not significant (adjusted p = 1.0000)
+Combination 2 vs Combination 4: Not significant (adjusted p = 1.0000)
+Combination 2 vs Combination 5: Not significant (adjusted p = 1.0000)
+Combination 2 vs Combination 6: Not significant (adjusted p = 0.8333)
+Combination 3 vs Combination 4: Not significant (adjusted p = 1.0000)
+Combination 3 vs Combination 5: Not significant (adjusted p = 0.8333)
+Combination 3 vs Combination 6: Not significant (adjusted p = 0.1190)
+Combination 4 vs Combination 5: Not significant (adjusted p = 0.1190)
+Combination 4 vs Combination 6: Not significant (adjusted p = 0.1190)
+Combination 5 vs Combination 6: Not significant (adjusted p = 1.0000)
+
+→ Ranking based on number of pairwise wins (without correction):
 1. Combination 6 — 3 wins
 2. Combination 5 — 2 wins
 3. Combination 2 — 1 wins
 4. Combination 4 — 1 wins
 5. Combination 1 — 0 wins
 6. Combination 3 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 1 — 0 wins
+2. Combination 2 — 0 wins
+3. Combination 3 — 0 wins
+4. Combination 4 — 0 wins
+5. Combination 5 — 0 wins
+6. Combination 6 — 0 wins
