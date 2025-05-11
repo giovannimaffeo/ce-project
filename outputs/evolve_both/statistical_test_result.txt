@@ -1,2 +1,0 @@
-
-2. Pairwise Independent t-tests for combinations of algorithm 'stats_random_both_vs_evolve_both_scenario_test' and test 'random_search_vs_evolve_both_test':

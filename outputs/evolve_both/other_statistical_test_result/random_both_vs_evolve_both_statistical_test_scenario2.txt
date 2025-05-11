@@ -1,0 +1,20 @@
+1. Shapiro-Wilk normality test results:
+
+Random Search (Combination 2): p = 0.2952 → Normal
+Evolve Both (Combination 2): p = 0.7024 → Normal
+
+2. Pairwise Independent t-tests for combinations of algorithm 'stats_random_both_vs_evolve_both_scenario_test' and test 'random_search_vs_evolve_both_test':
+
+→ Results without Bonferroni correction:
+Combination 2 beats Combination 1 (raw p = 0.0010, t = -5.04)
+
+→ Results with Bonferroni correction:
+Combination 2 beats Combination 1 (adjusted p = 0.0010, t = -5.04)
+
+→ Ranking based on number of pairwise wins (without correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
+
+→ Ranking based on number of pairwise wins (with Bonferroni correction):
+1. Combination 2 — 1 wins
+2. Combination 1 — 0 wins
