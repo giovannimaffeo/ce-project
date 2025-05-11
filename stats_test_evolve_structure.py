@@ -22,16 +22,16 @@ def stats_ea_search_controller_scenario_test():
 
 def stats_random_search_vs_ea_search_controller_scenario_test():
   check_pairwise_non_parametric_comparisons(
-  evolve_type="-",
-  algorithm="-",
-  test_type="random_search_vs_ea_search_test",
-  only_two=True,
-  combination_dirs=[
-    "outputs/evolve_structure/random_search/controller_scenario_test/reference_run/combination6",
-    "outputs/evolve_structure/ea_search/controller_scenario_test/reference_run/combination6"
-  ],
-  reference_run_dir="outputs/evolve_structure"
-)
+    evolve_type="-",
+    algorithm=stats_random_search_vs_ea_search_controller_scenario_test,
+    test_type="random_search_vs_ea_search_test",
+    only_two=True,
+    combination_dirs=[
+      "outputs/evolve_structure/random_search/controller_scenario_test/reference_run/combination6",
+      "outputs/evolve_structure/ea_search/controller_scenario_test/reference_run/combination6"
+    ],
+    reference_run_dir="outputs/evolve_structure"
+  )
 
 # stats_ea_search_hiperparams_fatorial_test()
 # stats_random_search_controller_scenario_test()
