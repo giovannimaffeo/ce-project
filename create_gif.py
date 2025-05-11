@@ -112,7 +112,6 @@ def load_experiment_data_3(folder_path):
     best_result_path = os.path.join(folder_path, 'best_result.csv')
     best_df = pd.read_csv(best_result_path)
     
-    # Parse robot structure and weights from string to Python objects
     best_robot = ast.literal_eval(best_df.loc[0, 'best_robot'])
     best_weights = ast.literal_eval(best_df.loc[0, 'best_weights'])
 
