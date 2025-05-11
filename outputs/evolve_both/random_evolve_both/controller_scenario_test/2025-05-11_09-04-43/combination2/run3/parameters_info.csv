@@ -1,0 +1,2 @@
+STRUCTURE_NUM_GENERATIONS,MIN_GRID_SIZE,MAX_GRID_SIZE,STEPS,STRUCTURE_POP_SIZE,SURVIVORS_COUNT,CONTROLLER_NUM_GENERATIONS,LOG_FILE,evaluate_fitness_fn,SCENARIO,SEED
+7,"(5, 5)","(5, 5)",500,5,3,30,outputs/evolve_both/random_evolve_both/controller_scenario_test/2025-05-11_09-04-43\combination2\log_combination2_pid30904.txt,evaluate_fitness,CaveCrawler-v0,85960
