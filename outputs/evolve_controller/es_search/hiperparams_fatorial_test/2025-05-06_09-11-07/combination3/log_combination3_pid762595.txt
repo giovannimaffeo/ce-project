@@ -1,2 +1,0 @@
-[2025-05-06 09:11:07.724735] [PID 762595] starting gen offsprings
-[2025-05-06 09:11:07.806804] [PID 762595] starting evaluation individuals

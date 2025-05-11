@@ -1,2 +1,0 @@
-NUM_GENERATIONS,STEPS,POP_SIZE,MUTATION_RATE,SIGMA,NUM_OFFSPRINGS,SCENARIO,SEED,LOG_FILE
-100,500,50,0.3,0.5,5,ObstacleTraverser-v0,19676,outputs/evolve_controller/es_search/controller_scenario_test/2025-05-07_16-49-35/combination2/log_combination2_pid111486.txt

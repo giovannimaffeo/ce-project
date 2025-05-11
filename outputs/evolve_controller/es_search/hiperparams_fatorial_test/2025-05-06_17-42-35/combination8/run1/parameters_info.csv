@@ -1,2 +1,0 @@
-NUM_GENERATIONS,STEPS,SCENARIO,POP_SIZE,MUTATION_RATE,SIGMA,NUM_OFFSPRINGS,SEED,LOG_FILE
-100,500,DownStepper-v0,50,0.3,0.5,5,3223,outputs/evolve_controller/es_search/hiperparams_fatorial_test/2025-05-06_17-42-35/combination8/log_combination8_pid23079.txt
